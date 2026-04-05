@@ -7,8 +7,13 @@ import { formatRands, getDifficultyColour } from '../../utils/helpers';
 import Timer from '../Game/Timer';
 
 export default function PlayerView() {
-  const { playerId, playerName, roomCode, gameState, isConnected } = useMultiplayerStore();
-  const { sendAnswer, sendBankDecision } = usePlayerMultiplayer();
+  const { playerId, playerName, roomCode, gameState, isConnected, reset } = useMultiplayerStore();
+  const { sendAnswer, sendBankDecision, disconnect } = usePlayerMultiplayer();
+
+  const handleLeave = () => {
+    disconnect();
+    reset();
+  };
 
   if (!isConnected || !gameState) {
     return <PlayerWaiting roomCode={roomCode} />;
@@ -24,10 +29,16 @@ export default function PlayerView() {
           <span className="text-lg">{me?.avatar ?? '����'}</span>
           <span className="font-medium text-text-primary text-sm">{playerName}</span>
         </div>
-        <div className="text-right">
+        <div className="flex items-center gap-3">
           <span className="font-score text-sm text-neon-gold font-bold">
             {formatRands(me?.score ?? 0)}
           </span>
+          <button
+            onClick={handleLeave}
+            className="text-xs text-text-muted hover:text-neon-pink transition-colors"
+          >
+            Leave
+          </button>
         </div>
       </div>
 

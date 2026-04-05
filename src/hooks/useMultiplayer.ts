@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback } from 'react';
+import { useCallback } from 'react';
 import type { RealtimeChannel } from '@supabase/supabase-js';
 import { supabase, generateRoomCode } from '../lib/supabase';
 import { useMultiplayerStore } from '../stores/multiplayerStore';
@@ -9,14 +9,112 @@ import { TIMER_DURATIONS, PLAYER_COLOURS, PLAYER_AVATARS } from '../types';
 import { generateId } from '../utils/helpers';
 
 // ──────────────────────────────────────────
+// Module-level channels — persist across component mount/unmount cycles.
+// Without this, channels are destroyed when Landing unmounts → Lobby
+// mounts (host) or JoinGame unmounts → PlayerView mounts (player).
+// ──────────────────────────────────────────
+let hostChannel: RealtimeChannel | null = null;
+let playerChannel: RealtimeChannel | null = null;
+
+// ──────────────────────────────────────────
+// Standalone broadcast — called from App.tsx useEffect and player_join handler.
+// Must be a plain function (not a hook) so it can live in a persistent component.
+// ──────────────────────────────────────────
+export function broadcastHostState() {
+  if (!hostChannel) return;
+  const store = useGameStore.getState();
+  if (!store.session) return;
+
+  const s = store.session;
+  const tiers =
+    s.settings.mode === 'quick' ? [90, 70, 50, 20, 1] : [90, 80, 70, 60, 50, 40, 30, 20, 10, 5, 1];
+  const difficulty = tiers[s.currentRound] ?? 90;
+  const pointsMap: Record<number, number> = {
+    90: 100, 80: 200, 70: 300, 60: 500, 50: 1000,
+    40: 2000, 30: 5000, 20: 10000, 10: 25000, 5: 50000, 1: 100000,
+  };
+  const points = pointsMap[difficulty] ?? 0;
+
+  const players: BroadcastPlayer[] = s.players.map((p) => ({
+    id: p.id,
+    name: p.name,
+    colour: p.colour,
+    avatar: p.avatar,
+    score: p.score,
+    isEliminated: p.isEliminated,
+    isBanked: p.isBanked,
+    hasAnswered: p.hasAnswered,
+  }));
+
+  const currentQ = s.selectedQuestions[s.currentRound];
+  const lastRound = s.roundHistory[s.roundHistory.length - 1];
+
+  const broadcast: GameBroadcast = {
+    screen: s.screen,
+    players,
+    packName: s.pack.name,
+    modeName: s.settings.mode,
+  };
+
+  if (s.screen === 'playing' && currentQ) {
+    broadcast.round = {
+      index: s.currentRound,
+      difficulty,
+      points,
+      totalRounds: tiers.length,
+      timerDuration: currentQ.time_limit_seconds ?? TIMER_DURATIONS[s.settings.timerSpeed],
+      question: {
+        question: currentQ.question,
+        type: currentQ.type,
+        options: currentQ.options,
+        image_url: currentQ.image_url,
+        sequence_items: currentQ.sequence_items,
+      },
+    };
+  }
+
+  if (s.screen === 'reveal' && lastRound) {
+    const correctAnswer =
+      lastRound.question.type === 'multiple_choice' || lastRound.question.type === 'image_based'
+        ? lastRound.question.options?.[Number(lastRound.question.correct_answer)] ??
+          String(lastRound.question.correct_answer)
+        : String(lastRound.question.correct_answer);
+
+    broadcast.reveal = {
+      correctAnswer,
+      explanation: lastRound.question.explanation,
+      correctPlayerIds: lastRound.correctPlayers,
+      eliminatedPlayerIds: lastRound.eliminatedPlayers,
+    };
+  }
+
+  if (s.screen === 'banking') {
+    broadcast.banking = { difficulty, points };
+  }
+
+  hostChannel.send({ type: 'broadcast', event: 'game_state', payload: broadcast });
+}
+
+// ──────────────────────────────────────────
+// End the game — notifies players and tears down the host channel.
+// Called from Results, Lobby back button, or any host "end game" action.
+// ──────────────────────────────────────────
+export function endHostGame() {
+  if (!hostChannel) return;
+  const channel = hostChannel;
+  hostChannel = null;
+  channel.send({ type: 'broadcast', event: 'game_ended', payload: {} });
+  // Brief delay so the broadcast reaches players before we tear down
+  setTimeout(() => supabase.removeChannel(channel), 300);
+}
+
+// ──────────────────────────────────────────
 // Host-side hook
 // ──────────────────────────────────────────
 export function useHostMultiplayer() {
-  const channelRef = useRef<RealtimeChannel | null>(null);
-  const { session, submitAnswer, bankPlayer } = useGameStore();
+  const { submitAnswer, bankPlayer } = useGameStore();
   const { roomCode, setRoomCode, setRole, setConnected, setError } = useMultiplayerStore();
 
-  // Create a room and broadcast channel
   const createRoom = useCallback(async (settings: GameSettings) => {
     const code = generateRoomCode();
 
@@ -33,6 +131,12 @@ export function useHostMultiplayer() {
         console.warn('DB insert failed (may not be set up yet), continuing with broadcast only:', dbError.message);
       }
 
+      // Clean up any existing channel before creating a new one
+      if (hostChannel) {
+        supabase.removeChannel(hostChannel);
+        hostChannel = null;
+      }
+
       // Create realtime channel
       const channel = supabase.channel(`room:${code}`, {
         config: { broadcast: { self: false } },
@@ -41,7 +145,6 @@ export function useHostMultiplayer() {
       channel
         .on('broadcast', { event: 'player_join' }, (msg) => {
           const { name, playerId } = msg.payload as { name: string; playerId: string };
-          // Add player to game store
           const store = useGameStore.getState();
           if (!store.session) return;
           const existing = store.session.players.find(
@@ -69,8 +172,8 @@ export function useHostMultiplayer() {
             },
           });
 
-          // Broadcast updated player list
-          broadcastState();
+          // Broadcast updated player list immediately
+          broadcastHostState();
         })
         .on('broadcast', { event: 'answer' }, (msg) => {
           const { playerId, answer } = msg.payload as {
@@ -94,7 +197,7 @@ export function useHostMultiplayer() {
           }
         });
 
-      channelRef.current = channel;
+      hostChannel = channel;
       setRoomCode(code);
       setRole('host');
 
@@ -106,107 +209,13 @@ export function useHostMultiplayer() {
     }
   }, [setRoomCode, setRole, setConnected, setError, submitAnswer, bankPlayer]);
 
-  // Broadcast current game state to all players
-  const broadcastState = useCallback(() => {
-    const channel = channelRef.current;
-    const store = useGameStore.getState();
-    if (!channel || !store.session) return;
-
-    const s = store.session;
-    const tiers =
-      s.settings.mode === 'quick' ? [90, 70, 50, 20, 1] : [90, 80, 70, 60, 50, 40, 30, 20, 10, 5, 1];
-    const difficulty = tiers[s.currentRound] ?? 90;
-    const pointsMap: Record<number, number> = {
-      90: 100, 80: 200, 70: 300, 60: 500, 50: 1000,
-      40: 2000, 30: 5000, 20: 10000, 10: 25000, 5: 50000, 1: 100000,
-    };
-    const points = pointsMap[difficulty] ?? 0;
-
-    const players: BroadcastPlayer[] = s.players.map((p) => ({
-      id: p.id,
-      name: p.name,
-      colour: p.colour,
-      avatar: p.avatar,
-      score: p.score,
-      isEliminated: p.isEliminated,
-      isBanked: p.isBanked,
-      hasAnswered: p.hasAnswered,
-    }));
-
-    const currentQ = s.selectedQuestions[s.currentRound];
-    const lastRound = s.roundHistory[s.roundHistory.length - 1];
-
-    const broadcast: GameBroadcast = {
-      screen: s.screen,
-      players,
-      packName: s.pack.name,
-      modeName: s.settings.mode,
-    };
-
-    if (s.screen === 'playing' && currentQ) {
-      broadcast.round = {
-        index: s.currentRound,
-        difficulty,
-        points,
-        totalRounds: tiers.length,
-        timerDuration: currentQ.time_limit_seconds ?? TIMER_DURATIONS[s.settings.timerSpeed],
-        question: {
-          question: currentQ.question,
-          type: currentQ.type,
-          options: currentQ.options,
-          image_url: currentQ.image_url,
-          sequence_items: currentQ.sequence_items,
-        },
-      };
-    }
-
-    if (s.screen === 'reveal' && lastRound) {
-      const correctAnswer =
-        lastRound.question.type === 'multiple_choice' || lastRound.question.type === 'image_based'
-          ? lastRound.question.options?.[Number(lastRound.question.correct_answer)] ??
-            String(lastRound.question.correct_answer)
-          : String(lastRound.question.correct_answer);
-
-      broadcast.reveal = {
-        correctAnswer,
-        explanation: lastRound.question.explanation,
-        correctPlayerIds: lastRound.correctPlayers,
-        eliminatedPlayerIds: lastRound.eliminatedPlayers,
-      };
-    }
-
-    if (s.screen === 'banking') {
-      broadcast.banking = { difficulty, points };
-    }
-
-    channel.send({ type: 'broadcast', event: 'game_state', payload: broadcast });
-  }, []);
-
-  // Broadcast whenever session changes
-  useEffect(() => {
-    if (channelRef.current && session) {
-      broadcastState();
-    }
-  }, [session, broadcastState]);
-
-  // Cleanup on unmount
-  useEffect(() => {
-    return () => {
-      if (channelRef.current) {
-        supabase.removeChannel(channelRef.current);
-        channelRef.current = null;
-      }
-    };
-  }, []);
-
-  return { createRoom, broadcastState, roomCode };
+  return { createRoom, broadcastState: broadcastHostState, roomCode };
 }
 
 // ──────────────────────────────────────────
 // Player-side hook
 // ──────────────────────────────────────────
 export function usePlayerMultiplayer() {
-  const channelRef = useRef<RealtimeChannel | null>(null);
   const {
     setRole,
     setRoomCode,
@@ -227,6 +236,12 @@ export function usePlayerMultiplayer() {
         .eq('room_code', upperCode)
         .single();
 
+      // Clean up any existing channel before creating a new one
+      if (playerChannel) {
+        supabase.removeChannel(playerChannel);
+        playerChannel = null;
+      }
+
       // Create channel and join
       const playerId = generateId();
       const channel = supabase.channel(`room:${upperCode}`, {
@@ -237,6 +252,14 @@ export function usePlayerMultiplayer() {
         .on('broadcast', { event: 'game_state' }, (msg) => {
           const state = msg.payload as GameBroadcast;
           setGameState(state);
+        })
+        .on('broadcast', { event: 'game_ended' }, () => {
+          // Host ended the game — clean up and return to landing
+          if (playerChannel) {
+            supabase.removeChannel(playerChannel);
+            playerChannel = null;
+          }
+          useMultiplayerStore.getState().reset();
         })
         .subscribe((status) => {
           if (status === 'SUBSCRIBED') {
@@ -250,7 +273,7 @@ export function usePlayerMultiplayer() {
           }
         });
 
-      channelRef.current = channel;
+      playerChannel = channel;
       setRole('player');
       setRoomCode(upperCode);
       setPlayerInfo(playerId, name);
@@ -259,7 +282,7 @@ export function usePlayerMultiplayer() {
   );
 
   const sendAnswer = useCallback((playerId: string, answer: string | number) => {
-    channelRef.current?.send({
+    playerChannel?.send({
       type: 'broadcast',
       event: 'answer',
       payload: { playerId, answer },
@@ -267,7 +290,7 @@ export function usePlayerMultiplayer() {
   }, []);
 
   const sendBankDecision = useCallback((playerId: string, banked: boolean) => {
-    channelRef.current?.send({
+    playerChannel?.send({
       type: 'broadcast',
       event: 'bank_decision',
       payload: { playerId, banked },
@@ -275,17 +298,11 @@ export function usePlayerMultiplayer() {
   }, []);
 
   const disconnect = useCallback(() => {
-    if (channelRef.current) {
-      supabase.removeChannel(channelRef.current);
-      channelRef.current = null;
+    if (playerChannel) {
+      supabase.removeChannel(playerChannel);
+      playerChannel = null;
     }
   }, []);
-
-  useEffect(() => {
-    return () => {
-      disconnect();
-    };
-  }, [disconnect]);
 
   return { joinRoom, sendAnswer, sendBankDecision, disconnect };
 }

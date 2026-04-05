@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useGameStore } from './stores/gameStore';
 import { useMultiplayerStore } from './stores/multiplayerStore';
+import { broadcastHostState } from './hooks/useMultiplayer';
 import { loadAllPacks } from './data/loadPacks';
 import Landing from './components/Landing/Landing';
 import Lobby from './components/Lobby/Lobby';
@@ -20,6 +21,14 @@ export default function App() {
     const packs = loadAllPacks();
     setPacks(packs);
   }, [setPacks]);
+
+  // Broadcast game state to all players whenever the host's session changes.
+  // This effect lives here (App never unmounts) so it survives screen transitions.
+  useEffect(() => {
+    if (role === 'host' && session) {
+      broadcastHostState();
+    }
+  }, [session, role]);
 
   // Player mode — show player experience
   if (role === 'player') {

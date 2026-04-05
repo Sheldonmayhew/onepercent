@@ -1,10 +1,14 @@
 import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useGameStore } from '../../stores/gameStore';
+import { useMultiplayerStore } from '../../stores/multiplayerStore';
+import { endHostGame } from '../../hooks/useMultiplayer';
 import { formatRands } from '../../utils/helpers';
 
 export default function Results() {
   const { session, resetGame, createGame } = useGameStore();
+  const roomCode = useMultiplayerStore((s) => s.roomCode);
+  const mpReset = useMultiplayerStore((s) => s.reset);
 
   if (!session) return null;
 
@@ -32,8 +36,22 @@ export default function Results() {
     return { longestStreak, highestBanker };
   }, [session.players]);
 
+  const handleNewGame = () => {
+    endHostGame();
+    resetGame();
+    mpReset();
+  };
+
   const handlePlayAgain = () => {
-    createGame(session.settings);
+    if (roomCode) {
+      // Multiplayer — players need to rejoin a fresh room
+      endHostGame();
+      resetGame();
+      mpReset();
+    } else {
+      // Local — restart directly into lobby
+      createGame(session.settings);
+    }
   };
 
   return (
@@ -171,7 +189,7 @@ export default function Results() {
           transition={{ delay: 1.1 }}
         >
           <motion.button
-            onClick={resetGame}
+            onClick={handleNewGame}
             className="flex-1 py-3.5 rounded-xl font-display text-lg tracking-wide bg-bg-elevated border border-white/5 text-text-secondary hover:text-text-primary hover:border-white/10 transition-all"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

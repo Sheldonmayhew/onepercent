@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../../stores/gameStore';
 import { useMultiplayerStore } from '../../stores/multiplayerStore';
+import { endHostGame } from '../../hooks/useMultiplayer';
 import { PLAYER_COLOURS, PLAYER_AVATARS } from '../../types';
 
 export default function Lobby() {
@@ -32,6 +33,7 @@ export default function Lobby() {
   };
 
   const handleBack = () => {
+    endHostGame();
     resetGame();
     mpReset();
   };

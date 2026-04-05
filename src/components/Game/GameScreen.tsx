@@ -21,6 +21,7 @@ export default function GameScreen() {
     submitAnswer,
     revealAnswers,
     setAllAnswersIn,
+    setScreen,
   } = useGameStore();
 
   const isMultiplayer = !!useMultiplayerStore((s) => s.roomCode);
@@ -87,6 +88,15 @@ export default function GameScreen() {
       />
 
       <div className="relative z-10 flex flex-col flex-1 max-w-3xl mx-auto w-full px-4 py-6">
+        <div className="flex items-center justify-between mb-1">
+          <div className="flex-1" />
+          <button
+            onClick={() => setScreen('results')}
+            className="text-xs text-text-muted hover:text-neon-pink transition-colors px-2 py-1"
+          >
+            End Game
+          </button>
+        </div>
         <Timer timeLeft={timeLeft} progress={progress} />
 
         <div className="mt-4 mb-6">

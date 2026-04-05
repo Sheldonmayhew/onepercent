@@ -55,6 +55,15 @@ export default function BankingPhase() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
+        <div className="flex justify-end mb-2">
+          <button
+            onClick={() => setScreen('results')}
+            className="text-xs text-text-muted hover:text-neon-pink transition-colors px-2 py-1"
+          >
+            End Game
+          </button>
+        </div>
+
         {/* Header */}
         <motion.div
           className="mb-8"

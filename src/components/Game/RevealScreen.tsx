@@ -6,7 +6,7 @@ import { formatRands } from '../../utils/helpers';
 import PlayerStatusBar from './PlayerStatusBar';
 
 export default function RevealScreen() {
-  const { session, proceedToNextRound, getCurrentPoints, getTiers } = useGameStore();
+  const { session, proceedToNextRound, getCurrentPoints, getTiers, setScreen } = useGameStore();
   const { play } = useSound();
   const [phase, setPhase] = useState<'answer' | 'results' | 'ready'>('answer');
 
@@ -55,6 +55,15 @@ export default function RevealScreen() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
+        <div className="flex justify-end mb-2">
+          <button
+            onClick={() => setScreen('results')}
+            className="text-xs text-text-muted hover:text-neon-pink transition-colors px-2 py-1"
+          >
+            End Game
+          </button>
+        </div>
+
         {/* Question recap */}
         <p className="text-text-secondary text-sm mb-3 line-clamp-2">{question.question}</p>
 
