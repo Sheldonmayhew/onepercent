@@ -103,6 +103,7 @@ export default function Landing() {
               <label className="text-sm text-text-secondary font-medium block mb-2">Timer Speed</label>
               <div className="flex gap-2">
                 {([
+                  { value: 'extended' as TimerSpeed, label: '60s' },
                   { value: 'relaxed' as TimerSpeed, label: '45s' },
                   { value: 'standard' as TimerSpeed, label: '30s' },
                   { value: 'pressure' as TimerSpeed, label: '15s' },

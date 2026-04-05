@@ -24,7 +24,7 @@ export interface QuestionPack {
 
 export type GameMode = 'classic' | 'quick' | 'practice';
 export type EliminationRule = 'zero_score' | 'keep_last_cleared';
-export type TimerSpeed = 'standard' | 'relaxed' | 'pressure';
+export type TimerSpeed = 'extended' | 'standard' | 'relaxed' | 'pressure';
 export type GameScreen = 'landing' | 'lobby' | 'playing' | 'reveal' | 'banking' | 'results';
 
 export interface GameSettings {
@@ -91,6 +91,7 @@ export const POINTS_PER_ROUND: Record<number, number> = {
 };
 
 export const TIMER_DURATIONS: Record<TimerSpeed, number> = {
+  extended: 60,
   standard: 30,
   relaxed: 45,
   pressure: 15,
