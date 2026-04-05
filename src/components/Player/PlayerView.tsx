@@ -374,7 +374,9 @@ function PlayerRevealView({ gameState, playerId }: { gameState: any; playerId: s
           >
             ❌
           </motion.div>
-          <h2 className="font-display text-3xl text-neon-pink glow-pink mb-2">ELIMINATED</h2>
+          <h2 className="font-display text-3xl text-neon-pink glow-pink mb-2">
+            {me?.isEliminated ? 'ELIMINATED' : 'INCORRECT'}
+          </h2>
           <p className="text-text-secondary mb-3">The answer was:</p>
           <p className="font-display text-2xl text-neon-green">{reveal.correctAnswer}</p>
         </>

@@ -116,7 +116,7 @@ export default function RevealScreen() {
                 </div>
               )}
 
-              {/* Eliminated */}
+              {/* Eliminated / Incorrect */}
               {eliminatedPlayers.length > 0 && (
                 <motion.div
                   className="bg-neon-pink/5 border border-neon-pink/20 rounded-xl p-4"
@@ -126,7 +126,9 @@ export default function RevealScreen() {
                 >
                   <div className="flex items-center gap-2 justify-center mb-3">
                     <span className="text-neon-pink text-lg">✗</span>
-                    <span className="text-neon-pink font-display text-lg tracking-wide">ELIMINATED</span>
+                    <span className="text-neon-pink font-display text-lg tracking-wide">
+                      {session.settings.eliminationRule === 'keep_last_cleared' ? 'INCORRECT' : 'ELIMINATED'}
+                    </span>
                   </div>
                   <div className="flex flex-wrap gap-2 justify-center">
                     {eliminatedPlayers.map((p) => (
