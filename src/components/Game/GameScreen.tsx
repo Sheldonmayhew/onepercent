@@ -132,6 +132,18 @@ export default function GameScreen() {
                 >
                   <div className="w-10 h-10 border-2 border-neon-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4" />
                   <p className="text-text-secondary text-lg mb-2">Waiting for players to get ready...</p>
+                  <motion.button
+                    onClick={() => {
+                      useGameStore.setState({
+                        session: { ...session, timerStarted: true },
+                      });
+                    }}
+                    className="mt-4 py-3 px-8 rounded-lg font-display text-lg tracking-wider bg-neon-cyan/20 text-neon-cyan border border-neon-cyan/40 hover:bg-neon-cyan/30 transition-colors"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    START ROUND
+                  </motion.button>
                 </motion.div>
               ) : !allAnswered ? (
                 <motion.div
@@ -146,6 +158,16 @@ export default function GameScreen() {
                   <p className="text-text-muted text-sm">
                     {activePlayers.filter((p) => p.hasAnswered).length} / {activePlayers.length} locked in
                   </p>
+                  <motion.button
+                    onClick={() => {
+                      setAllAnswersIn();
+                    }}
+                    className="mt-4 py-2 px-6 rounded-lg font-display text-sm tracking-wider bg-neon-gold/20 text-neon-gold border border-neon-gold/40 hover:bg-neon-gold/30 transition-colors"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    CLOSE ANSWERS
+                  </motion.button>
                 </motion.div>
               ) : (
                 <motion.div

@@ -16,6 +16,7 @@ import { generateId } from '../utils/helpers';
 let hostChannel: RealtimeChannel | null = null;
 let playerChannel: RealtimeChannel | null = null;
 const readyPlayers = new Set<string>();
+let readyPlayersRound = -1;
 
 // Module-level references for beforeunload cleanup
 let hostBeforeUnloadHandler: (() => void) | null = null;
@@ -32,9 +33,10 @@ export function broadcastHostState() {
 
   const s = store.session;
 
-  // #16: Clear readyPlayers when a new round starts (screen is 'playing' and timer hasn't started)
-  if (s.screen === 'playing' && !s.timerStarted) {
+  // #16: Clear readyPlayers only when the round actually changes
+  if (s.screen === 'playing' && !s.timerStarted && s.currentRound !== readyPlayersRound) {
     readyPlayers.clear();
+    readyPlayersRound = s.currentRound;
   }
 
   const tiers =
