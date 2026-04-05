@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../../stores/gameStore';
 import { useMultiplayerStore } from '../../stores/multiplayerStore';
@@ -45,11 +45,18 @@ export default function GameScreen() {
     }
   }, [play, session, setAllAnswersIn]);
 
-  const { timeLeft, progress, isRunning, reset: resetTimer } = useTimer({
+  const { timeLeft, progress, isRunning, start: startTimer, reset: resetTimer } = useTimer({
     duration: timerDuration,
     onExpire: handleTimerExpire,
-    autoStart: true,
+    autoStart: !isMultiplayer,
   });
+
+  // In multiplayer, start timer only after all players are ready
+  useEffect(() => {
+    if (isMultiplayer && session?.timerStarted) {
+      startTimer();
+    }
+  }, [isMultiplayer, session?.timerStarted, startTimer]);
 
   useMemo(() => {
     if (timeLeft <= 5 && timeLeft > 0 && isRunning) {
@@ -114,8 +121,19 @@ export default function GameScreen() {
         <div className="mt-6 flex-1">
           <AnimatePresence mode="wait">
             {isMultiplayer ? (
-              /* ── Multiplayer: host screen waits for remote answers ── */
-              !allAnswered ? (
+              /* ── Multiplayer: host screen waits for ready / answers ── */
+              !session.timerStarted ? (
+                <motion.div
+                  key="waiting-ready"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="text-center py-8"
+                >
+                  <div className="w-10 h-10 border-2 border-neon-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+                  <p className="text-text-secondary text-lg mb-2">Waiting for players to get ready...</p>
+                </motion.div>
+              ) : !allAnswered ? (
                 <motion.div
                   key="waiting-remote"
                   initial={{ opacity: 0 }}

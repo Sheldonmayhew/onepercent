@@ -15,6 +15,7 @@ import { generateId } from '../utils/helpers';
 // ──────────────────────────────────────────
 let hostChannel: RealtimeChannel | null = null;
 let playerChannel: RealtimeChannel | null = null;
+const readyPlayers = new Set<string>();
 
 // ──────────────────────────────────────────
 // Standalone broadcast — called from App.tsx useEffect and player_join handler.
@@ -52,6 +53,7 @@ export function broadcastHostState() {
   const broadcast: GameBroadcast = {
     screen: s.screen,
     players,
+    timerStarted: s.timerStarted,
     packName: s.pack.name,
     modeName: s.settings.mode,
   };
@@ -175,6 +177,23 @@ export function useHostMultiplayer() {
           // Broadcast updated player list immediately
           broadcastHostState();
         })
+        .on('broadcast', { event: 'player_ready' }, (msg) => {
+          const { playerId, roundIndex } = msg.payload as { playerId: string; roundIndex: number };
+          const store = useGameStore.getState();
+          if (!store.session) return;
+          if (store.session.currentRound !== roundIndex) return;
+          if (store.session.timerStarted) return;
+
+          readyPlayers.add(playerId);
+
+          const active = store.session.players.filter((p) => !p.isEliminated && !p.isBanked);
+          if (active.length > 0 && active.every((p) => readyPlayers.has(p.id))) {
+            readyPlayers.clear();
+            useGameStore.setState({
+              session: { ...store.session, timerStarted: true },
+            });
+          }
+        })
         .on('broadcast', { event: 'answer' }, (msg) => {
           const { playerId, answer } = msg.payload as {
             playerId: string;
@@ -281,6 +300,14 @@ export function usePlayerMultiplayer() {
     [setRole, setRoomCode, setPlayerInfo, setConnected, setError, setGameState]
   );
 
+  const sendReady = useCallback((playerId: string, roundIndex: number) => {
+    playerChannel?.send({
+      type: 'broadcast',
+      event: 'player_ready',
+      payload: { playerId, roundIndex },
+    });
+  }, []);
+
   const sendAnswer = useCallback((playerId: string, answer: string | number) => {
     playerChannel?.send({
       type: 'broadcast',
@@ -304,5 +331,5 @@ export function usePlayerMultiplayer() {
     }
   }, []);
 
-  return { joinRoom, sendAnswer, sendBankDecision, disconnect };
+  return { joinRoom, sendReady, sendAnswer, sendBankDecision, disconnect };
 }

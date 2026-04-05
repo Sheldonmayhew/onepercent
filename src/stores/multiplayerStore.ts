@@ -49,6 +49,7 @@ export interface GameBroadcast {
   round?: BroadcastRound;
   reveal?: BroadcastReveal;
   banking?: BroadcastBanking;
+  timerStarted?: boolean;
   packName?: string;
   modeName?: string;
 }

@@ -64,6 +64,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
         selectedQuestions: [],
         currentPlayerIndex: 0,
         allAnswersIn: false,
+        timerStarted: false,
       },
     });
   },
@@ -120,6 +121,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
         selectedQuestions: questions,
         currentPlayerIndex: 0,
         allAnswersIn: false,
+        timerStarted: false,
         players: session.players.map((p) => ({
           ...p,
           currentAnswer: null,
@@ -296,6 +298,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
         currentRound: nextRound,
         currentPlayerIndex: 0,
         allAnswersIn: false,
+        timerStarted: false,
         players: session.players.map((p) => ({
           ...p,
           currentAnswer: null,

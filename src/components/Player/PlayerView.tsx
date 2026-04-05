@@ -8,7 +8,7 @@ import Timer from '../Game/Timer';
 
 export default function PlayerView() {
   const { playerId, playerName, roomCode, gameState, isConnected, reset } = useMultiplayerStore();
-  const { sendAnswer, sendBankDecision, disconnect } = usePlayerMultiplayer();
+  const { sendReady, sendAnswer, sendBankDecision, disconnect } = usePlayerMultiplayer();
 
   const handleLeave = () => {
     disconnect();
@@ -56,6 +56,7 @@ export default function PlayerView() {
               gameState={gameState}
               playerId={playerId!}
               me={me!}
+              onReady={sendReady}
               onAnswer={sendAnswer}
             />
           ) : gameState.screen === 'reveal' ? (
@@ -134,11 +135,13 @@ function PlayerQuestionView({
   gameState,
   playerId,
   me,
+  onReady,
   onAnswer,
 }: {
   gameState: any;
   playerId: string;
   me: any;
+  onReady: (id: string, roundIndex: number) => void;
   onAnswer: (id: string, answer: string | number) => void;
 }) {
   const [selected, setSelected] = useState<number | null>(null);
@@ -153,16 +156,27 @@ function PlayerQuestionView({
     setLocked(false);
   }, [round?.index]);
 
-  const { timeLeft, progress } = useTimer({
+  // Tell the host we're ready for this round
+  useEffect(() => {
+    onReady(playerId, round?.index ?? 0);
+  }, [round?.index, playerId, onReady]);
+
+  const { timeLeft, progress, start: startTimer } = useTimer({
     duration: round?.timerDuration ?? 30,
-    autoStart: true,
+    autoStart: false,
     onExpire: () => {
       if (!locked) {
         setLocked(true);
-        // Submit empty answer (will be marked wrong)
       }
     },
   });
+
+  // Start timer only when host confirms all players are ready
+  useEffect(() => {
+    if (gameState.timerStarted) {
+      startTimer();
+    }
+  }, [gameState.timerStarted, startTimer]);
 
   if (!round) return null;
   const q = round.question;
