@@ -17,6 +17,10 @@ let hostChannel: RealtimeChannel | null = null;
 let playerChannel: RealtimeChannel | null = null;
 const readyPlayers = new Set<string>();
 
+// Module-level references for beforeunload cleanup
+let hostBeforeUnloadHandler: (() => void) | null = null;
+let playerBeforeUnloadHandler: (() => void) | null = null;
+
 // ──────────────────────────────────────────
 // Standalone broadcast — called from App.tsx useEffect and player_join handler.
 // Must be a plain function (not a hook) so it can live in a persistent component.
@@ -27,6 +31,12 @@ export function broadcastHostState() {
   if (!store.session) return;
 
   const s = store.session;
+
+  // #16: Clear readyPlayers when a new round starts (screen is 'playing' and timer hasn't started)
+  if (s.screen === 'playing' && !s.timerStarted) {
+    readyPlayers.clear();
+  }
+
   const tiers =
     s.settings.mode === 'quick' ? [90, 70, 50, 20, 1] : [90, 80, 70, 60, 50, 40, 30, 20, 10, 5, 1];
   const difficulty = tiers[s.currentRound] ?? 90;
@@ -102,6 +112,12 @@ export function broadcastHostState() {
 // Called from Results, Lobby back button, or any host "end game" action.
 // ──────────────────────────────────────────
 export function endHostGame() {
+  // Clean up beforeunload listener
+  if (hostBeforeUnloadHandler) {
+    window.removeEventListener('beforeunload', hostBeforeUnloadHandler);
+    hostBeforeUnloadHandler = null;
+  }
+
   if (!hostChannel) return;
   const channel = hostChannel;
   hostChannel = null;
@@ -114,7 +130,7 @@ export function endHostGame() {
 // Host-side hook
 // ──────────────────────────────────────────
 export function useHostMultiplayer() {
-  const { submitAnswer, bankPlayer } = useGameStore();
+  const { submitAnswer, recordBankingDecision } = useGameStore();
   const { roomCode, setRoomCode, setRole, setConnected, setError } = useMultiplayerStore();
 
   const createRoom = useCallback(async (settings: GameSettings) => {
@@ -139,9 +155,15 @@ export function useHostMultiplayer() {
         hostChannel = null;
       }
 
+      // Clean up any existing beforeunload handler
+      if (hostBeforeUnloadHandler) {
+        window.removeEventListener('beforeunload', hostBeforeUnloadHandler);
+        hostBeforeUnloadHandler = null;
+      }
+
       // Create realtime channel
       const channel = supabase.channel(`room:${code}`, {
-        config: { broadcast: { self: false } },
+        config: { broadcast: { self: false }, presence: { key: 'host' } },
       });
 
       channel
@@ -149,17 +171,37 @@ export function useHostMultiplayer() {
           const { name, playerId } = msg.payload as { name: string; playerId: string };
           const store = useGameStore.getState();
           if (!store.session) return;
+          // Only allow joins during lobby phase
+          if (store.session.screen !== 'lobby') return;
+
+          // #7: Reconnection — if a player with the same name exists, update their id
           const existing = store.session.players.find(
             (p) => p.name.toLowerCase() === name.toLowerCase()
           );
-          if (existing) return;
+          if (existing) {
+            // Update the existing player's id to the new playerId (reconnection)
+            useGameStore.setState({
+              session: {
+                ...store.session,
+                players: store.session.players.map((p) =>
+                  p.id === existing.id ? { ...p, id: playerId } : p
+                ),
+              },
+            });
+            broadcastHostState();
+            return;
+          }
 
-          const idx = store.session.players.length;
+          const usedColours = new Set(store.session.players.map(p => p.colour));
+          const usedAvatars = new Set(store.session.players.map(p => p.avatar));
+          const colour = PLAYER_COLOURS.find(c => !usedColours.has(c)) ?? PLAYER_COLOURS[0];
+          const avatar = PLAYER_AVATARS.find(a => !usedAvatars.has(a)) ?? PLAYER_AVATARS[0];
+
           const player = {
             id: playerId,
             name,
-            colour: PLAYER_COLOURS[idx % PLAYER_COLOURS.length],
-            avatar: PLAYER_AVATARS[idx % PLAYER_AVATARS.length],
+            colour,
+            avatar,
             score: 0,
             isEliminated: false,
             isBanked: false,
@@ -206,13 +248,31 @@ export function useHostMultiplayer() {
             playerId: string;
             banked: boolean;
           };
-          if (banked) {
-            bankPlayer(playerId);
+          recordBankingDecision(playerId, banked);
+        })
+        // #14: Listen for graceful player_leave broadcasts
+        .on('broadcast', { event: 'player_leave' }, (msg) => {
+          const { playerId } = msg.payload as { playerId: string };
+          useGameStore.getState().removePlayer(playerId);
+          readyPlayers.delete(playerId);
+          broadcastHostState();
+        })
+        // #3: Presence tracking — detect when players disconnect ungracefully
+        .on('presence', { event: 'leave' }, ({ leftPresences }) => {
+          for (const presence of leftPresences) {
+            const { playerId, role } = presence as { playerId?: string; role?: string };
+            if (role === 'player' && playerId) {
+              useGameStore.getState().removePlayer(playerId);
+              readyPlayers.delete(playerId);
+            }
           }
+          broadcastHostState();
         })
         .subscribe((status) => {
           if (status === 'SUBSCRIBED') {
             setConnected(true);
+            // #3: Track host presence
+            channel.track({ role: 'host' });
           }
         });
 
@@ -220,13 +280,17 @@ export function useHostMultiplayer() {
       setRoomCode(code);
       setRole('host');
 
+      // #12: Browser close cleanup — end game on tab close
+      hostBeforeUnloadHandler = () => endHostGame();
+      window.addEventListener('beforeunload', hostBeforeUnloadHandler);
+
       return code;
     } catch (err) {
       setError('Failed to create room');
       console.error(err);
       return null;
     }
-  }, [setRoomCode, setRole, setConnected, setError, submitAnswer, bankPlayer]);
+  }, [setRoomCode, setRole, setConnected, setError, submitAnswer, recordBankingDecision]);
 
   return { createRoom, broadcastState: broadcastHostState, roomCode };
 }
@@ -248,12 +312,22 @@ export function usePlayerMultiplayer() {
     async (code: string, name: string) => {
       const upperCode = code.toUpperCase().trim();
 
-      // Verify room exists (optional — may fail if DB not set up)
-      await supabase
-        .from('game_rooms')
-        .select('room_code')
-        .eq('room_code', upperCode)
-        .single();
+      // #10: Validate room exists before joining
+      try {
+        const { data, error: dbError } = await supabase
+          .from('game_rooms')
+          .select('room_code')
+          .eq('room_code', upperCode)
+          .single();
+
+        if (dbError || !data) {
+          setError('Room not found');
+          return;
+        }
+      } catch {
+        // DB may not be set up — skip validation and try to join anyway
+        console.warn('Room validation skipped (DB may not be set up)');
+      }
 
       // Clean up any existing channel before creating a new one
       if (playerChannel) {
@@ -261,10 +335,16 @@ export function usePlayerMultiplayer() {
         playerChannel = null;
       }
 
+      // Clean up any existing beforeunload handler
+      if (playerBeforeUnloadHandler) {
+        window.removeEventListener('beforeunload', playerBeforeUnloadHandler);
+        playerBeforeUnloadHandler = null;
+      }
+
       // Create channel and join
       const playerId = generateId();
       const channel = supabase.channel(`room:${upperCode}`, {
-        config: { broadcast: { self: false } },
+        config: { broadcast: { self: false }, presence: { key: playerId } },
       });
 
       channel
@@ -274,6 +354,10 @@ export function usePlayerMultiplayer() {
         })
         .on('broadcast', { event: 'game_ended' }, () => {
           // Host ended the game — clean up and return to landing
+          if (playerBeforeUnloadHandler) {
+            window.removeEventListener('beforeunload', playerBeforeUnloadHandler);
+            playerBeforeUnloadHandler = null;
+          }
           if (playerChannel) {
             supabase.removeChannel(playerChannel);
             playerChannel = null;
@@ -283,12 +367,35 @@ export function usePlayerMultiplayer() {
         .subscribe((status) => {
           if (status === 'SUBSCRIBED') {
             setConnected(true);
+            // #3: Track player presence
+            channel.track({ playerId, name, role: 'player' });
             // Announce ourselves to the host
             channel.send({
               type: 'broadcast',
               event: 'player_join',
               payload: { name, playerId },
             });
+
+            // #9: Join confirmation — retry if no game state received
+            setTimeout(() => {
+              const store = useMultiplayerStore.getState();
+              if (!store.gameState) {
+                // Retry sending player_join once
+                channel.send({
+                  type: 'broadcast',
+                  event: 'player_join',
+                  payload: { name, playerId },
+                });
+
+                // Final check after another 3 seconds
+                setTimeout(() => {
+                  const storeRetry = useMultiplayerStore.getState();
+                  if (!storeRetry.gameState) {
+                    setError('Failed to join room - no response from host');
+                  }
+                }, 3000);
+              }
+            }, 3000);
           }
         });
 
@@ -296,6 +403,20 @@ export function usePlayerMultiplayer() {
       setRole('player');
       setRoomCode(upperCode);
       setPlayerInfo(playerId, name);
+
+      // #12: Browser close cleanup — send player_leave on tab close
+      playerBeforeUnloadHandler = () => {
+        if (playerChannel) {
+          playerChannel.send({
+            type: 'broadcast',
+            event: 'player_leave',
+            payload: { playerId },
+          });
+          supabase.removeChannel(playerChannel);
+          playerChannel = null;
+        }
+      };
+      window.addEventListener('beforeunload', playerBeforeUnloadHandler);
     },
     [setRole, setRoomCode, setPlayerInfo, setConnected, setError, setGameState]
   );
@@ -324,8 +445,23 @@ export function usePlayerMultiplayer() {
     });
   }, []);
 
+  // #14: Send player_leave before disconnecting
   const disconnect = useCallback(() => {
+    // Clean up beforeunload listener
+    if (playerBeforeUnloadHandler) {
+      window.removeEventListener('beforeunload', playerBeforeUnloadHandler);
+      playerBeforeUnloadHandler = null;
+    }
+
     if (playerChannel) {
+      const pId = useMultiplayerStore.getState().playerId;
+      if (pId) {
+        playerChannel.send({
+          type: 'broadcast',
+          event: 'player_leave',
+          payload: { playerId: pId },
+        });
+      }
       supabase.removeChannel(playerChannel);
       playerChannel = null;
     }

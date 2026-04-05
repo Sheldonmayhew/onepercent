@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../../stores/gameStore';
 import { useMultiplayerStore } from '../../stores/multiplayerStore';
@@ -58,7 +58,7 @@ export default function GameScreen() {
     }
   }, [isMultiplayer, session?.timerStarted, startTimer]);
 
-  useMemo(() => {
+  useEffect(() => {
     if (timeLeft <= 5 && timeLeft > 0 && isRunning) {
       play('tick');
     }

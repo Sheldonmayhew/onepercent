@@ -30,6 +30,7 @@ interface GameStore {
   submitAnswer: (playerId: string, answer: string | number) => void;
   revealAnswers: () => void;
   bankPlayer: (playerId: string) => void;
+  recordBankingDecision: (playerId: string, banked: boolean) => void;
   proceedToNextRound: () => void;
   setScreen: (screen: GameScreen) => void;
   resetGame: () => void;
@@ -65,6 +66,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
         currentPlayerIndex: 0,
         allAnswersIn: false,
         timerStarted: false,
+        bankingDecisions: {},
       },
     });
   },
@@ -73,12 +75,16 @@ export const useGameStore = create<GameStore>((set, get) => ({
     const { session } = get();
     if (!session || session.players.length >= 8) return;
 
-    const idx = session.players.length;
+    const usedColours = new Set(session.players.map(p => p.colour));
+    const usedAvatars = new Set(session.players.map(p => p.avatar));
+    const colour = PLAYER_COLOURS.find(c => !usedColours.has(c)) ?? PLAYER_COLOURS[0];
+    const avatar = PLAYER_AVATARS.find(a => !usedAvatars.has(a)) ?? PLAYER_AVATARS[0];
+
     const player: Player = {
       id: generateId(),
       name,
-      colour: PLAYER_COLOURS[idx % PLAYER_COLOURS.length],
-      avatar: PLAYER_AVATARS[idx % PLAYER_AVATARS.length],
+      colour,
+      avatar,
       score: 0,
       isEliminated: false,
       isBanked: false,
@@ -122,6 +128,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
         currentPlayerIndex: 0,
         allAnswersIn: false,
         timerStarted: false,
+        bankingDecisions: {},
         players: session.players.map((p) => ({
           ...p,
           currentAnswer: null,
@@ -134,6 +141,8 @@ export const useGameStore = create<GameStore>((set, get) => ({
   submitAnswer: (playerId, answer) => {
     const { session } = get();
     if (!session) return;
+    // Reject answers after timer expires or outside playing phase
+    if (session.allAnswersIn || session.screen !== 'playing') return;
 
     const players = session.players.map((p) =>
       p.id === playerId ? { ...p, currentAnswer: answer, hasAnswered: true } : p
@@ -257,6 +266,56 @@ export const useGameStore = create<GameStore>((set, get) => ({
     });
   },
 
+  recordBankingDecision: (playerId, banked) => {
+    const { session } = get();
+    if (!session) return;
+
+    // Record this player's decision
+    const decisions = { ...session.bankingDecisions, [playerId]: banked };
+
+    // If the player chose to bank, mark them banked
+    const players = banked
+      ? session.players.map((p) =>
+          p.id === playerId ? { ...p, isBanked: true } : p
+        )
+      : session.players;
+
+    // Check if all active (non-eliminated, non-banked-before-this-round) players have decided.
+    // Use the *original* players list to determine who should decide — players who were
+    // active when the banking phase started (not eliminated and not already banked).
+    const playersWhoShouldDecide = session.players.filter(
+      (p) => !p.isEliminated && !p.isBanked
+    );
+    const allDecided = playersWhoShouldDecide.every((p) => decisions[p.id] !== undefined);
+
+    if (allDecided) {
+      // Transition to playing with proper round state reset
+      set({
+        session: {
+          ...session,
+          screen: 'playing',
+          players: players.map((p) => ({
+            ...p,
+            currentAnswer: null,
+            hasAnswered: false,
+          })),
+          currentPlayerIndex: 0,
+          allAnswersIn: false,
+          timerStarted: false,
+          bankingDecisions: {},
+        },
+      });
+    } else {
+      set({
+        session: {
+          ...session,
+          players,
+          bankingDecisions: decisions,
+        },
+      });
+    }
+  },
+
   proceedToNextRound: () => {
     const { session } = get();
     if (!session) return;
@@ -281,6 +340,8 @@ export const useGameStore = create<GameStore>((set, get) => ({
           currentRound: nextRound,
           currentPlayerIndex: 0,
           allAnswersIn: false,
+          timerStarted: false,
+          bankingDecisions: {},
           players: session.players.map((p) => ({
             ...p,
             currentAnswer: null,

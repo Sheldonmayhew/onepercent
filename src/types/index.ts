@@ -70,6 +70,7 @@ export interface GameSession {
   currentPlayerIndex: number;
   allAnswersIn: boolean;
   timerStarted: boolean;
+  bankingDecisions: Record<string, boolean>;
 }
 
 export const DIFFICULTY_TIERS = [90, 80, 70, 60, 50, 40, 30, 20, 10, 5, 1] as const;

@@ -146,6 +146,7 @@ function PlayerQuestionView({
 }) {
   const [selected, setSelected] = useState<number | null>(null);
   const [numericValue, setNumericValue] = useState('');
+  const [sequenceOrder, setSequenceOrder] = useState<number[]>([]);
   const [locked, setLocked] = useState(false);
   const round = gameState.round;
 
@@ -153,6 +154,7 @@ function PlayerQuestionView({
   useEffect(() => {
     setSelected(null);
     setNumericValue('');
+    setSequenceOrder([]);
     setLocked(false);
   }, [round?.index]);
 
@@ -189,6 +191,8 @@ function PlayerQuestionView({
       if (selected !== null) onAnswer(playerId, selected);
     } else if (q.type === 'numeric_input') {
       if (numericValue.trim()) onAnswer(playerId, Number(numericValue));
+    } else if (q.type === 'sequence') {
+      if (sequenceOrder.length > 0) onAnswer(playerId, sequenceOrder.map(i => i + 1).join(','));
     }
   };
 
@@ -281,12 +285,46 @@ function PlayerQuestionView({
         />
       )}
 
+      {/* Sequence */}
+      {q.type === 'sequence' && q.sequence_items && (
+        <div className="mb-4">
+          <p className="text-xs text-text-muted mb-3">Tap items in the correct order:</p>
+          <div className="flex flex-wrap gap-2">
+            {q.sequence_items.map((item: string, idx: number) => {
+              const orderPos = sequenceOrder.indexOf(idx);
+              return (
+                <motion.button
+                  key={idx}
+                  onClick={() =>
+                    setSequenceOrder((prev) =>
+                      prev.includes(idx)
+                        ? prev.filter((i) => i !== idx)
+                        : [...prev, idx]
+                    )
+                  }
+                  className={`py-2 px-4 rounded-xl text-sm font-medium border transition-all ${
+                    orderPos >= 0
+                      ? 'bg-neon-cyan/15 border-neon-cyan/50 text-neon-cyan'
+                      : 'bg-bg-elevated border-white/5 text-text-secondary'
+                  }`}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {orderPos >= 0 && <span className="text-xs mr-1.5 text-neon-gold">{orderPos + 1}.</span>}
+                  {item}
+                </motion.button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       {/* Lock In */}
       <motion.button
         onClick={handleLock}
         disabled={
           (q.type === 'multiple_choice' && selected === null) ||
-          (q.type === 'numeric_input' && !numericValue.trim())
+          (q.type === 'numeric_input' && !numericValue.trim()) ||
+          (q.type === 'sequence' && sequenceOrder.length === 0)
         }
         className="w-full py-3.5 rounded-xl font-display text-xl tracking-wide bg-neon-gold/15 border border-neon-gold/40 text-neon-gold hover:bg-neon-gold/25 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
         whileHover={{ scale: 1.01 }}
