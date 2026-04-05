@@ -49,7 +49,8 @@ export function checkAnswer(question: Question, answer: string | number | null):
   if (answer === null || answer === '') return false;
 
   if (question.type === 'numeric_input') {
-    return Number(answer) === Number(question.correct_answer);
+    const diff = Math.abs(Number(answer) - Number(question.correct_answer));
+    return diff <= (question.error_range ?? 0);
   }
 
   if (question.type === 'sequence') {

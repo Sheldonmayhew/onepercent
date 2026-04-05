@@ -8,6 +8,7 @@ export interface Question {
   question: string;
   options?: string[];
   correct_answer: number | string;
+  error_range?: number;
   explanation: string;
   image_url?: string | null;
   sequence_items?: string[];

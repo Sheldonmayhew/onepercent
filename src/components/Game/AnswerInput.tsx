@@ -33,9 +33,10 @@ export default function AnswerInput({ question, onSubmit, disabled, playerName, 
       setIsLocked(true);
       onSubmit(Number(numericValue));
     } else if (question.type === 'sequence') {
-      if (!question.sequence_items || sequenceOrder.length !== question.sequence_items.length) return;
+      const items = question.sequence_items ?? question.options;
+      if (!items || sequenceOrder.length !== items.length) return;
       setIsLocked(true);
-      onSubmit(sequenceOrder.map((i) => i + 1).join(','));
+      onSubmit(sequenceOrder.join(','));
     }
   };
 
@@ -103,11 +104,11 @@ export default function AnswerInput({ question, onSubmit, disabled, playerName, 
       )}
 
       {/* Sequence */}
-      {question.type === 'sequence' && question.sequence_items && (
+      {question.type === 'sequence' && (question.sequence_items ?? question.options) && (
         <div>
           <p className="text-xs text-text-muted mb-3">Tap items in the correct order:</p>
           <div className="flex flex-wrap gap-2">
-            {question.sequence_items.map((item, idx) => {
+            {(question.sequence_items ?? question.options)!.map((item, idx) => {
               const orderPos = sequenceOrder.indexOf(idx);
               return (
                 <motion.button
@@ -134,7 +135,7 @@ export default function AnswerInput({ question, onSubmit, disabled, playerName, 
       {!isLocked && (
         <motion.button
           onClick={handleLockIn}
-          disabled={disabled || (question.type === 'multiple_choice' && selected === null) || (question.type === 'numeric_input' && !numericValue.trim())}
+          disabled={disabled || (question.type === 'multiple_choice' && selected === null) || (question.type === 'numeric_input' && !numericValue.trim()) || (question.type === 'sequence' && sequenceOrder.length !== (question.sequence_items ?? question.options ?? []).length)}
           className="mt-4 w-full py-3 rounded-xl font-display text-lg tracking-wide bg-neon-gold/15 border border-neon-gold/40 text-neon-gold hover:bg-neon-gold/25 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
           whileHover={{ scale: 1.01 }}
           whileTap={{ scale: 0.99 }}

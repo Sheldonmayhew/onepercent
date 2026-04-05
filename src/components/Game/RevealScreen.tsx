@@ -39,7 +39,12 @@ export default function RevealScreen() {
   const correctAnswer =
     question.type === 'multiple_choice' || question.type === 'image_based'
       ? question.options?.[Number(question.correct_answer)] ?? String(question.correct_answer)
-      : String(question.correct_answer);
+      : question.type === 'sequence'
+        ? String(question.correct_answer).split(',').map((i) => {
+            const items = question.sequence_items ?? question.options;
+            return items?.[Number(i)] ?? i;
+          }).join(' → ')
+        : String(question.correct_answer);
 
   const correctPlayers = session.players.filter((p) => lastRound.correctPlayers.includes(p.id));
   const eliminatedPlayers = session.players.filter((p) => lastRound.eliminatedPlayers.includes(p.id));

@@ -192,7 +192,7 @@ function PlayerQuestionView({
     } else if (q.type === 'numeric_input') {
       if (numericValue.trim()) onAnswer(playerId, Number(numericValue));
     } else if (q.type === 'sequence') {
-      if (sequenceOrder.length > 0) onAnswer(playerId, sequenceOrder.map(i => i + 1).join(','));
+      if (sequenceOrder.length > 0) onAnswer(playerId, sequenceOrder.join(','));
     }
   };
 
@@ -286,11 +286,11 @@ function PlayerQuestionView({
       )}
 
       {/* Sequence */}
-      {q.type === 'sequence' && q.sequence_items && (
+      {q.type === 'sequence' && (q.sequence_items ?? q.options) && (
         <div className="mb-4">
           <p className="text-xs text-text-muted mb-3">Tap items in the correct order:</p>
           <div className="flex flex-wrap gap-2">
-            {q.sequence_items.map((item: string, idx: number) => {
+            {(q.sequence_items ?? q.options).map((item: string, idx: number) => {
               const orderPos = sequenceOrder.indexOf(idx);
               return (
                 <motion.button
@@ -324,7 +324,7 @@ function PlayerQuestionView({
         disabled={
           (q.type === 'multiple_choice' && selected === null) ||
           (q.type === 'numeric_input' && !numericValue.trim()) ||
-          (q.type === 'sequence' && sequenceOrder.length === 0)
+          (q.type === 'sequence' && sequenceOrder.length !== (q.sequence_items ?? q.options ?? []).length)
         }
         className="w-full py-3.5 rounded-xl font-display text-xl tracking-wide bg-neon-gold/15 border border-neon-gold/40 text-neon-gold hover:bg-neon-gold/25 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
         whileHover={{ scale: 1.01 }}
