@@ -207,6 +207,8 @@ export const useGameStore = create<GameStore>((set, get) => ({
     const correctIds: string[] = [];
     const eliminatedIds: string[] = [];
 
+    const keepScore = session.settings.eliminationRule === 'keep_last_cleared';
+
     const updatedPlayers = session.players.map((p) => {
       if (p.isEliminated || p.isBanked) return p;
 
@@ -221,14 +223,14 @@ export const useGameStore = create<GameStore>((set, get) => ({
         };
       } else {
         eliminatedIds.push(p.id);
-        const finalScore =
-          session.settings.eliminationRule === 'keep_last_cleared'
-            ? p.score
-            : 0;
+        if (keepScore) {
+          // "Keep Score" mode: player is NOT eliminated, just earns no points
+          return p;
+        }
         return {
           ...p,
           isEliminated: true,
-          score: finalScore,
+          score: 0,
         };
       }
     });

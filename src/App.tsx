@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useGameStore } from './stores/gameStore';
 import { useMultiplayerStore } from './stores/multiplayerStore';
@@ -12,15 +12,30 @@ import BankingPhase from './components/Game/BankingPhase';
 import Results from './components/Results/Results';
 import JoinGame from './components/Player/JoinGame';
 import PlayerView from './components/Player/PlayerView';
+import JoinModal from './components/Player/JoinModal';
+
+function getJoinCodeFromHash(): string | null {
+  const hash = window.location.hash;
+  const match = hash.match(/^#join=([A-Z0-9]{5})$/i);
+  return match ? match[1].toUpperCase() : null;
+}
 
 export default function App() {
   const { session, setPacks } = useGameStore();
   const { role, isConnected, gameState } = useMultiplayerStore();
+  const [joinCode, setJoinCode] = useState<string | null>(getJoinCodeFromHash);
 
   useEffect(() => {
     const packs = loadAllPacks();
     setPacks(packs);
   }, [setPacks]);
+
+  // Clear the hash from the URL after reading it
+  useEffect(() => {
+    if (joinCode) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  }, [joinCode]);
 
   // Broadcast game state to all players whenever the host's session changes.
   // This effect lives here (App never unmounts) so it survives screen transitions.
@@ -36,6 +51,16 @@ export default function App() {
       return <JoinGame />;
     }
     return <PlayerView />;
+  }
+
+  // Join via URL — show name modal (before any host/landing screen)
+  if (joinCode && !role) {
+    return (
+      <JoinModal
+        roomCode={joinCode}
+        onClose={() => setJoinCode(null)}
+      />
+    );
   }
 
   // Host mode (or local play)

@@ -6,7 +6,7 @@ import { endHostGame } from '../../hooks/useMultiplayer';
 import { formatRands } from '../../utils/helpers';
 
 export default function Results() {
-  const { session, resetGame, createGame } = useGameStore();
+  const { session, resetGame, setScreen, createGame } = useGameStore();
   const roomCode = useMultiplayerStore((s) => s.roomCode);
   const mpReset = useMultiplayerStore((s) => s.reset);
 
@@ -38,16 +38,20 @@ export default function Results() {
 
   const handleNewGame = () => {
     endHostGame();
-    resetGame();
     mpReset();
+    // Navigate to landing screen first so AnimatePresence can transition,
+    // then fully reset the session on the next tick
+    setScreen('landing');
+    setTimeout(() => resetGame(), 0);
   };
 
   const handlePlayAgain = () => {
     if (roomCode) {
       // Multiplayer — players need to rejoin a fresh room
       endHostGame();
-      resetGame();
       mpReset();
+      setScreen('landing');
+      setTimeout(() => resetGame(), 0);
     } else {
       // Local — restart directly into lobby
       createGame(session.settings);

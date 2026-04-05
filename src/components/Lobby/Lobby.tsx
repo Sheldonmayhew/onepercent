@@ -1,15 +1,21 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { QRCodeSVG } from 'qrcode.react';
 import { useGameStore } from '../../stores/gameStore';
 import { useMultiplayerStore } from '../../stores/multiplayerStore';
 import { endHostGame } from '../../hooks/useMultiplayer';
 import { PLAYER_COLOURS, PLAYER_AVATARS } from '../../types';
 
+function getJoinUrl(code: string): string {
+  return `${window.location.origin}${window.location.pathname}#join=${code}`;
+}
+
 export default function Lobby() {
-  const { session, addPlayer, removePlayer, startGame, resetGame } = useGameStore();
+  const { session, addPlayer, removePlayer, startGame, resetGame, setScreen } = useGameStore();
   const { roomCode } = useMultiplayerStore();
   const mpReset = useMultiplayerStore((s) => s.reset);
   const [playerName, setPlayerName] = useState('');
+  const [copied, setCopied] = useState(false);
 
   if (!session) return null;
 
@@ -34,8 +40,9 @@ export default function Lobby() {
 
   const handleBack = () => {
     endHostGame();
-    resetGame();
     mpReset();
+    setScreen('landing');
+    setTimeout(() => resetGame(), 0);
   };
 
   return (
@@ -52,10 +59,10 @@ export default function Lobby() {
         <div className="text-center mb-6">
           <h1 className="font-display text-5xl text-neon-cyan glow-cyan tracking-tight">LOBBY</h1>
 
-          {/* Room Code (multiplayer) */}
-          {isMultiplayer && (
+          {/* Room Code + Share (multiplayer) */}
+          {isMultiplayer && roomCode && (
             <motion.div
-              className="mt-4 bg-bg-surface/80 border border-neon-gold/30 rounded-xl px-6 py-4 inline-block"
+              className="mt-4 bg-bg-surface/80 border border-neon-gold/30 rounded-xl px-6 py-4 inline-flex flex-col items-center"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ type: 'spring', stiffness: 200 }}
@@ -64,8 +71,33 @@ export default function Lobby() {
               <span className="font-score text-4xl text-neon-gold tracking-[0.3em] glow-gold">
                 {roomCode}
               </span>
+
+              {/* QR Code */}
+              <div className="mt-4 p-3 bg-white rounded-xl">
+                <QRCodeSVG
+                  value={getJoinUrl(roomCode)}
+                  size={160}
+                  bgColor="#ffffff"
+                  fgColor="#0a0a0f"
+                  level="M"
+                />
+              </div>
+
+              {/* Copy Link */}
+              <motion.button
+                onClick={() => {
+                  navigator.clipboard.writeText(getJoinUrl(roomCode));
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 1500);
+                }}
+                className="mt-3 px-4 py-2 rounded-lg text-sm font-medium bg-neon-gold/10 border border-neon-gold/30 text-neon-gold hover:bg-neon-gold/20 transition-all"
+                whileTap={{ scale: 0.95 }}
+              >
+                {copied ? '✓ COPIED!' : 'COPY INVITE LINK'}
+              </motion.button>
+
               <p className="text-text-muted text-xs mt-2">
-                Players: open the game URL and tap JOIN
+                Scan the QR code or share the link to join
               </p>
             </motion.div>
           )}
