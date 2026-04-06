@@ -5,7 +5,7 @@ import { useGameStore } from '../stores/gameStore';
 import { useMultiplayerStore } from '../stores/multiplayerStore';
 import { useProfileStore } from '../stores/profileStore';
 import { useHistoryStore } from '../stores/historyStore';
-import { endHostGame } from '../hooks/useMultiplayer';
+import { endHostGame, broadcastHostState } from '../hooks/useMultiplayer';
 import { formatRands } from '../utils/helpers';
 
 export function Component() {
@@ -101,10 +101,11 @@ export function Component() {
       startGame();
       navigate('/quick-play/round-intro', { replace: true });
     } else {
-      endHostGame();
-      mpReset();
-      resetGame();
-      navigate('/', { replace: true });
+      broadcastHostState('/player/play-again');
+      navigate('/host/categories', {
+        replace: true,
+        state: { replay: true, mode: session.settings.teamMode ? 'team' : 'individual' },
+      });
     }
   };
 

@@ -11,7 +11,7 @@ export function Component() {
   const gameState = useMultiplayerStore((s) => s.gameState);
   const playerId = useMultiplayerStore((s) => s.playerId);
   const playerName = useMultiplayerStore((s) => s.playerName);
-  const { disconnect } = usePlayerMultiplayer();
+  const { disconnect, sendJoinTeam } = usePlayerMultiplayer();
   const mpReset = useMultiplayerStore((s) => s.reset);
 
   // Navigate when host broadcasts a new route
@@ -115,14 +115,16 @@ export function Component() {
           </div>
         </div>
 
-        {/* Team picker (display-only) */}
+        {/* Team picker */}
         {isTeamMode && teams.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <p className="text-xs text-text-muted tracking-[0.15em] uppercase mb-3">Teams</p>
+            <p className="text-xs text-text-muted tracking-[0.15em] uppercase mb-3">
+              Tap a team to join
+            </p>
             <div
               className="grid gap-3"
               style={{ gridTemplateColumns: `repeat(${teams.length}, 1fr)` }}
@@ -133,12 +135,19 @@ export function Component() {
                 );
                 const isMine = me && team.playerIds.includes(me.id);
                 return (
-                  <div
+                  <button
                     key={team.id}
-                    className={`bg-bg-card rounded-xl shadow-soft p-3 min-h-[72px] border ${
-                      isMine ? 'border-opacity-50' : 'border-transparent'
+                    type="button"
+                    onClick={() => {
+                      if (playerId) sendJoinTeam(playerId, team.id);
+                    }}
+                    className={`bg-bg-card rounded-xl shadow-soft p-3 min-h-[72px] border text-left transition-all ${
+                      isMine ? 'border-opacity-50 ring-1' : 'border-transparent hover:border-opacity-30'
                     }`}
-                    style={isMine ? { borderColor: team.colour } : undefined}
+                    style={{
+                      borderColor: isMine ? team.colour : undefined,
+                      ['--tw-ring-color' as string]: isMine ? team.colour : undefined,
+                    }}
                   >
                     <h4
                       className="font-display text-xs tracking-wide mb-2"
@@ -158,7 +167,7 @@ export function Component() {
                         ))}
                       </div>
                     )}
-                  </div>
+                  </button>
                 );
               })}
             </div>

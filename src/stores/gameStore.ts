@@ -34,6 +34,7 @@ interface GameStore {
   revealAnswers: () => void;
   proceedToNextRound: () => 'next' | 'done';
   resetGame: () => void;
+  resetForReplay: (packIds: string[]) => void;
   getCurrentQuestion: () => Question | null;
   getActivePlayers: () => Player[];
   getTotalRounds: () => number;
@@ -324,6 +325,36 @@ export const useGameStore = create<GameStore>((set, get) => ({
   },
 
   resetGame: () => set({ session: null }),
+
+  resetForReplay: (packIds) => {
+    const { session, availablePacks } = get();
+    if (!session) return;
+
+    const packs = availablePacks.filter((p) => packIds.includes(p.pack_id));
+    if (packs.length === 0) return;
+
+    set({
+      session: {
+        ...session,
+        id: generateId(),
+        pack: packs[0],
+        currentRound: 0,
+        selectedQuestions: [],
+        roundHistory: [],
+        currentPlayerIndex: 0,
+        allAnswersIn: false,
+        timerStarted: false,
+        settings: { ...session.settings, packIds },
+        players: session.players.map((p) => ({
+          ...p,
+          score: 0,
+          currentAnswer: null,
+          hasAnswered: false,
+        })),
+        teams: session.teams.map((t) => ({ ...t, score: 0 })),
+      },
+    });
+  },
 
   getCurrentQuestion: () => {
     const { session } = get();

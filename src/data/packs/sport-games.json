@@ -3,7 +3,7 @@
   "name": "Sport & Games",
   "description": "Sports facts, rules, famous athletes, and game knowledge — from the rugby field to the Olympic track!",
   "author": "Game Night Crew",
-  "question_count": 55,
+  "question_count": 57,
   "questions": [
     {
       "id": "sg001",
@@ -11,7 +11,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In rugby, a converted try is worth how many points in total?",
-      "options": ["5", "6", "7", "8"],
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
       "correct_answer": 2,
       "explanation": "A try is worth 5 points and the conversion kick adds 2 more, giving you 7 points total. Rugby 101!",
       "image_url": null
@@ -22,7 +27,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many players are on a soccer team on the field at one time?",
-      "options": ["10", "11", "12", "13"],
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
       "correct_answer": 1,
       "explanation": "11 players per side, including the goalkeeper. If you got this wrong, you might need to watch more Bafana Bafana!",
       "image_url": null
@@ -33,7 +43,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which country has won the most FIFA World Cup titles?",
-      "options": ["Germany", "Argentina", "Italy", "Brazil"],
+      "options": [
+        "Germany",
+        "Argentina",
+        "Italy",
+        "Brazil"
+      ],
       "correct_answer": 3,
       "explanation": "Brazil has won the FIFA World Cup 5 times (1958, 1962, 1970, 1994, 2002). The Seleção are the only team to have played in every single World Cup!",
       "image_url": null
@@ -44,7 +59,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What sport is played at Newlands Cricket Ground in Cape Town?",
-      "options": ["Rugby", "Soccer", "Cricket", "Tennis"],
+      "options": [
+        "Rugby",
+        "Soccer",
+        "Cricket",
+        "Tennis"
+      ],
       "correct_answer": 2,
       "explanation": "Newlands is one of the most beautiful cricket grounds in the world, nestled under Table Mountain. A proper Cape Town gem!",
       "image_url": null
@@ -55,7 +75,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In basketball, how many points is a shot from beyond the three-point line worth?",
-      "options": ["1", "2", "3", "4"],
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
       "correct_answer": 2,
       "explanation": "A shot from beyond the arc is worth 3 points. That's why players like Steph Curry changed the game!",
       "image_url": null
@@ -66,7 +91,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA rugby team is known as the Bulls?",
-      "options": ["Cape Town", "Durban", "Pretoria", "Johannesburg"],
+      "options": [
+        "Cape Town",
+        "Durban",
+        "Pretoria",
+        "Johannesburg"
+      ],
       "correct_answer": 2,
       "explanation": "The Bulls are based at Loftus Versfeld in Pretoria. Blue Bulls through and through!",
       "image_url": null
@@ -77,7 +107,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In tennis, what is a score of 40-40 called?",
-      "options": ["Match point", "Break point", "Deuce", "Advantage"],
+      "options": [
+        "Match point",
+        "Break point",
+        "Deuce",
+        "Advantage"
+      ],
       "correct_answer": 2,
       "explanation": "When both players reach 40, it's called deuce. You then need to win two consecutive points to take the game!",
       "image_url": null
@@ -88,7 +123,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Who captained the Springboks to victory in the 2019 Rugby World Cup?",
-      "options": ["Eben Etzebeth", "Siya Kolisi", "Handré Pollard", "Duane Vermeulen"],
+      "options": [
+        "Eben Etzebeth",
+        "Siya Kolisi",
+        "Handré Pollard",
+        "Duane Vermeulen"
+      ],
       "correct_answer": 1,
       "explanation": "Siya Kolisi became the first Black captain to lead the Springboks to World Cup glory. A historic moment for SA rugby and the nation!",
       "image_url": null
@@ -99,7 +139,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In cricket, what does 'LBW' stand for?",
-      "options": ["Left Before Wicket", "Leg Before Wicket", "Long Ball Wide", "Last Batsman Walking"],
+      "options": [
+        "Left Before Wicket",
+        "Leg Before Wicket",
+        "Long Ball Wide",
+        "Last Batsman Walking"
+      ],
       "correct_answer": 1,
       "explanation": "Leg Before Wicket — when the ball hits the batsman's leg and the umpire judges it would have hit the stumps. One of cricket's trickiest rules!",
       "image_url": null
@@ -110,7 +155,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which South African swimmer won gold at the 2016 Olympics in the 400m freestyle?",
-      "options": ["Chad le Clos", "Cameron van der Burgh", "Roland Schoeman", "None — it was Australia"],
+      "options": [
+        "Chad le Clos",
+        "Cameron van der Burgh",
+        "Roland Schoeman",
+        "None — it was Australia"
+      ],
       "correct_answer": 3,
       "explanation": "Trick question! Mack Horton of Australia won the 400m freestyle in 2016. Chad le Clos won his Olympic gold in the 200m butterfly in 2012!",
       "image_url": null
@@ -121,7 +171,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the nickname of the South African men's national cricket team?",
-      "options": ["The Proteas", "The Springboks", "The Blitzbokke", "The Bafana"],
+      "options": [
+        "The Proteas",
+        "The Springboks",
+        "The Blitzbokke",
+        "The Bafana"
+      ],
       "correct_answer": 0,
       "explanation": "The Proteas — named after South Africa's national flower, the King Protea. A beautiful name for a team with a complex but proud cricket history!",
       "image_url": null
@@ -132,7 +187,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In which year did South Africa host the FIFA World Cup?",
-      "options": ["2006", "2008", "2010", "2014"],
+      "options": [
+        "2006",
+        "2008",
+        "2010",
+        "2014"
+      ],
       "correct_answer": 2,
       "explanation": "South Africa hosted the 2010 FIFA World Cup — the first African nation to do so. Remember the vuvuzelas? The whole world heard them!",
       "image_url": null
@@ -143,7 +203,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many Grand Slam tournaments are there in tennis each year?",
-      "options": ["3", "4", "5", "6"],
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
       "correct_answer": 1,
       "explanation": "Four Grand Slams: Australian Open, French Open, Wimbledon, and the US Open. Winning all four in one year is called a Calendar Grand Slam!",
       "image_url": null
@@ -154,7 +219,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which position in rugby wears the number 10 jersey?",
-      "options": ["Scrumhalf", "Flyhalf", "Fullback", "Inside Centre"],
+      "options": [
+        "Scrumhalf",
+        "Flyhalf",
+        "Fullback",
+        "Inside Centre"
+      ],
       "correct_answer": 1,
       "explanation": "The flyhalf wears 10 — the playmaker who controls the game. Think Handré Pollard or Morne Steyn slotting those crucial kicks!",
       "image_url": null
@@ -165,7 +235,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these cricket dismissal types from MOST to LEAST common in professional cricket: (1) Bowled (2) Caught (3) Run out (4) LBW",
-      "options": ["Bowled", "Caught", "Run out", "LBW"],
+      "options": [
+        "Bowled",
+        "Caught",
+        "Run out",
+        "LBW"
+      ],
       "correct_answer": "1,3,0,2",
       "explanation": "Caught is by far the most common (over 50%), followed by LBW, then bowled, then run out. Catching wins matches — every coach knows that!",
       "image_url": null
@@ -176,7 +251,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which South African city is home to the Kaizer Chiefs soccer club?",
-      "options": ["Cape Town", "Durban", "Johannesburg", "Bloemfontein"],
+      "options": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg",
+        "Bloemfontein"
+      ],
       "correct_answer": 2,
       "explanation": "Kaizer Chiefs are based in Johannesburg — one of the most supported clubs in Africa. Amakhosi! Their rivalry with Orlando Pirates (the Soweto Derby) is legendary!",
       "image_url": null
@@ -187,7 +267,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What does a yellow card mean in soccer?",
-      "options": ["Player is sent off", "Player receives a warning", "Free kick awarded", "Penalty awarded"],
+      "options": [
+        "Player is sent off",
+        "Player receives a warning",
+        "Free kick awarded",
+        "Penalty awarded"
+      ],
       "correct_answer": 1,
       "explanation": "A yellow card is a caution/warning. Two yellows in the same match equals a red card, and you're off! Better behave after that first one.",
       "image_url": null
@@ -198,7 +283,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Wayde van Niekerk holds the world record in which track event?",
-      "options": ["100m", "200m", "400m", "800m"],
+      "options": [
+        "100m",
+        "200m",
+        "400m",
+        "800m"
+      ],
       "correct_answer": 2,
       "explanation": "Wayde van Niekerk ran 43.03 seconds in the 400m at the 2016 Rio Olympics — from lane 8! A South African legend who broke Michael Johnson's 17-year record!",
       "image_url": null
@@ -209,7 +299,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In a game of pool (8-ball), what must you sink last to win?",
-      "options": ["Any ball", "The cue ball", "The 8-ball", "Your last striped or solid ball"],
+      "options": [
+        "Any ball",
+        "The cue ball",
+        "The 8-ball",
+        "Your last striped or solid ball"
+      ],
       "correct_answer": 2,
       "explanation": "You must pot all your balls (stripes or solids) and then sink the 8-ball to win. Sink the 8-ball early and you lose! Now rack 'em up!",
       "image_url": null
@@ -220,7 +315,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many holes are played in a standard round of golf?",
-      "options": ["9", "12", "16", "18"],
+      "options": [
+        "9",
+        "12",
+        "16",
+        "18"
+      ],
       "correct_answer": 3,
       "explanation": "A standard round of golf is 18 holes — 9 on the front nine and 9 on the back nine. South Africa has some of the most beautiful courses in the world!",
       "image_url": null
@@ -231,7 +331,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Comrades Marathon is run between which two South African cities?",
-      "options": ["Johannesburg and Pretoria", "Durban and Pietermaritzburg", "Cape Town and Stellenbosch", "Bloemfontein and Kimberley"],
+      "options": [
+        "Johannesburg and Pretoria",
+        "Durban and Pietermaritzburg",
+        "Cape Town and Stellenbosch",
+        "Bloemfontein and Kimberley"
+      ],
       "correct_answer": 1,
       "explanation": "The Comrades Marathon is an ultramarathon of about 90km between Durban and Pietermaritzburg, alternating direction each year. The ultimate test of human endurance!",
       "image_url": null
@@ -242,7 +347,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which Springbok holds the record for most Test tries scored?",
-      "options": ["Bryan Habana", "Cheslin Kolbe", "Jaque Fourie", "Joost van der Westhuizen"],
+      "options": [
+        "Bryan Habana",
+        "Cheslin Kolbe",
+        "Jaque Fourie",
+        "Joost van der Westhuizen"
+      ],
       "correct_answer": 0,
       "explanation": "Bryan Habana holds the record with 67 tries in 124 Tests. The 'Speed Machine' was virtually uncatchable on the wing!",
       "image_url": null
@@ -253,7 +363,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the highest possible break in a frame of snooker?",
-      "options": ["137", "145", "147", "155"],
+      "options": [
+        "137",
+        "145",
+        "147",
+        "155"
+      ],
       "correct_answer": 2,
       "explanation": "A maximum break of 147 is achieved by potting 15 reds with 15 blacks, then all the colours. It's snooker perfection and incredibly rare!",
       "image_url": null
@@ -264,7 +379,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which country does Formula 1 driver Max Verstappen race for?",
-      "options": ["Belgium", "Germany", "Netherlands", "Austria"],
+      "options": [
+        "Belgium",
+        "Germany",
+        "Netherlands",
+        "Austria"
+      ],
       "correct_answer": 2,
       "explanation": "Max Verstappen races under the Dutch flag for the Netherlands, though he was born in Belgium. He's dominated F1 in recent years with Red Bull Racing!",
       "image_url": null
@@ -275,7 +395,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In T20 cricket, how many overs does each team face?",
-      "options": ["10", "15", "20", "25"],
+      "options": [
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
       "correct_answer": 2,
       "explanation": "T20 stands for Twenty20 — each team gets 20 overs. It's fast, furious, and perfect for a night at the stadium with a cold drink!",
       "image_url": null
@@ -286,7 +411,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the name of the famous rivalry match between Kaizer Chiefs and Orlando Pirates?",
-      "options": ["The Derby of Africa", "The Soweto Derby", "The Joburg Clash", "The Golden Derby"],
+      "options": [
+        "The Derby of Africa",
+        "The Soweto Derby",
+        "The Joburg Clash",
+        "The Golden Derby"
+      ],
       "correct_answer": 1,
       "explanation": "The Soweto Derby is one of the biggest football derbies in Africa and the world. When Chiefs and Pirates play, the whole of South Africa stops to watch!",
       "image_url": null
@@ -297,7 +427,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which sport uses a shuttlecock?",
-      "options": ["Squash", "Table Tennis", "Badminton", "Volleyball"],
+      "options": [
+        "Squash",
+        "Table Tennis",
+        "Badminton",
+        "Volleyball"
+      ],
       "correct_answer": 2,
       "explanation": "Badminton uses a shuttlecock (also called a birdie). The shuttlecock can travel over 400 km/h in a smash — making it the fastest racquet sport!",
       "image_url": null
@@ -308,7 +443,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many times have the Springboks won the Rugby World Cup?",
-      "options": ["2", "3", "4", "5"],
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correct_answer": 2,
       "explanation": "The Springboks have won the Rugby World Cup 4 times — 1995, 2007, 2019, and 2023. Back-to-back champions and the most successful team in World Cup history!",
       "image_url": null
@@ -319,7 +459,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In darts, what is the highest possible checkout with a single dart?",
-      "options": ["25 (outer bull)", "40 (double 20)", "50 (bullseye)", "60 (triple 20)"],
+      "options": [
+        "25 (outer bull)",
+        "40 (double 20)",
+        "50 (bullseye)",
+        "60 (triple 20)"
+      ],
       "correct_answer": 2,
       "explanation": "The bullseye (50 points) is the highest you can score with one dart as a checkout. You must finish on a double, and the bullseye counts as double 25!",
       "image_url": null
@@ -330,7 +475,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Rank these sports by the number of players on a team (on field/court), FEWEST to MOST: (1) Basketball (2) Rugby Union (3) Water Polo (4) Cricket",
-      "options": ["Basketball", "Rugby Union", "Water Polo", "Cricket"],
+      "options": [
+        "Basketball",
+        "Rugby Union",
+        "Water Polo",
+        "Cricket"
+      ],
       "correct_answer": "0,2,3,1",
       "explanation": "Basketball: 5, Water polo: 7, Cricket: 11, Rugby union: 15. From 5 to 15 — quite the range in team sizes!",
       "image_url": null
@@ -341,7 +491,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which golfer is known as the 'Big Easy' and hails from South Africa?",
-      "options": ["Gary Player", "Ernie Els", "Louis Oosthuizen", "Retief Goosen"],
+      "options": [
+        "Gary Player",
+        "Ernie Els",
+        "Louis Oosthuizen",
+        "Retief Goosen"
+      ],
       "correct_answer": 1,
       "explanation": "Ernie Els is nicknamed the 'Big Easy' for his smooth, effortless swing. A two-time Open champion and one of SA's greatest sporting exports!",
       "image_url": null
@@ -352,7 +507,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the distance of a standard marathon?",
-      "options": ["21.1 km", "35 km", "42.195 km", "50 km"],
+      "options": [
+        "21.1 km",
+        "35 km",
+        "42.195 km",
+        "50 km"
+      ],
       "correct_answer": 2,
       "explanation": "A marathon is 42.195 km (26.2 miles). The distance was standardised at the 1908 London Olympics. A half marathon is 21.1 km!",
       "image_url": null
@@ -363,7 +523,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the Monty Hall problem (from the game show), you pick a door, the host opens another showing a goat. Should you switch?",
-      "options": ["No, stay — it's 50/50 either way", "Yes, switch — you have a 2/3 chance of winning", "It doesn't matter at all", "No, stay — you had the best odds first"],
+      "options": [
+        "No, stay — it's 50/50 either way",
+        "Yes, switch — you have a 2/3 chance of winning",
+        "It doesn't matter at all",
+        "No, stay — you had the best odds first"
+      ],
       "correct_answer": 1,
       "explanation": "Switching gives you a 2/3 chance of winning! Your initial pick had 1/3 probability. When the host reveals a goat, the other door absorbs the remaining 2/3. Counter-intuitive but mathematically proven!",
       "image_url": null
@@ -374,7 +539,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which South African cricketer was known as 'Mr 360' for his ability to hit the ball anywhere?",
-      "options": ["Jacques Kallis", "AB de Villiers", "Hashim Amla", "Graeme Smith"],
+      "options": [
+        "Jacques Kallis",
+        "AB de Villiers",
+        "Hashim Amla",
+        "Graeme Smith"
+      ],
       "correct_answer": 1,
       "explanation": "AB de Villiers earned the nickname 'Mr 360' for his incredible shot-making ability — he could hit the ball to any part of the ground. A true genius of the game!",
       "image_url": null
@@ -385,7 +555,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In chess, which piece can only move diagonally?",
-      "options": ["Knight", "Rook", "Bishop", "Queen"],
+      "options": [
+        "Knight",
+        "Rook",
+        "Bishop",
+        "Queen"
+      ],
       "correct_answer": 2,
       "explanation": "The bishop moves only diagonally, any number of squares. Each player starts with two bishops — one on light squares, one on dark. They never switch colour!",
       "image_url": null
@@ -396,7 +571,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which country has hosted the Olympics the most times (Summer and Winter combined)?",
-      "options": ["USA", "France", "UK", "Japan"],
+      "options": [
+        "USA",
+        "France",
+        "UK",
+        "Japan"
+      ],
       "correct_answer": 0,
       "explanation": "The United States has hosted the Olympics the most times — including Los Angeles (1932, 1984, 2028), Atlanta (1996), St. Louis (1904), plus multiple Winter Games!",
       "image_url": null
@@ -407,7 +587,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is a 'hat-trick' in cricket?",
-      "options": ["Scoring 100 runs", "Taking 3 wickets in 3 consecutive balls", "Hitting 3 sixes in a row", "Winning 3 matches in a row"],
+      "options": [
+        "Scoring 100 runs",
+        "Taking 3 wickets in 3 consecutive balls",
+        "Hitting 3 sixes in a row",
+        "Winning 3 matches in a row"
+      ],
       "correct_answer": 1,
       "explanation": "A hat-trick is taking 3 wickets on 3 consecutive deliveries. The term actually originated in cricket — a bowler who did this was traditionally awarded a new hat!",
       "image_url": null
@@ -418,7 +603,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Caster Semenya is a South African Olympic champion in which event?",
-      "options": ["100m", "400m", "800m", "1500m"],
+      "options": [
+        "100m",
+        "400m",
+        "800m",
+        "1500m"
+      ],
       "correct_answer": 2,
       "explanation": "Caster Semenya won Olympic gold in the 800m at the 2012 and 2016 Games. A proud South African champion whose career has been marked by both brilliance and controversy.",
       "image_url": null
@@ -429,7 +619,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In which sport would you perform a 'scrum'?",
-      "options": ["American Football", "Rugby", "Hockey", "Wrestling"],
+      "options": [
+        "American Football",
+        "Rugby",
+        "Hockey",
+        "Wrestling"
+      ],
       "correct_answer": 1,
       "explanation": "A scrum is a rugby set piece where the forwards from each team bind together and push against each other to win the ball. Eight against eight — pure power!",
       "image_url": null
@@ -440,7 +635,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Rank these poker hands from WEAKEST to STRONGEST: (1) Full House (2) Flush (3) Straight (4) Four of a Kind",
-      "options": ["Full House", "Flush", "Straight", "Four of a Kind"],
+      "options": [
+        "Full House",
+        "Flush",
+        "Straight",
+        "Four of a Kind"
+      ],
       "correct_answer": "2,1,0,3",
       "explanation": "Straight < Flush < Full House < Four of a Kind. The ranking is based on rarity — a four of a kind is much harder to get than a straight. Know your poker hand rankings!",
       "image_url": null
@@ -451,7 +651,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which South African hosted the most iconic moment in Rugby World Cup history, catching the trophy in a Springbok jersey in 1995?",
-      "options": ["F.W. de Klerk", "Desmond Tutu", "Nelson Mandela", "Thabo Mbeki"],
+      "options": [
+        "F.W. de Klerk",
+        "Desmond Tutu",
+        "Nelson Mandela",
+        "Thabo Mbeki"
+      ],
       "correct_answer": 2,
       "explanation": "Nelson Mandela wearing François Pienaar's number 6 Springbok jersey at the 1995 World Cup final is one of the most iconic moments in sport. It united a nation!",
       "image_url": null
@@ -462,7 +667,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What does 'FIFA' stand for?",
-      "options": ["Fédération Internationale de Football Association", "Federation of International Football Authorities", "First International Football Alliance", "Federal Institution for Football Administration"],
+      "options": [
+        "Fédération Internationale de Football Association",
+        "Federation of International Football Authorities",
+        "First International Football Alliance",
+        "Federal Institution for Football Administration"
+      ],
       "correct_answer": 0,
       "explanation": "FIFA stands for Fédération Internationale de Football Association — founded in 1904 in Paris. It governs football worldwide with 211 member associations!",
       "image_url": null
@@ -473,7 +683,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which South African boxer became the undisputed cruiserweight champion of the world?",
-      "options": ["Baby Jake Matlala", "Corrie Sanders", "Gerrie Coetzee", "Welcome Ncita"],
+      "options": [
+        "Baby Jake Matlala",
+        "Corrie Sanders",
+        "Gerrie Coetzee",
+        "Welcome Ncita"
+      ],
       "correct_answer": 0,
       "explanation": "Baby Jake Matlala was actually a flyweight champion! This was a tricky one. But he remains one of SA's most beloved boxers despite his small stature.",
       "image_url": null
@@ -484,7 +699,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The 'Sardine Run' along the KZN coast sometimes coincides with which sporting event calendar?",
-      "options": ["The Durban July", "The Comrades Marathon", "The Midmar Mile", "The Dusi Canoe Marathon"],
+      "options": [
+        "The Durban July",
+        "The Comrades Marathon",
+        "The Midmar Mile",
+        "The Dusi Canoe Marathon"
+      ],
       "correct_answer": 2,
       "explanation": "The Midmar Mile, the world's largest open water swimming event, takes place in KZN in February. The Sardine Run is typically June-July, but both are iconic KZN events!",
       "image_url": null
@@ -495,7 +715,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In which city is the iconic FNB Stadium (Soccer City) located?",
-      "options": ["Cape Town", "Durban", "Johannesburg", "Port Elizabeth"],
+      "options": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg",
+        "Port Elizabeth"
+      ],
       "correct_answer": 2,
       "explanation": "FNB Stadium (Soccer City) is in Johannesburg — it hosted the 2010 World Cup final and is the largest stadium in Africa with a capacity of about 94,000!",
       "image_url": null
@@ -506,7 +731,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the term for scoring zero runs in cricket?",
-      "options": ["Nil", "Zero", "Duck", "Goose egg"],
+      "options": [
+        "Nil",
+        "Zero",
+        "Duck",
+        "Goose egg"
+      ],
       "correct_answer": 2,
       "explanation": "Scoring zero is called a 'duck' — supposedly because the zero on the scoreboard looks like a duck's egg. A golden duck is being out first ball without scoring!",
       "image_url": null
@@ -517,7 +747,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which South African rugby player is nicknamed 'The Beast'?",
-      "options": ["Eben Etzebeth", "Tendai Mtawarira", "Duane Vermeulen", "Frans Malherbe"],
+      "options": [
+        "Eben Etzebeth",
+        "Tendai Mtawarira",
+        "Duane Vermeulen",
+        "Frans Malherbe"
+      ],
       "correct_answer": 1,
       "explanation": "Tendai 'The Beast' Mtawarira earned his nickname for his incredible strength as a loosehead prop. His destruction of Phil Vickery in the 2009 Lions series was legendary!",
       "image_url": null
@@ -528,7 +763,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Durban July is South Africa's most famous event in which sport?",
-      "options": ["Cricket", "Soccer", "Golf", "Horse Racing"],
+      "options": [
+        "Cricket",
+        "Soccer",
+        "Golf",
+        "Horse Racing"
+      ],
       "correct_answer": 3,
       "explanation": "The Durban July (now Hollywoodbets Durban July) is South Africa's premier horse racing event, held annually at Greyville Racecourse. It's as much about fashion as it is about racing!",
       "image_url": null
@@ -539,7 +779,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which chess piece can jump over other pieces?",
-      "options": ["Bishop", "Rook", "Queen", "Knight"],
+      "options": [
+        "Bishop",
+        "Rook",
+        "Queen",
+        "Knight"
+      ],
       "correct_answer": 3,
       "explanation": "The knight is the only chess piece that can jump over other pieces. It moves in an L-shape — two squares in one direction and one square perpendicular!",
       "image_url": null
@@ -550,7 +795,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the 2023 Rugby World Cup final, the Springboks beat which team 12-11?",
-      "options": ["England", "Australia", "New Zealand", "France"],
+      "options": [
+        "England",
+        "Australia",
+        "New Zealand",
+        "France"
+      ],
       "correct_answer": 2,
       "explanation": "The Springboks beat the All Blacks 12-11 in a nail-biting final in Paris. All of SA's points came from Handré Pollard's boot — no tries needed!",
       "image_url": null
@@ -561,7 +811,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which country invented the sport of rugby?",
-      "options": ["South Africa", "Australia", "England", "New Zealand"],
+      "options": [
+        "South Africa",
+        "Australia",
+        "England",
+        "New Zealand"
+      ],
       "correct_answer": 2,
       "explanation": "Rugby originated at Rugby School in England in 1823, according to legend when William Webb Ellis picked up the ball during a football match and ran with it. The World Cup trophy is named after him!",
       "image_url": null
@@ -572,7 +827,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Jacques Kallis is widely regarded as one of the greatest all-rounders in cricket history. What did he excel at?",
-      "options": ["Batting and wicketkeeping", "Batting and bowling", "Bowling and fielding", "Wicketkeeping and bowling"],
+      "options": [
+        "Batting and wicketkeeping",
+        "Batting and bowling",
+        "Bowling and fielding",
+        "Wicketkeeping and bowling"
+      ],
       "correct_answer": 1,
       "explanation": "Jacques Kallis was a world-class batsman AND bowler — he scored over 13,000 Test runs and took nearly 300 Test wickets. Arguably the greatest all-rounder ever!",
       "image_url": null
@@ -583,7 +843,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What sport is associated with the term 'albatross'?",
-      "options": ["Badminton", "Sailing", "Golf", "Cricket"],
+      "options": [
+        "Badminton",
+        "Sailing",
+        "Golf",
+        "Cricket"
+      ],
       "correct_answer": 2,
       "explanation": "An albatross in golf means scoring 3 under par on a single hole (e.g., a 2 on a par 5). It's extremely rare and one of the most exciting things that can happen on a golf course!",
       "image_url": null
@@ -594,7 +859,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which South African stadium is nicknamed 'The Bullring'?",
-      "options": ["Newlands", "Ellis Park", "Loftus Versfeld", "Kings Park"],
+      "options": [
+        "Newlands",
+        "Ellis Park",
+        "Loftus Versfeld",
+        "Kings Park"
+      ],
       "correct_answer": 2,
       "explanation": "Loftus Versfeld in Pretoria is known as 'The Bullring' — home of the Blue Bulls. Playing there at altitude in the Highveld heat is one of the toughest away trips in rugby!",
       "image_url": null
@@ -605,9 +875,41 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Rank these by the number of possible legal game states (FEWEST to MOST): (1) Tic-Tac-Toe (2) Chess (3) Checkers (4) Go (19x19 board)",
-      "options": ["Tic-Tac-Toe", "Chess", "Checkers", "Go (19x19)"],
+      "options": [
+        "Tic-Tac-Toe",
+        "Chess",
+        "Checkers",
+        "Go (19x19)"
+      ],
       "correct_answer": "0,2,1,3",
       "explanation": "Tic-Tac-Toe: ~5,478 states. Checkers: ~5 x 10^20. Chess: ~10^47. Go: ~2 x 10^170 (more than atoms in the universe!). Go's complexity is why AI took so much longer to master it than chess.",
+      "image_url": null
+    },
+    {
+      "id": "sg056",
+      "difficulty": 1,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which year did Bafana Bafana win the Africa Cup of Nations for the first time?",
+      "options": [
+        "1994",
+        "1996",
+        "1998",
+        "2000"
+      ],
+      "correct_answer": 1,
+      "explanation": "Bafana Bafana won their first and only AFCON title in 1996, hosted on home soil — beating Tunisia 2-0 in the final at FNB Stadium!",
+      "image_url": null
+    },
+    {
+      "id": "sg057",
+      "difficulty": 1,
+      "type": "numeric_input",
+      "time_limit_seconds": 30,
+      "question": "How many consecutive Test matches did the Springboks win on their record-breaking streak from 1997 to 1998?",
+      "correct_answer": 17,
+      "error_range": 0,
+      "explanation": "The Springboks won 17 consecutive Tests from 1997 to 1998 under coach Nick Mallett — a world record that stood until 2024!",
       "image_url": null
     }
   ]

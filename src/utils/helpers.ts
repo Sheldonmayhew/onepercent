@@ -17,15 +17,29 @@ export function shuffleArray<T>(array: T[]): T[] {
 export function selectQuestionsForGame(packs: QuestionPack[]): Question[] {
   const tiers = [...DIFFICULTY_TIERS];
 
-  // Merge all questions from selected packs
-  const allQuestions = packs.flatMap((p) => p.questions);
+  // Merge all questions from selected packs, tagging each with its pack name
+  const allQuestions = packs.flatMap((p) =>
+    p.questions.map((q) => ({ ...q, category: q.category ?? p.name })),
+  );
 
   return tiers.map((difficulty) => {
-    const available = allQuestions.filter((q) => q.difficulty === difficulty);
+    let available = allQuestions.filter((q) => q.difficulty === difficulty);
+
+    // Fallback: if no exact match, pick from the nearest available tier
     if (available.length === 0) {
-      const packNames = packs.map((p) => p.name).join(', ');
-      throw new Error(`No questions found for difficulty ${difficulty}% in packs: ${packNames}`);
+      const sorted = [...new Set(allQuestions.map((q) => q.difficulty))].sort(
+        (a, b) => Math.abs(a - difficulty) - Math.abs(b - difficulty),
+      );
+      if (sorted.length > 0) {
+        available = allQuestions.filter((q) => q.difficulty === sorted[0]);
+      }
     }
+
+    if (available.length === 0) {
+      // Last resort: pick any question
+      available = allQuestions;
+    }
+
     return available[Math.floor(Math.random() * available.length)];
   });
 }

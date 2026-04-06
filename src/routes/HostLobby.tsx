@@ -15,13 +15,14 @@ function getJoinUrl(code: string): string {
 export function Component() {
   const navigate = useNavigate();
   const session = useGameStore((s) => s.session);
-  const { startGame, resetGame } = useGameStore();
+  const { startGame, resetGame, assignPlayerToTeam } = useGameStore();
   const { roomCode } = useMultiplayerStore();
   const mpReset = useMultiplayerStore((s) => s.reset);
   const { createRoom } = useHostMultiplayer();
   const profile = useProfileStore((s) => s.profile);
 
   const [copied, setCopied] = useState(false);
+  const [selectedPlayerId, setSelectedPlayerId] = useState<string | null>(null);
   const hostAddedRef = useRef(false);
   const roomCreatedRef = useRef(false);
 
@@ -81,9 +82,13 @@ export function Component() {
   };
 
   const handleStartGame = () => {
-    startGame();
-    broadcastHostState('/player/round-intro');
-    navigate('/host/round-intro');
+    try {
+      startGame();
+      broadcastHostState('/player/round-intro');
+      navigate('/host/round-intro');
+    } catch (err) {
+      console.error('Failed to start game:', err);
+    }
   };
 
   const handleBack = () => {
@@ -194,7 +199,7 @@ export function Component() {
           )}
         </div>
 
-        {/* Team Groupings (team mode, read-only) */}
+        {/* Team Groupings (team mode) */}
         {isTeamMode && teams.length > 0 && players.length > 0 && (
           <motion.div
             className="mb-6"
@@ -203,8 +208,30 @@ export function Component() {
             transition={{ delay: 0.2 }}
           >
             <h3 className="font-display text-xs text-text-muted tracking-[0.15em] mb-3">
-              TEAMS
+              {selectedPlayerId ? 'TAP A TEAM TO ASSIGN' : 'TAP A PLAYER, THEN A TEAM'}
             </h3>
+
+            {/* Player chips for selection */}
+            <div className="flex flex-wrap gap-2 mb-3">
+              {players.map((p) => (
+                <button
+                  key={p.id}
+                  type="button"
+                  onClick={() =>
+                    setSelectedPlayerId((prev) => (prev === p.id ? null : p.id))
+                  }
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                    selectedPlayerId === p.id
+                      ? 'bg-neon-cyan/20 text-neon-cyan ring-1 ring-neon-cyan'
+                      : 'bg-bg-card text-text-secondary hover:bg-bg-elevated'
+                  }`}
+                >
+                  <span>{p.avatar}</span>
+                  <span>{p.name}</span>
+                </button>
+              ))}
+            </div>
+
             <div
               className="grid gap-3"
               style={{ gridTemplateColumns: `repeat(${teams.length}, 1fr)` }}
@@ -212,9 +239,24 @@ export function Component() {
               {teams.map((team) => {
                 const teamPlayers = players.filter((p) => p.teamId === team.id);
                 return (
-                  <div
+                  <button
                     key={team.id}
-                    className="bg-bg-card rounded-xl shadow-soft p-3 min-h-[72px]"
+                    type="button"
+                    onClick={() => {
+                      if (selectedPlayerId) {
+                        assignPlayerToTeam(selectedPlayerId, team.id);
+                        broadcastHostState();
+                        setSelectedPlayerId(null);
+                      }
+                    }}
+                    className={`bg-bg-card rounded-xl shadow-soft p-3 min-h-[72px] text-left transition-all border ${
+                      selectedPlayerId
+                        ? 'border-opacity-30 hover:brightness-110 cursor-pointer'
+                        : 'border-transparent cursor-default'
+                    }`}
+                    style={
+                      selectedPlayerId ? { borderColor: team.colour } : undefined
+                    }
                   >
                     <h4
                       className="font-display text-xs tracking-wide mb-2"
@@ -237,7 +279,7 @@ export function Component() {
                         ))}
                       </div>
                     )}
-                  </div>
+                  </button>
                 );
               })}
             </div>

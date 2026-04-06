@@ -28,7 +28,10 @@
       "Bash(sort -t':' -k2 -rn)",
       "Bash(grep -h '\"type\":' c:/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
       "Bash(node scripts/convert-numeric-to-mc.js)",
-      "Bash(node scripts/convert-numeric-to-mc.cjs)"
+      "Bash(node scripts/convert-numeric-to-mc.cjs)",
+      "Bash(node -e \"const p = require\\('./src/data/packs/mzansi-mix-vol1.json'\\); const diffs = [...new Set\\(p.questions.map\\(q => q.difficulty\\)\\)].sort\\(\\(a,b\\) => a-b\\); console.log\\('Pack:', p.name\\); console.log\\('Difficulties:', diffs\\); console.log\\('Count per diff:'\\); diffs.forEach\\(d => console.log\\('  ' + d + '% ->', p.questions.filter\\(q => q.difficulty === d\\).length\\)\\)\")",
+      "Bash(xargs grep:*)",
+      "Bash(grep -E \"\\\\.\\(tsx|ts\\)$\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\Sheldon.Mayhew"

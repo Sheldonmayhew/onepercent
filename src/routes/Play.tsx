@@ -151,7 +151,7 @@ export function Component() {
             difficulty={difficulty}
             points={points}
             totalRounds={totalRounds}
-            categoryName={session.pack?.name}
+            categoryName={question?.category ?? session.pack?.name}
             playerName={currentPlayer?.name}
             playerColour={currentPlayer?.colour}
             timeLeft={timeLeft}
@@ -245,7 +245,7 @@ export function Component() {
           difficulty={difficulty}
           points={points}
           totalRounds={totalRounds}
-          categoryName={session.pack?.name}
+          categoryName={question?.category ?? session.pack?.name}
           playerName={hostPlayer?.name}
           playerColour={hostPlayer?.colour}
           timeLeft={timeLeft}

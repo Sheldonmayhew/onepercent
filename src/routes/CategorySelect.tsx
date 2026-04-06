@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useGameStore } from '../stores/gameStore';
-import { useHostMultiplayer } from '../hooks/useMultiplayer';
+import { useHostMultiplayer, broadcastHostState } from '../hooks/useMultiplayer';
 import { useProfileStore } from '../stores/profileStore';
 import type { MultiplayerMode } from '../types';
 import { TEAM_NAMES, TEAM_COLOURS } from '../types';
@@ -74,14 +74,15 @@ function getCategoryTheme(name: string) {
 export function Component() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { availablePacks, initQuickPlay, initHostGame, addPlayer, startGame } = useGameStore();
+  const { availablePacks, initQuickPlay, initHostGame, resetForReplay, addPlayer, startGame } = useGameStore();
   const { createRoom } = useHostMultiplayer();
   const profile = useProfileStore((s) => s.profile);
 
   const isQuickPlay = location.pathname.startsWith('/quick-play');
-  const locationState = location.state as { mode?: MultiplayerMode; teamCount?: 2 | 3 | 4 } | null;
+  const locationState = location.state as { mode?: MultiplayerMode; teamCount?: 2 | 3 | 4; replay?: boolean } | null;
   const mode = locationState?.mode ?? 'individual';
   const teamCount = locationState?.teamCount ?? 2;
+  const isReplay = locationState?.replay === true;
 
   const [selectedPacks, setSelectedPacks] = useState<string[]>(
     availablePacks.length > 0 ? [availablePacks[0].pack_id] : []
@@ -120,6 +121,15 @@ export function Component() {
 
   const handleHost = async () => {
     const packs = selectedPacks.length > 0 ? selectedPacks : availablePacks.slice(0, 1).map((p) => p.pack_id);
+
+    if (isReplay) {
+      // Replay: keep existing room and players, just update packs and reset scores
+      resetForReplay(packs);
+      broadcastHostState('/player/lobby');
+      navigate('/host/lobby');
+      return;
+    }
+
     initHostGame(mode, packs);
 
     // If team mode with more than 2 teams, regenerate teams with the correct count
@@ -148,7 +158,11 @@ export function Component() {
   };
 
   const handleBack = () => {
-    if (isQuickPlay) {
+    if (isReplay) {
+      // Cancel replay — broadcast results route back to players and return to results
+      broadcastHostState('/player/results');
+      navigate('/host/results');
+    } else if (isQuickPlay) {
       navigate('/');
     } else {
       navigate('/host/mode');

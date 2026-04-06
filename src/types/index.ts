@@ -13,6 +13,7 @@ export interface Question {
   explanation: string;
   image_url?: string | null;
   sequence_items?: string[];
+  category?: string;
 }
 
 export interface QuestionPack {
@@ -26,7 +27,7 @@ export interface QuestionPack {
 
 export type MultiplayerMode = 'individual' | 'team';
 
-export const DEFAULT_TIMER_SECONDS = 30;
+export const DEFAULT_TIMER_SECONDS = 45;
 
 export interface GameSettings {
   soundEnabled: boolean;

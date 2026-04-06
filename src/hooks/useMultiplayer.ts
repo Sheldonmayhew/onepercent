@@ -62,7 +62,10 @@ export function broadcastHostState(route?: string) {
     route: playerRoute,
     players,
     timerStarted: s.timerStarted,
-    packName: s.pack.name,
+    packName: store.availablePacks
+      .filter((p) => s.settings.packIds.includes(p.pack_id))
+      .map((p) => p.name)
+      .join(', ') || s.pack.name,
     teamMode: s.settings.teamMode,
     teams: s.teams,
   };
@@ -73,8 +76,8 @@ export function broadcastHostState(route?: string) {
       difficulty,
       points,
       totalRounds: tiers.length,
-      timerDuration: 30,
-      categoryName: s.pack?.name,
+      timerDuration: 45,
+      categoryName: currentQ.category ?? s.pack?.name,
       question: {
         question: currentQ.question,
         type: currentQ.type,
@@ -233,6 +236,11 @@ export function useHostMultiplayer() {
             answer: string | number;
           };
           submitAnswer(playerId, answer);
+        })
+        .on('broadcast', { event: 'join_team' }, (msg) => {
+          const { playerId, teamId } = msg.payload as { playerId: string; teamId: string };
+          useGameStore.getState().assignPlayerToTeam(playerId, teamId);
+          broadcastHostState();
         })
         .on('broadcast', { event: 'player_leave' }, (msg) => {
           const { playerId } = msg.payload as { playerId: string };
@@ -397,6 +405,14 @@ export function usePlayerMultiplayer() {
     });
   }, []);
 
+  const sendJoinTeam = useCallback((playerId: string, teamId: string) => {
+    playerChannel?.send({
+      type: 'broadcast',
+      event: 'join_team',
+      payload: { playerId, teamId },
+    });
+  }, []);
+
   const sendAnswer = useCallback((playerId: string, answer: string | number) => {
     playerChannel?.send({
       type: 'broadcast',
@@ -425,5 +441,5 @@ export function usePlayerMultiplayer() {
     }
   }, []);
 
-  return { joinRoom, sendReady, sendAnswer, disconnect };
+  return { joinRoom, sendReady, sendAnswer, sendJoinTeam, disconnect };
 }
