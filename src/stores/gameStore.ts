@@ -3,17 +3,19 @@ import type {
   GameSession,
   GameSettings,
   Player,
-  GameScreen,
+  MultiplayerMode,
   RoundResult,
   QuestionPack,
   Question,
+  Team,
 } from '../types';
 import {
   PLAYER_COLOURS,
   PLAYER_AVATARS,
   POINTS_PER_ROUND,
   DIFFICULTY_TIERS,
-  QUICK_TIERS,
+  TEAM_COLOURS,
+  TEAM_NAMES,
 } from '../types';
 import { generateId, selectQuestionsForGame, checkAnswer } from '../utils/helpers';
 
@@ -23,24 +25,23 @@ interface GameStore {
 
   // Actions
   setPacks: (packs: QuestionPack[]) => void;
-  createGame: (settings: GameSettings) => void;
-  addPlayer: (name: string) => void;
+  initQuickPlay: (packIds: string[]) => void;
+  initHostGame: (mode: MultiplayerMode, packIds: string[]) => void;
+  addPlayer: (name: string, emoji?: string, isHost?: boolean) => void;
   removePlayer: (id: string) => void;
   startGame: () => void;
   submitAnswer: (playerId: string, answer: string | number) => void;
   revealAnswers: () => void;
-  bankPlayer: (playerId: string) => void;
-  recordBankingDecision: (playerId: string, banked: boolean) => void;
-  proceedToNextRound: () => void;
-  setScreen: (screen: GameScreen) => void;
+  proceedToNextRound: () => 'next' | 'done';
   resetGame: () => void;
   getCurrentQuestion: () => Question | null;
   getActivePlayers: () => Player[];
-  getTiers: () => readonly number[];
+  getTotalRounds: () => number;
   getCurrentDifficulty: () => number;
   getCurrentPoints: () => number;
   advancePassAndPlay: () => void;
   setAllAnswersIn: () => void;
+  assignPlayerToTeam: (playerId: string, teamId: string) => void;
 }
 
 export const useGameStore = create<GameStore>((set, get) => ({
@@ -49,9 +50,17 @@ export const useGameStore = create<GameStore>((set, get) => ({
 
   setPacks: (packs) => set({ availablePacks: packs }),
 
-  createGame: (settings) => {
-    const pack = get().availablePacks.find((p) => p.pack_id === settings.packId);
-    if (!pack) return;
+  initQuickPlay: (packIds) => {
+    const packs = get().availablePacks.filter((p) => packIds.includes(p.pack_id));
+    if (packs.length === 0) return;
+
+    const pack = packs[0];
+    const settings: GameSettings = {
+      soundEnabled: true,
+      packIds,
+      teamMode: false,
+      teamCount: 2,
+    };
 
     set({
       session: {
@@ -59,26 +68,73 @@ export const useGameStore = create<GameStore>((set, get) => ({
         pack,
         players: [],
         currentRound: 0,
-        screen: 'lobby',
         settings,
         roundHistory: [],
         selectedQuestions: [],
         currentPlayerIndex: 0,
         allAnswersIn: false,
         timerStarted: false,
-        bankingDecisions: {},
+        teams: [],
       },
     });
   },
 
-  addPlayer: (name) => {
+  initHostGame: (mode, packIds) => {
+    const packs = get().availablePacks.filter((p) => packIds.includes(p.pack_id));
+    if (packs.length === 0) return;
+
+    const pack = packs[0];
+    const teamMode = mode === 'team';
+    const settings: GameSettings = {
+      soundEnabled: true,
+      packIds,
+      teamMode,
+      teamCount: 2,
+    };
+
+    const teams: Team[] = teamMode
+      ? Array.from({ length: 2 }, (_, i) => ({
+          id: generateId(),
+          name: TEAM_NAMES[i],
+          colour: TEAM_COLOURS[i],
+          playerIds: [],
+          score: 0,
+        }))
+      : [];
+
+    set({
+      session: {
+        id: generateId(),
+        pack,
+        players: [],
+        currentRound: 0,
+        settings,
+        roundHistory: [],
+        selectedQuestions: [],
+        currentPlayerIndex: 0,
+        allAnswersIn: false,
+        timerStarted: false,
+        teams,
+        multiplayerMode: mode,
+      },
+    });
+  },
+
+  addPlayer: (name, emoji, isHost) => {
     const { session } = get();
     if (!session || session.players.length >= 8) return;
 
     const usedColours = new Set(session.players.map(p => p.colour));
     const usedAvatars = new Set(session.players.map(p => p.avatar));
     const colour = PLAYER_COLOURS.find(c => !usedColours.has(c)) ?? PLAYER_COLOURS[0];
-    const avatar = PLAYER_AVATARS.find(a => !usedAvatars.has(a)) ?? PLAYER_AVATARS[0];
+
+    // Use provided emoji if available and not taken, otherwise auto-assign
+    let avatar: string;
+    if (emoji && !usedAvatars.has(emoji)) {
+      avatar = emoji;
+    } else {
+      avatar = PLAYER_AVATARS.find(a => !usedAvatars.has(a)) ?? PLAYER_AVATARS[0];
+    }
 
     const player: Player = {
       id: generateId(),
@@ -86,11 +142,9 @@ export const useGameStore = create<GameStore>((set, get) => ({
       colour,
       avatar,
       score: 0,
-      isEliminated: false,
-      isBanked: false,
       currentAnswer: null,
       hasAnswered: false,
-      lastCorrectRound: -1,
+      isHost: isHost ?? false,
     };
 
     set({
@@ -117,18 +171,17 @@ export const useGameStore = create<GameStore>((set, get) => ({
     const { session } = get();
     if (!session) return;
 
-    const questions = selectQuestionsForGame(session.pack, session.settings.mode);
+    const packs = get().availablePacks.filter((p) => session.settings.packIds.includes(p.pack_id));
+    const questions = selectQuestionsForGame(packs.length > 0 ? packs : [session.pack]);
 
     set({
       session: {
         ...session,
-        screen: 'playing',
         currentRound: 0,
         selectedQuestions: questions,
         currentPlayerIndex: 0,
         allAnswersIn: false,
         timerStarted: false,
-        bankingDecisions: {},
         players: session.players.map((p) => ({
           ...p,
           currentAnswer: null,
@@ -141,15 +194,13 @@ export const useGameStore = create<GameStore>((set, get) => ({
   submitAnswer: (playerId, answer) => {
     const { session } = get();
     if (!session) return;
-    // Reject answers after timer expires or outside playing phase
-    if (session.allAnswersIn || session.screen !== 'playing') return;
+    if (session.allAnswersIn) return;
 
     const players = session.players.map((p) =>
       p.id === playerId ? { ...p, currentAnswer: answer, hasAnswered: true } : p
     );
 
-    const activePlayers = players.filter((p) => !p.isEliminated && !p.isBanked);
-    const allIn = activePlayers.every((p) => p.hasAnswered);
+    const allIn = players.every((p) => p.hasAnswered);
 
     set({
       session: {
@@ -164,19 +215,17 @@ export const useGameStore = create<GameStore>((set, get) => ({
     const { session } = get();
     if (!session) return;
 
-    const activePlayers = session.players.filter((p) => !p.isEliminated && !p.isBanked);
     let nextIdx = session.currentPlayerIndex + 1;
 
-    // Find next active player who hasn't answered
     while (nextIdx < session.players.length) {
       const player = session.players[nextIdx];
-      if (!player.isEliminated && !player.isBanked && !player.hasAnswered) {
+      if (!player.hasAnswered) {
         break;
       }
       nextIdx++;
     }
 
-    const allIn = activePlayers.every((p) => p.hasAnswered);
+    const allIn = session.players.every((p) => p.hasAnswered);
 
     set({
       session: {
@@ -200,18 +249,13 @@ export const useGameStore = create<GameStore>((set, get) => ({
     const question = session.selectedQuestions[session.currentRound];
     if (!question) return;
 
-    const tiers = session.settings.mode === 'quick' ? [...QUICK_TIERS] : [...DIFFICULTY_TIERS];
-    const difficulty = tiers[session.currentRound];
+    const difficulty = [...DIFFICULTY_TIERS][session.currentRound];
     const points = POINTS_PER_ROUND[difficulty] ?? 0;
 
     const correctIds: string[] = [];
-    const eliminatedIds: string[] = [];
-
-    const keepScore = session.settings.eliminationRule === 'keep_last_cleared';
+    const incorrectIds: string[] = [];
 
     const updatedPlayers = session.players.map((p) => {
-      if (p.isEliminated || p.isBanked) return p;
-
       const isCorrect = checkAnswer(question, p.currentAnswer);
 
       if (isCorrect) {
@@ -219,19 +263,10 @@ export const useGameStore = create<GameStore>((set, get) => ({
         return {
           ...p,
           score: p.score + points,
-          lastCorrectRound: session.currentRound,
         };
       } else {
-        eliminatedIds.push(p.id);
-        if (keepScore) {
-          // "Keep Score" mode: player is NOT eliminated, just earns no points
-          return p;
-        }
-        return {
-          ...p,
-          isEliminated: true,
-          score: 0,
-        };
+        incorrectIds.push(p.id);
+        return p;
       }
     });
 
@@ -240,124 +275,40 @@ export const useGameStore = create<GameStore>((set, get) => ({
       difficulty,
       question,
       correctPlayers: correctIds,
-      eliminatedPlayers: eliminatedIds,
-      bankedPlayers: [],
+      incorrectPlayers: incorrectIds,
     };
 
+    // Update team scores
+    const updatedTeams = session.teams.map((team) => {
+      const teamPoints = correctIds
+        .filter((id) => updatedPlayers.find((p) => p.id === id)?.teamId === team.id)
+        .length * points;
+      return { ...team, score: team.score + teamPoints };
+    });
+
     set({
       session: {
         ...session,
-        screen: 'reveal',
         players: updatedPlayers,
         roundHistory: [...session.roundHistory, roundResult],
+        teams: updatedTeams,
       },
     });
-  },
-
-  bankPlayer: (playerId) => {
-    const { session } = get();
-    if (!session) return;
-
-    set({
-      session: {
-        ...session,
-        players: session.players.map((p) =>
-          p.id === playerId ? { ...p, isBanked: true } : p
-        ),
-      },
-    });
-  },
-
-  recordBankingDecision: (playerId, banked) => {
-    const { session } = get();
-    if (!session) return;
-
-    // Record this player's decision
-    const decisions = { ...session.bankingDecisions, [playerId]: banked };
-
-    // If the player chose to bank, mark them banked
-    const players = banked
-      ? session.players.map((p) =>
-          p.id === playerId ? { ...p, isBanked: true } : p
-        )
-      : session.players;
-
-    // Check if all active (non-eliminated, non-banked-before-this-round) players have decided.
-    // Use the *original* players list to determine who should decide — players who were
-    // active when the banking phase started (not eliminated and not already banked).
-    const playersWhoShouldDecide = session.players.filter(
-      (p) => !p.isEliminated && !p.isBanked
-    );
-    const allDecided = playersWhoShouldDecide.every((p) => decisions[p.id] !== undefined);
-
-    if (allDecided) {
-      // Transition to playing with proper round state reset
-      set({
-        session: {
-          ...session,
-          screen: 'playing',
-          players: players.map((p) => ({
-            ...p,
-            currentAnswer: null,
-            hasAnswered: false,
-          })),
-          currentPlayerIndex: 0,
-          allAnswersIn: false,
-          timerStarted: false,
-          bankingDecisions: {},
-        },
-      });
-    } else {
-      set({
-        session: {
-          ...session,
-          players,
-          bankingDecisions: decisions,
-        },
-      });
-    }
   },
 
   proceedToNextRound: () => {
     const { session } = get();
-    if (!session) return;
+    if (!session) return 'done';
 
-    const tiers = session.settings.mode === 'quick' ? [...QUICK_TIERS] : [...DIFFICULTY_TIERS];
     const nextRound = session.currentRound + 1;
-    const activePlayers = session.players.filter((p) => !p.isEliminated && !p.isBanked);
 
-    // Game over conditions
-    if (nextRound >= tiers.length || activePlayers.length === 0) {
-      set({ session: { ...session, screen: 'results' } });
-      return;
-    }
-
-    // Check if banking should be offered (at thresholds: after rounds 3, 5, 7, 9)
-    const bankingRounds = [3, 5, 7, 9];
-    if (session.settings.bankingEnabled && bankingRounds.includes(nextRound) && activePlayers.length > 1) {
-      set({
-        session: {
-          ...session,
-          screen: 'banking',
-          currentRound: nextRound,
-          currentPlayerIndex: 0,
-          allAnswersIn: false,
-          timerStarted: false,
-          bankingDecisions: {},
-          players: session.players.map((p) => ({
-            ...p,
-            currentAnswer: null,
-            hasAnswered: false,
-          })),
-        },
-      });
-      return;
+    if (nextRound >= DIFFICULTY_TIERS.length) {
+      return 'done';
     }
 
     set({
       session: {
         ...session,
-        screen: 'playing',
         currentRound: nextRound,
         currentPlayerIndex: 0,
         allAnswersIn: false,
@@ -369,12 +320,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
         })),
       },
     });
-  },
-
-  setScreen: (screen) => {
-    const { session } = get();
-    if (!session) return;
-    set({ session: { ...session, screen } });
+    return 'next';
   },
 
   resetGame: () => set({ session: null }),
@@ -388,27 +334,49 @@ export const useGameStore = create<GameStore>((set, get) => ({
   getActivePlayers: () => {
     const { session } = get();
     if (!session) return [];
-    return session.players.filter((p) => !p.isEliminated && !p.isBanked);
+    return session.players;
   },
 
-  getTiers: () => {
-    const { session } = get();
-    if (!session) return DIFFICULTY_TIERS;
-    return session.settings.mode === 'quick' ? QUICK_TIERS : DIFFICULTY_TIERS;
-  },
+  getTotalRounds: () => DIFFICULTY_TIERS.length,
 
   getCurrentDifficulty: () => {
     const { session } = get();
     if (!session) return 90;
-    const tiers = session.settings.mode === 'quick' ? [...QUICK_TIERS] : [...DIFFICULTY_TIERS];
-    return tiers[session.currentRound] ?? 90;
+    return [...DIFFICULTY_TIERS][session.currentRound] ?? 90;
   },
 
   getCurrentPoints: () => {
     const { session } = get();
     if (!session) return 0;
-    const tiers = session.settings.mode === 'quick' ? [...QUICK_TIERS] : [...DIFFICULTY_TIERS];
-    const difficulty = tiers[session.currentRound];
+    const difficulty = [...DIFFICULTY_TIERS][session.currentRound];
     return POINTS_PER_ROUND[difficulty] ?? 0;
   },
+
+  assignPlayerToTeam: (playerId, teamId) => {
+    const { session } = get();
+    if (!session) return;
+
+    // Remove player from any current team
+    const updatedTeams = session.teams.map((team) => ({
+      ...team,
+      playerIds: team.playerIds.filter((id) => id !== playerId),
+    }));
+
+    // Add to new team
+    const targetTeam = updatedTeams.find((t) => t.id === teamId);
+    if (targetTeam) {
+      targetTeam.playerIds.push(playerId);
+    }
+
+    set({
+      session: {
+        ...session,
+        teams: updatedTeams,
+        players: session.players.map((p) =>
+          p.id === playerId ? { ...p, teamId } : p
+        ),
+      },
+    });
+  },
+
 }));

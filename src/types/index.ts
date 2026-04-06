@@ -23,18 +23,15 @@ export interface QuestionPack {
   questions: Question[];
 }
 
-export type GameMode = 'classic' | 'quick' | 'practice';
-export type EliminationRule = 'zero_score' | 'keep_last_cleared';
-export type TimerSpeed = 'extended' | 'standard' | 'relaxed' | 'pressure';
-export type GameScreen = 'landing' | 'lobby' | 'playing' | 'reveal' | 'banking' | 'results';
+export type MultiplayerMode = 'individual' | 'team';
+
+export const DEFAULT_TIMER_SECONDS = 30;
 
 export interface GameSettings {
-  mode: GameMode;
-  eliminationRule: EliminationRule;
-  bankingEnabled: boolean;
   soundEnabled: boolean;
-  timerSpeed: TimerSpeed;
-  packId: string;
+  packIds: string[];
+  teamMode: boolean;
+  teamCount: 2 | 3 | 4;
 }
 
 export interface Player {
@@ -43,11 +40,18 @@ export interface Player {
   colour: string;
   avatar: string;
   score: number;
-  isEliminated: boolean;
-  isBanked: boolean;
   currentAnswer: string | number | null;
   hasAnswered: boolean;
-  lastCorrectRound: number;
+  isHost?: boolean;
+  teamId?: string | null;
+}
+
+export interface Team {
+  id: string;
+  name: string;
+  colour: string;
+  playerIds: string[];
+  score: number;
 }
 
 export interface RoundResult {
@@ -55,8 +59,7 @@ export interface RoundResult {
   difficulty: number;
   question: Question;
   correctPlayers: string[];
-  eliminatedPlayers: string[];
-  bankedPlayers: string[];
+  incorrectPlayers: string[];
 }
 
 export interface GameSession {
@@ -64,14 +67,15 @@ export interface GameSession {
   pack: QuestionPack;
   players: Player[];
   currentRound: number;
-  screen: GameScreen;
   settings: GameSettings;
   roundHistory: RoundResult[];
   selectedQuestions: Question[];
   currentPlayerIndex: number;
   allAnswersIn: boolean;
   timerStarted: boolean;
-  bankingDecisions: Record<string, boolean>;
+  teams: Team[];
+  roomCode?: string;
+  multiplayerMode?: MultiplayerMode;
 }
 
 export const DIFFICULTY_TIERS = [90, 80, 70, 60, 50, 40, 30, 20, 10, 5, 1] as const;
@@ -91,22 +95,29 @@ export const POINTS_PER_ROUND: Record<number, number> = {
   1: 100_000,
 };
 
-export const TIMER_DURATIONS: Record<TimerSpeed, number> = {
-  extended: 60,
-  standard: 30,
-  relaxed: 45,
-  pressure: 15,
-};
-
 export const PLAYER_COLOURS = [
-  '#00E5FF', // cyan
-  '#FFD700', // gold
-  '#FF2D6B', // pink
-  '#00FF88', // green
-  '#A855F7', // purple
-  '#FF8C00', // orange
-  '#E879F9', // fuchsia
-  '#38BDF8', // sky
+  '#4F46E5', // indigo
+  '#EAB308', // gold
+  '#EF4444', // red
+  '#22C55E', // green
+  '#7C3AED', // purple
+  '#F97316', // orange
+  '#D946EF', // fuchsia
+  '#3B82F6', // blue
 ];
 
 export const PLAYER_AVATARS = ['🦁', '🐆', '🦏', '🐘', '🦒', '🦓', '🐊', '🦅'];
+
+export const TEAM_COLOURS = ['#FF4444', '#4488FF', '#44DD44', '#FFAA00'];
+export const TEAM_NAMES = ['Red Team', 'Blue Team', 'Green Team', 'Gold Team'];
+
+export const AVAILABLE_EMOJIS = [
+  // Animals
+  '🦁', '🐆', '🦏', '🐘', '🦒', '🦓', '🐊', '🦅', '🐍', '🦈', '🐺', '🦊', '🐻', '🐼', '🦄', '🐲',
+  // Faces
+  '😎', '🤓', '🥸', '🤠', '🥳', '🤩', '😈', '👻', '💀', '🤖', '👽', '🎃',
+  // Objects
+  '🔥', '⚡', '💎', '👑', '🎯', '🏆', '🎪', '🚀', '💣', '🎸',
+  // Symbols
+  '⭐', '💫', '✨', '🌟', '💥', '🎵', '🌈', '💜',
+];

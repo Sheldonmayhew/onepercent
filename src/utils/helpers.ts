@@ -1,5 +1,5 @@
-import type { Question, QuestionPack, GameMode } from '../types';
-import { DIFFICULTY_TIERS, QUICK_TIERS } from '../types';
+import type { Question, QuestionPack } from '../types';
+import { DIFFICULTY_TIERS } from '../types';
 
 export function generateId(): string {
   return Math.random().toString(36).substring(2, 10);
@@ -14,13 +14,17 @@ export function shuffleArray<T>(array: T[]): T[] {
   return shuffled;
 }
 
-export function selectQuestionsForGame(pack: QuestionPack, mode: GameMode): Question[] {
-  const tiers = mode === 'quick' ? [...QUICK_TIERS] : [...DIFFICULTY_TIERS];
+export function selectQuestionsForGame(packs: QuestionPack[]): Question[] {
+  const tiers = [...DIFFICULTY_TIERS];
+
+  // Merge all questions from selected packs
+  const allQuestions = packs.flatMap((p) => p.questions);
 
   return tiers.map((difficulty) => {
-    const available = pack.questions.filter((q) => q.difficulty === difficulty);
+    const available = allQuestions.filter((q) => q.difficulty === difficulty);
     if (available.length === 0) {
-      throw new Error(`No questions found for difficulty ${difficulty}% in pack "${pack.name}"`);
+      const packNames = packs.map((p) => p.name).join(', ');
+      throw new Error(`No questions found for difficulty ${difficulty}% in packs: ${packNames}`);
     }
     return available[Math.floor(Math.random() * available.length)];
   });
@@ -39,10 +43,10 @@ export function getDifficultyLabel(difficulty: number): string {
 }
 
 export function getDifficultyColour(difficulty: number): string {
-  if (difficulty >= 70) return '#00FF88';
-  if (difficulty >= 40) return '#FFD700';
-  if (difficulty >= 10) return '#FF8C00';
-  return '#FF2D6B';
+  if (difficulty >= 70) return '#22C55E';
+  if (difficulty >= 40) return '#EAB308';
+  if (difficulty >= 10) return '#F97316';
+  return '#EF4444';
 }
 
 export function checkAnswer(question: Question, answer: string | number | null): boolean {
