@@ -1,4 +1,5 @@
 export type QuestionType = 'multiple_choice' | 'numeric_input' | 'image_based' | 'sequence';
+export type GameMode = 'classic' | 'quick';
 
 export interface Question {
   id: string;
