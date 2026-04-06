@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npx --yes create-vite@latest onepercent-temp --template react-ts)",
+      "Bash(cp -r onepercent-temp/* onepercent-temp/.* .)",
+      "Bash(rm -rf onepercent-temp)",
+      "Bash(rm -f src/App.css)",
+      "Bash(rm -rf src/assets/react.svg src/assets/vite.svg src/assets/hero.png)",
+      "Bash(node -e \"const d=require\\('./src/data/packs/numbers-game.json'\\); console.log\\('Numbers:', d.question_count, 'questions, actual:', d.questions.length\\); const tiers=[90,80,70,60,50,40,30,20,10,5,1]; tiers.forEach\\(t => { const c=d.questions.filter\\(q=>q.difficulty===t\\).length; console.log\\('  Tier', t+'%:', c\\); }\\);\")",
+      "Bash(node -e \"const d=require\\('./src/data/packs/pattern-spotter.json'\\); console.log\\('Patterns:', d.question_count, 'questions, actual:', d.questions.length\\); const tiers=[90,80,70,60,50,40,30,20,10,5,1]; tiers.forEach\\(t => { const c=d.questions.filter\\(q=>q.difficulty===t\\).length; console.log\\('  Tier', t+'%:', c\\); }\\);\")",
+      "Bash(node -e \"const d=require\\('./src/data/packs/mzansi-mix-vol1.json'\\); console.log\\('Mzansi:', d.question_count, 'questions, actual:', d.questions.length\\); const tiers=[90,80,70,60,50,40,30,20,10,5,1]; tiers.forEach\\(t => { const c=d.questions.filter\\(q=>q.difficulty===t\\).length; console.log\\('  Tier', t+'%:', c\\); }\\);\")",
+      "mcp__plugin_supabase_supabase__list_projects",
+      "mcp__plugin_supabase_supabase__list_organizations",
+      "mcp__plugin_supabase_supabase__get_project",
+      "mcp__plugin_supabase_supabase__get_project_url",
+      "mcp__plugin_supabase_supabase__get_publishable_keys",
+      "mcp__plugin_supabase_supabase__apply_migration",
+      "Bash(node -e ':*)",
+      "Bash(node -e \"const d = require\\('./src/data/packs/mixed-bag.json'\\); console.log\\('question_count:', d.question_count\\); console.log\\('actual questions:', d.questions.length\\); const newQs = d.questions.filter\\(q => q.id >= 'mx166'\\); console.log\\('new questions:', newQs.length\\); const tiers = [90,80,70,60,50,40,30,20,10,5,1]; tiers.forEach\\(t => { const count = newQs.filter\\(q => q.difficulty === t\\).length; console.log\\('tier', t, ':', count, 'questions'\\); }\\);\")",
+      "Bash(wc -l /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
+      "Bash(claude mcp:*)",
+      "Read(//c/Users/Sheldon.Mayhew/Desktop/onepercent/**)",
+      "Read(//c/Users/Sheldon.Mayhew/Desktop/onepercent/src/**)",
+      "Read(//c/Users/Sheldon.Mayhew/Desktop/onepercent/src/types/**)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Sheldon.Mayhew"
+    ]
+  }
+}

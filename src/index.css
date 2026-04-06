@@ -1,25 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Teko", sans-serif;
-  --font-score: "Orbitron", sans-serif;
-  --font-body: "Outfit", sans-serif;
+  /* Fonts — Plus Jakarta Sans for display/headlines, Be Vietnam Pro for body */
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-score: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Be Vietnam Pro", sans-serif;
 
-  --color-bg-deep: #060810;
-  --color-bg-primary: #0B0E17;
-  --color-bg-surface: #131726;
-  --color-bg-elevated: #1A1F35;
-  --color-bg-card: #1E2440;
+  /* Surfaces — tonal purple layering (Kinetic Joy theme) */
+  --color-bg-deep: #e5caff;
+  --color-bg-primary: #fdf3ff;
+  --color-bg-surface: #f9edff;
+  --color-bg-elevated: #f3e2ff;
+  --color-bg-card: #ffffff;
 
-  --color-neon-cyan: #00E5FF;
-  --color-neon-gold: #FFD700;
-  --color-neon-pink: #FF2D6B;
-  --color-neon-green: #00FF88;
-  --color-neon-purple: #A855F7;
+  /* Accent colors */
+  --color-neon-cyan: #2a4bd9;
+  --color-neon-gold: #fdd404;
+  --color-neon-pink: #a90094;
+  --color-neon-green: #22C55E;
+  --color-neon-purple: #7C3AED;
 
-  --color-text-primary: #F1F5F9;
-  --color-text-secondary: #94A3B8;
-  --color-text-muted: #475569;
+  /* Extended palette */
+  --color-primary: #2a4bd9;
+  --color-primary-container: #879aff;
+  --color-secondary: #6d5a00;
+  --color-secondary-container: #fdd404;
+  --color-tertiary: #a90094;
+  --color-tertiary-container: #ff86e1;
+  --color-error: #b41340;
+  --color-error-container: #f74b6d;
+  --color-outline: #836e99;
+  --color-outline-variant: #bba4d2;
+  --color-surface-tint: #2a4bd9;
+
+  /* Text colors */
+  --color-text-primary: #38274c;
+  --color-text-secondary: #67537c;
+  --color-text-muted: #836e99;
 }
 
 *,
@@ -29,7 +46,7 @@
 }
 
 html {
-  background: var(--color-bg-deep);
+  background: var(--color-bg-primary);
   color: var(--color-text-primary);
   font-family: var(--font-body);
 }
@@ -39,6 +56,20 @@ body {
   min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Prevent iOS zoom on input focus */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* Ensure minimum touch target sizes */
+button, [role="button"], a {
+  min-height: 44px;
+  min-width: 44px;
 }
 
 #root {
@@ -47,72 +78,21 @@ body {
   flex-direction: column;
 }
 
-/* Neon glow utilities */
-.glow-cyan {
-  text-shadow:
-    0 0 7px rgba(0, 229, 255, 0.6),
-    0 0 20px rgba(0, 229, 255, 0.4),
-    0 0 40px rgba(0, 229, 255, 0.2);
+/* Soft shadow utilities — tinted with on_surface (#38274c), never pure black */
+.shadow-soft {
+  box-shadow: 0 1px 3px rgba(56, 39, 76, 0.06), 0 4px 12px rgba(56, 39, 76, 0.04);
 }
-
-.glow-gold {
-  text-shadow:
-    0 0 7px rgba(255, 215, 0, 0.6),
-    0 0 20px rgba(255, 215, 0, 0.4),
-    0 0 40px rgba(255, 215, 0, 0.2);
+.shadow-soft-md {
+  box-shadow: 0 2px 8px rgba(56, 39, 76, 0.06), 0 8px 24px rgba(56, 39, 76, 0.06);
 }
-
-.glow-pink {
-  text-shadow:
-    0 0 7px rgba(255, 45, 107, 0.6),
-    0 0 20px rgba(255, 45, 107, 0.4),
-    0 0 40px rgba(255, 45, 107, 0.2);
+.shadow-soft-lg {
+  box-shadow: 0 4px 16px rgba(56, 39, 76, 0.08), 0 12px 32px rgba(56, 39, 76, 0.08);
 }
-
-.glow-green {
-  text-shadow:
-    0 0 7px rgba(0, 255, 136, 0.6),
-    0 0 20px rgba(0, 255, 136, 0.4),
-    0 0 40px rgba(0, 255, 136, 0.2);
+.shadow-primary {
+  box-shadow: 0 4px 14px rgba(42, 75, 217, 0.25);
 }
-
-.box-glow-cyan {
-  box-shadow:
-    0 0 8px rgba(0, 229, 255, 0.3),
-    0 0 24px rgba(0, 229, 255, 0.15),
-    inset 0 0 8px rgba(0, 229, 255, 0.05);
-}
-
-.box-glow-gold {
-  box-shadow:
-    0 0 8px rgba(255, 215, 0, 0.3),
-    0 0 24px rgba(255, 215, 0, 0.15),
-    inset 0 0 8px rgba(255, 215, 0, 0.05);
-}
-
-.box-glow-pink {
-  box-shadow:
-    0 0 8px rgba(255, 45, 107, 0.3),
-    0 0 24px rgba(255, 45, 107, 0.15);
-}
-
-.box-glow-green {
-  box-shadow:
-    0 0 8px rgba(0, 255, 136, 0.3),
-    0 0 24px rgba(0, 255, 136, 0.15);
-}
-
-/* Background noise overlay */
-.noise::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 100;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 256px 256px;
+.shadow-gold {
+  box-shadow: 0 4px 14px rgba(253, 212, 4, 0.25);
 }
 
 /* Custom scrollbar */
@@ -120,14 +100,14 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-bg-primary);
+  background: #f9edff;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-bg-elevated);
+  background: #bba4d2;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-neon-cyan);
+  background: #2a4bd9;
 }
 
 @keyframes timer-pulse {
@@ -145,4 +125,56 @@ body {
 }
 .animate-shake {
   animation: shake 0.6s ease-in-out;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile-first responsive font sizing */
+.font-responsive-question {
+  font-size: clamp(1.125rem, 2vw + 0.5rem, 1.75rem);
+}
+
+.font-responsive-title {
+  font-size: clamp(3rem, 8vw + 1rem, 7rem);
+}
+
+/* Safe area insets for notched devices */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Keyboard-aware layout helper */
+@supports (height: 100dvh) {
+  .keyboard-aware {
+    min-height: 100dvh;
+  }
+}
+
+/* Pulse animation for players still answering */
+@keyframes answer-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.animate-answer-pulse {
+  animation: answer-pulse 1.5s ease-in-out infinite;
+}
+
+/* Locked-in checkmark animation */
+@keyframes check-bounce {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.animate-check-bounce {
+  animation: check-bounce 0.3s ease-out;
 }

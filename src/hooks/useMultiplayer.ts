@@ -38,8 +38,7 @@ export function broadcastHostState(route?: string) {
     readyPlayersRound = s.currentRound;
   }
 
-  const tiers =
-    s.settings.mode === 'quick' ? [90, 70, 50, 20, 1] : [90, 80, 70, 60, 50, 40, 30, 20, 10, 5, 1];
+  const tiers = [90, 80, 70, 60, 50, 40, 30, 20, 10, 5, 1];
   const difficulty = tiers[s.currentRound] ?? 90;
   const pointsMap: Record<number, number> = {
     90: 100, 80: 200, 70: 300, 60: 500, 50: 1000,
@@ -164,8 +163,6 @@ export function useHostMultiplayer() {
           const { name, playerId, avatar: requestedAvatar } = msg.payload as { name: string; playerId: string; avatar?: string };
           const store = useGameStore.getState();
           if (!store.session) return;
-          if (store.session.screen !== 'lobby') return;
-
           const existing = store.session.players.find(
             (p) => p.name.toLowerCase() === name.toLowerCase()
           );

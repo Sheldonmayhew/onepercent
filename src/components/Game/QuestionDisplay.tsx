@@ -64,7 +64,7 @@ export default function QuestionDisplay({
 
       {/* Question text */}
       <motion.div
-        className="bg-bg-surface/80 backdrop-blur border border-white/5 rounded-2xl p-6 md:p-8"
+        className="bg-bg-card shadow-soft rounded-2xl p-6 md:p-8"
         initial={{ scale: 0.97 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.3, delay: 0.1 }}

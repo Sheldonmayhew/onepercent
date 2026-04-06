@@ -17,10 +17,10 @@ export default function Timer({ timeLeft, progress }: TimerProps) {
         <span
           className={`font-score text-2xl font-bold tabular-nums transition-colors ${
             isCritical
-              ? 'text-neon-pink glow-pink animate-timer-pulse'
+              ? 'text-neon-pink animate-timer-pulse'
               : isUrgent
-                ? 'text-neon-gold glow-gold'
-                : 'text-neon-cyan glow-cyan'
+                ? 'text-neon-gold'
+                : 'text-neon-cyan'
           }`}
         >
           {timeLeft}
@@ -32,10 +32,10 @@ export default function Timer({ timeLeft, progress }: TimerProps) {
         <motion.div
           className={`h-full rounded-full transition-colors duration-300 ${
             isCritical
-              ? 'bg-neon-pink shadow-[0_0_12px_rgba(255,45,107,0.5)]'
+              ? 'bg-neon-pink'
               : isUrgent
-                ? 'bg-neon-gold shadow-[0_0_12px_rgba(255,215,0,0.4)]'
-                : 'bg-neon-cyan shadow-[0_0_12px_rgba(0,229,255,0.4)]'
+                ? 'bg-neon-gold'
+                : 'bg-neon-cyan'
           }`}
           initial={{ width: '100%' }}
           animate={{ width: `${progress * 100}%` }}

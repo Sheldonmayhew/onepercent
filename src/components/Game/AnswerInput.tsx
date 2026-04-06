@@ -57,7 +57,7 @@ export default function AnswerInput({ question, onSubmit, disabled, playerName, 
         <div className="w-3 h-3 rounded-full" style={{ backgroundColor: playerColour }} />
         <span className="font-display text-lg tracking-wide text-text-primary">{playerName}'s turn</span>
         {isLocked && (
-          <span className="ml-auto text-xs text-neon-green font-medium px-2 py-0.5 rounded bg-neon-green/10 border border-neon-green/20">
+          <span className="ml-auto text-xs text-green-600 font-medium px-2 py-0.5 rounded bg-neon-green/10">
             LOCKED IN
           </span>
         )}
@@ -71,17 +71,17 @@ export default function AnswerInput({ question, onSubmit, disabled, playerName, 
               key={idx}
               onClick={() => handleMultipleChoice(idx)}
               disabled={isLocked || disabled}
-              className={`relative py-3.5 px-4 rounded-xl text-left font-medium transition-all duration-200 border ${
+              className={`relative py-3.5 px-4 rounded-xl text-left font-medium transition-all duration-200 ${
                 selected === idx
                   ? isLocked
-                    ? 'bg-neon-cyan/20 border-neon-cyan/60 text-neon-cyan box-glow-cyan'
-                    : 'bg-neon-cyan/15 border-neon-cyan/50 text-neon-cyan'
-                  : 'bg-bg-elevated border-white/5 text-text-secondary hover:border-white/15 hover:text-text-primary'
+                    ? 'bg-gradient-to-r from-neon-cyan to-primary-container text-white border-transparent shadow-primary'
+                    : 'bg-bg-elevated text-neon-cyan'
+                  : 'bg-bg-surface text-text-secondary hover:bg-bg-elevated hover:text-text-primary'
               } ${isLocked || disabled ? 'cursor-default' : 'cursor-pointer'}`}
               whileHover={!isLocked && !disabled ? { scale: 1.02 } : {}}
               whileTap={!isLocked && !disabled ? { scale: 0.98 } : {}}
             >
-              <span className="text-xs text-text-muted mr-2">{String.fromCharCode(65 + idx)}</span>
+              <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary-container/20 text-neon-cyan text-xs font-bold mr-3">{String.fromCharCode(65 + idx)}</span>
               {option}
             </motion.button>
           ))}
@@ -93,11 +93,12 @@ export default function AnswerInput({ question, onSubmit, disabled, playerName, 
         <div className="flex gap-3">
           <input
             type="number"
+            inputMode="numeric"
             value={numericValue}
             onChange={(e) => !isLocked && setNumericValue(e.target.value)}
             disabled={isLocked || disabled}
             placeholder="Type your answer..."
-            className="flex-1 py-3 px-4 rounded-xl bg-bg-elevated border border-white/10 text-text-primary text-lg font-score outline-none focus:border-neon-cyan/50 transition-colors disabled:opacity-50"
+            className="flex-1 py-3 px-4 rounded-xl bg-bg-card text-text-primary text-lg font-score outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-colors disabled:opacity-50"
             onKeyDown={(e) => e.key === 'Enter' && handleLockIn()}
           />
         </div>
@@ -115,10 +116,10 @@ export default function AnswerInput({ question, onSubmit, disabled, playerName, 
                   key={idx}
                   onClick={() => handleSequenceToggle(idx)}
                   disabled={isLocked || disabled}
-                  className={`py-2 px-4 rounded-lg text-sm font-medium border transition-all ${
+                  className={`py-2 px-4 rounded-lg text-sm font-medium transition-all ${
                     orderPos >= 0
-                      ? 'bg-neon-cyan/15 border-neon-cyan/50 text-neon-cyan'
-                      : 'bg-bg-elevated border-white/5 text-text-secondary hover:border-white/15'
+                      ? 'bg-bg-elevated text-neon-cyan'
+                      : 'bg-bg-surface text-text-secondary hover:bg-bg-elevated'
                   }`}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -136,7 +137,7 @@ export default function AnswerInput({ question, onSubmit, disabled, playerName, 
         <motion.button
           onClick={handleLockIn}
           disabled={disabled || (question.type === 'multiple_choice' && selected === null) || (question.type === 'numeric_input' && !numericValue.trim()) || (question.type === 'sequence' && sequenceOrder.length !== (question.sequence_items ?? question.options ?? []).length)}
-          className="mt-4 w-full py-3 rounded-xl font-display text-lg tracking-wide bg-neon-gold/15 border border-neon-gold/40 text-neon-gold hover:bg-neon-gold/25 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+          className="mt-4 w-full py-3 rounded-full font-display text-lg tracking-wide bg-gradient-to-r from-neon-cyan to-primary-container text-white shadow-primary disabled:opacity-30 disabled:cursor-not-allowed transition-all"
           whileHover={{ scale: 1.01 }}
           whileTap={{ scale: 0.99 }}
         >

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__stitch__list_projects",
+      "mcp__stitch__list_screens",
+      "WebFetch(domain:contribution.usercontent.google.com)"
+    ]
+  }
+}
