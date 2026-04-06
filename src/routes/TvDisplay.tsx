@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMultiplayerStore } from '../stores/multiplayerStore';
+import type { BroadcastRound } from '../stores/multiplayerStore';
 import TvLobby from '../components/Tv/TvLobby';
 import TvRoundIntro from '../components/Tv/TvRoundIntro';
 import TvPlay from '../components/Tv/TvPlay';
@@ -22,6 +23,12 @@ export function Component() {
   const gameState = useMultiplayerStore((s) => s.gameState);
   const role = useMultiplayerStore((s) => s.role);
   const roomCode = useMultiplayerStore((s) => s.roomCode);
+
+  // Remember the last round data from the play phase so we can show it during reveal
+  const lastRoundRef = useRef<BroadcastRound | null>(null);
+  if (gameState?.round) {
+    lastRoundRef.current = gameState.round;
+  }
 
   // Redirect if not connected as spectator
   useEffect(() => {
@@ -88,7 +95,7 @@ export function Component() {
         )}
         {phase === 'reveal' && (
           <motion.div key="reveal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <TvReveal gameState={gameState} />
+            <TvReveal gameState={gameState} lastRound={lastRoundRef.current} />
           </motion.div>
         )}
         {phase === 'results' && (
