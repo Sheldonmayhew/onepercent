@@ -91,6 +91,20 @@ const router = createHashRouter([
         path: 'player/results',
         lazy: () => import('./routes/PlayerResults'),
       },
+      {
+        path: 'player/play-again',
+        lazy: () => import('./routes/PlayerPlayAgain'),
+      },
+
+      // TV spectator routes
+      {
+        path: 'tv',
+        lazy: () => import('./routes/TvJoin'),
+      },
+      {
+        path: 'tv/display',
+        lazy: () => import('./routes/TvDisplay'),
+      },
     ],
   },
 ]);
