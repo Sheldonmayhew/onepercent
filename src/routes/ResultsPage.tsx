@@ -184,17 +184,33 @@ export function Component() {
           >
             <p className="text-xs text-text-muted tracking-[0.15em] uppercase mb-3">Team Standings</p>
             <div className="flex flex-col gap-2">
-              {[...teams].sort((a, b) => b.score - a.score).map((team, idx) => (
-                <div
-                  key={team.id}
-                  className="flex items-center gap-3 px-3 py-2 rounded-xl bg-bg-elevated"
-                >
-                  <span className="text-text-muted font-score text-sm w-5 text-center">{idx + 1}</span>
-                  <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: team.colour }} />
-                  <span className="flex-1 font-medium text-text-primary">{team.name}</span>
-                  <span className="font-score text-neon-gold">{formatRands(team.score)}</span>
-                </div>
-              ))}
+              {[...teams].sort((a, b) => b.score - a.score).map((team, idx) => {
+                const teamPlayers = players.filter((p) => p.teamId === team.id);
+                return (
+                  <div
+                    key={team.id}
+                    className="px-3 py-2.5 rounded-xl bg-bg-elevated"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="text-text-muted font-score text-sm w-5 text-center">
+                        {idx === 0 ? '🥇' : idx === 1 ? '🥈' : `${idx + 1}`}
+                      </span>
+                      <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: team.colour }} />
+                      <span className="flex-1 font-medium text-text-primary">{team.name}</span>
+                      <span className="font-score text-neon-gold">{formatRands(team.score)}</span>
+                    </div>
+                    {teamPlayers.length > 0 && (
+                      <div className="ml-8 mt-1.5 flex flex-wrap gap-x-3 gap-y-1">
+                        {teamPlayers.map((p) => (
+                          <span key={p.id} className="text-xs text-text-muted">
+                            {p.avatar} {p.name}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </motion.div>
         )}
@@ -208,30 +224,41 @@ export function Component() {
         >
           <p className="text-xs text-text-muted tracking-[0.15em] uppercase mb-3">Rankings</p>
           <div className="flex flex-col gap-2">
-            {sorted.map((player, idx) => (
-              <motion.div
-                key={player.id}
-                className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-bg-elevated"
-                initial={{ opacity: 0, x: -12 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.45 + idx * 0.05 }}
-              >
-                <span
-                  className={`font-score text-lg w-6 text-center ${
-                    idx === 0 ? 'text-neon-gold' : idx === 1 ? 'text-text-secondary' : 'text-text-muted'
-                  }`}
+            {sorted.map((player, idx) => {
+              const playerTeam = isTeamMode ? teams.find((t) => t.id === player.teamId) : null;
+              return (
+                <motion.div
+                  key={player.id}
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-bg-elevated"
+                  initial={{ opacity: 0, x: -12 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.45 + idx * 0.05 }}
                 >
-                  {idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `${idx + 1}`}
-                </span>
-                <span className="text-2xl">{player.avatar}</span>
-                <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: player.colour }} />
-                <span className="flex-1 font-medium text-text-primary">
-                  {player.name}
-                  {player.isHost && <span className="ml-1 text-xs">👑</span>}
-                </span>
-                <span className="font-score text-neon-gold text-sm">{formatRands(player.score)}</span>
-              </motion.div>
-            ))}
+                  <span
+                    className={`font-score text-lg w-6 text-center ${
+                      idx === 0 ? 'text-neon-gold' : idx === 1 ? 'text-text-secondary' : 'text-text-muted'
+                    }`}
+                  >
+                    {idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `${idx + 1}`}
+                  </span>
+                  <span className="text-2xl">{player.avatar}</span>
+                  {playerTeam ? (
+                    <div
+                      className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                      style={{ backgroundColor: playerTeam.colour }}
+                      title={playerTeam.name}
+                    />
+                  ) : (
+                    <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: player.colour }} />
+                  )}
+                  <span className="flex-1 font-medium text-text-primary">
+                    {player.name}
+                    {player.isHost && <span className="ml-1 text-xs">👑</span>}
+                  </span>
+                  <span className="font-score text-neon-gold text-sm">{formatRands(player.score)}</span>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
