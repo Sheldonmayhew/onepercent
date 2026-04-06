@@ -9,8 +9,6 @@ export interface BroadcastPlayer {
   colour: string;
   avatar: string;
   score: number;
-  isEliminated: boolean;
-  isBanked: boolean;
   hasAnswered: boolean;
 }
 
@@ -33,25 +31,18 @@ export interface BroadcastReveal {
   correctAnswer: string;
   explanation: string;
   correctPlayerIds: string[];
-  eliminatedPlayerIds: string[];
+  incorrectPlayerIds: string[];
 }
-
-export interface BroadcastBanking {
-  difficulty: number;
-  points: number;
-}
-
-export type PlayerScreen = 'landing' | 'lobby' | 'playing' | 'reveal' | 'banking' | 'results';
 
 export interface GameBroadcast {
-  screen: PlayerScreen;
+  route: string;
   players: BroadcastPlayer[];
   round?: BroadcastRound;
   reveal?: BroadcastReveal;
-  banking?: BroadcastBanking;
   timerStarted?: boolean;
   packName?: string;
-  modeName?: string;
+  teamMode?: boolean;
+  teams?: { id: string; name: string; colour: string; playerIds: string[]; score: number }[];
 }
 
 interface MultiplayerStore {
