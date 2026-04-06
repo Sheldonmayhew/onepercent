@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { GameBroadcast } from '../../stores/multiplayerStore';
+import { useSound } from '../../hooks/useSound';
 import { formatRands } from '../../utils/helpers';
 import { POINTS_PER_ROUND } from '../../types';
 
@@ -13,15 +14,27 @@ type Phase = 'answer' | 'results';
 export default function TvReveal({ gameState }: TvRevealProps) {
   const { players, reveal, round } = gameState;
   const [phase, setPhase] = useState<Phase>('answer');
+  const { play } = useSound();
+  const soundPlayed = useRef(false);
 
   const difficulty = round?.difficulty ?? 90;
   const pointsAtStake = POINTS_PER_ROUND[difficulty] ?? 0;
 
   useEffect(() => {
     setPhase('answer');
+    soundPlayed.current = false;
     const timer = setTimeout(() => setPhase('results'), 2000);
     return () => clearTimeout(timer);
   }, [reveal?.correctAnswer]);
+
+  // Play correct/wrong sound when results phase starts
+  useEffect(() => {
+    if (phase === 'results' && !soundPlayed.current && reveal) {
+      soundPlayed.current = true;
+      const anyCorrect = reveal.correctPlayerIds.length > 0;
+      play(anyCorrect ? 'correct_reveal' : 'wrong_reveal');
+    }
+  }, [phase, reveal, play]);
 
   if (!reveal) return null;
 

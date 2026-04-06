@@ -1,6 +1,8 @@
+import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QRCodeSVG } from 'qrcode.react';
 import type { GameBroadcast } from '../../stores/multiplayerStore';
+import { useSound } from '../../hooks/useSound';
 
 interface TvLobbyProps {
   gameState: GameBroadcast;
@@ -13,6 +15,15 @@ function getJoinUrl(code: string): string {
 
 export default function TvLobby({ gameState, roomCode }: TvLobbyProps) {
   const { players, packName, teamMode, teams } = gameState;
+  const { play } = useSound();
+  const prevPlayerCount = useRef(players.length);
+
+  useEffect(() => {
+    if (players.length > prevPlayerCount.current) {
+      play('player_joined');
+    }
+    prevPlayerCount.current = players.length;
+  }, [players.length, play]);
 
   return (
     <div className="min-h-dvh flex items-center justify-center p-8 lg:p-12">

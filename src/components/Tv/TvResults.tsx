@@ -1,5 +1,7 @@
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import type { GameBroadcast } from '../../stores/multiplayerStore';
+import { useSound } from '../../hooks/useSound';
 import { formatRands } from '../../utils/helpers';
 
 interface TvResultsProps {
@@ -8,6 +10,14 @@ interface TvResultsProps {
 
 export default function TvResults({ gameState }: TvResultsProps) {
   const { players, teamMode, teams } = gameState;
+  const { play } = useSound();
+  const soundPlayed = useRef(false);
+
+  useEffect(() => {
+    if (soundPlayed.current) return;
+    soundPlayed.current = true;
+    play('winner');
+  }, [play]);
   const sorted = [...players].sort((a, b) => b.score - a.score);
   const winner = sorted[0];
 
@@ -56,26 +66,40 @@ export default function TvResults({ gameState }: TvResultsProps) {
               Team Standings
             </h3>
             <div className="flex flex-col gap-3">
-              {[...teams].sort((a, b) => b.score - a.score).map((team, idx) => (
-                <div
-                  key={team.id}
-                  className="flex items-center gap-4 px-5 py-3 rounded-xl bg-bg-elevated"
-                >
-                  <span className="font-score text-lg w-6 text-center text-text-muted">
-                    {idx + 1}
-                  </span>
+              {[...teams].sort((a, b) => b.score - a.score).map((team, idx) => {
+                const teamPlayers = players.filter((p) => team.playerIds.includes(p.id));
+                return (
                   <div
-                    className="w-4 h-4 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: team.colour }}
-                  />
-                  <span className="flex-1 text-xl font-medium text-text-primary">
-                    {team.name}
-                  </span>
-                  <span className="font-score text-xl text-neon-gold">
-                    {formatRands(team.score)}
-                  </span>
-                </div>
-              ))}
+                    key={team.id}
+                    className="px-5 py-3 rounded-xl bg-bg-elevated"
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="font-score text-lg w-6 text-center text-text-muted">
+                        {idx === 0 ? '🥇' : idx === 1 ? '🥈' : `${idx + 1}`}
+                      </span>
+                      <div
+                        className="w-4 h-4 rounded-full flex-shrink-0"
+                        style={{ backgroundColor: team.colour }}
+                      />
+                      <span className="flex-1 text-xl font-medium text-text-primary">
+                        {team.name}
+                      </span>
+                      <span className="font-score text-xl text-neon-gold">
+                        {formatRands(team.score)}
+                      </span>
+                    </div>
+                    {teamPlayers.length > 0 && (
+                      <div className="ml-10 mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                        {teamPlayers.map((p) => (
+                          <span key={p.id} className="text-sm text-text-muted">
+                            {p.avatar} {p.name}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </motion.div>
         )}
@@ -91,34 +115,38 @@ export default function TvResults({ gameState }: TvResultsProps) {
             Final Rankings
           </h3>
           <div className="flex flex-col gap-3">
-            {sorted.map((player, idx) => (
-              <motion.div
-                key={player.id}
-                className="flex items-center gap-4 px-5 py-3 rounded-xl bg-bg-elevated"
-                initial={{ opacity: 0, x: -16 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.45 + idx * 0.07 }}
-              >
-                <span
-                  className={`font-score text-xl w-8 text-center ${
-                    idx === 0 ? 'text-neon-gold' : idx === 1 ? 'text-text-secondary' : 'text-text-muted'
-                  }`}
+            {sorted.map((player, idx) => {
+              const playerTeam = teamMode && teams ? teams.find((t) => t.playerIds.includes(player.id)) : null;
+              return (
+                <motion.div
+                  key={player.id}
+                  className="flex items-center gap-4 px-5 py-3 rounded-xl bg-bg-elevated"
+                  initial={{ opacity: 0, x: -16 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.45 + idx * 0.07 }}
                 >
-                  {idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `${idx + 1}`}
-                </span>
-                <span className="text-3xl">{player.avatar}</span>
-                <div
-                  className="w-3 h-3 rounded-full flex-shrink-0"
-                  style={{ backgroundColor: player.colour }}
-                />
-                <span className="flex-1 text-xl font-medium text-text-primary">
-                  {player.name}
-                </span>
-                <span className="font-score text-xl text-neon-gold">
-                  {formatRands(player.score)}
-                </span>
-              </motion.div>
-            ))}
+                  <span
+                    className={`font-score text-xl w-8 text-center ${
+                      idx === 0 ? 'text-neon-gold' : idx === 1 ? 'text-text-secondary' : 'text-text-muted'
+                    }`}
+                  >
+                    {idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `${idx + 1}`}
+                  </span>
+                  <span className="text-3xl">{player.avatar}</span>
+                  <div
+                    className="w-3 h-3 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: playerTeam ? playerTeam.colour : player.colour }}
+                    title={playerTeam?.name}
+                  />
+                  <span className="flex-1 text-xl font-medium text-text-primary">
+                    {player.name}
+                  </span>
+                  <span className="font-score text-xl text-neon-gold">
+                    {formatRands(player.score)}
+                  </span>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </div>

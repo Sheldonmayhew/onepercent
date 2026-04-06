@@ -1,6 +1,8 @@
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import type { GameBroadcast } from '../../stores/multiplayerStore';
 import { formatRands, getDifficultyColour } from '../../utils/helpers';
+import { useSound } from '../../hooks/useSound';
 
 interface TvRoundIntroProps {
   gameState: GameBroadcast;
@@ -13,6 +15,14 @@ export default function TvRoundIntro({ gameState }: TvRoundIntroProps) {
   const difficulty = round?.difficulty ?? 90;
   const points = round?.points ?? 0;
   const diffColour = getDifficultyColour(difficulty);
+  const { play } = useSound();
+  const soundPlayed = useRef(false);
+
+  useEffect(() => {
+    if (soundPlayed.current) return;
+    soundPlayed.current = true;
+    play(difficulty === 1 ? 'final_round' : 'round_start');
+  }, [difficulty, play]);
 
   return (
     <div className="min-h-dvh flex flex-col items-center justify-center">

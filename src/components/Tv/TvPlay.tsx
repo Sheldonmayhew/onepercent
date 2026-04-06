@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import type { GameBroadcast } from '../../stores/multiplayerStore';
 import { useTimer } from '../../hooks/useTimer';
+import { useSound } from '../../hooks/useSound';
 import { formatRands, getDifficultyColour } from '../../utils/helpers';
 
 interface TvPlayProps {
@@ -12,9 +13,11 @@ export default function TvPlay({ gameState }: TvPlayProps) {
   const round = gameState.round;
   const players = gameState.players;
   const timerStarted = gameState.timerStarted ?? false;
+  const { play } = useSound();
+  const prevTimeLeft = useRef<number | null>(null);
 
   const timerDuration = round?.timerDuration ?? 30;
-  const { timeLeft, progress, start } = useTimer({
+  const { timeLeft, progress, isExpired, start } = useTimer({
     duration: timerDuration,
     autoStart: false,
   });
@@ -24,6 +27,22 @@ export default function TvPlay({ gameState }: TvPlayProps) {
       start();
     }
   }, [timerStarted, start]);
+
+  // Timer tick sound for last 5 seconds
+  useEffect(() => {
+    if (!timerStarted) return;
+    if (prevTimeLeft.current !== null && timeLeft !== prevTimeLeft.current && timeLeft <= 5 && timeLeft > 0) {
+      play('timer_tick');
+    }
+    prevTimeLeft.current = timeLeft;
+  }, [timeLeft, timerStarted, play]);
+
+  // Timer expired sound
+  useEffect(() => {
+    if (isExpired) {
+      play('timer_expired');
+    }
+  }, [isExpired, play]);
 
   if (!round) return null;
 
