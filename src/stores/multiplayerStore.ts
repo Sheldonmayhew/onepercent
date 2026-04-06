@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import type { QuestionType } from '../types';
 
-export type AppRole = 'host' | 'player' | null;
+export type AppRole = 'host' | 'player' | 'spectator' | null;
 
 export interface BroadcastPlayer {
   id: string;
