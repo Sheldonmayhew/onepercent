@@ -32,12 +32,12 @@ export function Component() {
     }
   }, [session, navigate]);
 
-  // Create room on mount (once)
+  // Create room on mount (once) — skip if CategorySelect already created it
   useEffect(() => {
-    if (!session || roomCreatedRef.current) return;
+    if (!session || roomCreatedRef.current || roomCode) return;
     roomCreatedRef.current = true;
     createRoom();
-  }, [session, createRoom]);
+  }, [session, createRoom, roomCode]);
 
   // Auto-add host as player (once room + session exist)
   useEffect(() => {

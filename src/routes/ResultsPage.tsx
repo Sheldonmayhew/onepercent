@@ -15,11 +15,14 @@ export function Component() {
   const session = useGameStore((s) => s.session);
   const resetGame = useGameStore((s) => s.resetGame);
   const initQuickPlay = useGameStore((s) => s.initQuickPlay);
+  const addPlayer = useGameStore((s) => s.addPlayer);
+  const startGame = useGameStore((s) => s.startGame);
 
   const role = useMultiplayerStore((s) => s.role);
   const mpReset = useMultiplayerStore((s) => s.reset);
 
   const updateStats = useProfileStore((s) => s.updateStats);
+  const profile = useProfileStore((s) => s.profile);
   const { addRecord } = useHistoryStore();
 
   const statsUpdated = useRef(false);
@@ -94,6 +97,8 @@ export function Component() {
   const handlePlayAgain = () => {
     if (isQuickPlay) {
       initQuickPlay(session.settings.packIds);
+      addPlayer(profile?.name ?? 'Player', profile?.avatar);
+      startGame();
       navigate('/quick-play/round-intro', { replace: true });
     } else {
       endHostGame();
