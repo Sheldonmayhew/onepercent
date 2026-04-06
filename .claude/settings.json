@@ -31,7 +31,9 @@
       "Bash(node scripts/convert-numeric-to-mc.cjs)",
       "Bash(node -e \"const p = require\\('./src/data/packs/mzansi-mix-vol1.json'\\); const diffs = [...new Set\\(p.questions.map\\(q => q.difficulty\\)\\)].sort\\(\\(a,b\\) => a-b\\); console.log\\('Pack:', p.name\\); console.log\\('Difficulties:', diffs\\); console.log\\('Count per diff:'\\); diffs.forEach\\(d => console.log\\('  ' + d + '% ->', p.questions.filter\\(q => q.difficulty === d\\).length\\)\\)\")",
       "Bash(xargs grep:*)",
-      "Bash(grep -E \"\\\\.\\(tsx|ts\\)$\")"
+      "Bash(grep -E \"\\\\.\\(tsx|ts\\)$\")",
+      "Bash(grep -l \"myth\\\\|god\\\\|ancient\\\\|Greece\\\\|Rome\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
+      "Bash(grep -i \"mythology\\\\|mytholog\\\\|greek\\\\|roman\\\\|god\\\\|goddes\\\\|Odin\\\\|Ares\\\\|Aphrodite\\\\|Hermes\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Sheldon.Mayhew"

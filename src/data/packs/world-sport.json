@@ -1,0 +1,809 @@
+{
+  "pack_id": "world-sport-01",
+  "name": "World Sport",
+  "description": "From the World Cup to the Olympics — test your knowledge of sport around the globe!",
+  "author": "Game Night Crew",
+  "question_count": 50,
+  "questions": [
+    {
+      "id": "ws001",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country hosted the 2010 FIFA World Cup?",
+      "options": [
+        "Brazil",
+        "Germany",
+        "South Africa",
+        "Russia"
+      ],
+      "correct_answer": 2,
+      "explanation": "That was us, nè? South Africa made history as the first African nation to host the World Cup. Ke nako!",
+      "image_url": null
+    },
+    {
+      "id": "ws002",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "How many rings are on the Olympic flag?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_answer": 1,
+      "explanation": "Five rings representing the five continents. If you got this wrong, you might need to watch more sport!",
+      "image_url": null
+    },
+    {
+      "id": "ws003",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In tennis, what is the term for a score of 40-40?",
+      "options": [
+        "Match point",
+        "Deuce",
+        "Advantage",
+        "Love"
+      ],
+      "correct_answer": 1,
+      "explanation": "Deuce! Both players are tied at 40-40, and someone needs to win two consecutive points to take the game.",
+      "image_url": null
+    },
+    {
+      "id": "ws004",
+      "difficulty": 86,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which basketball player is nicknamed 'King James'?",
+      "options": [
+        "Kobe Bryant",
+        "Michael Jordan",
+        "LeBron James",
+        "Stephen Curry"
+      ],
+      "correct_answer": 2,
+      "explanation": "LeBron James, the King himself. Love him or hate him, the man can play basketball!",
+      "image_url": null
+    },
+    {
+      "id": "ws005",
+      "difficulty": 85,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which sport uses a shuttlecock?",
+      "options": [
+        "Table Tennis",
+        "Badminton",
+        "Squash",
+        "Volleyball"
+      ],
+      "correct_answer": 1,
+      "explanation": "Badminton! The shuttlecock (or birdie) can travel over 400 km/h in professional play. That's faster than most things on the N1!",
+      "image_url": null
+    },
+    {
+      "id": "ws006",
+      "difficulty": 83,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which swimmer has won the most Olympic gold medals of all time?",
+      "options": [
+        "Ian Thorpe",
+        "Mark Spitz",
+        "Michael Phelps",
+        "Ryan Lochte"
+      ],
+      "correct_answer": 2,
+      "explanation": "Michael Phelps with a mind-blowing 23 Olympic golds. The man is basically a fish with legs!",
+      "image_url": null
+    },
+    {
+      "id": "ws007",
+      "difficulty": 82,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country has won the most FIFA World Cup titles?",
+      "options": [
+        "Germany",
+        "Argentina",
+        "Italy",
+        "Brazil"
+      ],
+      "correct_answer": 3,
+      "explanation": "Brazil with 5 World Cup titles! They make it look lekker easy sometimes, hey.",
+      "image_url": null
+    },
+    {
+      "id": "ws008",
+      "difficulty": 80,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the maximum break score possible in a single frame of snooker?",
+      "options": [
+        "120",
+        "147",
+        "155",
+        "180"
+      ],
+      "correct_answer": 1,
+      "explanation": "A maximum break of 147 — all reds potted with blacks, then all the colours. Pure class!",
+      "image_url": null
+    },
+    {
+      "id": "ws009",
+      "difficulty": 78,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Grand Slam tennis tournament is played on clay courts?",
+      "options": [
+        "Wimbledon",
+        "US Open",
+        "French Open",
+        "Australian Open"
+      ],
+      "correct_answer": 2,
+      "explanation": "The French Open (Roland Garros) is the only Grand Slam on clay. Rafael Nadal basically owned that place!",
+      "image_url": null
+    },
+    {
+      "id": "ws010",
+      "difficulty": 76,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Formula 1, which driver holds the record for most World Championship titles?",
+      "options": [
+        "Ayrton Senna",
+        "Michael Schumacher",
+        "Lewis Hamilton",
+        "Max Verstappen"
+      ],
+      "correct_answer": 2,
+      "explanation": "Lewis Hamilton and Michael Schumacher are tied on 7 titles each, but Hamilton's 2020 title made him joint record holder. Legends!",
+      "image_url": null
+    },
+    {
+      "id": "ws011",
+      "difficulty": 75,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country won the first-ever Cricket World Cup in 1975?",
+      "options": [
+        "Australia",
+        "England",
+        "West Indies",
+        "India"
+      ],
+      "correct_answer": 2,
+      "explanation": "The West Indies won the inaugural Cricket World Cup in 1975, and again in 1979. Those Caribbean boys could play, nè?",
+      "image_url": null
+    },
+    {
+      "id": "ws012",
+      "difficulty": 73,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Who scored the 'Hand of God' goal in the 1986 FIFA World Cup?",
+      "options": [
+        "Pelé",
+        "Diego Maradona",
+        "Zinedine Zidane",
+        "Ronaldo"
+      ],
+      "correct_answer": 1,
+      "explanation": "Diego Maradona punched the ball into the net against England. Cheeky, but he also scored what many call the greatest goal ever in the same match!",
+      "image_url": null
+    },
+    {
+      "id": "ws013",
+      "difficulty": 72,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "How many players are on a volleyball team on the court at one time?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct_answer": 1,
+      "explanation": "6 players per side in volleyball. And yes, beach volleyball only has 2 — much harder to hide!",
+      "image_url": null
+    },
+    {
+      "id": "ws014",
+      "difficulty": 70,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which golfer has won the most major championships?",
+      "options": [
+        "Tiger Woods",
+        "Jack Nicklaus",
+        "Arnold Palmer",
+        "Gary Player"
+      ],
+      "correct_answer": 1,
+      "explanation": "Jack Nicklaus with 18 majors! Our own Gary Player won 9 — not too shabby for a Saffa, nè?",
+      "image_url": null
+    },
+    {
+      "id": "ws015",
+      "difficulty": 68,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Put these Olympic host cities in chronological order (earliest to latest):",
+      "options": [
+        "Beijing (Summer)",
+        "London (Summer)",
+        "Athens (Summer)",
+        "Rio de Janeiro (Summer)"
+      ],
+      "correct_answer": "2,0,1,3",
+      "explanation": "Athens 2004, Beijing 2008, London 2012, Rio 2016. The Olympics travels the world — maybe one day it'll come back to Africa!",
+      "image_url": null
+    },
+    {
+      "id": "ws016",
+      "difficulty": 66,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which boxer was known as 'The Greatest' and famously said 'Float like a butterfly, sting like a bee'?",
+      "options": [
+        "Mike Tyson",
+        "Floyd Mayweather",
+        "Muhammad Ali",
+        "Manny Pacquiao"
+      ],
+      "correct_answer": 2,
+      "explanation": "Muhammad Ali — the man was as good with words as he was with his fists. An absolute legend of the ring!",
+      "image_url": null
+    },
+    {
+      "id": "ws017",
+      "difficulty": 64,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which year did Usain Bolt set the 100m world record of 9.58 seconds?",
+      "options": [
+        "2008",
+        "2009",
+        "2012",
+        "2016"
+      ],
+      "correct_answer": 1,
+      "explanation": "Bolt ran 9.58 seconds at the 2009 World Championships in Berlin. Lightning fast! Our own Wayde van Niekerk knows a thing or two about world records too.",
+      "image_url": null
+    },
+    {
+      "id": "ws018",
+      "difficulty": 62,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country has won the most Rugby World Cup titles?",
+      "options": [
+        "New Zealand",
+        "South Africa",
+        "Australia",
+        "England"
+      ],
+      "correct_answer": 1,
+      "explanation": "South Africa with 4 titles (1995, 2007, 2019, 2023)! The Springboks are the kings of rugby, and don't let anyone tell you otherwise!",
+      "image_url": null
+    },
+    {
+      "id": "ws019",
+      "difficulty": 60,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which NBA team did Michael Jordan spend most of his career with?",
+      "options": [
+        "Los Angeles Lakers",
+        "Boston Celtics",
+        "Chicago Bulls",
+        "Washington Wizards"
+      ],
+      "correct_answer": 2,
+      "explanation": "MJ and the Chicago Bulls — 6 championships together. His Airness made basketball the global sport it is today!",
+      "image_url": null
+    },
+    {
+      "id": "ws020",
+      "difficulty": 58,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the distance of a marathon in kilometres (approximately)?",
+      "options": [
+        "36.2 km",
+        "42.2 km",
+        "46.2 km",
+        "50.0 km"
+      ],
+      "correct_answer": 1,
+      "explanation": "42.195 km to be exact! The Comrades Marathon in SA is nearly double that — those runners are absolutely mad, in the best way.",
+      "image_url": null
+    },
+    {
+      "id": "ws021",
+      "difficulty": 56,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which footballer has scored the most goals in FIFA World Cup history?",
+      "options": [
+        "Ronaldo (Brazil)",
+        "Miroslav Klose",
+        "Pelé",
+        "Lionel Messi"
+      ],
+      "correct_answer": 1,
+      "explanation": "Miroslav Klose with 16 World Cup goals, beating Ronaldo's (the Brazilian one) record of 15. What a career!",
+      "image_url": null
+    },
+    {
+      "id": "ws022",
+      "difficulty": 54,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which sport would you perform a 'triple axel'?",
+      "options": [
+        "Gymnastics",
+        "Figure Skating",
+        "Diving",
+        "Snowboarding"
+      ],
+      "correct_answer": 1,
+      "explanation": "Figure skating! The triple axel is 3.5 rotations in the air. Imagine trying that on the ice rink at Canal Walk!",
+      "image_url": null
+    },
+    {
+      "id": "ws023",
+      "difficulty": 52,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country has won the most Olympic gold medals in history?",
+      "options": [
+        "China",
+        "Russia",
+        "Great Britain",
+        "United States"
+      ],
+      "correct_answer": 3,
+      "explanation": "The United States dominates the all-time Olympic gold medal count with over 1,000 golds. They're not shy about it either!",
+      "image_url": null
+    },
+    {
+      "id": "ws024",
+      "difficulty": 50,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Who holds the record for the most centuries in international cricket?",
+      "options": [
+        "Ricky Ponting",
+        "Sachin Tendulkar",
+        "Virat Kohli",
+        "Jacques Kallis"
+      ],
+      "correct_answer": 1,
+      "explanation": "Sachin Tendulkar with 100 international centuries — an insane achievement! Our own Jacques Kallis wasn't far behind with 62 though, and he bowled too!",
+      "image_url": null
+    },
+    {
+      "id": "ws025",
+      "difficulty": 48,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which team has won the most UEFA Champions League titles?",
+      "options": [
+        "AC Milan",
+        "Barcelona",
+        "Real Madrid",
+        "Bayern Munich"
+      ],
+      "correct_answer": 2,
+      "explanation": "Real Madrid with 15 Champions League titles and counting. They just collect them like braai invites on a Saturday!",
+      "image_url": null
+    },
+    {
+      "id": "ws026",
+      "difficulty": 46,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which Olympic sport do competitors use a foil, épée, or sabre?",
+      "options": [
+        "Fencing",
+        "Archery",
+        "Shooting",
+        "Modern Pentathlon"
+      ],
+      "correct_answer": 0,
+      "explanation": "Fencing! Three weapons, three disciplines. It's basically a sword fight with rules and fancy outfits.",
+      "image_url": null
+    },
+    {
+      "id": "ws027",
+      "difficulty": 44,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which tennis player has won the most Grand Slam singles titles (men's)?",
+      "options": [
+        "Roger Federer",
+        "Rafael Nadal",
+        "Novak Djokovic",
+        "Pete Sampras"
+      ],
+      "correct_answer": 2,
+      "explanation": "Novak Djokovic with 24 Grand Slam titles. The GOAT debate in tennis is like the braai vs barbecue debate — everyone has an opinion!",
+      "image_url": null
+    },
+    {
+      "id": "ws028",
+      "difficulty": 42,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What was the final score of the 2023 Rugby World Cup final between South Africa and New Zealand?",
+      "options": [
+        "15-12",
+        "12-11",
+        "19-14",
+        "23-15"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Boks won 12-11 in a nail-biter in Paris! Handre Pollard's penalty sealed it. The whole of Mzansi was going absolutely crazy!",
+      "image_url": null
+    },
+    {
+      "id": "ws029",
+      "difficulty": 40,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Arrange these FIFA World Cup winners in chronological order (earliest to latest):",
+      "options": [
+        "Spain",
+        "France (first win)",
+        "Italy (most recent win)",
+        "Germany (most recent win)"
+      ],
+      "correct_answer": "1,2,0,3",
+      "explanation": "France 1998, Italy 2006, Spain 2010, Germany 2014. Four different countries, four lekker tournaments!",
+      "image_url": null
+    },
+    {
+      "id": "ws030",
+      "difficulty": 38,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which city hosted the first modern Olympic Games in 1896?",
+      "options": [
+        "Paris",
+        "London",
+        "Athens",
+        "Rome"
+      ],
+      "correct_answer": 2,
+      "explanation": "Athens, Greece — going back to the roots of the ancient Olympics. It only made sense!",
+      "image_url": null
+    },
+    {
+      "id": "ws031",
+      "difficulty": 36,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In cricket, what is a 'hat-trick'?",
+      "options": [
+        "Scoring 100 runs in an innings",
+        "Taking 3 wickets in 3 consecutive deliveries",
+        "Hitting 3 sixes in a row",
+        "Bowling 3 maiden overs in a row"
+      ],
+      "correct_answer": 1,
+      "explanation": "Three wickets in three consecutive balls! It's one of the most exciting things in cricket. Kagiso Rabada knows the feeling!",
+      "image_url": null
+    },
+    {
+      "id": "ws032",
+      "difficulty": 34,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Formula 1 circuit is known as 'The Temple of Speed'?",
+      "options": [
+        "Silverstone",
+        "Monaco",
+        "Monza",
+        "Spa-Francorchamps"
+      ],
+      "correct_answer": 2,
+      "explanation": "Monza in Italy — home of the Italian Grand Prix and one of the fastest tracks on the calendar. Those long straights are something else!",
+      "image_url": null
+    },
+    {
+      "id": "ws033",
+      "difficulty": 32,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Who was the first person to run a sub-4-minute mile?",
+      "options": [
+        "Jesse Owens",
+        "Roger Bannister",
+        "Carl Lewis",
+        "Sebastian Coe"
+      ],
+      "correct_answer": 1,
+      "explanation": "Roger Bannister broke the 4-minute mile barrier in 1954 with a time of 3:59.4. People thought it was impossible before that!",
+      "image_url": null
+    },
+    {
+      "id": "ws034",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country dominates international table tennis, having won the most Olympic golds in the sport?",
+      "options": [
+        "Japan",
+        "South Korea",
+        "China",
+        "Sweden"
+      ],
+      "correct_answer": 2,
+      "explanation": "China absolutely dominates table tennis. They've won 32 of the 37 Olympic gold medals in the sport. Eish, that's proper domination!",
+      "image_url": null
+    },
+    {
+      "id": "ws035",
+      "difficulty": 28,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which sport is the 'Ryder Cup' contested?",
+      "options": [
+        "Sailing",
+        "Golf",
+        "Polo",
+        "Horse Racing"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Ryder Cup is golf's biggest team event — Europe vs USA every two years. The atmosphere is unlike anything else in golf!",
+      "image_url": null
+    },
+    {
+      "id": "ws036",
+      "difficulty": 26,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which heavyweight boxer retired undefeated with a 49-0 record in 1956?",
+      "options": [
+        "Joe Louis",
+        "Rocky Marciano",
+        "Muhammad Ali",
+        "Floyd Patterson"
+      ],
+      "correct_answer": 1,
+      "explanation": "Rocky Marciano — the only heavyweight champion to retire undefeated. 49 fights, 49 wins, 43 by knockout. That's a lekker record!",
+      "image_url": null
+    },
+    {
+      "id": "ws037",
+      "difficulty": 24,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the 'Duckworth-Lewis-Stern' method used for in cricket?",
+      "options": [
+        "Calculating batting averages",
+        "Resetting targets in rain-affected matches",
+        "Determining bowling rankings",
+        "Calculating net run rate"
+      ],
+      "correct_answer": 1,
+      "explanation": "DLS is used to calculate revised targets when rain interrupts a limited-overs match. It's maths that makes even accountants confused, but it works!",
+      "image_url": null
+    },
+    {
+      "id": "ws038",
+      "difficulty": 22,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Arrange these athletics world records by how recently they were set (most recent first):",
+      "options": [
+        "Men's 100m (Usain Bolt)",
+        "Men's long jump (Mike Powell)",
+        "Women's 100m (Florence Griffith-Joyner)",
+        "Men's 400m (Wayde van Niekerk)"
+      ],
+      "correct_answer": "3,0,1,2",
+      "explanation": "Van Niekerk's 400m record was set in 2016 (in Rio, making SA proud!), Bolt's 100m in 2009, Powell's long jump in 1991, and Flo-Jo's 100m way back in 1988!",
+      "image_url": null
+    },
+    {
+      "id": "ws039",
+      "difficulty": 20,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country has won the most Hockey (field hockey) World Cup titles in men's competition?",
+      "options": [
+        "India",
+        "Netherlands",
+        "Pakistan",
+        "Australia"
+      ],
+      "correct_answer": 2,
+      "explanation": "Pakistan has won the men's Hockey World Cup 4 times. They were dominant in the 70s and 80s — proper lekker hockey!",
+      "image_url": null
+    },
+    {
+      "id": "ws040",
+      "difficulty": 18,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which year did the 'Miracle on Ice' occur, where the USA ice hockey team defeated the Soviet Union at the Olympics?",
+      "options": [
+        "1972",
+        "1976",
+        "1980",
+        "1984"
+      ],
+      "correct_answer": 2,
+      "explanation": "The 1980 Winter Olympics in Lake Placid. A bunch of college kids beat the mighty Soviet Union! It's one of the greatest upsets in sport history.",
+      "image_url": null
+    },
+    {
+      "id": "ws041",
+      "difficulty": 16,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the only Grand Slam tennis tournament played on grass?",
+      "options": [
+        "French Open",
+        "Australian Open",
+        "Wimbledon",
+        "US Open"
+      ],
+      "correct_answer": 2,
+      "explanation": "Wimbledon! Strawberries, cream, and grass courts. It's the most traditional of all the Slams, and they still enforce a white dress code.",
+      "image_url": null
+    },
+    {
+      "id": "ws042",
+      "difficulty": 14,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which athlete won 4 gold medals at the 1936 Berlin Olympics, embarrassing the Nazi regime?",
+      "options": [
+        "Carl Lewis",
+        "Jesse Owens",
+        "Paavo Nurmi",
+        "Jim Thorpe"
+      ],
+      "correct_answer": 1,
+      "explanation": "Jesse Owens won 4 golds right in front of Hitler. Actions speak louder than words, nè? One of sport's most powerful moments.",
+      "image_url": null
+    },
+    {
+      "id": "ws043",
+      "difficulty": 12,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In cycling, what is the name of the leader's jersey in the Tour de France?",
+      "options": [
+        "The Green Jersey",
+        "The Polka Dot Jersey",
+        "The Yellow Jersey (Maillot Jaune)",
+        "The White Jersey"
+      ],
+      "correct_answer": 2,
+      "explanation": "The famous Maillot Jaune! The yellow jersey has been the symbol of the race leader since 1919. Every cyclist dreams of wearing it in Paris.",
+      "image_url": null
+    },
+    {
+      "id": "ws044",
+      "difficulty": 10,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which sport features the 'Fosbury Flop' technique?",
+      "options": [
+        "Long Jump",
+        "Pole Vault",
+        "High Jump",
+        "Triple Jump"
+      ],
+      "correct_answer": 2,
+      "explanation": "Dick Fosbury revolutionised the high jump at the 1968 Olympics by going over the bar backwards. Everyone thought he was crazy — until he won gold!",
+      "image_url": null
+    },
+    {
+      "id": "ws045",
+      "difficulty": 8,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which is the only country to have competed in every single Summer Olympic Games since 1896?",
+      "options": [
+        "United States",
+        "Great Britain",
+        "France",
+        "Greece"
+      ],
+      "correct_answer": 3,
+      "explanation": "Greece has been at every Summer Olympics since 1896. As the birthplace of the Olympics, it would be rude not to show up! Note: Australia, France, and Great Britain have also competed in all editions.",
+      "image_url": null
+    },
+    {
+      "id": "ws046",
+      "difficulty": 6,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which sport is a 'stone' delivered towards the 'house' on ice?",
+      "options": [
+        "Ice Hockey",
+        "Curling",
+        "Bobsled",
+        "Speed Skating"
+      ],
+      "correct_answer": 1,
+      "explanation": "Curling! Players slide a granite stone down ice towards a target. It looks easy until you try it — then you realise why they sweep so furiously!",
+      "image_url": null
+    },
+    {
+      "id": "ws047",
+      "difficulty": 5,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Arrange these sports in the order they were introduced to the Summer Olympics (earliest first):",
+      "options": [
+        "Basketball",
+        "Tennis",
+        "Skateboarding",
+        "Taekwondo"
+      ],
+      "correct_answer": "1,0,3,2",
+      "explanation": "Tennis debuted in 1896, basketball in 1936, taekwondo in 2000, and skateboarding in 2020 (Tokyo). The Olympics keeps evolving!",
+      "image_url": null
+    },
+    {
+      "id": "ws048",
+      "difficulty": 4,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which cricketer holds the record for the fastest century in ODI cricket (off just 31 balls)?",
+      "options": [
+        "Chris Gayle",
+        "Shahid Afridi",
+        "AB de Villiers",
+        "Corey Anderson"
+      ],
+      "correct_answer": 2,
+      "explanation": "AB de Villiers smashed 100 off just 31 balls against the West Indies in 2015. Mr. 360 — one of our proudest exports! That innings was absolutely bonkers.",
+      "image_url": null
+    },
+    {
+      "id": "ws049",
+      "difficulty": 2,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country won the first-ever Olympic gold medal in rugby sevens at the 2016 Rio Olympics?",
+      "options": [
+        "New Zealand",
+        "South Africa",
+        "Fiji",
+        "Great Britain"
+      ],
+      "correct_answer": 2,
+      "explanation": "Fiji won their first-ever Olympic medal of any kind — and it was gold! The whole country celebrated. Rugby sevens made its Olympic debut that year and Fiji were absolutely dominant.",
+      "image_url": null
+    },
+    {
+      "id": "ws050",
+      "difficulty": 1,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In the sport of jai alai, what is the name of the curved basket used to catch and throw the ball?",
+      "options": [
+        "Chistera",
+        "Pelota",
+        "Frontón",
+        "Cesta punta"
+      ],
+      "correct_answer": 0,
+      "explanation": "The chistera (also called cesta) is the curved wicker basket strapped to the player's hand. Jai alai is one of the fastest ball sports in the world — the ball can travel over 300 km/h!",
+      "image_url": null
+    }
+  ]
+}

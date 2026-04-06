@@ -15,6 +15,13 @@ import trickQuestions from './packs/trick-questions.json';
 import worldKnowledge from './packs/world-knowledge.json';
 import mixedBag from './packs/mixed-bag.json';
 import popCulture from './packs/pop-culture.json';
+import mythology from './packs/mythology.json';
+import worldHistory from './packs/world-history.json';
+import worldSport from './packs/world-sport.json';
+import worldMusic from './packs/world-music.json';
+import worldEntertainment from './packs/world-entertainment.json';
+import worldGeography from './packs/world-geography.json';
+import worldTravel from './packs/world-travel.json';
 
 export function loadAllPacks(): QuestionPack[] {
   return [
@@ -33,5 +40,12 @@ export function loadAllPacks(): QuestionPack[] {
     worldKnowledge,
     mixedBag,
     popCulture,
+    mythology,
+    worldHistory,
+    worldSport,
+    worldMusic,
+    worldEntertainment,
+    worldGeography,
+    worldTravel,
   ] as QuestionPack[];
 }

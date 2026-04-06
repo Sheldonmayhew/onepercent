@@ -1,0 +1,251 @@
+{
+  "pack_id": "world-myth-01",
+  "name": "Myths & Legends",
+  "description": "Gods, monsters, and ancient legends from around the world — Greek, Norse, Egyptian, Hindu, African, and beyond!",
+  "author": "Game Night Crew",
+  "question_count": 22,
+  "questions": [
+    {
+      "id": "myth001",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Greek mythology, who is the god of the sea?",
+      "options": ["Zeus", "Poseidon", "Hades", "Apollo"],
+      "correct_answer": 1,
+      "explanation": "Poseidon rules the seas with his mighty trident. Zeus got the sky, Hades got the underworld, and Poseidon got the ocean — not a bad deal!",
+      "image_url": null
+    },
+    {
+      "id": "myth002",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Norse mythology, what is the name of Thor's hammer?",
+      "options": ["Gungnir", "Mjolnir", "Stormbreaker", "Excalibur"],
+      "correct_answer": 1,
+      "explanation": "Mjolnir is Thor's legendary hammer — so heavy only he can lift it. Marvel didn't make that up, it's straight from the old Norse sagas! Gungnir is actually Odin's spear.",
+      "image_url": null
+    },
+    {
+      "id": "myth003",
+      "difficulty": 80,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Egyptian mythology, which god has the head of a jackal and is associated with mummification and the afterlife?",
+      "options": ["Horus", "Ra", "Anubis", "Osiris"],
+      "correct_answer": 2,
+      "explanation": "Anubis is the jackal-headed god who guides souls to the afterlife and oversees mummification. Think of him as the ultimate funeral director — he's been in the business for thousands of years!",
+      "image_url": null
+    },
+    {
+      "id": "myth004",
+      "difficulty": 80,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In African folklore, Anansi is a famous trickster figure who takes the form of what creature?",
+      "options": ["Tortoise", "Hare", "Spider", "Crow"],
+      "correct_answer": 2,
+      "explanation": "Anansi the Spider is one of the most beloved trickster figures in West African and Caribbean folklore. He uses wit and cunning to outsmart much bigger opponents — a proper underdog hero, like Bafana Bafana on a good day!",
+      "image_url": null
+    },
+    {
+      "id": "myth005",
+      "difficulty": 70,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Hindu god is known as the 'Destroyer' and is often depicted with a third eye and a trident?",
+      "options": ["Brahma", "Vishnu", "Shiva", "Ganesh"],
+      "correct_answer": 2,
+      "explanation": "Shiva is the Destroyer in the Hindu trinity (Trimurti) alongside Brahma the Creator and Vishnu the Preserver. His third eye can literally burn anything to ash when opened — talk about a death stare!",
+      "image_url": null
+    },
+    {
+      "id": "myth006",
+      "difficulty": 70,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Greek mythology, who was sentenced to push a boulder up a hill for eternity, only for it to roll back down each time?",
+      "options": ["Prometheus", "Tantalus", "Sisyphus", "Atlas"],
+      "correct_answer": 2,
+      "explanation": "Sisyphus was punished by the gods for his deceitfulness. His endless boulder-pushing became a symbol of futile labour — basically how Monday mornings feel after loadshedding kept you up all night!",
+      "image_url": null
+    },
+    {
+      "id": "myth007",
+      "difficulty": 60,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Norse mythology, what is Yggdrasil?",
+      "options": ["A sea serpent", "An enormous ash tree connecting nine worlds", "Odin's throne room", "The bridge to Asgard"],
+      "correct_answer": 1,
+      "explanation": "Yggdrasil is the great World Tree — an immense ash tree that connects all nine worlds in Norse cosmology. Its roots and branches hold the entire universe together. Now that's a proper tree of life!",
+      "image_url": null
+    },
+    {
+      "id": "myth008",
+      "difficulty": 60,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "According to Roman mythology, who were the twin brothers raised by a she-wolf who went on to found Rome?",
+      "options": ["Castor and Pollux", "Romulus and Remus", "Mars and Mercury", "Aeneas and Anchises"],
+      "correct_answer": 1,
+      "explanation": "Romulus and Remus were raised by a she-wolf after being abandoned. Romulus eventually killed Remus in a dispute and named the city Rome after himself. Sibling rivalry taken to the extreme!",
+      "image_url": null
+    },
+    {
+      "id": "myth009",
+      "difficulty": 50,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Japanese mythology, what is the name of the sun goddess and chief deity of Shinto?",
+      "options": ["Tsukuyomi", "Amaterasu", "Susanoo", "Izanami"],
+      "correct_answer": 1,
+      "explanation": "Amaterasu is the sun goddess and one of the principal deities in Shinto. The Japanese imperial family traditionally claims descent from her. Japan's name — 'Land of the Rising Sun' — connects directly to her!",
+      "image_url": null
+    },
+    {
+      "id": "myth010",
+      "difficulty": 50,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "How many labours did Hercules (Heracles) have to complete as penance in Greek mythology?",
+      "options": ["12", "2", "7", "17"],
+      "correct_answer": 0,
+      "explanation": "Hercules had to complete 12 labours, including slaying the Nemean Lion, capturing the Erymanthian Boar, and cleaning the Augean stables. That's one serious to-do list — makes your Monday look easy!",
+      "image_url": null
+    },
+    {
+      "id": "myth011",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Egyptian mythology, during the 'Weighing of the Heart' ceremony, the deceased's heart is weighed against what?",
+      "options": ["A gold coin", "The feather of Ma'at", "A sacred scarab", "The Eye of Horus"],
+      "correct_answer": 1,
+      "explanation": "The heart was weighed against the feather of Ma'at (goddess of truth and justice). If your heart was heavier than the feather — meaning you lived a sinful life — the demon Ammit would devour it. No appeals process either!",
+      "image_url": null
+    },
+    {
+      "id": "myth012",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Norse mythology, what is Ragnarok?",
+      "options": ["The realm of the frost giants", "A magical weapon forged by dwarves", "The prophesied end of the world and final battle of the gods", "The hall where warriors feast after death"],
+      "correct_answer": 2,
+      "explanation": "Ragnarok is the Norse apocalypse — a cataclysmic battle where gods like Odin and Thor meet their end, the world is consumed by fire and flood, and then reborn anew. It's basically the ultimate series finale!",
+      "image_url": null
+    },
+    {
+      "id": "myth013",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Zulu mythology, who is the supreme creator god known as 'the Great One of the Sky'?",
+      "options": ["Unkulunkulu", "Mamlambo", "Tikoloshe", "Nomhoyi"],
+      "correct_answer": 0,
+      "explanation": "Unkulunkulu is the supreme creator deity in Zulu mythology — 'the Great One' who emerged from a reed bed and created all people, animals, and the world. Proper homegrown South African mythology right there!",
+      "image_url": null
+    },
+    {
+      "id": "myth014",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Chinese mythology, which legendary creature guards the Eastern direction and represents spring?",
+      "options": ["White Tiger", "Black Tortoise", "Azure Dragon", "Vermilion Bird"],
+      "correct_answer": 2,
+      "explanation": "The Azure Dragon (Qinglong) guards the East and represents spring. The four celestial guardians are: Azure Dragon (East/Spring), Vermilion Bird (South/Summer), White Tiger (West/Autumn), and Black Tortoise (North/Winter). An epic squad!",
+      "image_url": null
+    },
+    {
+      "id": "myth015",
+      "difficulty": 20,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In West African mythology, Mami Wata is a powerful water spirit. What does she typically offer mortals in exchange for their devotion?",
+      "options": ["Immortality", "Wealth and beauty, but at the cost of fidelity to her", "Power over animals", "The ability to breathe underwater"],
+      "correct_answer": 1,
+      "explanation": "Mami Wata offers her followers wealth and beauty, but demands complete spiritual fidelity in return. Break that deal and you lose everything. She's worshipped across West, Central, and Southern Africa — even in SA! It's basically the ultimate loyalty test.",
+      "image_url": null
+    },
+    {
+      "id": "myth016",
+      "difficulty": 20,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these Greek mythological events in chronological order, from earliest to latest.",
+      "options": ["Trojan War", "Titans vs Olympians (Titanomachy)", "Odysseus's voyage home", "Jason and the Argonauts"],
+      "correct_answer": "1,3,0,2",
+      "explanation": "First came the Titanomachy (Titans vs Olympians), then Jason's quest for the Golden Fleece, then the Trojan War, and finally Odysseus's 10-year journey home from Troy. Greek mythology has its own cinematic universe!",
+      "image_url": null
+    },
+    {
+      "id": "myth017",
+      "difficulty": 10,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Norse mythology, which giant wolf is prophesied to swallow Odin during Ragnarok?",
+      "options": ["Sk\u00f6ll", "Hati", "Fenrir", "Garmr"],
+      "correct_answer": 2,
+      "explanation": "Fenrir, the monstrous wolf and son of Loki, is destined to break free from his magical chains and devour Odin during Ragnarok. The gods tried binding him, but fate catches up with everyone — even the All-Father!",
+      "image_url": null
+    },
+    {
+      "id": "myth018",
+      "difficulty": 10,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Hindu mythology, what is the name of the cosmic ocean of milk that the gods and demons churned to obtain the nectar of immortality (amrita)?",
+      "options": ["Kshir Sagar", "Ganga Sagar", "Pushkar Lake", "Manasarovar"],
+      "correct_answer": 0,
+      "explanation": "The Kshir Sagar (Ocean of Milk) was churned in the Samudra Manthan — one of the most epic episodes in Hindu mythology. Gods and demons used Mount Mandara as a churning rod and the serpent Vasuki as a rope. Talk about teamwork!",
+      "image_url": null
+    },
+    {
+      "id": "myth019",
+      "difficulty": 5,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In the Arthurian legend tradition, what is the name of the sword that King Arthur pulled from the stone — which is NOT Excalibur in many original sources?",
+      "options": ["Clarent", "Caliburn", "Arondight", "Galatine"],
+      "correct_answer": 1,
+      "explanation": "In many medieval sources, the sword in the stone is called Caliburn (from the Welsh 'Caledfwlch'), while Excalibur was a separate sword given to Arthur by the Lady of the Lake. Popular culture merged them, but the originals tell a different story!",
+      "image_url": null
+    },
+    {
+      "id": "myth020",
+      "difficulty": 5,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Egyptian mythology, how many gates (or pylons) must a soul pass through in the Duat (underworld) according to the Book of the Dead?",
+      "options": ["6", "11", "16", "21"],
+      "correct_answer": 3,
+      "explanation": "The Book of the Dead describes 21 gates (pylons) that a soul must pass through in the Duat, each guarded by a fearsome deity. You needed to know the correct magical spells for each one — the ultimate exam with no second chances!",
+      "image_url": null
+    },
+    {
+      "id": "myth021",
+      "difficulty": 1,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Mesopotamian mythology, who is the mother goddess who creates humans from clay mixed with the blood of a slain god in the Atrahasis epic?",
+      "options": ["Inanna", "Nintu (Mami)", "Ereshkigal", "Tiamat"],
+      "correct_answer": 1,
+      "explanation": "Nintu, also called Mami, mixed clay with the blood of the slain god Geshtu-e to create humans in the Atrahasis epic. This is one of the oldest creation myths in human history — dating back to around 1700 BCE. Only true mythology scholars know this one!",
+      "image_url": null
+    },
+    {
+      "id": "myth022",
+      "difficulty": 1,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In the obscure Finnish epic 'Kalevala', what magical object — a source of infinite prosperity — does the hero V\u00e4in\u00e4m\u00f6inen quest to retrieve from the land of Pohjola?",
+      "options": ["The Kantele", "The Sampo", "The Tuonela Stone", "The Ukko's Hammer"],
+      "correct_answer": 1,
+      "explanation": "The Sampo is a mysterious magical artifact forged by the smith Ilmarinen that brings endless riches and good fortune. Nobody's entirely sure what it actually IS — a mill, a world pillar, or something else entirely. The Kalevala inspired Tolkien, so you can thank Finnish mythology for Middle-earth!",
+      "image_url": null
+    }
+  ]
+}

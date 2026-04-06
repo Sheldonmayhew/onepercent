@@ -1,0 +1,809 @@
+{
+  "pack_id": "world-travel-01",
+  "name": "World Travel",
+  "description": "Airports, landmarks, cuisines, and bucket-list destinations -- for the armchair travellers and jet-setters alike!",
+  "author": "Game Night Crew",
+  "question_count": 50,
+  "questions": [
+    {
+      "id": "wt001",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Eiffel Tower is a famous landmark in which city?",
+      "options": [
+        "London",
+        "Rome",
+        "Paris",
+        "Madrid"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Eiffel Tower is in Paris, France. Built in 1889 for the World's Fair. It's about 330 metres tall -- almost 3x the height of the Carlton Centre in Joburg!",
+      "image_url": null
+    },
+    {
+      "id": "wt002",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country is famous for pizza and pasta?",
+      "options": [
+        "Spain",
+        "Italy",
+        "Greece",
+        "Portugal"
+      ],
+      "correct_answer": 1,
+      "explanation": "Italy is the home of pizza and pasta! From Naples-style margherita to fresh fettuccine -- Italian food is lekker worldwide.",
+      "image_url": null
+    },
+    {
+      "id": "wt003",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Statue of Liberty is located in which city?",
+      "options": [
+        "Los Angeles",
+        "Chicago",
+        "New York City",
+        "Washington D.C."
+      ],
+      "correct_answer": 2,
+      "explanation": "Lady Liberty stands in New York Harbor. She was a gift from France in 1886. A bit bigger than our Mandela statue in Sandton, ne?",
+      "image_url": null
+    },
+    {
+      "id": "wt004",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the currency used in the United Kingdom?",
+      "options": [
+        "Euro",
+        "Dollar",
+        "Pound Sterling",
+        "Franc"
+      ],
+      "correct_answer": 2,
+      "explanation": "The UK uses the British Pound Sterling (GBP). Fun fact: 1 Pound is usually around R23-R24, so London is NOT cheap for us South Africans!",
+      "image_url": null
+    },
+    {
+      "id": "wt005",
+      "difficulty": 86,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which ancient wonder of the world is located in Egypt?",
+      "options": [
+        "Colosseum",
+        "Great Pyramid of Giza",
+        "Machu Picchu",
+        "Stonehenge"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Great Pyramid of Giza is the only surviving ancient wonder! It's over 4,500 years old. You can fly direct from Joburg to Cairo to see it.",
+      "image_url": null
+    },
+    {
+      "id": "wt006",
+      "difficulty": 84,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Sushi is a traditional dish from which country?",
+      "options": [
+        "China",
+        "Thailand",
+        "South Korea",
+        "Japan"
+      ],
+      "correct_answer": 3,
+      "explanation": "Sushi originates from Japan! The word 'sushi' actually refers to the vinegared rice, not the fish. We've got some lekker sushi spots in SA too, but Japan is the OG.",
+      "image_url": null
+    },
+    {
+      "id": "wt007",
+      "difficulty": 82,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the most visited country in the world by international tourists?",
+      "options": [
+        "United States",
+        "Spain",
+        "France",
+        "Italy"
+      ],
+      "correct_answer": 2,
+      "explanation": "France is the most visited country, with over 89 million international tourists per year. Paris alone gets more visitors in a year than the entire population of South Africa!",
+      "image_url": null
+    },
+    {
+      "id": "wt008",
+      "difficulty": 80,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which airline is the national carrier of South Africa?",
+      "options": [
+        "FlySafair",
+        "South African Airways",
+        "Kulula",
+        "Mango"
+      ],
+      "correct_answer": 1,
+      "explanation": "South African Airways (SAA) is our national airline, founded in 1934. It's had its ups and downs (mostly downs lately), but it's still flying the flag!",
+      "image_url": null
+    },
+    {
+      "id": "wt009",
+      "difficulty": 78,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Taj Mahal is located in which country?",
+      "options": [
+        "Pakistan",
+        "Bangladesh",
+        "India",
+        "Nepal"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Taj Mahal is in Agra, India. It was built by Emperor Shah Jahan as a tomb for his wife. Now THAT'S romantic -- makes a bunch of flowers look a bit weak, ne?",
+      "image_url": null
+    },
+    {
+      "id": "wt010",
+      "difficulty": 76,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the busiest airport in the world by passenger traffic?",
+      "options": [
+        "London Heathrow",
+        "Dubai International",
+        "Hartsfield-Jackson Atlanta",
+        "Beijing Capital"
+      ],
+      "correct_answer": 2,
+      "explanation": "Hartsfield-Jackson Atlanta International Airport handles over 93 million passengers a year. That's like the entire SA population flying through... and then some! OR Tambo handles about 21 million by comparison.",
+      "image_url": null
+    },
+    {
+      "id": "wt011",
+      "difficulty": 74,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country is home to the ancient city of Machu Picchu?",
+      "options": [
+        "Colombia",
+        "Peru",
+        "Chile",
+        "Bolivia"
+      ],
+      "correct_answer": 1,
+      "explanation": "Machu Picchu is a 15th-century Inca citadel high up in the Andes Mountains of Peru. It sits at about 2,430m -- higher than Joburg's altitude of 1,753m!",
+      "image_url": null
+    },
+    {
+      "id": "wt012",
+      "difficulty": 72,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Grand Bazaar, one of the oldest and largest covered markets in the world, is in which city?",
+      "options": [
+        "Marrakech",
+        "Istanbul",
+        "Cairo",
+        "Delhi"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Grand Bazaar is in Istanbul, Turkey. It has over 4,000 shops! Makes the V&A Waterfront look like a corner cafe by comparison.",
+      "image_url": null
+    },
+    {
+      "id": "wt013",
+      "difficulty": 70,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the IATA airport code for OR Tambo International Airport in Johannesburg?",
+      "options": [
+        "JHB",
+        "JNB",
+        "ORT",
+        "TAM"
+      ],
+      "correct_answer": 1,
+      "explanation": "JNB is the code for OR Tambo (formerly Johannesburg International). Every South African should know this one -- it's on your luggage tags every time you fly!",
+      "image_url": null
+    },
+    {
+      "id": "wt014",
+      "difficulty": 68,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which festival in Germany is the world's largest beer festival?",
+      "options": [
+        "Carnival",
+        "Oktoberfest",
+        "Bierfest",
+        "Fasching"
+      ],
+      "correct_answer": 1,
+      "explanation": "Oktoberfest in Munich attracts over 6 million visitors each year. They drink about 7.7 million litres of beer! Makes our Joburg Oktoberfest look like a braai warmup.",
+      "image_url": null
+    },
+    {
+      "id": "wt015",
+      "difficulty": 66,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country's passport is generally considered the most powerful in the world (most visa-free destinations)?",
+      "options": [
+        "United States",
+        "Japan",
+        "United Kingdom",
+        "Germany"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Japanese passport typically tops the rankings with visa-free or visa-on-arrival access to 190+ countries. SA's green mamba gets us into about 100 -- not bad, but not Japan-level!",
+      "image_url": null
+    },
+    {
+      "id": "wt016",
+      "difficulty": 64,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Colosseum, an ancient amphitheatre, is found in which city?",
+      "options": [
+        "Athens",
+        "Rome",
+        "Istanbul",
+        "Alexandria"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Colosseum is in Rome, Italy. Built around 70-80 AD, it could seat 50,000-80,000 spectators. That's bigger than Ellis Park and Loftus combined!",
+      "image_url": null
+    },
+    {
+      "id": "wt017",
+      "difficulty": 62,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which famous street in Los Angeles is known for its luxury shopping and celebrity sightings?",
+      "options": [
+        "Sunset Boulevard",
+        "Hollywood Boulevard",
+        "Rodeo Drive",
+        "Mulholland Drive"
+      ],
+      "correct_answer": 2,
+      "explanation": "Rodeo Drive in Beverly Hills is THE luxury shopping street. Think Gucci, Louis Vuitton, Prada -- basically Sandton City but outside and with better weather.",
+      "image_url": null
+    },
+    {
+      "id": "wt018",
+      "difficulty": 60,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which country would you find the ancient rock-carved city of Petra?",
+      "options": [
+        "Israel",
+        "Jordan",
+        "Egypt",
+        "Lebanon"
+      ],
+      "correct_answer": 1,
+      "explanation": "Petra is in Jordan, carved directly into pink sandstone cliffs over 2,000 years ago. You might recognise it from Indiana Jones and the Last Crusade!",
+      "image_url": null
+    },
+    {
+      "id": "wt019",
+      "difficulty": 58,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the standard tipping percentage in restaurants in the United States?",
+      "options": [
+        "5-10%",
+        "10-15%",
+        "15-20%",
+        "25-30%"
+      ],
+      "correct_answer": 2,
+      "explanation": "Americans typically tip 15-20% at restaurants -- it's basically mandatory there because waiters earn very low base wages. In SA we usually do 10-15%, but in the US you'd be considered rude at that level!",
+      "image_url": null
+    },
+    {
+      "id": "wt020",
+      "difficulty": 56,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which UNESCO World Heritage Site is a massive coral reef system off the coast of Australia?",
+      "options": [
+        "Great Barrier Reef",
+        "Ningaloo Reef",
+        "Coral Sea Reef",
+        "Lord Howe Reef"
+      ],
+      "correct_answer": 0,
+      "explanation": "The Great Barrier Reef stretches over 2,300km along Australia's northeast coast. It's so big you can see it from space! Our own Sodwana Bay coral reefs are beautiful too, but much smaller.",
+      "image_url": null
+    },
+    {
+      "id": "wt021",
+      "difficulty": 54,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Asian city-state is known for its strict laws, including a ban on chewing gum?",
+      "options": [
+        "Hong Kong",
+        "Macau",
+        "Singapore",
+        "Brunei"
+      ],
+      "correct_answer": 2,
+      "explanation": "Singapore banned chewing gum imports in 1992 to keep their city clean. You can get fined for all sorts there -- littering, jaywalking, even not flushing a public toilet. Makes Joburg look pretty chill by comparison!",
+      "image_url": null
+    },
+    {
+      "id": "wt022",
+      "difficulty": 52,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Put these famous landmarks in order from OLDEST to NEWEST:",
+      "options": [
+        "Eiffel Tower (Paris)",
+        "Great Pyramid of Giza (Egypt)",
+        "Colosseum (Rome)",
+        "Statue of Liberty (New York)"
+      ],
+      "correct_answer": "1,2,3,0",
+      "explanation": "Great Pyramid (~2560 BC), Colosseum (~80 AD), Statue of Liberty (1886), Eiffel Tower (1889). The pyramids are almost 4,500 years older than the Eiffel Tower -- that's properly ancient!",
+      "image_url": null
+    },
+    {
+      "id": "wt023",
+      "difficulty": 50,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which hotel in Dubai is shaped like a sail and stands on an artificial island?",
+      "options": [
+        "Atlantis The Palm",
+        "Burj Al Arab",
+        "Emirates Palace",
+        "Jumeirah Beach Hotel"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Burj Al Arab is one of the most luxurious hotels in the world, standing 321m tall on its own island. A night there can cost more than a round trip from Joburg to Dubai!",
+      "image_url": null
+    },
+    {
+      "id": "wt024",
+      "difficulty": 48,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the IATA airport code for London Heathrow?",
+      "options": [
+        "LHR",
+        "LON",
+        "HTH",
+        "LDN"
+      ],
+      "correct_answer": 0,
+      "explanation": "LHR stands for London Heathrow -- one of the busiest airports in Europe. If you've ever taken that 11-hour direct flight from JNB, you know that code well!",
+      "image_url": null
+    },
+    {
+      "id": "wt025",
+      "difficulty": 46,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Holi festival, known as the 'Festival of Colours', is celebrated primarily in which country?",
+      "options": [
+        "Thailand",
+        "Indonesia",
+        "India",
+        "Sri Lanka"
+      ],
+      "correct_answer": 2,
+      "explanation": "Holi is a Hindu spring festival celebrated across India where people throw coloured powders at each other. It's lekker vibes -- imagine a colour run but as a national holiday!",
+      "image_url": null
+    },
+    {
+      "id": "wt026",
+      "difficulty": 44,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which South American country is the Galapagos Islands a territory of?",
+      "options": [
+        "Colombia",
+        "Peru",
+        "Chile",
+        "Ecuador"
+      ],
+      "correct_answer": 3,
+      "explanation": "The Galapagos Islands belong to Ecuador, sitting about 1,000km off the coast. Charles Darwin's visit there in 1835 inspired his theory of evolution. A proper bucket-list destination!",
+      "image_url": null
+    },
+    {
+      "id": "wt027",
+      "difficulty": 42,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Japan, it is considered rude to do what with your chopsticks?",
+      "options": [
+        "Rest them on your bowl",
+        "Use them to point at food",
+        "Stick them upright in rice",
+        "Hold them in your left hand"
+      ],
+      "correct_answer": 2,
+      "explanation": "Sticking chopsticks upright in rice resembles incense at a funeral in Japanese culture -- it's a major no-no! Like putting your elbows on the table at your ouma's house, but way worse.",
+      "image_url": null
+    },
+    {
+      "id": "wt028",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which European country has the most UNESCO World Heritage Sites?",
+      "options": [
+        "Spain",
+        "France",
+        "Italy",
+        "Germany"
+      ],
+      "correct_answer": 2,
+      "explanation": "Italy has the most UNESCO World Heritage Sites in the world with 59! SA has 10, including Robben Island and the Cradle of Humankind. Not bad for us either, ne?",
+      "image_url": null
+    },
+    {
+      "id": "wt029",
+      "difficulty": 38,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which neighbourhood in New York City is famous for its jazz clubs and African-American cultural heritage?",
+      "options": [
+        "Brooklyn",
+        "SoHo",
+        "Harlem",
+        "Greenwich Village"
+      ],
+      "correct_answer": 2,
+      "explanation": "Harlem in Upper Manhattan has been a centre of African-American culture since the Harlem Renaissance of the 1920s. Jazz, soul food, gospel -- the vibe is something else!",
+      "image_url": null
+    },
+    {
+      "id": "wt030",
+      "difficulty": 36,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Ferdinand Magellan's expedition was the first to do what, completed in 1522?",
+      "options": [
+        "Reach the North Pole",
+        "Circumnavigate the globe",
+        "Cross the Atlantic Ocean",
+        "Sail around Africa"
+      ],
+      "correct_answer": 1,
+      "explanation": "Magellan's expedition was the first to sail all the way around the world, though Magellan himself died in the Philippines. His crew finished the trip. Talk about a long road trip!",
+      "image_url": null
+    },
+    {
+      "id": "wt031",
+      "difficulty": 34,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country is La Tomatina, the world's largest tomato fight festival, held in?",
+      "options": [
+        "Italy",
+        "Mexico",
+        "Spain",
+        "Portugal"
+      ],
+      "correct_answer": 2,
+      "explanation": "La Tomatina takes place every August in Bunol, Spain. About 150,000 tomatoes get thrown in one hour. Imagine the mess -- your mom would NEVER allow that at a braai!",
+      "image_url": null
+    },
+    {
+      "id": "wt032",
+      "difficulty": 32,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Rank these airports by IATA code in ALPHABETICAL order:",
+      "options": [
+        "OR Tambo, Johannesburg (JNB)",
+        "Dubai International (DXB)",
+        "Cape Town International (CPT)",
+        "London Heathrow (LHR)"
+      ],
+      "correct_answer": "2,1,0,3",
+      "explanation": "CPT (Cape Town), DXB (Dubai), JNB (Johannesburg), LHR (London). If you fly enough between these, you're practically a travel blogger!",
+      "image_url": null
+    },
+    {
+      "id": "wt033",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The famous Maldives resort destination is located in which ocean?",
+      "options": [
+        "Pacific Ocean",
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Maldives sits in the Indian Ocean, southwest of Sri Lanka. Those overwater bungalows are a bucket-list dream -- and from SA it's only about a 6-7 hour flight from JNB!",
+      "image_url": null
+    },
+    {
+      "id": "wt034",
+      "difficulty": 28,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country is home to the world's longest commercial flight route (as of 2024)?",
+      "options": [
+        "United States (New York to Sydney)",
+        "Singapore (Singapore to New York)",
+        "Australia (Melbourne to London)",
+        "Qatar (Doha to Auckland)"
+      ],
+      "correct_answer": 1,
+      "explanation": "Singapore Airlines' flight from Singapore to New York JFK covers about 15,350km and takes roughly 18.5 hours non-stop. That's about 14 hours longer than JNB to CPT -- now THAT'S a long flight!",
+      "image_url": null
+    },
+    {
+      "id": "wt035",
+      "difficulty": 26,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which country is it customary to remove your shoes before entering someone's home?",
+      "options": [
+        "Brazil",
+        "United States",
+        "Japan",
+        "Australia"
+      ],
+      "correct_answer": 2,
+      "explanation": "In Japan, removing shoes before entering a home is essential etiquette. They even have special slippers for the bathroom! We South Africans often go barefoot by choice -- slightly different vibe.",
+      "image_url": null
+    },
+    {
+      "id": "wt036",
+      "difficulty": 24,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The ancient city of Angkor Wat, the largest religious monument in the world, is in which country?",
+      "options": [
+        "Thailand",
+        "Vietnam",
+        "Cambodia",
+        "Myanmar"
+      ],
+      "correct_answer": 2,
+      "explanation": "Angkor Wat is in Siem Reap, Cambodia. Originally a Hindu temple, it became Buddhist in the 12th century. The complex covers 162 hectares -- that's bigger than most SA game reserves!",
+      "image_url": null
+    },
+    {
+      "id": "wt037",
+      "difficulty": 22,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Middle Eastern country has the currency called the 'Dirham' and is home to the Burj Khalifa?",
+      "options": [
+        "Saudi Arabia",
+        "Qatar",
+        "United Arab Emirates",
+        "Oman"
+      ],
+      "correct_answer": 2,
+      "explanation": "The UAE uses the Dirham (AED). The Burj Khalifa in Dubai stands at 828m -- the tallest building in the world. Many South Africans have moved to Dubai for work, so this should be an easy one!",
+      "image_url": null
+    },
+    {
+      "id": "wt038",
+      "difficulty": 20,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which famous market in Bangkok, Thailand is one of the world's largest outdoor markets?",
+      "options": [
+        "Floating Market",
+        "Chatuchak Weekend Market",
+        "Night Bazaar",
+        "Khao San Market"
+      ],
+      "correct_answer": 1,
+      "explanation": "Chatuchak Weekend Market has over 15,000 stalls spread across 35 acres. You can find everything from vintage clothes to exotic pets. It makes the Rosebank Rooftop Market look tiny!",
+      "image_url": null
+    },
+    {
+      "id": "wt039",
+      "difficulty": 18,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Put these famous travel routes in order from SHORTEST to LONGEST distance:",
+      "options": [
+        "Trans-Siberian Railway (~9,289 km)",
+        "Route 66, USA (~3,940 km)",
+        "Garden Route, SA (~300 km)",
+        "Silk Road (~6,400 km)"
+      ],
+      "correct_answer": "2,1,3,0",
+      "explanation": "Garden Route (300km), Route 66 (3,940km), Silk Road (6,400km), Trans-Siberian (9,289km). Our Garden Route is short but sweet -- from Mossel Bay to Storms River, it's one of the most scenic drives in the world!",
+      "image_url": null
+    },
+    {
+      "id": "wt040",
+      "difficulty": 16,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Pacific island nation has a time zone that is UTC+14, making it one of the first places to see each new day?",
+      "options": [
+        "Samoa",
+        "Tonga",
+        "Kiribati",
+        "Fiji"
+      ],
+      "correct_answer": 2,
+      "explanation": "Kiribati's Line Islands use UTC+14, making them the first place on Earth to ring in the New Year. SA is UTC+2, so they're a full 12 hours ahead of us -- they're literally living in the future!",
+      "image_url": null
+    },
+    {
+      "id": "wt041",
+      "difficulty": 14,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which luxury train travels between Cape Town and Pretoria, considered one of the most luxurious train journeys in the world?",
+      "options": [
+        "The Shongololo Express",
+        "The Blue Train",
+        "Rovos Rail",
+        "Premier Classe"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Blue Train is SA's iconic luxury rail service covering 1,600km between Cape Town and Pretoria. Rovos Rail also does this route and is equally lekker, but The Blue Train is the more famous answer!",
+      "image_url": null
+    },
+    {
+      "id": "wt042",
+      "difficulty": 12,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Svalbard Global Seed Vault, a secure backup of the world's crop seeds, is located in which country?",
+      "options": [
+        "Iceland",
+        "Finland",
+        "Norway",
+        "Sweden"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Seed Vault is buried in a mountain on the Norwegian island of Svalbard, near the North Pole. It holds over 1.1 million seed samples -- basically a backup drive for planet Earth's food supply!",
+      "image_url": null
+    },
+    {
+      "id": "wt043",
+      "difficulty": 10,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which tiny European country is entirely surrounded by Italy and has the world's oldest constitution still in effect (since 1600)?",
+      "options": [
+        "Vatican City",
+        "Monaco",
+        "San Marino",
+        "Liechtenstein"
+      ],
+      "correct_answer": 2,
+      "explanation": "San Marino, with only 33,000 people, claims to be the oldest republic in the world. Its constitution dates from 1600. The whole country is about the size of Soweto!",
+      "image_url": null
+    },
+    {
+      "id": "wt044",
+      "difficulty": 8,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which airline has the longest-running international route still in operation, flying between London and Brisbane since 1935?",
+      "options": [
+        "British Airways",
+        "Singapore Airlines",
+        "Qantas",
+        "Emirates"
+      ],
+      "correct_answer": 2,
+      "explanation": "Qantas has been flying the 'Kangaroo Route' between London and Australia since 1935 (with several stops originally). The name comes from their kangaroo logo -- obviously!",
+      "image_url": null
+    },
+    {
+      "id": "wt045",
+      "difficulty": 7,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Central Asian country has the bizarre 'Door to Hell', a natural gas crater that has been burning since 1971?",
+      "options": [
+        "Kazakhstan",
+        "Uzbekistan",
+        "Turkmenistan",
+        "Tajikistan"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Darvaza Gas Crater in Turkmenistan was accidentally created by Soviet geologists. They set it on fire thinking it would burn out in weeks -- it's been burning for over 50 years! Talk about a braai that got out of hand.",
+      "image_url": null
+    },
+    {
+      "id": "wt046",
+      "difficulty": 6,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country has the most time zones in the world?",
+      "options": [
+        "Russia",
+        "United States",
+        "France",
+        "China"
+      ],
+      "correct_answer": 2,
+      "explanation": "Surprise! France has 12 time zones thanks to its overseas territories (French Polynesia, New Caledonia, Reunion, etc.). Russia has 11, and the US has 9. SA's single time zone (SAST) keeps things simple for us!",
+      "image_url": null
+    },
+    {
+      "id": "wt047",
+      "difficulty": 5,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Put these countries in order of MOST to FEWEST visa-free destinations their passport grants (as of 2024):",
+      "options": [
+        "South Africa (~100)",
+        "Japan (~190)",
+        "Afghanistan (~27)",
+        "Brazil (~170)"
+      ],
+      "correct_answer": "1,3,0,2",
+      "explanation": "Japan (~190), Brazil (~170), South Africa (~100), Afghanistan (~27). Our green mamba passport is decent but not top-tier. Japan's passport is basically a golden ticket to the world!",
+      "image_url": null
+    },
+    {
+      "id": "wt048",
+      "difficulty": 4,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which remote island, a UNESCO World Heritage Site, was used as a leper colony and is part of the Hawaiian archipelago?",
+      "options": [
+        "Niihau",
+        "Kahoolawe",
+        "Molokai (Kalaupapa)",
+        "Lanai"
+      ],
+      "correct_answer": 2,
+      "explanation": "Kalaupapa on Molokai served as a leprosy settlement from 1866. Belgian priest Father Damien famously devoted his life to caring for the patients there. SA had a similar colony on Robben Island before it became a prison.",
+      "image_url": null
+    },
+    {
+      "id": "wt049",
+      "difficulty": 3,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which obscure travel record was set by Graham Hughes in 2014?",
+      "options": [
+        "First person to fly to every country in one year",
+        "First person to visit every country without flying",
+        "Youngest person to visit all 7 continents",
+        "Most countries visited in 24 hours"
+      ],
+      "correct_answer": 1,
+      "explanation": "British adventurer Graham Hughes visited all 201 countries (as recognised at the time) using only buses, taxis, trains, and boats -- no flights! It took him 4 years. Now THAT makes your road trip to Durban look easy, ne?",
+      "image_url": null
+    },
+    {
+      "id": "wt050",
+      "difficulty": 1,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the name of the only airport in the world with a roundabout (traffic circle) on its active runway?",
+      "options": [
+        "Madeira Airport, Portugal",
+        "Gibraltar International Airport",
+        "Barra Airport, Scotland",
+        "Tenzing-Hillary Airport, Nepal"
+      ],
+      "correct_answer": 1,
+      "explanation": "Gibraltar Airport's runway crosses Winston Churchill Avenue, a major road! Cars have to stop at barriers like a railway crossing when planes land or take off. It's like the N1 and OR Tambo runway had a baby -- chaos!",
+      "image_url": null
+    }
+  ]
+}

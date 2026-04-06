@@ -1,0 +1,809 @@
+{
+  "pack_id": "world-hist-01",
+  "name": "World History",
+  "description": "From ancient empires to modern revolutions -- how well do you know the story of humanity?",
+  "author": "Game Night Crew",
+  "question_count": 50,
+  "questions": [
+    {
+      "id": "wh001",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which ancient civilisation built the Great Pyramid of Giza?",
+      "options": [
+        "The Romans",
+        "The Greeks",
+        "The Egyptians",
+        "The Persians"
+      ],
+      "correct_answer": 2,
+      "explanation": "The ancient Egyptians built the Great Pyramid around 2560 BC. It's about 139 metres tall -- almost as tall as the Carlton Centre in Joburg!",
+      "image_url": null
+    },
+    {
+      "id": "wh002",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which year did World War II end?",
+      "options": [
+        "1942",
+        "1945",
+        "1948",
+        "1950"
+      ],
+      "correct_answer": 1,
+      "explanation": "WWII ended in 1945 when Japan surrendered. South African soldiers also served in the war, fighting in North Africa and Italy. Respect!",
+      "image_url": null
+    },
+    {
+      "id": "wh003",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What was the name of the ship on which the Pilgrims sailed to America in 1620?",
+      "options": [
+        "The Santa Maria",
+        "The Mayflower",
+        "The Endeavour",
+        "The Beagle"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Mayflower carried the Pilgrims from England to what's now Massachusetts. A lekker long voyage across the Atlantic -- no Woolworths snacks on board!",
+      "image_url": null
+    },
+    {
+      "id": "wh004",
+      "difficulty": 87,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which empire was ruled by Julius Caesar?",
+      "options": [
+        "The Greek Empire",
+        "The Ottoman Empire",
+        "The Roman Empire",
+        "The Persian Empire"
+      ],
+      "correct_answer": 2,
+      "explanation": "Julius Caesar was a Roman leader (though technically a dictator, not an emperor). He was famously stabbed by his mates -- talk about a bad braai invite, ne?",
+      "image_url": null
+    },
+    {
+      "id": "wh005",
+      "difficulty": 85,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Berlin Wall fell in which year?",
+      "options": [
+        "1985",
+        "1989",
+        "1991",
+        "1993"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Berlin Wall fell on 9 November 1989. Just a few months later, Madiba walked out of prison in February 1990. Big years for freedom worldwide!",
+      "image_url": null
+    },
+    {
+      "id": "wh006",
+      "difficulty": 83,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country was the first to land a human on the Moon?",
+      "options": [
+        "Russia (Soviet Union)",
+        "China",
+        "United States",
+        "United Kingdom"
+      ],
+      "correct_answer": 2,
+      "explanation": "The USA landed Neil Armstrong and Buzz Aldrin on the Moon in July 1969. That's one giant leap -- further than from Cape Town to Joburg, just a little bit!",
+      "image_url": null
+    },
+    {
+      "id": "wh007",
+      "difficulty": 82,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What ancient wonder was located in the city of Babylon?",
+      "options": [
+        "The Colossus of Rhodes",
+        "The Hanging Gardens",
+        "The Lighthouse of Alexandria",
+        "The Temple of Artemis"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Hanging Gardens of Babylon were one of the Seven Wonders of the Ancient World. Imagine Kirstenbosch but thousands of years ago in Iraq!",
+      "image_url": null
+    },
+    {
+      "id": "wh008",
+      "difficulty": 80,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Who was the first President of the United States?",
+      "options": [
+        "Abraham Lincoln",
+        "Thomas Jefferson",
+        "George Washington",
+        "John Adams"
+      ],
+      "correct_answer": 2,
+      "explanation": "George Washington became the first US President in 1789. He's the ou on the one-dollar bill. Every country needs a strong first president, ne Madiba?",
+      "image_url": null
+    },
+    {
+      "id": "wh009",
+      "difficulty": 78,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The French Revolution began in which year?",
+      "options": [
+        "1776",
+        "1789",
+        "1804",
+        "1815"
+      ],
+      "correct_answer": 1,
+      "explanation": "The French Revolution kicked off in 1789 with the storming of the Bastille. The people were gatvol of the monarchy -- revolution time!",
+      "image_url": null
+    },
+    {
+      "id": "wh010",
+      "difficulty": 76,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which famous conqueror created one of the largest empires in history by the age of 30?",
+      "options": [
+        "Genghis Khan",
+        "Napoleon Bonaparte",
+        "Alexander the Great",
+        "Attila the Hun"
+      ],
+      "correct_answer": 2,
+      "explanation": "Alexander the Great of Macedonia conquered from Greece to India by age 30. That's some serious hustle -- most of us haven't even paid off our cars by then!",
+      "image_url": null
+    },
+    {
+      "id": "wh011",
+      "difficulty": 75,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Great Zimbabwe was a medieval city in which modern-day country?",
+      "options": [
+        "South Africa",
+        "Mozambique",
+        "Zimbabwe",
+        "Zambia"
+      ],
+      "correct_answer": 2,
+      "explanation": "Great Zimbabwe was a thriving city from the 11th to 15th century in modern Zimbabwe. It's proof that Africa had amazing civilisations long before Europeans arrived. Proud Mzansi neighbour energy!",
+      "image_url": null
+    },
+    {
+      "id": "wh012",
+      "difficulty": 73,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Put these historical events in chronological order (earliest first): (1) French Revolution (2) Fall of the Roman Empire (3) World War I (4) American Independence",
+      "options": [
+        "French Revolution",
+        "Fall of the Roman Empire",
+        "World War I",
+        "American Independence"
+      ],
+      "correct_answer": "1,3,0,2",
+      "explanation": "The order is: Fall of Rome (476 AD), American Independence (1776), French Revolution (1789), then World War I (1914). History moves fast, ne?",
+      "image_url": null
+    },
+    {
+      "id": "wh013",
+      "difficulty": 72,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which empire was Mansa Musa, considered the richest person in history, ruler of?",
+      "options": [
+        "The Songhai Empire",
+        "The Mali Empire",
+        "The Zulu Kingdom",
+        "The Aksumite Empire"
+      ],
+      "correct_answer": 1,
+      "explanation": "Mansa Musa ruled the Mali Empire in the 14th century. He was so rich that when he visited Cairo, he crashed the gold market for a decade. That's Sandton-level flex times a thousand!",
+      "image_url": null
+    },
+    {
+      "id": "wh014",
+      "difficulty": 70,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Titanic sank in which year?",
+      "options": [
+        "1905",
+        "1912",
+        "1918",
+        "1923"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Titanic hit an iceberg and sank on 15 April 1912. Over 1,500 people died. They said it was unsinkable -- famous last words, that!",
+      "image_url": null
+    },
+    {
+      "id": "wh015",
+      "difficulty": 68,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which civilisation invented paper, gunpowder, and the compass?",
+      "options": [
+        "The Romans",
+        "The Arabs",
+        "The Chinese",
+        "The Indians"
+      ],
+      "correct_answer": 2,
+      "explanation": "Ancient China invented all three, plus printing! Without them we'd have no books, no fireworks, and no GPS. Dankie, China!",
+      "image_url": null
+    },
+    {
+      "id": "wh016",
+      "difficulty": 66,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Who led India's non-violent independence movement against British rule?",
+      "options": [
+        "Jawaharlal Nehru",
+        "Mahatma Gandhi",
+        "Subhas Chandra Bose",
+        "Bhagat Singh"
+      ],
+      "correct_answer": 1,
+      "explanation": "Mahatma Gandhi led India to independence through non-violent resistance. Madiba was inspired by him too -- peaceful revolution runs deep!",
+      "image_url": null
+    },
+    {
+      "id": "wh017",
+      "difficulty": 65,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The ancient city of Carthage was located in which modern-day country?",
+      "options": [
+        "Libya",
+        "Egypt",
+        "Tunisia",
+        "Morocco"
+      ],
+      "correct_answer": 2,
+      "explanation": "Carthage was in modern-day Tunisia. The Carthaginian general Hannibal famously crossed the Alps with elephants to attack Rome. Now THAT's a road trip!",
+      "image_url": null
+    },
+    {
+      "id": "wh018",
+      "difficulty": 63,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which event triggered the start of World War I in 1914?",
+      "options": [
+        "The invasion of Poland",
+        "The sinking of the Lusitania",
+        "The assassination of Archduke Franz Ferdinand",
+        "The bombing of Pearl Harbor"
+      ],
+      "correct_answer": 2,
+      "explanation": "Archduke Franz Ferdinand of Austria-Hungary was assassinated in Sarajevo on 28 June 1914, setting off a chain reaction of alliances that led to war. One bullet changed the whole world!",
+      "image_url": null
+    },
+    {
+      "id": "wh019",
+      "difficulty": 62,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Ottoman Empire was centred in which modern-day country?",
+      "options": [
+        "Iran",
+        "Turkey",
+        "Egypt",
+        "Saudi Arabia"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Ottoman Empire was based in what's now Turkey, with Istanbul (Constantinople) as its capital. It lasted over 600 years -- longer than any braai we've ever been to!",
+      "image_url": null
+    },
+    {
+      "id": "wh020",
+      "difficulty": 60,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What was the name of the trade network that connected China to the Mediterranean?",
+      "options": [
+        "The Spice Route",
+        "The Silk Road",
+        "The Gold Coast Route",
+        "The Tea Trail"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Silk Road was an ancient trade network stretching thousands of kilometres. Silk, spices, and ideas all flowed along it. The original online shopping, just with camels instead of couriers!",
+      "image_url": null
+    },
+    {
+      "id": "wh021",
+      "difficulty": 58,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which African kingdom successfully resisted Italian colonisation at the Battle of Adwa in 1896?",
+      "options": [
+        "The Zulu Kingdom",
+        "Ethiopia",
+        "The Ashanti Empire",
+        "Egypt"
+      ],
+      "correct_answer": 1,
+      "explanation": "Ethiopia defeated Italy at Adwa and remained one of only two African countries never colonised. Emperor Menelik II wasn't having any of it. Absolute legend!",
+      "image_url": null
+    },
+    {
+      "id": "wh022",
+      "difficulty": 56,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Magna Carta, signed in 1215, limited the power of the king in which country?",
+      "options": [
+        "France",
+        "Spain",
+        "England",
+        "Germany"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Magna Carta was signed by King John of England. It was one of the first documents to say the king isn't above the law. A bit like our Constitution, ne?",
+      "image_url": null
+    },
+    {
+      "id": "wh023",
+      "difficulty": 55,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Viking explorer is believed to have reached North America around 1000 AD?",
+      "options": [
+        "Erik the Red",
+        "Ragnar Lothbrok",
+        "Leif Erikson",
+        "Harald Hardrada"
+      ],
+      "correct_answer": 2,
+      "explanation": "Leif Erikson reached Newfoundland about 500 years before Columbus. The Vikings were the original adventurers -- they'd have loved the Drakensberg!",
+      "image_url": null
+    },
+    {
+      "id": "wh024",
+      "difficulty": 53,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The atomic bombs dropped on Japan in 1945 hit which two cities?",
+      "options": [
+        "Tokyo and Osaka",
+        "Hiroshima and Nagasaki",
+        "Kyoto and Kobe",
+        "Yokohama and Sapporo"
+      ],
+      "correct_answer": 1,
+      "explanation": "Hiroshima (6 Aug) and Nagasaki (9 Aug) were bombed in 1945, leading to Japan's surrender. A devastating moment in history that the world must never forget.",
+      "image_url": null
+    },
+    {
+      "id": "wh025",
+      "difficulty": 52,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Genghis Khan founded which empire in the 13th century?",
+      "options": [
+        "The Ottoman Empire",
+        "The Mughal Empire",
+        "The Mongol Empire",
+        "The Persian Empire"
+      ],
+      "correct_answer": 2,
+      "explanation": "Genghis Khan united the Mongol tribes and built the largest contiguous land empire in history. His empire stretched from China to Europe -- bigger than driving from Cape Town to Cairo and back!",
+      "image_url": null
+    },
+    {
+      "id": "wh026",
+      "difficulty": 50,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Rwandan Genocide took place in which year?",
+      "options": [
+        "1990",
+        "1992",
+        "1994",
+        "1996"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Rwandan Genocide happened in 1994, the same year SA had its first democratic election. While Mzansi celebrated freedom, Rwanda experienced unimaginable tragedy. About 800,000 people were killed in just 100 days.",
+      "image_url": null
+    },
+    {
+      "id": "wh027",
+      "difficulty": 48,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which revolution in 1917 led to the creation of the Soviet Union?",
+      "options": [
+        "The French Revolution",
+        "The Russian Revolution",
+        "The Chinese Revolution",
+        "The Cuban Revolution"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Russian Revolution of 1917 overthrew the Tsar and eventually led to the Soviet Union under Lenin. It changed the entire 20th century!",
+      "image_url": null
+    },
+    {
+      "id": "wh028",
+      "difficulty": 46,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these empires from OLDEST to most RECENT: (1) Roman Empire (2) British Empire (3) Mongol Empire (4) Ancient Egypt",
+      "options": [
+        "Roman Empire",
+        "British Empire",
+        "Mongol Empire",
+        "Ancient Egypt"
+      ],
+      "correct_answer": "3,0,2,1",
+      "explanation": "Ancient Egypt (~3100 BC), then Rome (~27 BC), Mongol Empire (~1206 AD), and finally the British Empire (~1600s). Egypt was already ancient when Rome was just getting started!",
+      "image_url": null
+    },
+    {
+      "id": "wh029",
+      "difficulty": 45,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Scramble for Africa, where European powers divided the continent, was formalised at which conference?",
+      "options": [
+        "The Vienna Congress",
+        "The Berlin Conference",
+        "The Paris Peace Conference",
+        "The Yalta Conference"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Berlin Conference of 1884-85 is where European powers carved up Africa like a Sunday roast -- without inviting a single African leader. The audacity, ne?",
+      "image_url": null
+    },
+    {
+      "id": "wh030",
+      "difficulty": 43,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which ancient writing system used wedge-shaped marks pressed into clay tablets?",
+      "options": [
+        "Hieroglyphics",
+        "Cuneiform",
+        "Sanskrit",
+        "Linear B"
+      ],
+      "correct_answer": 1,
+      "explanation": "Cuneiform was developed by the Sumerians in Mesopotamia (modern Iraq) around 3400 BC. It's one of the oldest writing systems ever -- the original WhatsApp!",
+      "image_url": null
+    },
+    {
+      "id": "wh031",
+      "difficulty": 42,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Martin Luther King Jr.'s famous 'I Have a Dream' speech was delivered during which event?",
+      "options": [
+        "The Montgomery Bus Boycott",
+        "The March on Washington",
+        "The Selma to Montgomery March",
+        "The Greensboro Sit-ins"
+      ],
+      "correct_answer": 1,
+      "explanation": "MLK delivered the speech at the March on Washington on 28 August 1963 in front of 250,000 people. A moment that echoed all the way to Mzansi's own struggle for freedom.",
+      "image_url": null
+    },
+    {
+      "id": "wh032",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Chinese dynasty built the majority of the Great Wall of China?",
+      "options": [
+        "The Tang Dynasty",
+        "The Han Dynasty",
+        "The Ming Dynasty",
+        "The Qing Dynasty"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Ming Dynasty (1368-1644) built most of the Great Wall we see today. It's over 21,000 km long. Makes the N1 highway look like a driveway!",
+      "image_url": null
+    },
+    {
+      "id": "wh033",
+      "difficulty": 38,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Haitian Revolution, the only successful large-scale slave revolt in history, began in which year?",
+      "options": [
+        "1776",
+        "1789",
+        "1791",
+        "1804"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Haitian Revolution began in 1791 and ended in 1804 when Haiti became the first Black republic. Led by Toussaint Louverture and others, they defeated Napoleon's army. Absolute legends!",
+      "image_url": null
+    },
+    {
+      "id": "wh034",
+      "difficulty": 36,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Rosetta Stone, which helped decode Egyptian hieroglyphics, is written in how many scripts?",
+      "options": [
+        "Two",
+        "Three",
+        "Four",
+        "Five"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Rosetta Stone has three scripts: hieroglyphics, Demotic, and ancient Greek. It was found by Napoleon's soldiers in Egypt in 1799. Three languages on one stone -- SA does eleven on our road signs!",
+      "image_url": null
+    },
+    {
+      "id": "wh035",
+      "difficulty": 34,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which medieval African city was a famous centre of learning with the University of Sankore?",
+      "options": [
+        "Cairo",
+        "Timbuktu",
+        "Marrakech",
+        "Addis Ababa"
+      ],
+      "correct_answer": 1,
+      "explanation": "Timbuktu in Mali was one of the world's great centres of learning in the 15th-16th centuries. It had universities and libraries while much of Europe was still in the dark ages. Africa stays underrated!",
+      "image_url": null
+    },
+    {
+      "id": "wh036",
+      "difficulty": 32,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Thirty Years' War (1618-1648) was primarily fought in which region?",
+      "options": [
+        "The British Isles",
+        "The Iberian Peninsula",
+        "The Holy Roman Empire (Central Europe)",
+        "Scandinavia"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Thirty Years' War devastated Central Europe, especially the Holy Roman Empire (modern Germany). It started as a religious conflict and killed about 8 million people. Hectic!",
+      "image_url": null
+    },
+    {
+      "id": "wh037",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Meiji Restoration in Japan began in which year?",
+      "options": [
+        "1848",
+        "1868",
+        "1888",
+        "1898"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Meiji Restoration of 1868 transformed Japan from a feudal society into an industrial power in just a few decades. Japan speed-ran modernisation like nobody's business!",
+      "image_url": null
+    },
+    {
+      "id": "wh038",
+      "difficulty": 28,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which ancient civilisation built the city of Tenochtitlan, now Mexico City?",
+      "options": [
+        "The Maya",
+        "The Inca",
+        "The Aztecs",
+        "The Olmec"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Aztecs built Tenochtitlan on an island in Lake Texcoco in 1325. At its peak it had over 200,000 people -- bigger than most SA cities at the time!",
+      "image_url": null
+    },
+    {
+      "id": "wh039",
+      "difficulty": 26,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Treaty of Westphalia (1648) is considered the foundation of which concept?",
+      "options": [
+        "Human rights",
+        "Modern state sovereignty",
+        "International trade law",
+        "Religious freedom"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Treaty of Westphalia established the principle of state sovereignty -- the idea that each country controls its own territory. It's basically the origin of modern international relations!",
+      "image_url": null
+    },
+    {
+      "id": "wh040",
+      "difficulty": 24,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Order these African independence dates from EARLIEST to LATEST: (1) Ghana (2) South Africa (democracy) (3) Kenya (4) Congo",
+      "options": [
+        "Ghana",
+        "South Africa (democracy)",
+        "Kenya",
+        "Congo"
+      ],
+      "correct_answer": "0,3,2,1",
+      "explanation": "Ghana (1957), Congo (1960), Kenya (1963), South Africa's democracy (1994). Ghana was the first sub-Saharan African country to gain independence. SA took a bit longer but we got there!",
+      "image_url": null
+    },
+    {
+      "id": "wh041",
+      "difficulty": 22,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Khmer Empire, which built Angkor Wat, was located in which modern-day country?",
+      "options": [
+        "Thailand",
+        "Vietnam",
+        "Cambodia",
+        "Myanmar"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Khmer Empire was based in modern Cambodia and built Angkor Wat in the 12th century. It's the largest religious monument in the world -- makes our Union Buildings look tiny!",
+      "image_url": null
+    },
+    {
+      "id": "wh042",
+      "difficulty": 20,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Taiping Rebellion (1850-1864) in China is estimated to have killed how many people?",
+      "options": [
+        "About 1 million",
+        "About 5 million",
+        "About 20 million",
+        "About 50 million"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Taiping Rebellion killed an estimated 20-30 million people, making it one of the deadliest conflicts in history. Most people haven't even heard of it. Wild!",
+      "image_url": null
+    },
+    {
+      "id": "wh043",
+      "difficulty": 18,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Mesopotamian king created one of the first known written legal codes?",
+      "options": [
+        "Nebuchadnezzar II",
+        "Hammurabi",
+        "Sargon of Akkad",
+        "Gilgamesh"
+      ],
+      "correct_answer": 1,
+      "explanation": "Hammurabi of Babylon created his famous code around 1754 BC. It included the idea of 'an eye for an eye.' The OG lawmaker -- our Constitutional Court would have words!",
+      "image_url": null
+    },
+    {
+      "id": "wh044",
+      "difficulty": 15,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Congress of Vienna (1814-1815) was convened primarily to do what?",
+      "options": [
+        "End the Hundred Years' War",
+        "Establish the United Nations",
+        "Redraw Europe after the Napoleonic Wars",
+        "Divide Africa among European powers"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Congress of Vienna redrew European borders after Napoleon's defeat. The major powers wanted to restore balance -- a bit like load shedding schedules but for countries!",
+      "image_url": null
+    },
+    {
+      "id": "wh045",
+      "difficulty": 12,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Mfecane (or Difaqane) was a period of widespread chaos and migration in southern Africa during the 1810s-1830s, largely attributed to the rise of which kingdom?",
+      "options": [
+        "The Ndebele Kingdom",
+        "The Zulu Kingdom",
+        "The Sotho Kingdom",
+        "The Swazi Kingdom"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Mfecane was triggered largely by the rise of the Zulu Kingdom under Shaka. It caused massive displacement across southern Africa. A hugely important chapter in our region's history!",
+      "image_url": null
+    },
+    {
+      "id": "wh046",
+      "difficulty": 10,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Byzantine emperor codified Roman law into the 'Corpus Juris Civilis'?",
+      "options": [
+        "Constantine I",
+        "Theodosius II",
+        "Justinian I",
+        "Heraclius"
+      ],
+      "correct_answer": 2,
+      "explanation": "Emperor Justinian I compiled Roman law in the 530s AD. This 'Corpus Juris Civilis' became the basis for many modern legal systems worldwide. The original legal eagle!",
+      "image_url": null
+    },
+    {
+      "id": "wh047",
+      "difficulty": 8,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Order these ancient civilisations from OLDEST founding to most RECENT: (1) Ancient Rome (2) Sumerian civilisation (3) Indus Valley civilisation (4) Ancient Greece (Mycenaean)",
+      "options": [
+        "Ancient Rome",
+        "Sumerian civilisation",
+        "Indus Valley civilisation",
+        "Ancient Greece (Mycenaean)"
+      ],
+      "correct_answer": "1,2,3,0",
+      "explanation": "Sumer (~4500 BC), Indus Valley (~3300 BC), Mycenaean Greece (~1600 BC), then Rome (~753 BC). Sumer was the OG civilisation -- they were building cities while everyone else was still figuring things out!",
+      "image_url": null
+    },
+    {
+      "id": "wh048",
+      "difficulty": 5,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The 'Defenestration of Prague' in 1618, which helped trigger the Thirty Years' War, involved what action?",
+      "options": [
+        "Burning of religious texts",
+        "Assassination of a bishop",
+        "Throwing officials out of a window",
+        "Destruction of a cathedral"
+      ],
+      "correct_answer": 2,
+      "explanation": "Protestant nobles literally threw two Catholic governors out of a third-floor window in Prague Castle. They survived by landing in a dung heap. You can't make this stuff up -- history is wilder than any soapie!",
+      "image_url": null
+    },
+    {
+      "id": "wh049",
+      "difficulty": 3,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Albigensian Crusade (1209-1229) was launched against which group in southern France?",
+      "options": [
+        "The Waldensians",
+        "The Cathars",
+        "The Hussites",
+        "The Bogomils"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Albigensian Crusade targeted the Cathars, a Christian sect in the Languedoc region. Pope Innocent III launched it, and it devastated southern France. Medieval politics were rough, ne?",
+      "image_url": null
+    },
+    {
+      "id": "wh050",
+      "difficulty": 1,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Battle of Talas in 751 AD between the Tang Dynasty and the Abbasid Caliphate is historically significant because it led to the spread of which technology to the Islamic world?",
+      "options": [
+        "Gunpowder",
+        "Papermaking",
+        "Silk weaving",
+        "Compass navigation"
+      ],
+      "correct_answer": 1,
+      "explanation": "Chinese papermakers captured at the Battle of Talas shared their craft with the Abbasids. Paper then spread to Europe, revolutionising knowledge. One battle changed how the whole world communicates -- lekker important, that!",
+      "image_url": null
+    }
+  ]
+}

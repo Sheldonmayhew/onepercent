@@ -1,0 +1,809 @@
+{
+  "pack_id": "world-music-01",
+  "name": "World Music",
+  "description": "From Beethoven to Beyonc\u00e9 \u2014 how well do you know the world of music?",
+  "author": "Game Night Crew",
+  "question_count": 50,
+  "questions": [
+    {
+      "id": "wm001",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which member of The Beatles was known as the 'Quiet Beatle'?",
+      "options": [
+        "John Lennon",
+        "Paul McCartney",
+        "George Harrison",
+        "Ringo Starr"
+      ],
+      "correct_answer": 2,
+      "explanation": "George Harrison was the quiet one \u2014 but his guitar work spoke volumes. He wrote 'Here Comes the Sun' and 'Something', so he definitely wasn't silent!",
+      "image_url": null
+    },
+    {
+      "id": "wm002",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What was Michael Jackson's famous nickname?",
+      "options": [
+        "The King of Pop",
+        "The Prince of Pop",
+        "The Emperor of Music",
+        "The Duke of Dance"
+      ],
+      "correct_answer": 0,
+      "explanation": "Michael Jackson is the King of Pop \u2014 no debate. From 'Thriller' to the moonwalk, nobody did it like MJ.",
+      "image_url": null
+    },
+    {
+      "id": "wm003",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which rapper is known for hits like 'Hotline Bling' and 'God's Plan'?",
+      "options": [
+        "Kanye West",
+        "Drake",
+        "Kendrick Lamar",
+        "J. Cole"
+      ],
+      "correct_answer": 1,
+      "explanation": "Drake \u2014 the Toronto legend. 'Hotline Bling' had everyone doing that awkward dance. You know the one.",
+      "image_url": null
+    },
+    {
+      "id": "wm004",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which band performed the iconic rock anthem 'Bohemian Rhapsody'?",
+      "options": [
+        "Led Zeppelin",
+        "The Rolling Stones",
+        "Queen",
+        "Pink Floyd"
+      ],
+      "correct_answer": 2,
+      "explanation": "Queen gave us 'Bohemian Rhapsody' \u2014 six minutes of pure genius. Freddie Mercury was on another level, no cap.",
+      "image_url": null
+    },
+    {
+      "id": "wm005",
+      "difficulty": 86,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Taylor Swift's 2014 album '1989' marked her transition from which genre to pop?",
+      "options": [
+        "Rock",
+        "Country",
+        "R&B",
+        "Folk"
+      ],
+      "correct_answer": 1,
+      "explanation": "Taylor started in country music before going full pop with '1989'. Smart move \u2014 she basically conquered two genres.",
+      "image_url": null
+    },
+    {
+      "id": "wm006",
+      "difficulty": 86,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which South Korean boy band became a global phenomenon with hits like 'Dynamite' and 'Butter'?",
+      "options": [
+        "EXO",
+        "BLACKPINK",
+        "BTS",
+        "TWICE"
+      ],
+      "correct_answer": 2,
+      "explanation": "BTS (Bangtan Sonyeondan) broke every record going. Their ARMY fanbase is basically its own nation at this point.",
+      "image_url": null
+    },
+    {
+      "id": "wm007",
+      "difficulty": 84,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What instrument does a DJ primarily use to mix music?",
+      "options": [
+        "Guitar",
+        "Turntables",
+        "Drums",
+        "Saxophone"
+      ],
+      "correct_answer": 1,
+      "explanation": "Turntables are the DJ's bread and butter. From Grandmaster Flash to Black Coffee \u2014 the decks are where the magic happens!",
+      "image_url": null
+    },
+    {
+      "id": "wm008",
+      "difficulty": 84,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Beyonc\u00e9 was the lead singer of which girl group before going solo?",
+      "options": [
+        "TLC",
+        "Destiny's Child",
+        "Spice Girls",
+        "En Vogue"
+      ],
+      "correct_answer": 1,
+      "explanation": "Destiny's Child gave us 'Say My Name' and 'Survivor' before Beyonc\u00e9 went on to become Queen Bey. The rest is history!",
+      "image_url": null
+    },
+    {
+      "id": "wm009",
+      "difficulty": 82,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which legendary rapper was fatally shot in Las Vegas in September 1996?",
+      "options": [
+        "The Notorious B.I.G.",
+        "Tupac Shakur",
+        "Eazy-E",
+        "Ol' Dirty Bastard"
+      ],
+      "correct_answer": 1,
+      "explanation": "Tupac was shot on September 7, 1996, and passed away six days later. Gone way too soon \u2014 2Pac's influence on hip hop is still massive.",
+      "image_url": null
+    },
+    {
+      "id": "wm010",
+      "difficulty": 82,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Nigerian artist won the Grammy for Best Global Music Album in 2021 with 'Twice As Tall'?",
+      "options": [
+        "Wizkid",
+        "Davido",
+        "Burna Boy",
+        "Tiwa Savage"
+      ],
+      "correct_answer": 2,
+      "explanation": "Burna Boy took home that Grammy and put Afrobeats on the global map even more. The African Giant indeed!",
+      "image_url": null
+    },
+    {
+      "id": "wm011",
+      "difficulty": 80,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which song by Luis Fonsi and Daddy Yankee became the first YouTube video to reach 5 billion views?",
+      "options": [
+        "La Bicicleta",
+        "Despacito",
+        "Mi Gente",
+        "Bailando"
+      ],
+      "correct_answer": 1,
+      "explanation": "Despacito was EVERYWHERE in 2017. You couldn't escape it \u2014 at the braai, in the taxi, at the shops. It broke YouTube!",
+      "image_url": null
+    },
+    {
+      "id": "wm012",
+      "difficulty": 78,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "How many strings does a standard guitar have?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correct_answer": 2,
+      "explanation": "Six strings on a standard guitar. A bass guitar has 4 though \u2014 don't get confused at the music shop!",
+      "image_url": null
+    },
+    {
+      "id": "wm013",
+      "difficulty": 76,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the best-selling album of all time worldwide?",
+      "options": [
+        "Back in Black \u2014 AC/DC",
+        "Thriller \u2014 Michael Jackson",
+        "The Dark Side of the Moon \u2014 Pink Floyd",
+        "Abbey Road \u2014 The Beatles"
+      ],
+      "correct_answer": 1,
+      "explanation": "Thriller sold over 70 million copies worldwide. MJ really said 'hold my glove' and made history.",
+      "image_url": null
+    },
+    {
+      "id": "wm014",
+      "difficulty": 74,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which music award show hands out the famous golden gramophone trophy?",
+      "options": [
+        "MTV VMAs",
+        "BET Awards",
+        "Grammy Awards",
+        "Billboard Music Awards"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Grammy Awards give out that iconic golden gramophone. It's basically the Oscars of music \u2014 every artist wants one on the shelf.",
+      "image_url": null
+    },
+    {
+      "id": "wm015",
+      "difficulty": 72,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Kurt Cobain was the frontman of which grunge band?",
+      "options": [
+        "Pearl Jam",
+        "Soundgarden",
+        "Nirvana",
+        "Alice in Chains"
+      ],
+      "correct_answer": 2,
+      "explanation": "Nirvana and 'Smells Like Teen Spirit' basically invented the '90s grunge movement. Kurt Cobain was a generational talent.",
+      "image_url": null
+    },
+    {
+      "id": "wm016",
+      "difficulty": 70,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which rapper's real name is Shawn Corey Carter?",
+      "options": [
+        "Nas",
+        "Jay-Z",
+        "Lil Wayne",
+        "50 Cent"
+      ],
+      "correct_answer": 1,
+      "explanation": "Jay-Z went from Marcy Projects to billionaire status. Shawn Carter built an empire \u2014 Roc Nation, Tidal, and married Beyonc\u00e9. Power couple goals!",
+      "image_url": null
+    },
+    {
+      "id": "wm017",
+      "difficulty": 68,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What does 'BPM' stand for in music production?",
+      "options": [
+        "Bass Per Minute",
+        "Beats Per Measure",
+        "Beats Per Minute",
+        "Base Pulse Meter"
+      ],
+      "correct_answer": 2,
+      "explanation": "BPM = Beats Per Minute. It's how you measure tempo. House music usually sits around 120-130 BPM \u2014 perfect for the dancefloor!",
+      "image_url": null
+    },
+    {
+      "id": "wm018",
+      "difficulty": 66,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which classical composer became deaf later in life but continued to compose masterpieces?",
+      "options": [
+        "Wolfgang Amadeus Mozart",
+        "Johann Sebastian Bach",
+        "Ludwig van Beethoven",
+        "Fr\u00e9d\u00e9ric Chopin"
+      ],
+      "correct_answer": 2,
+      "explanation": "Beethoven started losing his hearing in his late 20s and was nearly totally deaf by 44 \u2014 but still composed his 9th Symphony. Absolute legend move.",
+      "image_url": null
+    },
+    {
+      "id": "wm019",
+      "difficulty": 64,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Fela Kuti is considered the pioneer of which music genre?",
+      "options": [
+        "Highlife",
+        "Afrobeats",
+        "Afrobeat",
+        "Juju music"
+      ],
+      "correct_answer": 2,
+      "explanation": "Fela Kuti created Afrobeat (no 's') \u2014 blending jazz, funk, and West African rhythms. Modern 'Afrobeats' with an 's' is a different genre, but Fela inspired it all!",
+      "image_url": null
+    },
+    {
+      "id": "wm020",
+      "difficulty": 62,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Kendrick Lamar album won the Pulitzer Prize for Music in 2018?",
+      "options": [
+        "good kid, m.A.A.d city",
+        "To Pimp a Butterfly",
+        "DAMN.",
+        "Section.80"
+      ],
+      "correct_answer": 2,
+      "explanation": "DAMN. won the Pulitzer \u2014 the first non-classical, non-jazz album to do so. Kendrick literally changed what's possible in hip hop.",
+      "image_url": null
+    },
+    {
+      "id": "wm021",
+      "difficulty": 60,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which instrument family does the violin belong to?",
+      "options": [
+        "Woodwind",
+        "Brass",
+        "Strings",
+        "Percussion"
+      ],
+      "correct_answer": 2,
+      "explanation": "Violin is a string instrument \u2014 you play it with a bow (or pizzicato if you're feeling fancy). It's the soprano of the string family.",
+      "image_url": null
+    },
+    {
+      "id": "wm022",
+      "difficulty": 58,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Swedish DJ, born Tim Bergling, passed away in 2018 and was known for hits like 'Wake Me Up'?",
+      "options": [
+        "Marshmello",
+        "Avicii",
+        "Deadmau5",
+        "Calvin Harris"
+      ],
+      "correct_answer": 1,
+      "explanation": "Avicii was one of EDM's biggest names. 'Wake Me Up' and 'Levels' were absolute bangers. His passing was a huge loss to music.",
+      "image_url": null
+    },
+    {
+      "id": "wm023",
+      "difficulty": 56,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In music notation, how many beats does a whole note (semibreve) receive in 4/4 time?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_answer": 3,
+      "explanation": "A whole note gets 4 beats in 4/4 time. It fills up the entire bar \u2014 like ordering the full bunny chow, not the quarter.",
+      "image_url": null
+    },
+    {
+      "id": "wm024",
+      "difficulty": 54,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which reggaeton artist released the hit 'Gasolina' in 2004, helping bring the genre to global attention?",
+      "options": [
+        "Bad Bunny",
+        "J Balvin",
+        "Daddy Yankee",
+        "Ozuna"
+      ],
+      "correct_answer": 2,
+      "explanation": "Daddy Yankee's 'Gasolina' was THE song that introduced reggaeton to the world. Every party from Durban to Dubai was playing it!",
+      "image_url": null
+    },
+    {
+      "id": "wm025",
+      "difficulty": 52,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which artist has won the most Grammy Awards of all time (as of 2024)?",
+      "options": [
+        "Quincy Jones",
+        "Beyonc\u00e9",
+        "Georg Solti",
+        "Stevie Wonder"
+      ],
+      "correct_answer": 1,
+      "explanation": "Beyonc\u00e9 holds the record with 32 Grammy wins as of 2024. Queen Bey stays collecting trophies like they're going out of fashion!",
+      "image_url": null
+    },
+    {
+      "id": "wm026",
+      "difficulty": 50,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the name of the Nigerian music genre that blends hip hop, dancehall, and West African rhythms, popularised by Wizkid and Burna Boy?",
+      "options": [
+        "Kwaito",
+        "Amapiano",
+        "Afrobeats",
+        "Gqom"
+      ],
+      "correct_answer": 2,
+      "explanation": "Afrobeats (with the 's') is the modern genre from Nigeria and Ghana that's taken over the world. Different from Fela's Afrobeat \u2014 though the roots are connected!",
+      "image_url": null
+    },
+    {
+      "id": "wm027",
+      "difficulty": 48,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Led Zeppelin's 'Stairway to Heaven' is considered one of the greatest rock songs ever. How long is the original studio version?",
+      "options": [
+        "About 5 minutes",
+        "About 6 minutes",
+        "About 8 minutes",
+        "About 10 minutes"
+      ],
+      "correct_answer": 2,
+      "explanation": "'Stairway to Heaven' clocks in at about 8 minutes. It builds from acoustic to electric like a proper lekker crescendo. Worth every second!",
+      "image_url": null
+    },
+    {
+      "id": "wm028",
+      "difficulty": 46,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Put these iconic music decades in order, from earliest to latest, based on when each genre FIRST dominated mainstream charts:",
+      "options": [
+        "Disco",
+        "Grunge",
+        "Motown/Soul",
+        "EDM/Electronic"
+      ],
+      "correct_answer": "2,0,1,3",
+      "explanation": "Motown dominated the 1960s, Disco ruled the late 1970s, Grunge broke through in the early 1990s, and EDM hit the mainstream in the 2010s. A proper timeline of vibes!",
+      "image_url": null
+    },
+    {
+      "id": "wm029",
+      "difficulty": 44,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Mozart opera tells the story of a young woman who is kidnapped from a harem?",
+      "options": [
+        "The Marriage of Figaro",
+        "Don Giovanni",
+        "The Magic Flute",
+        "The Abduction from the Seraglio"
+      ],
+      "correct_answer": 3,
+      "explanation": "'Die Entf\u00fchrung aus dem Serail' (The Abduction from the Seraglio) premiered in 1782. Mozart was only 26 and already cooking with gas!",
+      "image_url": null
+    },
+    {
+      "id": "wm030",
+      "difficulty": 42,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What was the first music video ever played on MTV when it launched on August 1, 1981?",
+      "options": [
+        "'Thriller' \u2014 Michael Jackson",
+        "'Bohemian Rhapsody' \u2014 Queen",
+        "'Video Killed the Radio Star' \u2014 The Buggles",
+        "'Take On Me' \u2014 a-ha"
+      ],
+      "correct_answer": 2,
+      "explanation": "'Video Killed the Radio Star' by The Buggles \u2014 how fitting for the first ever MTV music video! The irony was chef's kiss.",
+      "image_url": null
+    },
+    {
+      "id": "wm031",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In music theory, what is the interval between C and G called?",
+      "options": [
+        "A third",
+        "A fourth",
+        "A fifth",
+        "An octave"
+      ],
+      "correct_answer": 2,
+      "explanation": "C to G is a perfect fifth \u2014 one of the most important intervals in music. It's the backbone of power chords in rock!",
+      "image_url": null
+    },
+    {
+      "id": "wm032",
+      "difficulty": 38,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which South African DJ and producer is known globally and has played at major festivals like Coachella and Tomorrowland?",
+      "options": [
+        "DJ Maphorisa",
+        "Black Coffee",
+        "Kabza De Small",
+        "Prince Kaybee"
+      ],
+      "correct_answer": 1,
+      "explanation": "Black Coffee is Mzansi's biggest DJ export. From Durban to the world stage \u2014 he even won a Grammy in 2022. Proudly South African!",
+      "image_url": null
+    },
+    {
+      "id": "wm033",
+      "difficulty": 36,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which K-pop girl group released the hit 'DDU-DU DDU-DU' and became the highest-charting female K-pop act on the Billboard Hot 100?",
+      "options": [
+        "TWICE",
+        "Red Velvet",
+        "BLACKPINK",
+        "aespa"
+      ],
+      "correct_answer": 2,
+      "explanation": "BLACKPINK in your area! Jisoo, Jennie, Ros\u00e9, and Lisa became global superstars. 'DDU-DU DDU-DU' was absolutely massive.",
+      "image_url": null
+    },
+    {
+      "id": "wm034",
+      "difficulty": 34,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Bach's 'The Well-Tempered Clavier' was written to demonstrate music in all 24 what?",
+      "options": [
+        "Time signatures",
+        "Major and minor keys",
+        "Octaves",
+        "Musical modes"
+      ],
+      "correct_answer": 1,
+      "explanation": "Bach wrote preludes and fugues in all 24 major and minor keys. It was basically a flex to show that the tuning system worked. Bach was that guy.",
+      "image_url": null
+    },
+    {
+      "id": "wm035",
+      "difficulty": 32,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Billboard chart ranks the most popular songs in the United States each week?",
+      "options": [
+        "Billboard 200",
+        "Billboard Hot 100",
+        "Billboard Global 200",
+        "Billboard Top 40"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Billboard Hot 100 is THE chart for singles in the US. It factors in streaming, radio, and sales. Getting a #1 there is like winning the musical World Cup.",
+      "image_url": null
+    },
+    {
+      "id": "wm036",
+      "difficulty": 30,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Put these Beatles albums in the order they were released, from earliest to latest:",
+      "options": [
+        "Abbey Road",
+        "Sgt. Pepper's Lonely Hearts Club Band",
+        "A Hard Day's Night",
+        "Let It Be"
+      ],
+      "correct_answer": "2,1,0,3",
+      "explanation": "A Hard Day's Night (1964), Sgt. Pepper's (1967), Abbey Road (1969), Let It Be (1970). The Beatles evolved from mop-tops to musical revolutionaries in just a few years!",
+      "image_url": null
+    },
+    {
+      "id": "wm037",
+      "difficulty": 28,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the term for a musical composition written for a full orchestra, typically in four movements?",
+      "options": [
+        "Concerto",
+        "Sonata",
+        "Symphony",
+        "Overture"
+      ],
+      "correct_answer": 2,
+      "explanation": "A symphony is an extended composition for orchestra, usually in four movements. Beethoven wrote 9 of them, and the 9th is still giving people chills!",
+      "image_url": null
+    },
+    {
+      "id": "wm038",
+      "difficulty": 26,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Jamaican musician is considered the 'King of Reggae'?",
+      "options": [
+        "Peter Tosh",
+        "Jimmy Cliff",
+        "Bob Marley",
+        "Buju Banton"
+      ],
+      "correct_answer": 2,
+      "explanation": "Bob Marley is reggae royalty. 'One Love', 'No Woman No Cry', 'Redemption Song' \u2014 his music is timeless. You'll hear his tunes from Kingston to Camps Bay!",
+      "image_url": null
+    },
+    {
+      "id": "wm039",
+      "difficulty": 24,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What scale uses only the black keys on a piano and is common in East Asian music?",
+      "options": [
+        "Chromatic scale",
+        "Blues scale",
+        "Pentatonic scale",
+        "Whole tone scale"
+      ],
+      "correct_answer": 2,
+      "explanation": "The pentatonic scale has 5 notes and you can play it on just the black keys. It's used everywhere \u2014 from Chinese traditional music to blues and rock!",
+      "image_url": null
+    },
+    {
+      "id": "wm040",
+      "difficulty": 22,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which music streaming platform, launched in Sweden in 2008, became the world's largest by subscriber count?",
+      "options": [
+        "Apple Music",
+        "Tidal",
+        "Spotify",
+        "Deezer"
+      ],
+      "correct_answer": 2,
+      "explanation": "Spotify changed the game. Daniel Ek started it in Stockholm and now it has over 600 million users. RIP to buying CDs at Musica!",
+      "image_url": null
+    },
+    {
+      "id": "wm041",
+      "difficulty": 20,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Miriam Makeba, known as 'Mama Africa', popularised which style of vocal clicking in her international hit?",
+      "options": [
+        "Beatboxing",
+        "Scat singing",
+        "Click singing (Xhosa clicks)",
+        "Yodelling"
+      ],
+      "correct_answer": 2,
+      "explanation": "Miriam Makeba's 'Pata Pata' and 'The Click Song' (Qongqothwane) introduced the world to Xhosa click consonants. She put Mzansi on the global music map!",
+      "image_url": null
+    },
+    {
+      "id": "wm042",
+      "difficulty": 18,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In a standard orchestra, which section typically sits at the back and includes timpani, snare drum, and cymbals?",
+      "options": [
+        "Strings",
+        "Woodwinds",
+        "Brass",
+        "Percussion"
+      ],
+      "correct_answer": 3,
+      "explanation": "Percussion sits at the back of the orchestra. They might look like they're chilling back there, but when those timpani hit, everyone feels it!",
+      "image_url": null
+    },
+    {
+      "id": "wm043",
+      "difficulty": 16,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Arrange these music formats in the order they became mainstream, from earliest to latest:",
+      "options": [
+        "Compact Disc (CD)",
+        "Vinyl Record (LP)",
+        "MP3 / Digital Download",
+        "Music Streaming"
+      ],
+      "correct_answer": "1,0,2,3",
+      "explanation": "Vinyl records (1950s mainstream), CDs (1980s), MP3s (late 1990s/2000s), streaming (2010s). From spinning vinyl at a jol to streaming on the couch \u2014 what a journey!",
+      "image_url": null
+    },
+    {
+      "id": "wm044",
+      "difficulty": 14,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the musical term for gradually getting louder?",
+      "options": [
+        "Diminuendo",
+        "Crescendo",
+        "Fortissimo",
+        "Sforzando"
+      ],
+      "correct_answer": 1,
+      "explanation": "Crescendo means gradually getting louder. It's Italian, like most music terms. Think of it like the braai getting busier as the afternoon goes on!",
+      "image_url": null
+    },
+    {
+      "id": "wm045",
+      "difficulty": 12,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Celia Cruz catchphrase became synonymous with salsa music worldwide?",
+      "options": [
+        "\u00a1Ol\u00e9!",
+        "\u00a1Azucar!",
+        "\u00a1Salsa!",
+        "\u00a1Fuego!"
+      ],
+      "correct_answer": 1,
+      "explanation": "Celia Cruz was the 'Queen of Salsa' and her signature shout '\u00a1Azucar!' (meaning 'sugar!') became iconic. She brought Cuban music to the whole world!",
+      "image_url": null
+    },
+    {
+      "id": "wm046",
+      "difficulty": 10,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What rare vocal technique, used by Tuvan throat singers, allows a person to produce two pitches simultaneously?",
+      "options": [
+        "Falsetto",
+        "Overtone singing",
+        "Vibrato",
+        "Melisma"
+      ],
+      "correct_answer": 1,
+      "explanation": "Overtone singing (or throat singing) from Tuva lets singers produce a fundamental note and an overtone at the same time. It sounds otherworldly \u2014 proper mind-blowing stuff!",
+      "image_url": null
+    },
+    {
+      "id": "wm047",
+      "difficulty": 8,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In twelve-tone serialism, pioneered by Arnold Schoenberg, the composer must use all how many chromatic pitches before repeating any?",
+      "options": [
+        "7",
+        "10",
+        "12",
+        "15"
+      ],
+      "correct_answer": 2,
+      "explanation": "Twelve-tone technique uses all 12 chromatic pitches in a specific order (a 'tone row') before any can repeat. Schoenberg basically said 'rules are boring' and made new ones!",
+      "image_url": null
+    },
+    {
+      "id": "wm048",
+      "difficulty": 6,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Put these classical music periods in chronological order, from earliest to latest:",
+      "options": [
+        "Romantic",
+        "Classical",
+        "Baroque",
+        "20th Century Modern"
+      ],
+      "correct_answer": "2,1,0,3",
+      "explanation": "Baroque (1600-1750, Bach/Vivaldi), Classical (1750-1820, Mozart/Haydn), Romantic (1820-1900, Chopin/Tchaikovsky), 20th Century Modern (Stravinsky/Schoenberg). Each era pushed boundaries further!",
+      "image_url": null
+    },
+    {
+      "id": "wm049",
+      "difficulty": 4,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The 'Devil's Interval', historically avoided in medieval church music, is technically known as what?",
+      "options": [
+        "Augmented fourth / Tritone",
+        "Minor second",
+        "Diminished seventh",
+        "Major seventh"
+      ],
+      "correct_answer": 0,
+      "explanation": "The tritone (augmented fourth / diminished fifth) was called 'Diabolus in Musica'. Medieval monks thought it sounded evil. Black Sabbath and heavy metal later said 'perfect, we'll take it!'",
+      "image_url": null
+    },
+    {
+      "id": "wm050",
+      "difficulty": 2,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which 20th-century composer wrote '4\u203233\u2033', a piece consisting of four minutes and thirty-three seconds of silence?",
+      "options": [
+        "Philip Glass",
+        "John Cage",
+        "Steve Reich",
+        "Karlheinz Stockhausen"
+      ],
+      "correct_answer": 1,
+      "explanation": "John Cage's '4\u203233\u2033' (1952) is literally silence \u2014 the 'music' is whatever ambient sounds occur. It's either genius or the biggest troll in music history. Maybe both!",
+      "image_url": null
+    }
+  ]
+}

@@ -1,0 +1,809 @@
+{
+  "pack_id": "world-ent-01",
+  "name": "World Entertainment",
+  "description": "Movies, TV shows, gaming, and pop culture from around the world — lights, camera, trivia!",
+  "author": "Game Night Crew",
+  "question_count": 50,
+  "questions": [
+    {
+      "id": "we001",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In 'The Lion King', what is the name of Simba's father?",
+      "options": [
+        "Scar",
+        "Mufasa",
+        "Rafiki",
+        "Zazu"
+      ],
+      "correct_answer": 1,
+      "explanation": "Mufasa is the OG king of Pride Rock. That stampede scene still hits different — even on your fifth rewatch at 2am.",
+      "image_url": null
+    },
+    {
+      "id": "we002",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which TV show features the fictional country of Westeros?",
+      "options": [
+        "The Witcher",
+        "Lord of the Rings",
+        "Game of Thrones",
+        "Vikings"
+      ],
+      "correct_answer": 2,
+      "explanation": "Game of Thrones brought Westeros to life. Everyone had a favourite house — and if you say House Bolton, we need to talk.",
+      "image_url": null
+    },
+    {
+      "id": "we003",
+      "difficulty": 90,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the name of the plumber who rescues Princess Peach in Nintendo games?",
+      "options": [
+        "Luigi",
+        "Wario",
+        "Mario",
+        "Toad"
+      ],
+      "correct_answer": 2,
+      "explanation": "It's-a-me, Mario! The most famous plumber in history — he's saved more princesses than he's fixed pipes.",
+      "image_url": null
+    },
+    {
+      "id": "we004",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which movie franchise features a character named Jack Sparrow?",
+      "options": [
+        "Pirates of the Caribbean",
+        "Treasure Island",
+        "The Mummy",
+        "Indiana Jones"
+      ],
+      "correct_answer": 0,
+      "explanation": "Captain Jack Sparrow, if you please! Johnny Depp's wobbly pirate became one of the most iconic characters in cinema history.",
+      "image_url": null
+    },
+    {
+      "id": "we005",
+      "difficulty": 86,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which animated movie features a clownfish searching for his son?",
+      "options": [
+        "Shark Tale",
+        "Finding Nemo",
+        "The Little Mermaid",
+        "Moana"
+      ],
+      "correct_answer": 1,
+      "explanation": "Finding Nemo! Marlin crossed the entire ocean for his boy. That's top-tier parenting right there.",
+      "image_url": null
+    },
+    {
+      "id": "we006",
+      "difficulty": 84,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In the TV show 'Friends', what is the name of the coffee shop where the group hangs out?",
+      "options": [
+        "The Brew House",
+        "Central Perk",
+        "Java Joe's",
+        "Café Mocha"
+      ],
+      "correct_answer": 1,
+      "explanation": "Central Perk — where six New Yorkers somehow always had the best couch reserved. Try that at a Vida e in Cape Town, good luck!",
+      "image_url": null
+    },
+    {
+      "id": "we007",
+      "difficulty": 82,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What video game series features a battle royale mode called 'Warzone'?",
+      "options": [
+        "Battlefield",
+        "Fortnite",
+        "Call of Duty",
+        "Apex Legends"
+      ],
+      "correct_answer": 2,
+      "explanation": "Call of Duty: Warzone had the whole world dropping into Verdansk. SA gamers were locked in too, load-shedding permitting!",
+      "image_url": null
+    },
+    {
+      "id": "we008",
+      "difficulty": 80,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which streaming platform produced the Korean series 'Squid Game'?",
+      "options": [
+        "Disney+",
+        "Amazon Prime",
+        "Netflix",
+        "HBO Max"
+      ],
+      "correct_answer": 2,
+      "explanation": "Netflix dropped Squid Game in 2021 and it became the most-watched series in the platform's history. Red light, green light went from playground to nightmare!",
+      "image_url": null
+    },
+    {
+      "id": "we009",
+      "difficulty": 78,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Who directed the movie 'Titanic' (1997)?",
+      "options": [
+        "Steven Spielberg",
+        "James Cameron",
+        "Ridley Scott",
+        "Christopher Nolan"
+      ],
+      "correct_answer": 1,
+      "explanation": "James Cameron directed Titanic and told the world 'I'm the king of the world!' at the Oscars. The man does NOT do things by halves.",
+      "image_url": null
+    },
+    {
+      "id": "we010",
+      "difficulty": 76,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In 'Breaking Bad', what subject does Walter White teach before becoming a drug manufacturer?",
+      "options": [
+        "Biology",
+        "Physics",
+        "Chemistry",
+        "Mathematics"
+      ],
+      "correct_answer": 2,
+      "explanation": "Chemistry, obviously! Walt went from marking homework to cooking blue meth. That's one heck of a career pivot.",
+      "image_url": null
+    },
+    {
+      "id": "we011",
+      "difficulty": 74,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these Disney animated films from EARLIEST to LATEST release.",
+      "options": [
+        "Frozen",
+        "The Little Mermaid",
+        "Snow White and the Seven Dwarfs",
+        "The Lion King"
+      ],
+      "correct_answer": "2,1,3,0",
+      "explanation": "Snow White (1937), The Little Mermaid (1989), The Lion King (1994), Frozen (2013). Disney's been at it for nearly a century — that's commitment!",
+      "image_url": null
+    },
+    {
+      "id": "we012",
+      "difficulty": 72,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which actor played the Joker in 'The Dark Knight' (2008)?",
+      "options": [
+        "Jared Leto",
+        "Joaquin Phoenix",
+        "Heath Ledger",
+        "Jack Nicholson"
+      ],
+      "correct_answer": 2,
+      "explanation": "Heath Ledger's Joker performance was legendary and earned him a posthumous Oscar. 'Why so serious?' became instant pop culture gold.",
+      "image_url": null
+    },
+    {
+      "id": "we013",
+      "difficulty": 70,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the highest-grossing film of all time (not adjusted for inflation)?",
+      "options": [
+        "Avengers: Endgame",
+        "Avatar",
+        "Titanic",
+        "Star Wars: The Force Awakens"
+      ],
+      "correct_answer": 1,
+      "explanation": "Avatar (2009) reclaimed the top spot after its re-releases, sitting at around $2.9 billion. James Cameron just keeps winning.",
+      "image_url": null
+    },
+    {
+      "id": "we014",
+      "difficulty": 68,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Japanese animation studio created 'Spirited Away' and 'My Neighbor Totoro'?",
+      "options": [
+        "Toei Animation",
+        "Studio Ghibli",
+        "Madhouse",
+        "Sunrise"
+      ],
+      "correct_answer": 1,
+      "explanation": "Studio Ghibli, founded by the legendary Hayao Miyazaki. Spirited Away even won the Oscar for Best Animated Feature in 2003!",
+      "image_url": null
+    },
+    {
+      "id": "we015",
+      "difficulty": 66,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which comedian is known for specials like 'Afraid of the Dark' and was born in Johannesburg, South Africa?",
+      "options": [
+        "Kevin Hart",
+        "Dave Chappelle",
+        "Trevor Noah",
+        "Chris Rock"
+      ],
+      "correct_answer": 2,
+      "explanation": "Trevor Noah — born and raised in Mzansi! He went from Soweto to hosting The Daily Show. Proudly South African, that one.",
+      "image_url": null
+    },
+    {
+      "id": "we016",
+      "difficulty": 64,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In the video game 'Minecraft', what is the final boss called?",
+      "options": [
+        "The Wither",
+        "Herobrine",
+        "The Ender Dragon",
+        "The Warden"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Ender Dragon lives in The End dimension. Millions of kids (and let's be honest, adults too) have made that portal journey!",
+      "image_url": null
+    },
+    {
+      "id": "we017",
+      "difficulty": 62,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which TV series had an episode called 'The Red Wedding' that shocked viewers worldwide?",
+      "options": [
+        "The Walking Dead",
+        "Game of Thrones",
+        "Peaky Blinders",
+        "Westworld"
+      ],
+      "correct_answer": 1,
+      "explanation": "Game of Thrones, Season 3. The Red Wedding destroyed us all. Nobody was safe in Westeros — George R.R. Martin showed no mercy!",
+      "image_url": null
+    },
+    {
+      "id": "we018",
+      "difficulty": 60,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Pixar movie features the emotion characters Joy, Sadness, Anger, Fear, and Disgust?",
+      "options": [
+        "Soul",
+        "Inside Out",
+        "Coco",
+        "Up"
+      ],
+      "correct_answer": 1,
+      "explanation": "Inside Out (2015) turned emotions into characters and made grown adults cry — which is ironic when you think about it.",
+      "image_url": null
+    },
+    {
+      "id": "we019",
+      "difficulty": 58,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the name of the fictional African nation in the Marvel Cinematic Universe known for its vibranium?",
+      "options": [
+        "Zamunda",
+        "Wakanda",
+        "Genosha",
+        "Latveria"
+      ],
+      "correct_answer": 1,
+      "explanation": "Wakanda forever! Black Panther put a fictional African superpower on the map. SA vibes were strong in that movie — some scenes were even filmed in our backyard!",
+      "image_url": null
+    },
+    {
+      "id": "we020",
+      "difficulty": 56,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which video game franchise features characters named Master Chief and Cortana?",
+      "options": [
+        "Destiny",
+        "Gears of War",
+        "Halo",
+        "Mass Effect"
+      ],
+      "correct_answer": 2,
+      "explanation": "Halo! Master Chief is Xbox's poster boy. And yes, Microsoft named their AI assistant Cortana after the game character.",
+      "image_url": null
+    },
+    {
+      "id": "we021",
+      "difficulty": 54,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these Marvel Cinematic Universe films in order of release, EARLIEST to LATEST.",
+      "options": [
+        "Avengers: Endgame",
+        "Iron Man",
+        "Black Panther",
+        "The Avengers"
+      ],
+      "correct_answer": "1,3,2,0",
+      "explanation": "Iron Man (2008), The Avengers (2012), Black Panther (2018), Avengers: Endgame (2019). The MCU built up to that Endgame moment for over a decade!",
+      "image_url": null
+    },
+    {
+      "id": "we022",
+      "difficulty": 52,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Broadway musical features the songs 'Defying Gravity' and 'Popular'?",
+      "options": [
+        "Hamilton",
+        "Wicked",
+        "The Phantom of the Opera",
+        "Les Misérables"
+      ],
+      "correct_answer": 1,
+      "explanation": "Wicked tells the untold story of the witches of Oz. The 2024 movie adaptation finally brought it to the big screen after years of waiting!",
+      "image_url": null
+    },
+    {
+      "id": "we023",
+      "difficulty": 50,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country's film industry is commonly known as 'Bollywood'?",
+      "options": [
+        "Pakistan",
+        "Bangladesh",
+        "India",
+        "Sri Lanka"
+      ],
+      "correct_answer": 2,
+      "explanation": "Bollywood is India's Hindi-language film industry based in Mumbai. It produces more films per year than Hollywood — with way more dancing!",
+      "image_url": null
+    },
+    {
+      "id": "we024",
+      "difficulty": 48,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In the anime series 'Dragon Ball Z', what is Goku's Saiyan name?",
+      "options": [
+        "Vegeta",
+        "Kakarot",
+        "Broly",
+        "Raditz"
+      ],
+      "correct_answer": 1,
+      "explanation": "Kakarot! Every SA kid who grew up watching DBZ on SABC 2 remembers Vegeta screaming that name. Good times.",
+      "image_url": null
+    },
+    {
+      "id": "we025",
+      "difficulty": 46,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which film won the Oscar for Best Picture in 2020, becoming the first non-English language film to do so?",
+      "options": [
+        "Roma",
+        "Parasite",
+        "Minari",
+        "Drive My Car"
+      ],
+      "correct_answer": 1,
+      "explanation": "Parasite from South Korea swept the Oscars! Director Bong Joon-ho made history. Korean entertainment was already taking over the world.",
+      "image_url": null
+    },
+    {
+      "id": "we026",
+      "difficulty": 44,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which actress has won the most Academy Awards for acting?",
+      "options": [
+        "Meryl Streep",
+        "Katharine Hepburn",
+        "Cate Blanchett",
+        "Frances McDormand"
+      ],
+      "correct_answer": 1,
+      "explanation": "Katharine Hepburn won four Best Actress Oscars. Meryl Streep has three (plus the most nominations ever), but Hepburn still holds the record!",
+      "image_url": null
+    },
+    {
+      "id": "we027",
+      "difficulty": 42,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In 'The Witcher' video game series, what is Geralt of Rivia's profession?",
+      "options": [
+        "Knight",
+        "Witcher (monster hunter)",
+        "Sorcerer",
+        "Assassin"
+      ],
+      "correct_answer": 1,
+      "explanation": "Geralt is a Witcher — a mutant monster hunter for hire. The games, books, and Netflix series all became massive hits worldwide.",
+      "image_url": null
+    },
+    {
+      "id": "we028",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which stand-up comedian is known for the Netflix special 'Sticks & Stones' and the sketch show 'Chappelle's Show'?",
+      "options": [
+        "Eddie Murphy",
+        "Dave Chappelle",
+        "Bill Burr",
+        "Jerry Seinfeld"
+      ],
+      "correct_answer": 1,
+      "explanation": "Dave Chappelle — one of the GOATs of stand-up comedy. Chappelle's Show was groundbreaking, and he walked away from $50 million. Legend move!",
+      "image_url": null
+    },
+    {
+      "id": "we029",
+      "difficulty": 38,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Nigerian film industry is the third-largest in the world by number of films produced?",
+      "options": [
+        "Kannywood",
+        "Nollywood",
+        "Afrocinema",
+        "Naija Films"
+      ],
+      "correct_answer": 1,
+      "explanation": "Nollywood is massive! Nigeria produces thousands of films each year. African cinema is booming, and Nollywood leads the way on the continent.",
+      "image_url": null
+    },
+    {
+      "id": "we030",
+      "difficulty": 36,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which director is known for mind-bending films like 'Inception', 'Interstellar', and 'Tenet'?",
+      "options": [
+        "Denis Villeneuve",
+        "Quentin Tarantino",
+        "Christopher Nolan",
+        "David Fincher"
+      ],
+      "correct_answer": 2,
+      "explanation": "Christopher Nolan loves making you watch a movie three times before you actually understand it. No complaints though — the man is a genius!",
+      "image_url": null
+    },
+    {
+      "id": "we031",
+      "difficulty": 34,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these streaming platforms by their global launch year, EARLIEST to LATEST.",
+      "options": [
+        "Disney+",
+        "Netflix (streaming)",
+        "Apple TV+",
+        "Amazon Prime Video"
+      ],
+      "correct_answer": "1,3,0,2",
+      "explanation": "Netflix streaming (2007), Amazon Prime Video (2011), Disney+ (Nov 2019), Apple TV+ (Nov 2019 — same month, but Disney+ launched days earlier). The streaming wars are real!",
+      "image_url": null
+    },
+    {
+      "id": "we032",
+      "difficulty": 32,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What was the first feature-length film to be entirely computer-animated?",
+      "options": [
+        "Shrek",
+        "A Bug's Life",
+        "Toy Story",
+        "Antz"
+      ],
+      "correct_answer": 2,
+      "explanation": "Toy Story (1995) by Pixar was the first fully computer-animated feature film. It changed animation forever — to infinity and beyond!",
+      "image_url": null
+    },
+    {
+      "id": "we033",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In the Harry Potter films, who played Professor Severus Snape?",
+      "options": [
+        "Gary Oldman",
+        "Ralph Fiennes",
+        "Alan Rickman",
+        "Ian McKellen"
+      ],
+      "correct_answer": 2,
+      "explanation": "Alan Rickman's portrayal of Snape is iconic. 'Always.' — if that one word doesn't make you emotional, are you even human?",
+      "image_url": null
+    },
+    {
+      "id": "we034",
+      "difficulty": 28,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which video game holds the record for most copies sold of a single game (as of 2024)?",
+      "options": [
+        "Grand Theft Auto V",
+        "Minecraft",
+        "Tetris",
+        "Wii Sports"
+      ],
+      "correct_answer": 1,
+      "explanation": "Minecraft has sold over 300 million copies across all platforms. It's the best-selling video game ever — and people are STILL playing it!",
+      "image_url": null
+    },
+    {
+      "id": "we035",
+      "difficulty": 26,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which South African-born filmmaker directed 'District 9' (2009), a sci-fi film set in Johannesburg?",
+      "options": [
+        "Gavin Hood",
+        "Neill Blomkamp",
+        "Oliver Hermanus",
+        "John Trengrove"
+      ],
+      "correct_answer": 1,
+      "explanation": "Neill Blomkamp put Joburg on the Hollywood map with District 9! Aliens landing in SA — only a local could make that story work so well.",
+      "image_url": null
+    },
+    {
+      "id": "we036",
+      "difficulty": 24,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which TV series created by Vince Gilligan is a prequel to 'Breaking Bad'?",
+      "options": [
+        "Ozark",
+        "Better Call Saul",
+        "Narcos",
+        "The Wire"
+      ],
+      "correct_answer": 1,
+      "explanation": "Better Call Saul tells the origin story of lawyer Jimmy McGill becoming Saul Goodman. Six seasons of absolute quality television — some say it's even better than Breaking Bad!",
+      "image_url": null
+    },
+    {
+      "id": "we037",
+      "difficulty": 22,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which anime series follows a boy named Monkey D. Luffy searching for the 'One Piece' treasure?",
+      "options": [
+        "Naruto",
+        "Bleach",
+        "One Piece",
+        "Hunter x Hunter"
+      ],
+      "correct_answer": 2,
+      "explanation": "One Piece has been running since 1999 and is one of the best-selling manga series of all time. Luffy's journey just keeps going — over 1,100 episodes!",
+      "image_url": null
+    },
+    {
+      "id": "we038",
+      "difficulty": 20,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which film won the first-ever Academy Award for Best Picture in 1929?",
+      "options": [
+        "Sunrise: A Song of Two Humans",
+        "Wings",
+        "The Jazz Singer",
+        "All Quiet on the Western Front"
+      ],
+      "correct_answer": 1,
+      "explanation": "Wings (1927) won Best Picture at the very first Oscars ceremony. It's a silent World War I film — before talkies even took over!",
+      "image_url": null
+    },
+    {
+      "id": "we039",
+      "difficulty": 18,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Broadway musical tells the story of American founding father Alexander Hamilton using hip-hop music?",
+      "options": [
+        "Dear Evan Hansen",
+        "Hamilton",
+        "The Book of Mormon",
+        "In the Heights"
+      ],
+      "correct_answer": 1,
+      "explanation": "Hamilton by Lin-Manuel Miranda revolutionised Broadway. History class meets hip-hop — and it actually works. The Disney+ recording brought it to the world!",
+      "image_url": null
+    },
+    {
+      "id": "we040",
+      "difficulty": 16,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Korean director made the 2003 film 'Oldboy', considered a masterpiece of revenge cinema?",
+      "options": [
+        "Bong Joon-ho",
+        "Park Chan-wook",
+        "Kim Jee-woon",
+        "Lee Chang-dong"
+      ],
+      "correct_answer": 1,
+      "explanation": "Park Chan-wook directed Oldboy as part of his Vengeance Trilogy. Korean cinema has been producing world-class films for decades — Hollywood just took a while to notice!",
+      "image_url": null
+    },
+    {
+      "id": "we041",
+      "difficulty": 14,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these 'Grand Theft Auto' games in order of release, EARLIEST to LATEST.",
+      "options": [
+        "GTA V",
+        "GTA: San Andreas",
+        "GTA: Vice City",
+        "GTA IV"
+      ],
+      "correct_answer": "2,1,3,0",
+      "explanation": "Vice City (2002), San Andreas (2004), GTA IV (2008), GTA V (2013). And somehow GTA V is STILL getting re-released on every new console!",
+      "image_url": null
+    },
+    {
+      "id": "we042",
+      "difficulty": 12,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which director's filmography includes 'Pulp Fiction', 'Kill Bill', and 'Django Unchained'?",
+      "options": [
+        "Martin Scorsese",
+        "Quentin Tarantino",
+        "Guy Ritchie",
+        "The Coen Brothers"
+      ],
+      "correct_answer": 1,
+      "explanation": "Quentin Tarantino — the king of non-linear storytelling and sharp dialogue. He says he'll retire after his tenth film. We'll see about that!",
+      "image_url": null
+    },
+    {
+      "id": "we043",
+      "difficulty": 10,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which video game studio developed 'The Last of Us' and the 'Uncharted' series?",
+      "options": [
+        "Rockstar Games",
+        "Naughty Dog",
+        "Santa Monica Studio",
+        "Insomniac Games"
+      ],
+      "correct_answer": 1,
+      "explanation": "Naughty Dog is a PlayStation-exclusive studio known for incredible storytelling. The Last of Us even became a hit HBO series!",
+      "image_url": null
+    },
+    {
+      "id": "we044",
+      "difficulty": 9,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which comedian holds the record for the most-watched comedy special on Netflix with 'He's All That' (2023)?",
+      "options": [
+        "Kevin Hart",
+        "Dave Chappelle",
+        "Matt Rife",
+        "Chris Rock"
+      ],
+      "correct_answer": 2,
+      "explanation": "Matt Rife's 'Natural Selection' (2023) broke Netflix comedy special records. He went from TikTok fame to global stand-up stardom practically overnight!",
+      "image_url": null
+    },
+    {
+      "id": "we045",
+      "difficulty": 8,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Studio Ghibli film features a moving castle controlled by a wizard named Howl?",
+      "options": [
+        "Princess Mononoke",
+        "Howl's Moving Castle",
+        "Ponyo",
+        "The Wind Rises"
+      ],
+      "correct_answer": 1,
+      "explanation": "Howl's Moving Castle (2004) is a Miyazaki classic. Between the animation, the story, and that fire demon Calcifer — it's pure magic.",
+      "image_url": null
+    },
+    {
+      "id": "we046",
+      "difficulty": 6,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which long-running musical holds the record for the most performances on Broadway before closing in 2023?",
+      "options": [
+        "The Lion King",
+        "Wicked",
+        "The Phantom of the Opera",
+        "Chicago"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Phantom of the Opera ran for 35 years on Broadway (1988-2023) with over 13,900 performances. That chandelier dropped more times than your phone!",
+      "image_url": null
+    },
+    {
+      "id": "we047",
+      "difficulty": 5,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Indian filmmaker directed the critically acclaimed 'Pather Panchali' (1955), considered a masterpiece of world cinema?",
+      "options": [
+        "Raj Kapoor",
+        "Satyajit Ray",
+        "Guru Dutt",
+        "Mehboob Khan"
+      ],
+      "correct_answer": 1,
+      "explanation": "Satyajit Ray's Apu Trilogy beginning with Pather Panchali is considered one of the greatest achievements in cinema history. He received an honorary Oscar in 1992.",
+      "image_url": null
+    },
+    {
+      "id": "we048",
+      "difficulty": 4,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which video game, released in 1993, is credited with popularising the first-person shooter genre?",
+      "options": [
+        "Wolfenstein 3D",
+        "Doom",
+        "Quake",
+        "Duke Nukem 3D"
+      ],
+      "correct_answer": 1,
+      "explanation": "Doom (1993) by id Software is credited with popularising the FPS genre. Wolfenstein 3D came first (1992), but Doom made it mainstream and created a cultural phenomenon!",
+      "image_url": null
+    },
+    {
+      "id": "we049",
+      "difficulty": 3,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which actor holds the record for most Oscar nominations without a win as of 2024, with eight nominations?",
+      "options": [
+        "Glenn Close",
+        "Peter O'Toole",
+        "Amy Adams",
+        "Bradley Cooper"
+      ],
+      "correct_answer": 0,
+      "explanation": "Glenn Close has been nominated eight times and never won. Peter O'Toole had eight too but received an honorary Oscar. Hollywood owes Glenn Close, honestly!",
+      "image_url": null
+    },
+    {
+      "id": "we050",
+      "difficulty": 1,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which 1927 German Expressionist film by Fritz Lang depicted a dystopian future city and is considered one of the most influential sci-fi films ever made?",
+      "options": [
+        "Nosferatu",
+        "The Cabinet of Dr. Caligari",
+        "Metropolis",
+        "M"
+      ],
+      "correct_answer": 2,
+      "explanation": "Metropolis (1927) by Fritz Lang was way ahead of its time. The visuals influenced everything from Blade Runner to music videos. Nearly 100 years old and still iconic!",
+      "image_url": null
+    }
+  ]
+}

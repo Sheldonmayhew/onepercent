@@ -161,129 +161,191 @@ export function Component() {
           ))}
         </div>
 
-        {/* Player List */}
-        <div className="space-y-2 mb-6 min-h-[96px]">
-          <AnimatePresence mode="popLayout">
-            {players.map((player, idx) => (
-              <motion.div
-                key={player.id}
-                layout
-                initial={{ opacity: 0, x: -16, scale: 0.95 }}
-                animate={{ opacity: 1, x: 0, scale: 1 }}
-                exit={{ opacity: 0, x: 20, scale: 0.95 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-                className="flex items-center gap-3 bg-bg-card shadow-soft rounded-xl px-4 py-3"
-              >
-                <span className="text-2xl">{player.avatar}</span>
-                <div
-                  className="w-3 h-3 rounded-full flex-shrink-0"
-                  style={{ backgroundColor: PLAYER_COLOURS[idx % PLAYER_COLOURS.length] }}
-                />
-                <span className="flex-1 text-lg font-medium text-text-primary">
-                  {player.name}
-                  {player.isHost && (
-                    <span className="ml-1.5 text-neon-gold text-sm" title="Host">
-                      👑
-                    </span>
-                  )}
-                </span>
-                <span className="text-xs text-text-muted">P{idx + 1}</span>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-
-          {players.length === 0 && (
-            <div className="flex items-center justify-center h-24 text-text-muted text-sm">
-              Waiting for players to join…
-            </div>
-          )}
-        </div>
-
-        {/* Team Groupings (team mode) */}
-        {isTeamMode && teams.length > 0 && players.length > 0 && (
-          <motion.div
-            className="mb-6"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <h3 className="font-display text-xs text-text-muted tracking-[0.15em] mb-3">
-              {selectedPlayerId ? 'TAP A TEAM TO ASSIGN' : 'TAP A PLAYER, THEN A TEAM'}
-            </h3>
-
-            {/* Player chips for selection */}
-            <div className="flex flex-wrap gap-2 mb-3">
-              {players.map((p) => (
-                <button
-                  key={p.id}
-                  type="button"
-                  onClick={() =>
-                    setSelectedPlayerId((prev) => (prev === p.id ? null : p.id))
-                  }
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                    selectedPlayerId === p.id
-                      ? 'bg-neon-cyan/20 text-neon-cyan ring-1 ring-neon-cyan'
-                      : 'bg-bg-card text-text-secondary hover:bg-bg-elevated'
-                  }`}
-                >
-                  <span>{p.avatar}</span>
-                  <span>{p.name}</span>
-                </button>
-              ))}
-            </div>
-
-            <div
-              className="grid gap-3"
-              style={{ gridTemplateColumns: `repeat(${teams.length}, 1fr)` }}
+        {/* Team mode layout */}
+        {isTeamMode && teams.length > 0 && players.length > 0 ? (
+          <>
+            {/* VS Team Cards */}
+            <motion.div
+              className="mb-6"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
             >
-              {teams.map((team) => {
-                const teamPlayers = players.filter((p) => p.teamId === team.id);
-                return (
-                  <button
-                    key={team.id}
-                    type="button"
-                    onClick={() => {
-                      if (selectedPlayerId) {
-                        assignPlayerToTeam(selectedPlayerId, team.id);
-                        broadcastHostState();
-                        setSelectedPlayerId(null);
-                      }
-                    }}
-                    className={`bg-bg-card rounded-xl shadow-soft p-3 min-h-[72px] text-left transition-all border ${
-                      selectedPlayerId
-                        ? 'border-opacity-30 hover:brightness-110 cursor-pointer'
-                        : 'border-transparent cursor-default'
-                    }`}
-                    style={
-                      selectedPlayerId ? { borderColor: team.colour } : undefined
-                    }
-                  >
-                    <h4
-                      className="font-display text-xs tracking-wide mb-2"
-                      style={{ color: team.colour }}
+              <h3 className="font-display text-xs text-text-muted tracking-[0.15em] mb-3 text-center">
+                {selectedPlayerId ? 'TAP A TEAM TO ASSIGN' : 'TAP A PLAYER BELOW, THEN A TEAM'}
+              </h3>
+
+              <div className="flex flex-col gap-3 relative">
+                {teams.map((team, teamIdx) => {
+                  const teamPlayers = players.filter((p) => p.teamId === team.id);
+                  return (
+                    <motion.button
+                      key={team.id}
+                      type="button"
+                      onClick={() => {
+                        if (selectedPlayerId) {
+                          assignPlayerToTeam(selectedPlayerId, team.id);
+                          broadcastHostState();
+                          setSelectedPlayerId(null);
+                        }
+                      }}
+                      className={`relative overflow-hidden rounded-2xl p-5 text-left transition-all ${
+                        selectedPlayerId
+                          ? 'cursor-pointer hover:brightness-110'
+                          : 'cursor-default'
+                      }`}
+                      style={{
+                        background: `linear-gradient(135deg, ${team.colour}30, ${team.colour}10)`,
+                        border: selectedPlayerId ? `2px solid ${team.colour}40` : '2px solid transparent',
+                      }}
+                      initial={{ opacity: 0, x: teamIdx % 2 === 0 ? -16 : 16 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.25 + teamIdx * 0.1 }}
                     >
-                      {team.name}
-                    </h4>
-                    {teamPlayers.length === 0 ? (
-                      <p className="text-text-muted text-xs italic">No players yet</p>
-                    ) : (
-                      <div className="space-y-1">
-                        {teamPlayers.map((p) => (
-                          <div
-                            key={p.id}
-                            className="flex items-center gap-1 text-xs text-text-primary"
-                          >
-                            <span>{p.avatar}</span>
-                            <span>{p.name}</span>
-                          </div>
-                        ))}
+                      <div className="flex items-center justify-between mb-3">
+                        <h4
+                          className="font-display text-xl tracking-wide"
+                          style={{ color: team.colour }}
+                        >
+                          {team.name}
+                        </h4>
+                        <span className="text-xs text-text-muted font-score">
+                          {teamPlayers.length} player{teamPlayers.length !== 1 ? 's' : ''}
+                        </span>
                       </div>
-                    )}
-                  </button>
-                );
-              })}
+
+                      {/* Player avatars */}
+                      <div className="flex items-center gap-2">
+                        <div className="flex -space-x-2">
+                          {teamPlayers.slice(0, 4).map((p) => (
+                            <div
+                              key={p.id}
+                              className="w-8 h-8 rounded-full bg-bg-card flex items-center justify-center text-base ring-2 ring-bg-primary"
+                            >
+                              {p.avatar}
+                            </div>
+                          ))}
+                        </div>
+                        {teamPlayers.length > 4 && (
+                          <span className="text-xs text-text-muted">
+                            +{teamPlayers.length - 4}
+                          </span>
+                        )}
+                        {teamPlayers.length === 0 && (
+                          <span className="text-xs text-text-muted italic">No players yet</span>
+                        )}
+                      </div>
+                    </motion.button>
+                  );
+                })}
+
+                {/* VS divider */}
+                {teams.length === 2 && (
+                  <div className="flex items-center justify-center -my-1.5 relative z-10">
+                    <div className="w-10 h-10 rounded-full bg-bg-card shadow-soft flex items-center justify-center">
+                      <span className="font-display text-xs text-text-muted">VS</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+
+            {/* Player grid with team badges */}
+            <div className="mb-6">
+              <p className="text-xs text-text-muted tracking-[0.15em] uppercase mb-3">
+                Players Ready ({players.length})
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                <AnimatePresence mode="popLayout">
+                  {players.map((player, idx) => {
+                    const pTeam = teams.find((t) => t.id === player.teamId);
+                    const isSelected = selectedPlayerId === player.id;
+                    return (
+                      <motion.button
+                        key={player.id}
+                        type="button"
+                        layout
+                        onClick={() =>
+                          setSelectedPlayerId((prev) => (prev === player.id ? null : player.id))
+                        }
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+                        className={`bg-bg-card shadow-soft rounded-xl p-4 flex flex-col items-center gap-2 transition-all ${
+                          isSelected
+                            ? 'ring-2 ring-neon-cyan shadow-md'
+                            : 'hover:bg-bg-elevated'
+                        }`}
+                      >
+                        <div className="relative">
+                          <span className="text-3xl">{player.avatar}</span>
+                          {player.isHost && (
+                            <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-neon-gold flex items-center justify-center">
+                              <span className="text-[8px]">👑</span>
+                            </div>
+                          )}
+                        </div>
+                        <span className="font-medium text-text-primary text-sm text-center truncate w-full">
+                          {player.name}
+                        </span>
+                        {pTeam ? (
+                          <span
+                            className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white uppercase tracking-wider"
+                            style={{ backgroundColor: pTeam.colour }}
+                          >
+                            {pTeam.name}
+                          </span>
+                        ) : (
+                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-bg-elevated text-text-muted uppercase tracking-wider">
+                            No Team
+                          </span>
+                        )}
+                      </motion.button>
+                    );
+                  })}
+                </AnimatePresence>
+              </div>
             </div>
-          </motion.div>
+          </>
+        ) : (
+          /* Individual mode: original player list */
+          <div className="space-y-2 mb-6 min-h-[96px]">
+            <AnimatePresence mode="popLayout">
+              {players.map((player, idx) => (
+                <motion.div
+                  key={player.id}
+                  layout
+                  initial={{ opacity: 0, x: -16, scale: 0.95 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
+                  exit={{ opacity: 0, x: 20, scale: 0.95 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+                  className="flex items-center gap-3 bg-bg-card shadow-soft rounded-xl px-4 py-3"
+                >
+                  <span className="text-2xl">{player.avatar}</span>
+                  <div
+                    className="w-3 h-3 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: PLAYER_COLOURS[idx % PLAYER_COLOURS.length] }}
+                  />
+                  <span className="flex-1 text-lg font-medium text-text-primary">
+                    {player.name}
+                    {player.isHost && (
+                      <span className="ml-1.5 text-neon-gold text-sm" title="Host">
+                        👑
+                      </span>
+                    )}
+                  </span>
+                  <span className="text-xs text-text-muted">P{idx + 1}</span>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+
+            {players.length === 0 && (
+              <div className="flex items-center justify-center h-24 text-text-muted text-sm">
+                Waiting for players to join…
+              </div>
+            )}
+          </div>
         )}
 
         {/* Actions */}
