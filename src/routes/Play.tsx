@@ -9,7 +9,6 @@ import { useSound } from '../hooks/useSound';
 import { DEFAULT_TIMER_SECONDS } from '../types';
 import QuestionDisplay from '../components/Game/QuestionDisplay';
 import AnswerInput from '../components/Game/AnswerInput';
-import Timer from '../components/Game/Timer';
 import PlayerStatusBar from '../components/Game/PlayerStatusBar';
 
 export function Component() {
@@ -152,8 +151,13 @@ export function Component() {
             difficulty={difficulty}
             points={points}
             totalRounds={totalRounds}
+            categoryName={session.pack?.name}
+            playerName={currentPlayer?.name}
+            playerColour={currentPlayer?.colour}
+            timeLeft={timeLeft}
+            timerProgress={progress}
+            showTimer
           />
-          <Timer timeLeft={timeLeft} progress={progress} />
           {players.length > 1 && (
             <PlayerStatusBar players={players} showAnswerStatus />
           )}
@@ -241,9 +245,13 @@ export function Component() {
           difficulty={difficulty}
           points={points}
           totalRounds={totalRounds}
+          categoryName={session.pack?.name}
+          playerName={hostPlayer?.name}
+          playerColour={hostPlayer?.colour}
+          timeLeft={timeLeft}
+          timerProgress={progress}
+          showTimer={timerStarted}
         />
-
-        {timerStarted && <Timer timeLeft={timeLeft} progress={progress} />}
 
         {/* Player answer status */}
         <PlayerStatusBar players={nonHostPlayers} showAnswerStatus />
