@@ -18,6 +18,7 @@ export interface BroadcastRound {
   points: number;
   totalRounds: number;
   timerDuration: number;
+  categoryName?: string;
   question: {
     question: string;
     type: QuestionType;

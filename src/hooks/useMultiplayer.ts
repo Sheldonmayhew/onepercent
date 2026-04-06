@@ -74,6 +74,7 @@ export function broadcastHostState(route?: string) {
       points,
       totalRounds: tiers.length,
       timerDuration: 30,
+      categoryName: s.pack?.name,
       question: {
         question: currentQ.question,
         type: currentQ.type,

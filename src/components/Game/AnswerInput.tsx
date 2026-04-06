@@ -10,7 +10,7 @@ interface AnswerInputProps {
   playerColour: string;
 }
 
-export default function AnswerInput({ question, onSubmit, disabled, playerName, playerColour }: AnswerInputProps) {
+export default function AnswerInput({ question, onSubmit, disabled }: AnswerInputProps) {
   const [selected, setSelected] = useState<number | null>(null);
   const [numericValue, setNumericValue] = useState('');
   const [sequenceOrder, setSequenceOrder] = useState<number[]>([]);
