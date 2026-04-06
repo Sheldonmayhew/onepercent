@@ -11,7 +11,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You buy a pie for R32 and a cold drink for R18. How much change do you get from R100?",
-      "options": ["R40", "R50", "R55", "R45"],
+      "options": [
+        "R40",
+        "R50",
+        "R55",
+        "R45"
+      ],
       "correct_answer": 1,
       "explanation": "R32 + R18 = R50. Change from R100 is R50. Easy peasy, more money for tomorrow's lunch!",
       "image_url": null
@@ -22,7 +27,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If you earn R200 per day and work 5 days a week, what's your weekly income?",
-      "options": ["R800", "R900", "R1 000", "R1 200"],
+      "options": [
+        "R800",
+        "R900",
+        "R1 000",
+        "R1 200"
+      ],
       "correct_answer": 2,
       "explanation": "R200 x 5 = R1 000. That's your weekly bread and butter right there.",
       "image_url": null
@@ -30,11 +40,16 @@
     {
       "id": "mm003",
       "difficulty": 90,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A loaf of bread costs R25. How many loaves can you buy with R100?",
-      "options": [],
-      "correct_answer": 4,
+      "options": [
+        "1",
+        "4",
+        "2",
+        "3"
+      ],
+      "correct_answer": 1,
       "explanation": "R100 / R25 = 4 loaves. Simple division — now go make some sandwiches!",
       "image_url": null
     },
@@ -44,7 +59,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which South African coin has the smallest value?",
-      "options": ["10c", "5c", "20c", "50c"],
+      "options": [
+        "10c",
+        "5c",
+        "20c",
+        "50c"
+      ],
       "correct_answer": 1,
       "explanation": "The 5c coin is the smallest denomination still in circulation. Though good luck finding one these days!",
       "image_url": null
@@ -55,7 +75,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If a T-shirt is marked R150 and it's 50% off, what do you pay?",
-      "options": ["R100", "R80", "R75", "R65"],
+      "options": [
+        "R100",
+        "R80",
+        "R75",
+        "R65"
+      ],
       "correct_answer": 2,
       "explanation": "50% of R150 = R75. Half price — now that's a lekker deal!",
       "image_url": null
@@ -66,7 +91,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You split a R540 restaurant bill equally between 6 friends. How much does each person pay?",
-      "options": ["R80", "R85", "R90", "R95"],
+      "options": [
+        "R80",
+        "R85",
+        "R90",
+        "R95"
+      ],
       "correct_answer": 2,
       "explanation": "R540 / 6 = R90 each. Don't forget to add a tip for the waiter, though!",
       "image_url": null
@@ -74,11 +104,16 @@
     {
       "id": "mm007",
       "difficulty": 80,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You save R500 per month. How many months will it take to save R3 000?",
-      "options": [],
-      "correct_answer": 6,
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct_answer": 3,
       "explanation": "R3 000 / R500 = 6 months. Consistency is king when it comes to saving!",
       "image_url": null
     },
@@ -88,7 +123,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A shop offers 'buy 2 get 1 free' on items costing R60 each. What's the effective price per item if you buy 3?",
-      "options": ["R30", "R40", "R45", "R50"],
+      "options": [
+        "R30",
+        "R40",
+        "R45",
+        "R50"
+      ],
       "correct_answer": 1,
       "explanation": "You pay for 2 items: 2 x R60 = R120 for 3 items. R120 / 3 = R40 each. Nice saving!",
       "image_url": null
@@ -99,7 +139,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Your prepaid electricity costs R2.50 per kWh. If you use 200 kWh in a month, what's your electricity bill?",
-      "options": ["R400", "R450", "R500", "R550"],
+      "options": [
+        "R400",
+        "R450",
+        "R500",
+        "R550"
+      ],
       "correct_answer": 2,
       "explanation": "200 x R2.50 = R500. Load shedding might actually save you some money... silver lining?",
       "image_url": null
@@ -110,7 +155,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If the Rand weakens from R15/$ to R18/$, what happens to the price of imported goods?",
-      "options": ["They get cheaper", "They stay the same", "They get more expensive", "It depends on VAT"],
+      "options": [
+        "They get cheaper",
+        "They stay the same",
+        "They get more expensive",
+        "It depends on VAT"
+      ],
       "correct_answer": 2,
       "explanation": "A weaker Rand means you need more Rands to buy the same dollar amount — so imports cost more. That's why petrol goes up when the Rand drops!",
       "image_url": null
@@ -121,7 +171,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "South Africa's VAT rate is 15%. If an item costs R200 before VAT, what's the total price including VAT?",
-      "options": ["R215", "R225", "R230", "R235"],
+      "options": [
+        "R215",
+        "R225",
+        "R230",
+        "R235"
+      ],
       "correct_answer": 2,
       "explanation": "15% of R200 = R30. Total = R200 + R30 = R230. VAT — the government's way of getting a slice of every pie!",
       "image_url": null
@@ -129,11 +184,16 @@
     {
       "id": "mm012",
       "difficulty": 70,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You buy a phone on contract for R399/month over 24 months. What's the total cost in Rands?",
-      "options": [],
-      "correct_answer": 9576,
+      "options": [
+        "9576",
+        "8140",
+        "8810",
+        "10342"
+      ],
+      "correct_answer": 0,
       "explanation": "R399 x 24 = R9 576. Always calculate the total before signing that contract!",
       "image_url": null
     },
@@ -143,7 +203,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A pair of shoes costs R800. The shop offers 25% off. How much do you save?",
-      "options": ["R150", "R175", "R200", "R225"],
+      "options": [
+        "R150",
+        "R175",
+        "R200",
+        "R225"
+      ],
       "correct_answer": 2,
       "explanation": "25% of R800 = R200. You pay R600. That saved R200 is basically a free meal!",
       "image_url": null
@@ -154,7 +219,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If inflation is 6% per year, roughly how many years does it take for prices to double?",
-      "options": ["6 years", "8 years", "10 years", "12 years"],
+      "options": [
+        "6 years",
+        "8 years",
+        "10 years",
+        "12 years"
+      ],
       "correct_answer": 3,
       "explanation": "Using the Rule of 72: 72 / 6 = 12 years. That's why your ouma says everything was cheaper back in her day!",
       "image_url": null
@@ -165,7 +235,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these monthly expenses from typically MOST to LEAST expensive for an average SA household: (1) Rent/Bond (2) Groceries (3) Transport (4) Electricity",
-      "options": ["Rent/Bond", "Groceries", "Transport", "Electricity"],
+      "options": [
+        "Rent/Bond",
+        "Groceries",
+        "Transport",
+        "Electricity"
+      ],
       "correct_answer": "0,1,2,3",
       "explanation": "For most SA households, rent/bond is the biggest expense, followed by groceries, then transport, then electricity. Budget accordingly!",
       "image_url": null
@@ -176,7 +251,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You invest R10 000 at 8% simple interest per year. How much interest do you earn after 3 years?",
-      "options": ["R2 000", "R2 400", "R2 600", "R3 000"],
+      "options": [
+        "R2 000",
+        "R2 400",
+        "R2 600",
+        "R3 000"
+      ],
       "correct_answer": 1,
       "explanation": "Simple interest: R10 000 x 0.08 x 3 = R2 400. Simple interest is straightforward — it's compound interest where things get spicy!",
       "image_url": null
@@ -184,11 +264,16 @@
     {
       "id": "mm017",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A shop item has a price tag of R345 including 15% VAT. What is the price BEFORE VAT (to the nearest Rand)?",
-      "options": [],
-      "correct_answer": 300,
+      "options": [
+        "240",
+        "270",
+        "300",
+        "330"
+      ],
+      "correct_answer": 2,
       "explanation": "To remove VAT: R345 / 1.15 = R300. Remember, VAT is already baked into the price — you divide, not subtract!",
       "image_url": null
     },
@@ -198,7 +283,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Your salary is R25 000 per month. After a 7% raise, what's your new monthly salary?",
-      "options": ["R25 700", "R26 250", "R26 500", "R26 750"],
+      "options": [
+        "R25 700",
+        "R26 250",
+        "R26 500",
+        "R26 750"
+      ],
       "correct_answer": 3,
       "explanation": "7% of R25 000 = R1 750. New salary: R25 000 + R1 750 = R26 750. Time to celebrate... responsibly!",
       "image_url": null
@@ -209,7 +299,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You take a personal loan of R50 000 at 18% per year simple interest for 2 years. What total amount do you repay?",
-      "options": ["R59 000", "R64 000", "R68 000", "R72 000"],
+      "options": [
+        "R59 000",
+        "R64 000",
+        "R68 000",
+        "R72 000"
+      ],
       "correct_answer": 2,
       "explanation": "Interest: R50 000 x 0.18 x 2 = R18 000. Total repayment: R50 000 + R18 000 = R68 000. Haibo, that interest stings!",
       "image_url": null
@@ -217,11 +312,16 @@
     {
       "id": "mm020",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A car depreciates by 15% per year. If it was worth R200 000 new, what is it worth after 1 year (in thousands of Rands)?",
-      "options": [],
-      "correct_answer": 170,
+      "options": [
+        "136",
+        "170",
+        "153",
+        "187"
+      ],
+      "correct_answer": 1,
       "explanation": "15% of R200 000 = R30 000. After 1 year: R200 000 - R30 000 = R170 000. Cars lose value faster than you can say 'depreciation'!",
       "image_url": null
     },
@@ -231,7 +331,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You earn R30 000/month. Using the SA tax brackets, roughly what percentage goes to PAYE tax if you're in the 26% marginal bracket?",
-      "options": ["About 14%", "About 18%", "About 22%", "About 26%"],
+      "options": [
+        "About 14%",
+        "About 18%",
+        "About 22%",
+        "About 26%"
+      ],
       "correct_answer": 1,
       "explanation": "Your marginal rate is 26% but your effective rate is much lower because the first portions are taxed at lower rates. For R30k/month, effective tax is roughly 18%. Marginal vs effective — big difference!",
       "image_url": null
@@ -239,11 +344,16 @@
     {
       "id": "mm022",
       "difficulty": 50,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You invest R5 000 at 10% compound interest per year. What is the investment worth after 2 years (to the nearest Rand)?",
-      "options": [],
-      "correct_answer": 6050,
+      "options": [
+        "6050",
+        "5143",
+        "5566",
+        "6534"
+      ],
+      "correct_answer": 0,
       "explanation": "Year 1: R5 000 x 1.10 = R5 500. Year 2: R5 500 x 1.10 = R6 050. That extra R50 over simple interest is compound interest doing its magic!",
       "image_url": null
     },
@@ -253,7 +363,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A property is listed at R1.2 million. Transfer duty is approximately 3% on the amount above R1.1 million. What transfer duty do you pay?",
-      "options": ["R3 000", "R30 000", "R36 000", "R33 000"],
+      "options": [
+        "R3 000",
+        "R30 000",
+        "R36 000",
+        "R33 000"
+      ],
       "correct_answer": 0,
       "explanation": "Only the amount above R1.1M is taxed at 3%: R100 000 x 0.03 = R3 000. Transfer duty brackets work a bit like tax brackets!",
       "image_url": null
@@ -264,7 +379,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You have a credit card charging 2% interest per month on the outstanding balance. What's the approximate annual interest rate?",
-      "options": ["12%", "18%", "24%", "27%"],
+      "options": [
+        "12%",
+        "18%",
+        "24%",
+        "27%"
+      ],
       "correct_answer": 3,
       "explanation": "With compounding: (1.02)^12 - 1 ≈ 26.8%, roughly 27%. Monthly rates look small but compound into scary annual numbers. Credit cards are hectic!",
       "image_url": null
@@ -275,7 +395,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Rank these investment types from typically LOWEST to HIGHEST risk: (1) Government bonds (2) JSE shares (3) Fixed deposit (4) Crypto",
-      "options": ["Government bonds", "JSE shares", "Fixed deposit", "Crypto"],
+      "options": [
+        "Government bonds",
+        "JSE shares",
+        "Fixed deposit",
+        "Crypto"
+      ],
       "correct_answer": "2,0,1,3",
       "explanation": "Fixed deposits are safest (guaranteed return), then government bonds (very low risk), then JSE shares (market risk), then crypto (wild ride). Risk and reward go hand in hand!",
       "image_url": null
@@ -286,7 +411,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A house is valued at R1.5 million. Municipal rates are charged at 0.8 cents per Rand of property value per year. What are the annual rates?",
-      "options": ["R8 000", "R10 000", "R12 000", "R15 000"],
+      "options": [
+        "R8 000",
+        "R10 000",
+        "R12 000",
+        "R15 000"
+      ],
       "correct_answer": 2,
       "explanation": "0.8 cents per Rand = R0.008 per Rand. R1 500 000 x 0.008 = R12 000 per year. Owning property comes with its own set of bills!",
       "image_url": null
@@ -294,11 +424,16 @@
     {
       "id": "mm027",
       "difficulty": 40,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You buy shares at R45 each and sell them at R63 each. What is your percentage profit (whole number)?",
-      "options": [],
-      "correct_answer": 40,
+      "options": [
+        "40",
+        "25",
+        "30",
+        "35"
+      ],
+      "correct_answer": 0,
       "explanation": "Profit: R63 - R45 = R18. Percentage: (18/45) x 100 = 40%. Not bad for a day on the JSE!",
       "image_url": null
     },
@@ -308,7 +443,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Your home loan is R1 million at prime rate (11.75%). If prime drops by 0.25%, roughly how much do you save per month on a 20-year bond?",
-      "options": ["About R80", "About R160", "About R250", "About R400"],
+      "options": [
+        "About R80",
+        "About R160",
+        "About R250",
+        "About R400"
+      ],
       "correct_answer": 1,
       "explanation": "A 0.25% rate cut on R1M saves roughly R160/month on a 20-year bond. Every basis point counts when you're paying off a house!",
       "image_url": null
@@ -319,7 +459,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You earn R480 000 per year. You contribute R27 500 to your pension fund. The contribution is tax-deductible. If your marginal tax rate is 31%, how much tax do you save?",
-      "options": ["R5 525", "R7 250", "R8 525", "R9 300"],
+      "options": [
+        "R5 525",
+        "R7 250",
+        "R8 525",
+        "R9 300"
+      ],
       "correct_answer": 2,
       "explanation": "Tax saving: R27 500 x 0.31 = R8 525. Retirement contributions reduce your taxable income — it's one of the best legal tax breaks going!",
       "image_url": null
@@ -327,11 +472,16 @@
     {
       "id": "mm030",
       "difficulty": 40,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A business has revenue of R2 million and expenses of R1.4 million. What is the profit margin as a percentage?",
-      "options": [],
-      "correct_answer": 30,
+      "options": [
+        "15",
+        "30",
+        "20",
+        "25"
+      ],
+      "correct_answer": 1,
       "explanation": "Profit: R2M - R1.4M = R600 000. Margin: (600 000 / 2 000 000) x 100 = 30%. That's a healthy business!",
       "image_url": null
     },
@@ -341,7 +491,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You invest R100 000 in a Tax-Free Savings Account earning 9% per year. After 10 years of compound growth (no additional contributions), approximately how much do you have?",
-      "options": ["R190 000", "R210 000", "R237 000", "R260 000"],
+      "options": [
+        "R190 000",
+        "R210 000",
+        "R237 000",
+        "R260 000"
+      ],
       "correct_answer": 2,
       "explanation": "R100 000 x (1.09)^10 = R100 000 x 2.367 = R236 736, approximately R237 000. And it's all tax-free — the TFSA is a proper gem!",
       "image_url": null
@@ -349,11 +504,16 @@
     {
       "id": "mm032",
       "difficulty": 30,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A company's share price drops 20% on Monday, then rises 25% on Tuesday. What is the overall percentage change from the original price?",
-      "options": [],
-      "correct_answer": 0,
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "correct_answer": 1,
       "explanation": "If the share was R100: after -20% it's R80. After +25% it's R80 x 1.25 = R100. Net change: 0%! This is why percentages can be deceiving — a 20% drop needs a 25% rise just to break even.",
       "image_url": null
     },
@@ -363,7 +523,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Your bond repayment is R12 500/month on a R1.2 million home loan at 11.5% over 20 years. In the first month, roughly how much goes to interest vs capital?",
-      "options": ["R5 750 interest / R6 750 capital", "R8 500 interest / R4 000 capital", "R11 500 interest / R1 000 capital", "R10 000 interest / R2 500 capital"],
+      "options": [
+        "R5 750 interest / R6 750 capital",
+        "R8 500 interest / R4 000 capital",
+        "R11 500 interest / R1 000 capital",
+        "R10 000 interest / R2 500 capital"
+      ],
       "correct_answer": 2,
       "explanation": "Monthly interest: R1 200 000 x 11.5% / 12 = R11 500. Only about R1 000 goes to capital in the first month! That's why extra payments early on make such a huge difference.",
       "image_url": null
@@ -374,7 +539,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A Johannesburg rental property earns R8 500/month rent. Monthly costs are: bond R6 200, levies R1 800, insurance R400, rates R600. What's the monthly cash flow?",
-      "options": ["-R500", "-R200", "R0", "-R1 000"],
+      "options": [
+        "-R500",
+        "-R200",
+        "R0",
+        "-R1 000"
+      ],
       "correct_answer": 0,
       "explanation": "Income: R8 500. Costs: R6 200 + R1 800 + R400 + R600 = R9 000. Cash flow: R8 500 - R9 000 = -R500. Negative cash flow — you're paying to be a landlord! Capital growth better be worth it.",
       "image_url": null
@@ -385,7 +555,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these SA financial milestones by the year they happened, EARLIEST to LATEST: (1) Rand introduced (2) JSE founded (3) SA Reserve Bank established (4) Decimal currency adopted",
-      "options": ["Rand introduced (1961)", "JSE founded (1887)", "SA Reserve Bank (1921)", "Decimal currency (1961)"],
+      "options": [
+        "Rand introduced (1961)",
+        "JSE founded (1887)",
+        "SA Reserve Bank (1921)",
+        "Decimal currency (1961)"
+      ],
       "correct_answer": "1,2,0,3",
       "explanation": "JSE was founded in 1887, SARB established in 1921, and both the Rand and decimal currency came in 1961 (same event really). The JSE is one of the oldest stock exchanges in the world!",
       "image_url": null
@@ -393,11 +568,16 @@
     {
       "id": "mm036",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You invest R1 000 per month for 30 years at 12% annual return (1% monthly), compounded monthly. Roughly how many million Rand will you have? (Answer as a whole number of millions)",
-      "options": [],
-      "correct_answer": 3,
+      "options": [
+        "0",
+        "3",
+        "1",
+        "2"
+      ],
+      "correct_answer": 1,
       "explanation": "Using the future value of annuity formula: R1 000 x ((1.01^360 - 1) / 0.01) = R1 000 x 3 494.96 ≈ R3.5 million. The power of consistent investing over decades is mind-blowing! Roughly R3 million (accepting 3 or 4 as close).",
       "image_url": null
     },
@@ -407,7 +587,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A company has a P/E ratio of 18 and earnings per share of R12. Another company has P/E of 12 and EPS of R20. Which has the higher share price?",
-      "options": ["Company A (P/E 18, EPS R12)", "Company B (P/E 12, EPS R20)", "They're the same", "Cannot determine"],
+      "options": [
+        "Company A (P/E 18, EPS R12)",
+        "Company B (P/E 12, EPS R20)",
+        "They're the same",
+        "Cannot determine"
+      ],
       "correct_answer": 1,
       "explanation": "Share price = P/E x EPS. Company A: 18 x R12 = R216. Company B: 12 x R20 = R240. Company B is pricier despite the lower P/E ratio — EPS matters!",
       "image_url": null
@@ -418,7 +603,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You take a R800 000 home loan at 11% over 20 years. Total interest paid over the loan term is closest to?",
-      "options": ["R800 000", "R1 200 000", "R1 500 000", "R1 000 000"],
+      "options": [
+        "R800 000",
+        "R1 200 000",
+        "R1 500 000",
+        "R1 000 000"
+      ],
       "correct_answer": 1,
       "explanation": "Monthly repayment at 11% over 20 years on R800k is about R8 270. Total paid: R8 270 x 240 = ~R1 985 000. Interest: ~R1 185 000, closest to R1.2 million. You basically pay for the house twice!",
       "image_url": null
@@ -426,11 +616,16 @@
     {
       "id": "mm039",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If the Rand depreciates from R14/$ to R19/$ over 5 years, what is the average annual depreciation rate as a percentage (to the nearest whole number)?",
-      "options": [],
-      "correct_answer": 6,
+      "options": [
+        "3",
+        "6",
+        "4",
+        "5"
+      ],
+      "correct_answer": 1,
       "explanation": "Total depreciation: (19-14)/14 = 35.7% over 5 years. Annual rate: (19/14)^(1/5) - 1 ≈ 6.3%, roughly 6%. The Rand's long-term trend hasn't been pretty!",
       "image_url": null
     },
@@ -440,7 +635,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "An SA company declares a dividend of 350 cents per share. Dividend withholding tax is 20%. If you hold 500 shares, what net dividend do you receive?",
-      "options": ["R1 200", "R1 400", "R1 600", "R1 750"],
+      "options": [
+        "R1 200",
+        "R1 400",
+        "R1 600",
+        "R1 750"
+      ],
       "correct_answer": 1,
       "explanation": "Gross dividend: 500 x R3.50 = R1 750. Tax: 20% x R1 750 = R350. Net: R1 750 - R350 = R1 400. The taxman always gets his cut!",
       "image_url": null
@@ -451,7 +651,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You have a R2 million retirement annuity. The living annuity drawdown must be between 2.5% and 17.5%. At the minimum drawdown, what monthly income do you receive before tax?",
-      "options": ["R2 083", "R3 125", "R4 167", "R5 000"],
+      "options": [
+        "R2 083",
+        "R3 125",
+        "R4 167",
+        "R5 000"
+      ],
       "correct_answer": 2,
       "explanation": "Annual drawdown: R2 000 000 x 2.5% = R50 000. Monthly: R50 000 / 12 = R4 167. Living annuities give flexibility but you need to manage your drawdown carefully!",
       "image_url": null
@@ -459,11 +664,16 @@
     {
       "id": "mm042",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A company's EBITDA is R5 million, debt is R8 million, and it has 2 million shares. Enterprise value is R30 million. What is the equity value per share in Rands?",
-      "options": [],
-      "correct_answer": 11,
+      "options": [
+        "1",
+        "6",
+        "11",
+        "16"
+      ],
+      "correct_answer": 2,
       "explanation": "Equity value = Enterprise value - Debt = R30M - R8M = R22M. Per share: R22M / 2M shares = R11. This is a simplified equity valuation — real-world analysis gets much more complex!",
       "image_url": null
     },
@@ -473,7 +683,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You're comparing two bond investments: Bond A yields 9% with inflation at 5%. Bond B yields 7% with inflation at 2%. Which gives the better REAL return?",
-      "options": ["Bond A", "Bond B", "They're equal", "Cannot determine without duration"],
+      "options": [
+        "Bond A",
+        "Bond B",
+        "They're equal",
+        "Cannot determine without duration"
+      ],
       "correct_answer": 1,
       "explanation": "Real return ≈ nominal - inflation. Bond A: 9% - 5% = 4%. Bond B: 7% - 2% = 5%. Bond B wins on real return! Nominal rates can be misleading — always think in real terms.",
       "image_url": null
@@ -484,7 +699,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In SA capital gains tax, the annual exclusion is R40 000. You sell shares for a R150 000 capital gain. Your marginal tax rate is 36%. With the 40% inclusion rate, how much CGT do you pay?",
-      "options": ["R9 360", "R15 840", "R21 600", "R11 520"],
+      "options": [
+        "R9 360",
+        "R15 840",
+        "R21 600",
+        "R11 520"
+      ],
       "correct_answer": 1,
       "explanation": "Taxable gain: R150 000 - R40 000 exclusion = R110 000. Inclusion: R110 000 x 40% = R44 000. Tax: R44 000 x 36% = R15 840. CGT is softer than income tax, but it still adds up!",
       "image_url": null
@@ -495,7 +715,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Rank these SA banks by total assets as of 2024, LARGEST to SMALLEST: (1) Nedbank (2) Standard Bank (3) FirstRand (4) Absa",
-      "options": ["Nedbank", "Standard Bank", "FirstRand", "Absa"],
+      "options": [
+        "Nedbank",
+        "Standard Bank",
+        "FirstRand",
+        "Absa"
+      ],
       "correct_answer": "1,2,3,0",
       "explanation": "Standard Bank is Africa's largest bank by assets, followed by FirstRand (which owns FNB), then Absa (formerly Barclays Africa), then Nedbank. The Big Four dominate SA banking!",
       "image_url": null
@@ -503,10 +728,15 @@
     {
       "id": "mm046",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A property generates R15 000/month rental income with a capitalization rate of 8%. Using the income approach, what is the property value in millions of Rands (to the nearest whole number)?",
-      "options": [],
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
       "correct_answer": 2,
       "explanation": "Annual income: R15 000 x 12 = R180 000. Property value = Income / Cap rate = R180 000 / 0.08 = R2 250 000, approximately R2 million. Cap rates are the bread and butter of property valuation!",
       "image_url": null
@@ -517,7 +747,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A trader uses a straddle strategy, buying both a call and put option on a JSE stock at R50 strike price. The call costs R4 and the put costs R3. At what TWO prices does the trader break even?",
-      "options": ["R43 and R57", "R46 and R54", "R44 and R56", "R45 and R55"],
+      "options": [
+        "R43 and R57",
+        "R46 and R54",
+        "R44 and R56",
+        "R45 and R55"
+      ],
       "correct_answer": 0,
       "explanation": "Total premium: R4 + R3 = R7. Break-even points: R50 - R7 = R43 (downside) and R50 + R7 = R57 (upside). Straddles profit from big moves in either direction!",
       "image_url": null
@@ -528,7 +763,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A South African company has a WACC of 14%, cost of equity of 18%, cost of debt (after tax) of 9%, and a debt-to-equity ratio. What is its debt-to-equity ratio?",
-      "options": ["0.44:1", "0.80:1", "0.67:1", "1:1"],
+      "options": [
+        "0.44:1",
+        "0.80:1",
+        "0.67:1",
+        "1:1"
+      ],
       "correct_answer": 1,
       "explanation": "WACC = We x Ke + Wd x Kd. 14 = We x 18 + (1-We) x 9. Solving: 14 = 18We + 9 - 9We, so 5 = 9We, We = 5/9. Wd = 4/9. D/E ratio = Wd/We = 4/5 = 0.80:1. Corporate finance at its finest!",
       "image_url": null
@@ -539,7 +779,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You're structuring a BEE deal. A company is valued at R50 million. The BEE partner acquires 26% using vendor financing at 0% interest over 7 years, with dividends covering repayments. If annual dividends are R2.5 million and the BEE partner's share of dividends goes to repayments, how many years to pay off?",
-      "options": ["4 years", "5 years", "6 years", "7 years"],
+      "options": [
+        "4 years",
+        "5 years",
+        "6 years",
+        "7 years"
+      ],
       "correct_answer": 1,
       "explanation": "BEE stake cost: 26% x R50M = R13M. Annual dividend received: 26% x R2.5M = R650 000. Wait — R13M / R650k = 20 years! But if total dividends of R2.5M go to the BEE partner for repayment: R13M / R2.5M = 5.2 years, so roughly 5 years with rounding.",
       "image_url": null
@@ -547,22 +792,32 @@
     {
       "id": "mm050",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Using the Gordon Growth Model: a JSE-listed share pays a dividend of R6, growing at 5% per year. Required return is 14%. What is the fair value of the share in Rands (to the nearest Rand)?",
-      "options": [],
-      "correct_answer": 70,
+      "options": [
+        "70",
+        "55",
+        "60",
+        "65"
+      ],
+      "correct_answer": 0,
       "explanation": "Gordon Growth Model: P = D1 / (r - g) = R6 x 1.05 / (0.14 - 0.05) = R6.30 / 0.09 = R70. This model assumes constant growth forever — reality is messier, but it's a useful starting point!",
       "image_url": null
     },
     {
       "id": "mm051",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A zero-coupon bond has a face value of R1 000 000, matures in 5 years, and is priced to yield 11% per annum (compounded annually). What is the current price in thousands of Rands (to the nearest thousand)?",
-      "options": [],
-      "correct_answer": 593,
+      "options": [
+        "474",
+        "534",
+        "593",
+        "652"
+      ],
+      "correct_answer": 2,
       "explanation": "Price = Face value / (1 + r)^n = R1 000 000 / (1.11)^5 = R1 000 000 / 1.68506 = R593 451, approximately R593 000. Zero-coupon bonds are pure time-value-of-money in action!",
       "image_url": null
     },
@@ -572,7 +827,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "An SA exporter hedges USD receivables using a forward contract. Spot rate is R18.50/$, SA interest rate is 8.25%, US rate is 5.25%, and the contract is for 6 months. Using interest rate parity, what's the approximate forward rate?",
-      "options": ["R18.77/$", "R19.02/$", "R18.23/$", "R19.35/$"],
+      "options": [
+        "R18.77/$",
+        "R19.02/$",
+        "R18.23/$",
+        "R19.35/$"
+      ],
       "correct_answer": 0,
       "explanation": "Forward = Spot x (1 + rZA x t) / (1 + rUS x t) = R18.50 x (1 + 0.0825 x 0.5) / (1 + 0.0525 x 0.5) = R18.50 x 1.04125 / 1.02625 = R18.77. Interest rate parity — the backbone of forex forward pricing!",
       "image_url": null
@@ -583,7 +843,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A company issues a 10-year bond at par (R1 000) with a 9% annual coupon. After 2 years, market yields rise to 12%. What is the approximate market price of the bond?",
-      "options": ["R825", "R852", "R878", "R905"],
+      "options": [
+        "R825",
+        "R852",
+        "R878",
+        "R905"
+      ],
       "correct_answer": 1,
       "explanation": "Remaining: 8 years, coupon R90/year. Price = 90 x PVIFA(12%,8) + 1000 x PVIF(12%,8) = 90 x 4.9676 + 1000 x 0.4039 = R447.08 + R403.88 = R850.97 ≈ R852. When yields rise, bond prices fall — the see-saw of fixed income!",
       "image_url": null
@@ -594,7 +859,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these events in order of their impact on the Rand (MOST NEGATIVE to LEAST NEGATIVE): (1) Nenegate (Dec 2015) (2) COVID crash (Mar 2020) (3) Ramaphoria (Feb 2018) (4) Junk status downgrade (Apr 2017)",
-      "options": ["Nenegate (Dec 2015)", "COVID crash (Mar 2020)", "Ramaphoria (Feb 2018)", "Junk status downgrade (Apr 2017)"],
+      "options": [
+        "Nenegate (Dec 2015)",
+        "COVID crash (Mar 2020)",
+        "Ramaphoria (Feb 2018)",
+        "Junk status downgrade (Apr 2017)"
+      ],
       "correct_answer": "1,0,3,2",
       "explanation": "COVID crash saw the Rand hit R19/$, Nenegate saw a sudden R2 drop overnight, junk status caused gradual weakness, and Ramaphoria actually STRENGTHENED the Rand. Knowing SA's financial history is the real 1% knowledge!",
       "image_url": null
@@ -602,11 +872,16 @@
     {
       "id": "mm055",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Using the Black-Scholes intuition: a JSE call option has a delta of 0.6, gamma of 0.03, and the underlying stock moves up R5. What is the approximate new delta (express as a whole number, e.g. 0.75 = 75)?",
-      "options": [],
-      "correct_answer": 75,
+      "options": [
+        "60",
+        "75",
+        "65",
+        "70"
+      ],
+      "correct_answer": 1,
       "explanation": "New delta = old delta + (gamma x price move) = 0.6 + (0.03 x 5) = 0.6 + 0.15 = 0.75, i.e. 75. Gamma measures how fast delta changes — it's the acceleration of options pricing. Only the true 1% understand the Greeks!",
       "image_url": null
     }

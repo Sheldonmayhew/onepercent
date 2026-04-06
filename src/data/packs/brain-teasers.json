@@ -11,7 +11,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If you have 3 boerewors rolls and I take away 2, how many do YOU have?",
-      "options": ["1", "2", "3", "0"],
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
       "correct_answer": 1,
       "explanation": "You took 2, so YOU have 2! The classic trick — the question asks how many YOU have, not how many are left.",
       "image_url": null
@@ -22,7 +27,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A farmer has 17 sheep. All but 9 run away. How many sheep does the farmer have left?",
-      "options": ["8", "9", "17", "0"],
+      "options": [
+        "8",
+        "9",
+        "17",
+        "0"
+      ],
       "correct_answer": 1,
       "explanation": "\"All but 9\" means 9 remain. Don't overthink it, china!",
       "image_url": null
@@ -33,7 +43,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What comes once in a minute, twice in a moment, but never in a thousand years?",
-      "options": ["The letter M", "The number 1", "A heartbeat", "A shooting star"],
+      "options": [
+        "The letter M",
+        "The number 1",
+        "A heartbeat",
+        "A shooting star"
+      ],
       "correct_answer": 0,
       "explanation": "The letter 'M' appears once in 'minute', twice in 'moment', and zero times in 'a thousand years'. It's about spelling, not time!",
       "image_url": null
@@ -44,7 +59,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Is it legal in South Africa for a man to marry his widow's sister?",
-      "options": ["Yes", "No", "Only in the Western Cape", "Only with a prenup"],
+      "options": [
+        "Yes",
+        "No",
+        "Only in the Western Cape",
+        "Only with a prenup"
+      ],
       "correct_answer": 1,
       "explanation": "If he has a widow, he's dead! Dead men can't marry anyone, bru.",
       "image_url": null
@@ -55,7 +75,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many months in a year have 28 days?",
-      "options": ["1", "6", "12", "2"],
+      "options": [
+        "1",
+        "6",
+        "12",
+        "2"
+      ],
       "correct_answer": 2,
       "explanation": "ALL 12 months have at least 28 days! February has exactly 28 (or 29), but every month has 28 days in it.",
       "image_url": null
@@ -66,7 +91,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A Joburg taxi driver is going the wrong way down a one-way street. He passes a traffic cop but isn't stopped or fined. Why?",
-      "options": ["The cop was off duty", "He was walking", "The street was closed", "He was reversing"],
+      "options": [
+        "The cop was off duty",
+        "He was walking",
+        "The street was closed",
+        "He was reversing"
+      ],
       "correct_answer": 1,
       "explanation": "He was walking down the street! Nobody said he was driving. Classic misdirection.",
       "image_url": null
@@ -77,7 +107,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "I have cities but no houses, forests but no trees, and water but no fish. What am I?",
-      "options": ["A dream", "A map", "A painting", "A story"],
+      "options": [
+        "A dream",
+        "A map",
+        "A painting",
+        "A story"
+      ],
       "correct_answer": 1,
       "explanation": "A map has cities, forests, and water — but none of the actual things! Pretty clever, ne?",
       "image_url": null
@@ -85,11 +120,16 @@
     {
       "id": "bt008",
       "difficulty": 80,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If there are 6 apples in a basket and you take away 4, how many apples do you have?",
-      "options": [],
-      "correct_answer": 4,
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "correct_answer": 2,
       "explanation": "You took 4, so you have 4 apples. The basket still has 2, but the question asks about YOU.",
       "image_url": null
     },
@@ -99,7 +139,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What gets wetter the more it dries?",
-      "options": ["A sponge", "A towel", "Sand", "Your hair"],
+      "options": [
+        "A sponge",
+        "A towel",
+        "Sand",
+        "Your hair"
+      ],
       "correct_answer": 1,
       "explanation": "A towel! The more drying it does, the wetter it gets. Every South African oke knows this from beach day.",
       "image_url": null
@@ -110,7 +155,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Two fathers and two sons go fishing at Langebaan. They each catch one fish. They come home with exactly 3 fish. How is this possible?",
-      "options": ["One fish escaped", "There are only 3 people — grandpa, dad, and son", "They shared one fish", "One person threw a fish back"],
+      "options": [
+        "One fish escaped",
+        "There are only 3 people — grandpa, dad, and son",
+        "They shared one fish",
+        "One person threw a fish back"
+      ],
       "correct_answer": 1,
       "explanation": "It's a grandfather, his son, and his grandson. The middle man is both a father AND a son. Three people, three fish!",
       "image_url": null
@@ -121,7 +171,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You're running a Comrades Marathon. You overtake the person in 2nd place. What position are you now in?",
-      "options": ["1st", "2nd", "3rd", "It depends on your pace"],
+      "options": [
+        "1st",
+        "2nd",
+        "3rd",
+        "It depends on your pace"
+      ],
       "correct_answer": 1,
       "explanation": "If you overtake the person in 2nd, you take their position — you're now in 2nd! You didn't overtake 1st place.",
       "image_url": null
@@ -132,7 +187,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A man builds a house with all 4 sides facing south. A bear walks by. What colour is the bear?",
-      "options": ["Brown", "Black", "White", "There is no bear"],
+      "options": [
+        "Brown",
+        "Black",
+        "White",
+        "There is no bear"
+      ],
       "correct_answer": 2,
       "explanation": "The only place you can build a house where all 4 sides face south is the North Pole. The bear is a polar bear — so it's white!",
       "image_url": null
@@ -140,12 +200,17 @@
     {
       "id": "bt013",
       "difficulty": 70,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A biltong shop has a \"buy 2, get 1 free\" deal. Each pack costs R50. How much do you pay for 9 packs?",
-      "options": [],
-      "correct_answer": 300,
-      "explanation": "For every 3 packs you only pay for 2. So 9 packs = 3 groups of 3. You pay for 6 packs: 6 × R50 = R300.",
+      "question": "A man pushes his car to a hotel and loses all his money. What happened?",
+      "options": [
+        "His car was stolen at the hotel",
+        "He's playing Monopoly",
+        "The hotel charged him for parking",
+        "He bet on a car race and lost"
+      ],
+      "correct_answer": 1,
+      "explanation": "He's playing Monopoly! He landed on a hotel property and went bankrupt. The 'car' is his game piece. Aha!",
       "image_url": null
     },
     {
@@ -154,7 +219,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A plane crashes exactly on the border of Limpopo and Mpumalanga. Where do they bury the survivors?",
-      "options": ["Limpopo", "Mpumalanga", "They split them evenly", "You don't bury survivors"],
+      "options": [
+        "Limpopo",
+        "Mpumalanga",
+        "They split them evenly",
+        "You don't bury survivors"
+      ],
       "correct_answer": 3,
       "explanation": "You don't bury SURVIVORS! They're alive, bru. Listen carefully to the question.",
       "image_url": null
@@ -165,7 +235,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Before Mafadi Peak was discovered, what was the highest mountain in South Africa?",
-      "options": ["Table Mountain", "Champagne Castle", "Mafadi Peak", "Thabana Ntlenyana"],
+      "options": [
+        "Table Mountain",
+        "Champagne Castle",
+        "Mafadi Peak",
+        "Thabana Ntlenyana"
+      ],
       "correct_answer": 2,
       "explanation": "Mafadi Peak! It was always the highest — 'discovering' it didn't change that. A mountain doesn't grow taller when someone finds it, ne?",
       "image_url": null
@@ -173,12 +248,17 @@
     {
       "id": "bt016",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 45,
-      "question": "If 5 machines take 5 minutes to make 5 biltong packs, how many minutes would 100 machines take to make 100 biltong packs?",
-      "options": [],
-      "correct_answer": 5,
-      "explanation": "Each machine takes 5 minutes to make 1 pack. So 100 machines each making 1 pack still takes 5 minutes. Don't fall for the linear scaling trap!",
+      "question": "A woman has two children. One of them is a boy. What are the chances the other child is also a boy?",
+      "options": [
+        "50%",
+        "33%",
+        "25%",
+        "67%"
+      ],
+      "correct_answer": 1,
+      "explanation": "Not 50%! The possible combinations with at least one boy are: Boy-Boy, Boy-Girl, Girl-Boy. Only 1 out of 3 has two boys. So it's 33%. The 'at least one boy' condition changes everything!",
       "image_url": null
     },
     {
@@ -186,21 +266,31 @@
       "difficulty": 60,
       "type": "multiple_choice",
       "time_limit_seconds": 45,
-      "question": "A lily pad doubles in size every day. If it takes 48 days to cover an entire dam, how many days does it take to cover half the dam?",
-      "options": ["24 days", "36 days", "47 days", "46 days"],
-      "correct_answer": 2,
-      "explanation": "If it doubles each day and covers the whole dam on day 48, it must have covered half on day 47. Exponential growth is hectic, ne?",
+      "question": "A doctor gives you 3 pills and says to take one every 30 minutes. How long do the pills last?",
+      "options": [
+        "1.5 hours",
+        "1 hour",
+        "45 minutes",
+        "2 hours"
+      ],
+      "correct_answer": 1,
+      "explanation": "You take the first pill immediately (0 min), the second at 30 min, and the third at 60 min. That's 1 hour total, not 1.5! Most people multiply 3 x 30 without thinking.",
       "image_url": null
     },
     {
       "id": "bt018",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 45,
-      "question": "You have 12 socks in a drawer: 6 black and 6 white. It's loadshedding and you can't see. What's the minimum number you must pull out to guarantee a matching pair?",
-      "options": [],
-      "correct_answer": 3,
-      "explanation": "With 2 colours, if you pull out 3 socks, at least 2 must be the same colour (pigeonhole principle). Load shedding life hack!",
+      "question": "What disappears as soon as you say its name?",
+      "options": [
+        "A secret",
+        "Darkness",
+        "Silence",
+        "A shadow"
+      ],
+      "correct_answer": 2,
+      "explanation": "Silence! The moment you say 'silence', you've broken it. A proper brain-bender, that one.",
       "image_url": null
     },
     {
@@ -209,7 +299,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 45,
       "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",
-      "options": ["A ghost", "An echo", "A whistle", "A flag"],
+      "options": [
+        "A ghost",
+        "An echo",
+        "A whistle",
+        "A flag"
+      ],
       "correct_answer": 1,
       "explanation": "An echo! It 'speaks' back to you and 'hears' your voice, but has no physical form. Wind can carry echoes through valleys.",
       "image_url": null
@@ -220,7 +315,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 45,
       "question": "You walk into a dark room during loadshedding with a match. There's a candle, a paraffin lamp, and a braai. What do you light first?",
-      "options": ["The candle", "The paraffin lamp", "The braai", "The match"],
+      "options": [
+        "The candle",
+        "The paraffin lamp",
+        "The braai",
+        "The match"
+      ],
       "correct_answer": 3,
       "explanation": "You light the match first! You need it to light anything else. Classic trick question for load shedding season.",
       "image_url": null
@@ -228,12 +328,17 @@
     {
       "id": "bt021",
       "difficulty": 50,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 45,
-      "question": "Three friends check into a hotel in Cape Town. The room costs R300, so each pays R100. The manager realises the room is only R250, and gives R50 to the bellboy to return. The bellboy keeps R20 and gives R10 back to each friend. Each friend paid R90 (R100 - R10). 3 × R90 = R270 + R20 the bellboy kept = R290. Where's the missing R10?",
-      "options": [],
-      "correct_answer": 0,
-      "explanation": "There's no missing R10! The maths is deliberately misleading. The friends paid R270 total. Of that, R250 went to the hotel and R20 to the bellboy. R250 + R20 = R270. You shouldn't ADD the bellboy's R20 to the R270 — it's already included in it! Answer: 0 (there is no missing rand).",
+      "question": "A man is found dead in a field with an unopened package next to him. No one else is around. How did he die?",
+      "options": [
+        "He was poisoned by the package contents",
+        "His parachute didn't open",
+        "He was struck by lightning",
+        "He tripped and hit his head"
+      ],
+      "correct_answer": 1,
+      "explanation": "The unopened package was his parachute! He was skydiving and it failed to open. The 'package' is the key clue — lateral thinking at its finest.",
       "image_url": null
     },
     {
@@ -241,10 +346,15 @@
       "difficulty": 50,
       "type": "multiple_choice",
       "time_limit_seconds": 45,
-      "question": "A brick weighs 1 kg plus half a brick. How much does the brick weigh?",
-      "options": ["1.5 kg", "2 kg", "1 kg", "3 kg"],
+      "question": "The more you take, the more you leave behind. What am I?",
+      "options": [
+        "Memories",
+        "Footsteps",
+        "Photographs",
+        "Breath"
+      ],
       "correct_answer": 1,
-      "explanation": "If the brick weighs B, then B = 1 + B/2. So B/2 = 1, meaning B = 2 kg. It's a simple algebra trap — most people say 1.5 kg!",
+      "explanation": "Footsteps! Every step you take leaves another one behind you. Simple but brilliant once you see it.",
       "image_url": null
     },
     {
@@ -252,20 +362,30 @@
       "difficulty": 50,
       "type": "multiple_choice",
       "time_limit_seconds": 45,
-      "question": "A bat and ball cost R11.00 in total. The bat costs R10.00 more than the ball. How much does the ball cost?",
-      "options": ["R1.00", "R0.50", "R0.55", "R1.10"],
-      "correct_answer": 1,
-      "explanation": "The ball costs R0.50 (50 cents). If the ball is R0.50, the bat is R10.50 (R10 more). R10.50 + R0.50 = R11.00. Most people say R1.00 — but then the bat would be R11 and the total R12!",
+      "question": "A man lives on the 10th floor. Every day he takes the lift down to the ground floor to go to work. When he returns, he takes the lift to the 7th floor and walks up 3 flights. Why?",
+      "options": [
+        "The lift is broken above floor 7",
+        "He likes the exercise",
+        "He's too short to reach the button for floor 10",
+        "His neighbour lives on floor 7"
+      ],
+      "correct_answer": 2,
+      "explanation": "He's too short to reach the 10th floor button! He can press the ground floor button (bottom) and reach up to floor 7. On rainy days, he uses his umbrella to press 10. Classic lateral thinking puzzle!",
       "image_url": null
     },
     {
       "id": "bt024",
       "difficulty": 50,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 45,
       "question": "You're in a race and overtake the last person. What position are you in? (Enter 0 if it's impossible)",
-      "options": [],
-      "correct_answer": 0,
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "correct_answer": 1,
       "explanation": "It's impossible! You can't overtake the person in last place — if you're behind them, then THEY'RE not last, you are. The scenario is impossible.",
       "image_url": null
     },
@@ -275,7 +395,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 45,
       "question": "A shepherd has 20 sheep. A disease kills all but 7. How many are left alive?",
-      "options": ["7", "13", "0", "20"],
+      "options": [
+        "7",
+        "13",
+        "0",
+        "20"
+      ],
       "correct_answer": 0,
       "explanation": "\"All but 7\" means 7 survive. Same trick as before — read carefully! 7 sheep are left.",
       "image_url": null
@@ -286,7 +411,12 @@
       "type": "sequence",
       "time_limit_seconds": 60,
       "question": "You have two ropes that each burn in exactly 1 hour (but unevenly). To measure exactly 45 minutes, put these steps in order:",
-      "options": ["Light rope 1 from BOTH ends AND rope 2 from ONE end", "Rope 1 burns out (30 min elapsed)", "Light the OTHER end of rope 2", "Rope 2 burns out (45 min total)"],
+      "options": [
+        "Light rope 1 from BOTH ends AND rope 2 from ONE end",
+        "Rope 1 burns out (30 min elapsed)",
+        "Light the OTHER end of rope 2",
+        "Rope 2 burns out (45 min total)"
+      ],
       "correct_answer": "0,1,2,3",
       "explanation": "Step 1: Light rope 1 from both ends + rope 2 from one end simultaneously. Step 2: Rope 1 burns out in 30 minutes (burning from both sides). Step 3: Immediately light rope 2's other end. Step 4: Rope 2 has 30 min of burn left, but from both ends = 15 min more. Total: 45 minutes!",
       "image_url": null
@@ -310,12 +440,17 @@
     {
       "id": "bt028",
       "difficulty": 40,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 60,
-      "question": "How many times do the hands of a clock overlap in a 12-hour period?",
-      "options": [],
-      "correct_answer": 11,
-      "explanation": "The hands overlap 11 times in 12 hours (not 12!). They overlap roughly every 65.45 minutes. They DON'T overlap separately at 11 o'clock and 12 o'clock — the overlap at ~12:00 counts as the start of the next cycle.",
+      "question": "A windowless room has 3 lightbulbs inside and 3 switches outside. You need to match each switch to its bulb. You can only enter the room ONCE. A friend suggests feeling the bulbs for warmth. But what if all 3 bulbs are LED (no heat)? What strategy works?",
+      "options": [
+        "It's impossible with LEDs",
+        "Turn on switch 1 and 2. Enter, note which are on. Come out — wait, you can't re-enter!",
+        "Turn on switch 1. Enter and unscrew bulb 2. Come out, turn off 1, turn on 2. Enter — wait, only one entry!",
+        "Turn on switch 1 halfway, switch 2 fully. Dim bulb = switch 1, bright = switch 2, off = switch 3"
+      ],
+      "correct_answer": 3,
+      "explanation": "Use a dimmer! Turn switch 1 halfway (dim), switch 2 fully on, switch 3 off. Enter: the dim bulb is switch 1, the bright bulb is switch 2, the dark one is switch 3. You gotta think outside the box when the heat trick won't work!",
       "image_url": null
     },
     {
@@ -323,10 +458,15 @@
       "difficulty": 40,
       "type": "multiple_choice",
       "time_limit_seconds": 60,
-      "question": "You have 8 identical-looking balls. One is slightly heavier. Using a balance scale, what's the minimum number of weighings to find the heavy ball?",
-      "options": ["1", "2", "3", "4"],
-      "correct_answer": 1,
-      "explanation": "Just 2 weighings! Split into groups of 3-3-2. Weigh the two groups of 3. If balanced, weigh the remaining 2. If unbalanced, take the heavy group of 3 and weigh any 2 of them. Sorted!",
+      "question": "You're in a dark room during loadshedding. You have one match. The room has a newspaper, a candle, a gas stove, and a fireplace full of wood. Which do you light first?",
+      "options": [
+        "The newspaper, to see the room",
+        "The candle, for lasting light",
+        "The match",
+        "The gas stove, for warmth and light"
+      ],
+      "correct_answer": 2,
+      "explanation": "The match! You always have to light the match before you can light anything else. Sometimes the simplest answer is right in front of you, ne?",
       "image_url": null
     },
     {
@@ -348,12 +488,17 @@
     {
       "id": "bt031",
       "difficulty": 30,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 60,
-      "question": "You have a 3-litre jug and a 5-litre jug. How do you measure exactly 4 litres? What's the minimum number of pourings needed?",
-      "options": [],
-      "correct_answer": 6,
-      "explanation": "Fill 5L jug. Pour into 3L jug (5L has 2L left). Empty 3L jug. Pour 2L from 5L into 3L jug. Fill 5L jug again. Pour from 5L into 3L (which has 2L, so only 1L fits). 5L jug now has exactly 4L. That's 6 pourings.",
+      "question": "A man is looking at a painting in a gallery. Someone asks who's in the portrait. He says: 'Brothers and sisters I have none, but that man's father is my father's son.' Who is in the painting?",
+      "options": [
+        "Himself",
+        "His father",
+        "His son",
+        "His uncle"
+      ],
+      "correct_answer": 2,
+      "explanation": "'My father's son' = himself (he has no brothers). So 'that man's father is ME.' The man in the painting is his son! This one trips up almost everyone.",
       "image_url": null
     },
     {
@@ -362,7 +507,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 60,
       "question": "Two people are born at the same time, to the same parents, but they're not twins. How?",
-      "options": ["They're adopted", "They're triplets or more", "One is from a test tube", "Time zone difference"],
+      "options": [
+        "They're adopted",
+        "They're triplets or more",
+        "One is from a test tube",
+        "Time zone difference"
+      ],
       "correct_answer": 1,
       "explanation": "They're triplets (or quadruplets, etc.)! Same parents, same time — just not twins because there are more than two of them.",
       "image_url": null
@@ -370,12 +520,17 @@
     {
       "id": "bt033",
       "difficulty": 30,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 60,
-      "question": "Using only addition and eight 8's (like 888 + 88 + 8 + 8 + 8), what number do you get?",
-      "options": [],
-      "correct_answer": 1000,
-      "explanation": "888 + 88 + 8 + 8 + 8 = 1000. That's eight 8's using only addition — and they add up perfectly to a thousand!",
+      "question": "I can be cracked, made, told, and played. What am I?",
+      "options": [
+        "A code",
+        "A joke",
+        "An egg",
+        "A record"
+      ],
+      "correct_answer": 1,
+      "explanation": "A joke! You crack a joke, make a joke, tell a joke, and play a joke. None of the other options fit all four verbs.",
       "image_url": null
     },
     {
@@ -400,7 +555,13 @@
       "type": "sequence",
       "time_limit_seconds": 60,
       "question": "Put these steps in the correct order to solve the classic river crossing puzzle: A farmer needs to get a jackal, a chicken, and mielies across a river (boat fits farmer + 1 item). 1) Take mielies across 2) Take chicken across 3) Bring chicken back 4) Take jackal across",
-      "options": ["Take chicken across", "Take jackal across", "Bring chicken back", "Take mielies across", "Take chicken across again"],
+      "options": [
+        "Take chicken across",
+        "Take jackal across",
+        "Bring chicken back",
+        "Take mielies across",
+        "Take chicken across again"
+      ],
       "correct_answer": "0,1,2,3,4",
       "explanation": "First take the chicken (safe to leave jackal with mielies). Then take the jackal, but bring the chicken back (can't leave jackal with chicken). Take the mielies across. Finally, go back for the chicken. Sorted!",
       "image_url": null
@@ -408,12 +569,17 @@
     {
       "id": "bt036",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 60,
-      "question": "If you write out all numbers from 1 to 100, how many times does the digit 9 appear?",
-      "options": [],
-      "correct_answer": 20,
-      "explanation": "In the units place: 9, 19, 29, 39, 49, 59, 69, 79, 89, 99 = 10 times. In the tens place: 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 = 10 times. Total = 20. (99 contributes two 9's!)",
+      "question": "You're driving a bus from Cape Town. At the first stop, 10 people get on. At the second stop, 5 get off and 3 get on. At the third stop, 7 get on. What is the name of the bus driver?",
+      "options": [
+        "Not enough information",
+        "The driver's name is your name",
+        "Cape Town Charlie",
+        "There is no driver"
+      ],
+      "correct_answer": 1,
+      "explanation": "Read it again: 'YOU'RE driving a bus.' The driver is YOU! The numbers are just there to distract you from the very first sentence. Got you, ne?",
       "image_url": null
     },
     {
@@ -422,7 +588,12 @@
       "type": "sequence",
       "time_limit_seconds": 60,
       "question": "Put these logic puzzle steps in order to determine who owns the fish: 1) The Brit lives in the red house. 2) The Swede keeps dogs. 3) The Dane drinks tea. 4) The green house is left of the white. Which nationality is stated FIRST in the classic Einstein puzzle?",
-      "options": ["The Norwegian lives in the first house", "The Brit lives in the red house", "The German smokes Prince", "The Swede keeps dogs"],
+      "options": [
+        "The Norwegian lives in the first house",
+        "The Brit lives in the red house",
+        "The German smokes Prince",
+        "The Swede keeps dogs"
+      ],
       "correct_answer": "0,1,3,2",
       "explanation": "In Einstein's riddle, the clues are ordered: Norwegian first (house 1), then Brit (red house), then Swede (dogs), then German (Prince cigarettes). The German owns the fish! This is one of the hardest logic puzzles ever made.",
       "image_url": null
@@ -432,10 +603,15 @@
       "difficulty": 20,
       "type": "multiple_choice",
       "time_limit_seconds": 60,
-      "question": "You have 100 lockers, all closed. 100 students walk by. Student 1 opens every locker. Student 2 closes every 2nd locker. Student 3 toggles every 3rd. This continues to student 100. How many lockers are open at the end?",
-      "options": ["10", "50", "25", "12"],
-      "correct_answer": 0,
-      "explanation": "10 lockers! A locker ends up open if it's toggled an odd number of times. A locker is toggled once for each of its factors. Only perfect squares have an odd number of factors (1, 4, 9, 16, 25, 36, 49, 64, 81, 100). That's 10 lockers.",
+      "question": "Five people were eating apples. A finished before B. C finished before D. D finished before B. E finished after C but before A. Who finished eating last?",
+      "options": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "correct_answer": 1,
+      "explanation": "Let's trace it out: C finished first, then E, then D, then A, then B finished last. The order is C > E > D > A > B. You have to chain the clues together carefully!",
       "image_url": null
     },
     {
@@ -444,7 +620,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 60,
       "question": "A man is looking at a photograph. Someone asks, 'Whose picture are you looking at?' He replies: 'Brothers and sisters I have none, but this man's father is my father's son.' Who is in the photo?",
-      "options": ["Himself", "His father", "His son", "His nephew"],
+      "options": [
+        "Himself",
+        "His father",
+        "His son",
+        "His nephew"
+      ],
       "correct_answer": 2,
       "explanation": "'My father's son' = himself (no brothers). So 'this man's father is me.' The man in the photo is his son!",
       "image_url": null
@@ -452,34 +633,49 @@
     {
       "id": "bt040",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 60,
-      "question": "You flip a fair coin 3 times. What is the probability of getting at least 2 heads? Express as a percentage (whole number).",
-      "options": [],
-      "correct_answer": 50,
-      "explanation": "Possible outcomes: HHH, HHT, HTH, THH, HTT, THT, TTH, TTT (8 total). At least 2 heads: HHH, HHT, HTH, THH = 4 outcomes. 4/8 = 50%.",
+      "question": "Three boxes are labelled 'Apples', 'Oranges', and 'Apples & Oranges'. ALL labels are wrong. You pick one fruit from one box. Which box should you pick from to figure out all three?",
+      "options": [
+        "The box labelled 'Apples'",
+        "The box labelled 'Oranges'",
+        "The box labelled 'Apples & Oranges'",
+        "It doesn't matter which box"
+      ],
+      "correct_answer": 2,
+      "explanation": "Pick from 'Apples & Oranges'. Since ALL labels are wrong, this box must contain ONLY apples or ONLY oranges. If you pull out an apple, it's the Apples box. Then you can deduce the rest. Logic chain, bru!",
       "image_url": null
     },
     {
       "id": "bt041",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 90,
-      "question": "You have 12 coins. One is either heavier or lighter than the rest (you don't know which). Using a balance scale, what's the minimum number of weighings guaranteed to find the odd coin AND determine if it's heavier or lighter?",
-      "options": [],
-      "correct_answer": 3,
-      "explanation": "The classic 12-coin problem! With 3 weighings you can distinguish between 24 possibilities (12 coins × heavier/lighter). Each weighing has 3 outcomes (left heavy, right heavy, balanced), giving 3³ = 27 possible outcomes — just enough!",
+      "question": "You're at a braai and someone says: 'I always lie.' Is that statement true or false?",
+      "options": [
+        "It's true",
+        "It's false",
+        "It's a paradox — it can't be either",
+        "It depends on context"
+      ],
+      "correct_answer": 2,
+      "explanation": "Classic liar's paradox! If the statement is true, then he always lies — so the statement must be false. But if it's false, he doesn't always lie — so it could be true. It's a logical paradox with no resolution. Brain = melted!",
       "image_url": null
     },
     {
       "id": "bt042",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 90,
-      "question": "You have a cube made up of 3×3×3 = 27 smaller cubes. If the outside is painted red, how many small cubes have exactly 2 red faces?",
-      "options": [],
-      "correct_answer": 12,
-      "explanation": "Cubes with exactly 2 painted faces sit on the edges (but not corners). A cube has 12 edges, and each edge has 1 such cube (in a 3×3×3). So 12 cubes have exactly 2 red faces.",
+      "question": "A king sentences a prisoner: 'You will be executed tomorrow, but you will NOT know the day of your execution until the executioner knocks on your door.' The prisoner reasons he can't be executed on Friday (the last day, he'd know by Thursday night). Then Thursday is eliminated, then Wednesday... He concludes he's safe. What happens?",
+      "options": [
+        "He's right — the sentence is impossible",
+        "He's executed on Wednesday and is genuinely surprised",
+        "The king pardons him for his clever logic",
+        "He's executed on a random day and IS surprised, disproving his logic"
+      ],
+      "correct_answer": 3,
+      "explanation": "The Unexpected Hanging Paradox! The prisoner's reasoning seems sound step by step, but by convincing himself it can't happen, he creates the very surprise the king promised. When the executioner knocks on, say, Wednesday — he IS surprised! His logic defeated itself.",
       "image_url": null
     },
     {
@@ -487,15 +683,15 @@
       "difficulty": 10,
       "type": "multiple_choice",
       "time_limit_seconds": 90,
-      "question": "Five pirates rank 1-5 (5 is senior) must divide 100 gold coins. The most senior proposes a split. All vote, and if at least half agree, it's accepted. Otherwise, the proposer is thrown overboard. If all pirates are perfectly logical and self-interested, what does pirate 5 propose?",
+      "question": "You meet two guards. One ALWAYS tells the truth, one ALWAYS lies. You don't know which is which. One guard says: 'We are both liars.' Which guard said it?",
       "options": [
-        "98 for himself, 0, 0, 1, 1 (giving 1 each to pirates 1 and 3)",
-        "20 each for everyone",
-        "100 for himself",
-        "97 for himself, 0, 1, 0, 2"
+        "The truth-teller",
+        "The liar",
+        "Either could have said it",
+        "Neither could have said it"
       ],
-      "correct_answer": 0,
-      "explanation": "Working backwards: Pirate 5 needs 3 votes (including his own). He gives 1 coin each to pirates 1 and 3 (who would get nothing under alternative scenarios), keeping 98. Pirates 1 and 3 vote yes because 1 > 0. Game theory, baby!",
+      "correct_answer": 1,
+      "explanation": "The truth-teller can't say 'we are both liars' because that would be a lie. The liar CAN say it, because 'we are both liars' is false (they're not both liars), and the liar always says false things. So the LIAR said it!",
       "image_url": null
     },
     {
@@ -517,34 +713,49 @@
     {
       "id": "bt045",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 90,
-      "question": "At a braai, every person shakes hands with every other person exactly once. If there are 45 handshakes in total, how many people are at the braai?",
-      "options": [],
-      "correct_answer": 10,
-      "explanation": "The formula is n(n-1)/2 = 45, so n(n-1) = 90. Trying values: 10 × 9 = 90. So there are 10 people at the braai!",
+      "question": "A room has 100 people. 99% of them are wearing hats. How many hat-wearers must leave so that only 98% of people in the room are wearing hats?",
+      "options": [
+        "1",
+        "49",
+        "50",
+        "2"
+      ],
+      "correct_answer": 2,
+      "explanation": "Start: 99 hat-wearers, 1 without. Need hat-wearers to be 98% of the room. If 50 leave, you have 49 hat-wearers and 1 without = 50 people. 49/50 = 98%. You need to remove FIFTY people to drop just one percent. Mind-blowing!",
       "image_url": null
     },
     {
       "id": "bt046",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 90,
-      "question": "You have 25 racehorses and can race 5 at a time (no stopwatch). What's the minimum number of races needed to find the top 3 fastest horses?",
-      "options": [],
-      "correct_answer": 7,
-      "explanation": "5 initial races (one per group). Then race the 5 group winners. The overall winner is #1. For #2 and #3, you need one more race among: the 2nd and 3rd from the winner's original group, the 2nd from the runner-up's group, and the 3rd-place finisher. That's 7 races total.",
+      "question": "You're in a pitch-dark room. On a table are 52 cards, and you know exactly 13 are face-up. You can't see or feel which are face-up. How do you split them into two groups guaranteed to have the same number of face-up cards?",
+      "options": [
+        "Deal them alternating into two piles",
+        "Take any 13 cards and flip them all over",
+        "Shuffle them and split in half",
+        "It's impossible without seeing the cards"
+      ],
+      "correct_answer": 1,
+      "explanation": "Take ANY 13 cards from the deck and flip them all. If your group has X face-up cards, the other group has 13-X. After flipping your 13, your group also has 13-X face-up cards. Both groups match! Pure logic, no luck needed.",
       "image_url": null
     },
     {
       "id": "bt047",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 90,
-      "question": "A snail climbs a 30-metre pole. Each day it climbs 3 metres, but slides back 2 metres each night. On which day does the snail reach the top?",
-      "options": [],
-      "correct_answer": 28,
-      "explanation": "Each full day (climb + slide) gains 1 metre net. After 27 days: 27 metres. On day 28, it climbs 3 metres to reach 30 — and it's at the top, so it doesn't slide back! Day 28.",
+      "question": "You have 12 identical-looking coins. One is counterfeit and weighs differently (you don't know if it's heavier or lighter). Using a balance scale exactly 3 times, can you always find the counterfeit coin AND tell if it's heavier or lighter?",
+      "options": [
+        "Yes, by dividing into groups of 4-4-4",
+        "No, 3 weighings aren't enough for 12 coins",
+        "Yes, but only if you get lucky",
+        "Yes, but only if you know it's heavier"
+      ],
+      "correct_answer": 0,
+      "explanation": "Yes! Divide into 3 groups of 4. Weigh group A vs group B. Each weighing has 3 outcomes (left heavy, balanced, right heavy), giving 3x3x3 = 27 possible result paths — enough to identify all 24 possibilities (12 coins x heavier or lighter). The strategy is brilliant!",
       "image_url": null
     },
     {
@@ -566,12 +777,17 @@
     {
       "id": "bt049",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 90,
-      "question": "You have 10 bags of coins, each containing many coins. 9 bags have coins weighing 10g each. 1 bag has coins weighing 9g each. Using a digital scale with ONE weighing, you identify the light bag. You take 1 coin from bag 1, 2 from bag 2, etc. What would the total weigh (in grams) if bag 7 is the light one?",
-      "options": [],
-      "correct_answer": 543,
-      "explanation": "Total coins = 1+2+3+...+10 = 55. If all were 10g: 550g. Bag 7 has 7 light coins (each 1g lighter). So 550 - 7 = 543g. The shortfall tells you which bag is light!",
+      "question": "There are 10 people in a room. Everyone claims to be a truth-teller, but some are liars. Person A says 'There is at least 1 liar here.' Person B says 'There are at least 2 liars.' Person C says 'At least 3 liars.' ... Person J says 'All 10 are liars.' How many liars are there?",
+      "options": [
+        "0",
+        "5",
+        "9",
+        "10"
+      ],
+      "correct_answer": 1,
+      "explanation": "If there are 5 liars, then persons A-E (at least 1 through 5 liars) are telling the truth, and persons F-J (at least 6 through 10 liars) are lying. That's exactly 5 truth-tellers and 5 liars — self-consistent! Any other number creates a contradiction.",
       "image_url": null
     },
     {
@@ -593,34 +809,49 @@
     {
       "id": "bt051",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 120,
-      "question": "A 100-storey building. You have 2 identical eggs. You need to find the highest floor from which an egg can be dropped without breaking. What's the minimum number of drops guaranteed to find this floor?",
-      "options": [],
-      "correct_answer": 14,
-      "explanation": "With 2 eggs and optimal strategy: drop the first egg from floors 14, 27, 39, 50, 60, 69, 77, 84, 90, 95, 99, 100 (decreasing intervals). If it breaks, use egg 2 to check floors below linearly. Maximum drops = 14. The formula is n(n+1)/2 >= 100, so n = 14.",
+      "question": "A census taker visits a woman. She says she has 3 children. 'What are their ages?' he asks. She replies: 'The product of their ages is 36. The sum equals the house number next door.' He looks at the house number and says 'I still don't know.' She adds: 'The eldest plays piano.' Now he knows. What are the ages?",
+      "options": [
+        "1, 6, 6",
+        "2, 2, 9",
+        "3, 3, 4",
+        "1, 4, 9"
+      ],
+      "correct_answer": 1,
+      "explanation": "The factors of 36 with the same sum are: 1+6+6=13 and 2+2+9=13. Since the census taker STILL didn't know after seeing the sum, the sum must be 13 (the only ambiguous one). The clue 'the ELDEST' means there IS a single oldest child — ruling out 1,6,6 (tied eldest). Answer: 2, 2, 9!",
       "image_url": null
     },
     {
       "id": "bt052",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 120,
-      "question": "There are 1000 lockers in a row. Person 1 opens all. Person 2 toggles every 2nd. Person 3 toggles every 3rd... up to person 1000. What is the number of the LAST (highest-numbered) open locker?",
-      "options": [],
-      "correct_answer": 961,
-      "explanation": "Only perfect squares end up open (they have an odd number of factors). The largest perfect square ≤ 1000 is 31² = 961.",
+      "question": "You have 1000 bottles of wine. One is poisoned. You have 10 prisoners to test with. A prisoner who drinks poison dies within 24 hours. You have exactly 24 hours to find the poisoned bottle. What's the maximum number of bottles you can test?",
+      "options": [
+        "100",
+        "500",
+        "1024",
+        "10"
+      ],
+      "correct_answer": 2,
+      "explanation": "Assign each bottle a unique binary number (10 digits = 10 prisoners). Each prisoner drinks from all bottles where their digit is 1. After 24 hours, the pattern of dead/alive prisoners spells out the poisoned bottle's binary number. 2^10 = 1024 bottles testable with just 10 prisoners! Information theory is beautiful.",
       "image_url": null
     },
     {
       "id": "bt053",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 120,
-      "question": "In the Tower of Hanoi puzzle with 10 discs, what is the minimum number of moves required to move all discs from one peg to another?",
-      "options": [],
-      "correct_answer": 1023,
-      "explanation": "The formula is 2^n - 1. For 10 discs: 2^10 - 1 = 1024 - 1 = 1023 moves. That's a LOT of moves!",
+      "question": "Two perfectly logical friends, Sipho and Thabo, each have a number on their forehead (positive integers, one is one more than the other). They can see each other's number but not their own. They take turns being asked 'Do you know your number?' Sipho sees 5 on Thabo. Both say 'No' repeatedly until someone says 'Yes'. Who says 'Yes' first and what's their number?",
+      "options": [
+        "Sipho says 'Yes', his number is 4",
+        "Thabo says 'Yes', his number is 5",
+        "Sipho says 'Yes', his number is 6",
+        "Thabo says 'Yes', his number is 4"
+      ],
+      "correct_answer": 2,
+      "explanation": "Sipho sees 5, so he's either 4 or 6. If he were 4, Thabo would see 4 and know he's 3 or 5. But if Thabo were 3, Sipho would've seen 3 and known he's 2 or 4... The chain of 'No' answers eliminates possibilities until Sipho can deduce he must be 6. Pure logical deduction!",
       "image_url": null
     },
     {
@@ -628,21 +859,31 @@
       "difficulty": 1,
       "type": "multiple_choice",
       "time_limit_seconds": 120,
-      "question": "In a room of 23 people, what is the approximate probability that at least two share a birthday? (Ignore leap years)",
-      "options": ["About 25%", "About 50%", "About 75%", "About 6%"],
+      "question": "100 prisoners each must enter a room with 100 boxes (numbered 1-100), each containing a unique prisoner's number. Each prisoner opens at most 50 boxes to find their own number. If ALL succeed, they go free. They can strategize beforehand but can't communicate once started. What's the best strategy's success rate?",
+      "options": [
+        "About 0.0000001%",
+        "About 31%",
+        "50%",
+        "About 69%"
+      ],
       "correct_answer": 1,
-      "explanation": "The Birthday Paradox! With just 23 people, there's about a 50.7% chance two share a birthday. Counter-intuitive because we compare all pairs: 23 people = 253 pairs. Most people think you'd need way more people!",
+      "explanation": "The mind-blowing answer: each prisoner starts at the box matching their number, then follows the chain (open box N, if it contains M, open box M next). This gives about 31% success! The key insight: all prisoners succeed unless there's a cycle longer than 50. The probability of no long cycle is ~31%. Random guessing gives essentially 0%!",
       "image_url": null
     },
     {
       "id": "bt055",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 120,
-      "question": "You have a 100×100 grid of squares. How many rectangles (including squares) can be formed using the grid lines?",
-      "options": [],
-      "correct_answer": 25502500,
-      "explanation": "To form a rectangle, choose 2 vertical lines and 2 horizontal lines from 101 lines each. The answer is C(101,2) × C(101,2) = (101×100/2)² = 5050² = 25,502,500. A beautiful combinatorics problem!",
+      "question": "In a town, the barber shaves everyone who does not shave themselves, and ONLY those people. Who shaves the barber?",
+      "options": [
+        "The barber shaves himself",
+        "Another barber from a different town",
+        "Nobody — he grows a beard",
+        "It's a paradox — no consistent answer exists"
+      ],
+      "correct_answer": 3,
+      "explanation": "Russell's Barber Paradox! If the barber shaves himself, he shouldn't (he only shaves those who DON'T shave themselves). If he doesn't shave himself, he should (he shaves ALL who don't shave themselves). It's a logical impossibility — a paradox that shook the foundations of mathematics!",
       "image_url": null
     }
   ]

@@ -1,7 +1,7 @@
 {
   "pack_id": "za-general-01",
   "name": "Mzansi Mix Vol. 1",
-  "description": "General logic and reasoning with a South African flavour",
+  "description": "South African general knowledge trivia — culture, history, geography, food, slang, music, and more!",
   "author": "Game Night Crew",
   "question_count": 55,
   "questions": [
@@ -11,7 +11,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A R5 coin is round and flat. How many sides does it have?",
-      "options": ["1", "2", "5", "0"],
+      "options": [
+        "1",
+        "2",
+        "5",
+        "0"
+      ],
       "correct_answer": 1,
       "explanation": "Eish, this one's easy! Any flat coin has 2 sides — heads and tails. Don't let the '5' on the coin confuse you!",
       "image_url": null
@@ -21,10 +26,15 @@
       "difficulty": 90,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Sipho buys a packet of biltong for R50 and pays with a R100 note. How much change does he get?",
-      "options": ["R150", "R50", "R25", "R100"],
-      "correct_answer": 1,
-      "explanation": "Shame, this one's straightforward — R100 minus R50 is R50 change. Now go enjoy that biltong!",
+      "question": "What is the capital city of South Africa that houses the Union Buildings?",
+      "options": [
+        "Johannesburg",
+        "Cape Town",
+        "Pretoria",
+        "Bloemfontein"
+      ],
+      "correct_answer": 2,
+      "explanation": "Pretoria is the administrative capital and home to the Union Buildings, where the President's offices are. SA is unique with three capital cities — Cape Town (legislative) and Bloemfontein (judicial) are the others. Lekker fact!",
       "image_url": null
     },
     {
@@ -33,7 +43,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If today is Monday in Joburg, what day is it in Cape Town?",
-      "options": ["Sunday", "Tuesday", "Monday", "It depends on the season"],
+      "options": [
+        "Sunday",
+        "Tuesday",
+        "Monday",
+        "It depends on the season"
+      ],
       "correct_answer": 2,
       "explanation": "Both cities are in the same country and time zone! It's still Monday in Cape Town. No tricks here, just now you'll overthink it.",
       "image_url": null
@@ -43,10 +58,15 @@
       "difficulty": 90,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A minibus taxi has 4 wheels. How many wheels do 3 minibus taxis have in total?",
-      "options": ["7", "12", "16", "4"],
+      "question": "What popular dried meat snack is South Africa famous for?",
+      "options": [
+        "Jerky",
+        "Biltong",
+        "Pancetta",
+        "Bresaola"
+      ],
       "correct_answer": 1,
-      "explanation": "3 taxis times 4 wheels each = 12 wheels. Lekker simple maths!",
+      "explanation": "Biltong is SA's pride and joy! It's cured, dried meat seasoned with spices like coriander and vinegar. Don't ever call it jerky around a South African — you'll start a fight, shame!",
       "image_url": null
     },
     {
@@ -55,53 +75,78 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which is heavier: 1 kg of boerewors or 1 kg of droewors?",
-      "options": ["Boerewors", "Droewors", "They weigh the same", "Depends on the spices"],
+      "options": [
+        "Boerewors",
+        "Droewors",
+        "They weigh the same",
+        "Depends on the spices"
+      ],
       "correct_answer": 2,
       "explanation": "They both weigh 1 kg! A kilogram is a kilogram whether it's boerewors or droewors. Don't let your braai instincts fool you.",
       "image_url": null
     },
     {
       "id": "mz006",
-      "difficulty": 80,
+      "difficulty": 90,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Thandi has R200. She spends half at Shoprite and then half of what's left at Checkers. How much does she have now?",
-      "options": ["R0", "R50", "R100", "R25"],
+      "question": "What does the South African slang word 'lekker' mean?",
+      "options": [
+        "Ugly",
+        "Nice or great",
+        "Expensive",
+        "Tired"
+      ],
       "correct_answer": 1,
-      "explanation": "Half of R200 = R100 spent at Shoprite, leaving R100. Half of R100 = R50 spent at Checkers, leaving R50. Still enough for a cold drink!",
+      "explanation": "Lekker means nice, great, or delicious! It's one of the most-used words in SA. 'That braai was lekker' means it was great. You'll hear it 50 times a day in Mzansi!",
       "image_url": null
     },
     {
       "id": "mz007",
-      "difficulty": 80,
+      "difficulty": 90,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A braai starts at 14:00 and the meat takes 3 hours to cook. Friends arrive 2 hours after the braai starts. How long do the friends wait for the meat to be ready?",
-      "options": ["1 hour", "2 hours", "3 hours", "5 hours"],
-      "correct_answer": 0,
-      "explanation": "Meat is ready at 17:00. Friends arrive at 16:00. So they wait 1 hour. That's quick for a braai, shame!",
+      "question": "Which ocean borders the east coast of South Africa?",
+      "options": [
+        "Atlantic Ocean",
+        "Pacific Ocean",
+        "Indian Ocean",
+        "Southern Ocean"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Indian Ocean is on the east coast (Durban side), while the Atlantic Ocean is on the west coast (Cape Town side). That's why Durban's beaches are warmer — the Mozambique Current brings warm water down from the tropics!",
       "image_url": null
     },
     {
       "id": "mz008",
-      "difficulty": 80,
+      "difficulty": 90,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "In a queue at Pick n Pay, Nomsa is 5th from the front and 8th from the back. How many people are in the queue?",
-      "options": ["13", "12", "14", "11"],
+      "question": "What is the Afrikaans word for a barbecue in South Africa?",
+      "options": [
+        "Potjie",
+        "Braai",
+        "Shisa nyama",
+        "Sosatie"
+      ],
       "correct_answer": 1,
-      "explanation": "Nomsa is 5th from front and 8th from back. Total = 5 + 8 - 1 = 12 (we subtract 1 because we counted Nomsa twice). Eish, that's a long queue!",
+      "explanation": "Braai is the Afrikaans word! Shisa nyama is the isiZulu term for grilled meat, and it's also widely used. But braai is THE word that unites all South Africans. Heritage Day is even called National Braai Day!",
       "image_url": null
     },
     {
       "id": "mz009",
-      "difficulty": 80,
+      "difficulty": 90,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Gautrain departs every 15 minutes. If you just missed the 09:05 train, when is the next one?",
-      "options": ["09:15", "09:20", "09:25", "09:30"],
-      "correct_answer": 1,
-      "explanation": "If trains depart every 15 minutes and the last one left at 09:05, the next one is at 09:05 + 15 minutes = 09:20. Now now you'll catch it!",
+      "question": "How many official languages does South Africa have?",
+      "options": [
+        "2",
+        "9",
+        "11",
+        "13"
+      ],
+      "correct_answer": 2,
+      "explanation": "South Africa has 11 official languages! Including English, Afrikaans, isiZulu, isiXhosa, Sesotho, Setswana, Sepedi, Xitsonga, siSwati, Tshivenda, and isiNdebele. That's the most of any country in Africa. Multilingual is the Mzansi way!",
       "image_url": null
     },
     {
@@ -110,174 +155,254 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You have three Woolworths bags. The first has apples, the second has oranges, the third has apples and oranges. ALL labels are wrong. You pick one fruit from the bag labelled 'Apples and Oranges' and it's an apple. What's actually in the bag labelled 'Oranges'?",
-      "options": ["Oranges", "Apples", "Apples and Oranges", "Empty"],
+      "options": [
+        "Oranges",
+        "Apples",
+        "Apples and Oranges",
+        "Empty"
+      ],
       "correct_answer": 2,
       "explanation": "Since ALL labels are wrong: The bag labelled 'Apples and Oranges' can't have both — you pulled an apple, so it has only apples. The bag labelled 'Oranges' can't have oranges, and the apples-only bag is taken, so it must have apples and oranges. The bag labelled 'Apples' must have oranges. Lekker logic puzzle!",
       "image_url": null
     },
     {
       "id": "mz011",
-      "difficulty": 70,
+      "difficulty": 80,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Eskom implements Stage 2 load shedding, cutting power to each area for 2 hours at a time, 3 times a day. How many hours per day is your area without power?",
-      "options": ["2 hours", "4 hours", "6 hours", "8 hours"],
-      "correct_answer": 2,
-      "explanation": "2 hours per session times 3 sessions per day = 6 hours without power. Eish, better charge your phone now now!",
+      "question": "What is the nickname for Johannesburg?",
+      "options": [
+        "The Mother City",
+        "The City of Gold",
+        "The Friendly City",
+        "The Windy City"
+      ],
+      "correct_answer": 1,
+      "explanation": "Joburg is called the City of Gold because of the Witwatersrand gold rush that started in 1886. It's also called Jozi, Egoli (isiZulu for 'place of gold'), and eGoli. The Mother City is Cape Town, by the way!",
       "image_url": null
     },
     {
       "id": "mz012",
-      "difficulty": 70,
+      "difficulty": 80,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A farmer near Stellenbosch plants vines in rows. Each row has 10 vines. He has 5 rows. He adds 1 more row and removes 3 vines from the new row. How many vines does he have in total?",
-      "options": ["57", "60", "53", "67"],
-      "correct_answer": 0,
-      "explanation": "Original: 5 rows x 10 vines = 50 vines. New row has 10 - 3 = 7 vines. Total = 50 + 7 = 57 vines. That's going to make some lekker wine!",
+      "question": "Which South African dish is a hollowed-out loaf of bread filled with curry?",
+      "options": [
+        "Vetkoek",
+        "Bunny chow",
+        "Gatsby",
+        "Kota"
+      ],
+      "correct_answer": 1,
+      "explanation": "Bunny chow originated in Durban's Indian community. It's a half or quarter loaf of white bread, hollowed out and filled with curry. The name has nothing to do with rabbits — it likely comes from the Bania merchant caste. It's a Durban icon!",
       "image_url": null
     },
     {
       "id": "mz013",
-      "difficulty": 70,
+      "difficulty": 80,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Three friends split a R240 dinner bill at Spur. They each add a R20 tip for the waiter. How much does each person pay in total?",
-      "options": ["R80", "R100", "R260", "R90"],
-      "correct_answer": 1,
-      "explanation": "Bill per person: R240 / 3 = R80. Plus R20 tip each = R100 per person. Shame, at least they tipped!",
+      "question": "Nelson Mandela was imprisoned on which island?",
+      "options": [
+        "Robben Island",
+        "Seal Island",
+        "Bird Island",
+        "Dassen Island"
+      ],
+      "correct_answer": 0,
+      "explanation": "Robben Island, off the coast of Cape Town, is where Madiba spent 18 of his 27 years in prison. Today it's a UNESCO World Heritage Site and museum. A visit there will give you goosebumps, guaranteed!",
       "image_url": null
     },
     {
       "id": "mz014",
-      "difficulty": 70,
-      "type": "numeric_input",
+      "difficulty": 80,
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Joburg-to-Durban road trip is 600 km. If you drive at a constant 120 km/h, how many hours does the trip take?",
-      "options": [],
-      "correct_answer": 5,
-      "explanation": "600 km divided by 120 km/h = 5 hours. That's without stopping for a Wimpy breakfast, obviously!",
+      "question": "What does 'eish' express in South African slang?",
+      "options": [
+        "Happiness",
+        "Surprise, frustration, or disbelief",
+        "Hunger",
+        "Agreement"
+      ],
+      "correct_answer": 1,
+      "explanation": "Eish is one of the most versatile words in SA! It can express shock, frustration, sympathy, or disbelief depending on how you say it. Load shedding again? Eish! Your team lost? Eish! It's pure Mzansi emotion in one word.",
       "image_url": null
     },
     {
       "id": "mz015",
-      "difficulty": 70,
+      "difficulty": 80,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You're at a potjie competition. Potjie A takes 4 hours to cook and needs to be ready by 18:00. Potjie B takes 5 hours and also needs to be ready by 18:00. What's the latest you can start Potjie B if you start Potjie A on time?",
-      "options": ["14:00", "13:00", "12:00", "14:30"],
-      "correct_answer": 1,
-      "explanation": "Potjie B needs 5 hours before 18:00, so latest start is 13:00. Potjie A only needs to start by 14:00. Better get that fire going early!",
+      "question": "Which province is the smallest by area in South Africa?",
+      "options": [
+        "Mpumalanga",
+        "KwaZulu-Natal",
+        "Gauteng",
+        "Limpopo"
+      ],
+      "correct_answer": 2,
+      "explanation": "Gauteng is the smallest province but the most populated and the economic powerhouse of SA! It's only about 18,178 km squared but home to Joburg and Pretoria. Small but mighty, just like a chilli on a braai plate!",
       "image_url": null
     },
     {
       "id": "mz016",
-      "difficulty": 60,
+      "difficulty": 70,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A taxi rank has taxis going to 4 different townships. Each route has 3 taxis. Each taxi holds 15 passengers. If all taxis are half full, how many passengers are at the rank?",
-      "options": ["180", "90", "60", "45"],
+      "question": "What is the name of the famous steam train that runs between Cape Town and Pretoria?",
+      "options": [
+        "The Gautrain",
+        "The Blue Train",
+        "The Shosholoza Express",
+        "The Rovos Rail"
+      ],
       "correct_answer": 1,
-      "explanation": "4 routes x 3 taxis = 12 taxis total. Each holds 15 but is half full = 7.5, but since we're counting capacity at half: 12 x 15 = 180 total capacity, half of that = 90 passengers. The rank is buzzing!",
+      "explanation": "The Blue Train is one of the most luxurious train journeys in the world! It runs between Pretoria and Cape Town, covering about 1,600 km. Rovos Rail is also a luxury SA train, but the Blue Train is the more famous one. All aboard!",
       "image_url": null
     },
     {
       "id": "mz017",
-      "difficulty": 60,
+      "difficulty": 70,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Bafana Bafana jersey costs R800. The shop has a sale: 25% off, then an additional 10% off the reduced price. What's the final price?",
-      "options": ["R520", "R540", "R560", "R480"],
+      "question": "Which South African rugby team is known as the Springboks?",
+      "options": [
+        "The provincial team from Western Cape",
+        "The South African national team",
+        "The Sharks from Durban",
+        "The Bulls from Pretoria"
+      ],
       "correct_answer": 1,
-      "explanation": "First discount: R800 - 25% = R800 - R200 = R600. Second discount: R600 - 10% = R600 - R60 = R540. Note it's NOT 35% off the original — the second discount applies to the already reduced price!",
+      "explanation": "The Springboks (Bokke) are the SA national rugby team! They've won the Rugby World Cup four times (1995, 2007, 2019, 2023). The 1995 win is legendary — Madiba wearing the Bok jersey united the nation. Bokke!",
       "image_url": null
     },
     {
       "id": "mz018",
-      "difficulty": 60,
+      "difficulty": 70,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "At a shisa nyama, every 3rd customer gets free pap and every 5th customer gets a free drink. Out of the first 30 customers, how many get BOTH free pap and a free drink?",
-      "options": ["1", "2", "4", "6"],
+      "question": "What is a 'potjiekos'?",
+      "options": [
+        "A type of bread",
+        "A stew cooked in a cast-iron pot over coals",
+        "A spicy sausage",
+        "A fermented drink"
+      ],
       "correct_answer": 1,
-      "explanation": "Customers who get both are multiples of both 3 and 5, i.e., multiples of 15. In the first 30 customers: 15 and 30. That's 2 lucky people. Lekker!",
+      "explanation": "Potjiekos (small pot food) is a traditional SA stew slow-cooked in a three-legged cast-iron pot over coals. The golden rule? Never stir it — you layer the ingredients and let the magic happen. It takes hours but it's worth every minute!",
       "image_url": null
     },
     {
       "id": "mz019",
-      "difficulty": 60,
-      "type": "numeric_input",
+      "difficulty": 70,
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You buy 3 bunny chows at R45 each and 2 samoosas at R15 each. You pay with a R200 note. How many rands change do you get?",
-      "options": [],
-      "correct_answer": 35,
-      "explanation": "3 bunny chows: 3 x R45 = R135. 2 samoosas: 2 x R15 = R30. Total: R135 + R30 = R165. Change: R200 - R165 = R35. Just enough for another samoosa!",
+      "question": "In which year did South Africa host the FIFA World Cup?",
+      "options": [
+        "2006",
+        "2010",
+        "2014",
+        "2002"
+      ],
+      "correct_answer": 1,
+      "explanation": "SA hosted the 2010 FIFA World Cup — the first ever on African soil! Remember the vuvuzelas? The whole world couldn't stop hearing them. Spain won the tournament, but Mzansi won everyone's hearts. Ke nako!",
       "image_url": null
     },
     {
       "id": "mz020",
-      "difficulty": 60,
+      "difficulty": 70,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "At a Pretoria hotel, rooms are numbered 1-100. The manager puts a gold star on every door that is a multiple of 6 AND a multiple of 8. How many gold stars does he use?",
-      "options": ["2", "4", "6", "8"],
-      "correct_answer": 1,
-      "explanation": "A number that's a multiple of both 6 and 8 is a multiple of their LCM (Least Common Multiple). LCM of 6 and 8 = 24. Multiples of 24 from 1-100: 24, 48, 72, 96 = 4 gold stars. The trick is knowing you need the LCM, not just any common multiple!",
+      "question": "What is Table Mountain's flat top made of?",
+      "options": [
+        "Granite",
+        "Limestone",
+        "Sandstone",
+        "Marble"
+      ],
+      "correct_answer": 2,
+      "explanation": "Table Mountain is made of sandstone, specifically the Table Mountain Sandstone formation that's about 600 million years old! The flat top was formed by millions of years of erosion. It's one of the oldest mountains in the world. Cape Town's backyard is ancient!",
       "image_url": null
     },
     {
       "id": "mz021",
-      "difficulty": 50,
+      "difficulty": 60,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Five friends at a braai each shake hands with every other person exactly once. How many handshakes happen in total?",
-      "options": ["20", "25", "10", "15"],
+      "question": "What animal is on the South African coat of arms?",
+      "options": [
+        "Springbok",
+        "Lion",
+        "Secretary bird",
+        "Blue crane"
+      ],
       "correct_answer": 2,
-      "explanation": "With 5 people, the number of handshakes is 5 x 4 / 2 = 10. We divide by 2 because each handshake involves two people. The formula is n(n-1)/2. Now braai in peace!",
+      "explanation": "The secretary bird features prominently on SA's coat of arms, representing protection and vigilance. Its uplifted wings symbolise the rise of the nation. The springbok is the rugby emblem, the blue crane is the national bird, but the coat of arms belongs to the secretary bird!",
       "image_url": null
     },
     {
       "id": "mz022",
-      "difficulty": 50,
+      "difficulty": 60,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Woolworths food item's price increases by 20%, then later decreases by 20%. Compared to the original price, the final price is:",
-      "options": ["The same as the original", "4% less than the original", "4% more than the original", "2% less than the original"],
-      "correct_answer": 1,
-      "explanation": "Say the original price is R100. Increase by 20% = R120. Decrease by 20% of R120 = R120 - R24 = R96. That's R4 less, or 4% less than the original. The percentages don't cancel out because they're applied to different amounts. Eish, maths can be sneaky!",
+      "question": "Which city is known as the 'Mother City' of South Africa?",
+      "options": [
+        "Durban",
+        "Johannesburg",
+        "Cape Town",
+        "Port Elizabeth"
+      ],
+      "correct_answer": 2,
+      "explanation": "Cape Town is the Mother City because it was the first European settlement in SA, founded by Jan van Riebeeck in 1652. It's where it all began for colonial South Africa. Plus the mountain, the wine, the beaches... what a city!",
       "image_url": null
     },
     {
       "id": "mz023",
-      "difficulty": 50,
-      "type": "numeric_input",
+      "difficulty": 60,
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You turn on a geyser at the start of load shedding. Power goes off 10 minutes later and stays off for 2.5 hours. When power returns, the geyser resumes. If the geyser needs exactly 45 minutes of actual heating time, how many minutes after the power returns will it finish?",
-      "options": [],
-      "correct_answer": 35,
-      "explanation": "The geyser heated for 10 minutes before load shedding. It needs 45 minutes total. So after power returns, it needs 45 - 10 = 35 more minutes. The time without power doesn't count as heating time!",
+      "question": "What does 'now now' mean in South African English?",
+      "options": [
+        "Immediately, right this second",
+        "Soon, but not immediately",
+        "Yesterday",
+        "Never"
+      ],
+      "correct_answer": 1,
+      "explanation": "In SA, 'now now' means soon but not right away. 'Now' means sometime today, 'now now' means soonish, and 'just now' could mean anything from 5 minutes to never. It confuses every tourist, shame!",
       "image_url": null
     },
     {
       "id": "mz024",
-      "difficulty": 50,
+      "difficulty": 60,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A spaza shop sells chips in 3 sizes: small (R5), medium (R8), and large (R14). Lerato buys some bags and pays exactly R35. Which combination did she buy?",
-      "options": ["2 large, 1 small", "1 large, 2 medium, 1 small", "3 medium, 1 small", "1 large, 1 medium, 1 small"],
-      "correct_answer": 1,
-      "explanation": "Let's check each option: A = 2(R14) + R5 = R33 (no). B = R14 + 2(R8) + R5 = R14 + R16 + R5 = R35 (yes!). C = 3(R8) + R5 = R29 (no). D = R14 + R8 + R5 = R27 (no). Only option B adds up to R35. Spaza shop maths for the win!",
+      "question": "Which South African city is famous for its annual sardine run?",
+      "options": [
+        "Cape Town",
+        "Port Elizabeth",
+        "Durban",
+        "East London"
+      ],
+      "correct_answer": 2,
+      "explanation": "The sardine run along the KwaZulu-Natal coast near Durban is one of the greatest marine spectacles on Earth! Billions of sardines migrate up the coast between May and July, attracting sharks, dolphins, and birds. It's nature's biggest buffet!",
       "image_url": null
     },
     {
       "id": "mz025",
-      "difficulty": 50,
+      "difficulty": 60,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A taxi from Soweto to Joburg CBD takes 40 minutes in traffic and 25 minutes without traffic. If you need to arrive by 08:00 and there's DEFINITELY traffic if you leave before 07:30 but you can't be sure about traffic after 07:30, what's the latest you can GUARANTEE arriving on time?",
-      "options": ["07:20", "07:35", "07:15", "07:25"],
-      "correct_answer": 0,
-      "explanation": "To guarantee arrival, you must plan for worst case. If you leave at 07:20 (before 07:30), there IS traffic, so it takes 40 minutes: 07:20 + 40 = 08:00. You arrive just on time. If you leave later, say 07:25, with traffic that's 08:05 — too late! Leaving after 07:30 might have traffic too (can't be sure), so you can't rely on the 25-minute trip. The latest guaranteed-safe departure is 07:20.",
+      "question": "What is a 'Gatsby' in Cape Town?",
+      "options": [
+        "A fancy cocktail",
+        "A type of taxi",
+        "A massive sandwich with chips and fillings",
+        "A dance move"
+      ],
+      "correct_answer": 2,
+      "explanation": "A Gatsby is a Cape Town legend — a long roll stuffed with chips (hot chips!), and your choice of filling like polony, steak, masala steak, or calamari. One Gatsby can feed 2-4 people. It was invented in the Cape Flats and it's a proper working-class hero of a meal!",
       "image_url": null
     },
     {
@@ -286,152 +411,222 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Five Joburg office workers — Ayanda, Bongani, Cynthia, Dumisani, and Fikile — sit in a row. Ayanda sits next to Bongani. Cynthia does NOT sit next to Dumisani. Fikile sits at one end. Bongani sits in the exact middle. Who sits at the other end (not Fikile's end)?",
-      "options": ["Ayanda", "Cynthia", "Dumisani", "Could be either Cynthia or Dumisani"],
+      "options": [
+        "Ayanda",
+        "Cynthia",
+        "Dumisani",
+        "Could be either Cynthia or Dumisani"
+      ],
       "correct_answer": 2,
       "explanation": "Bongani is in the middle (position 3). Ayanda sits next to Bongani, so Ayanda is in position 2 or 4. Fikile is at one end (position 1 or 5). Cynthia and Dumisani fill the remaining spots. Since Cynthia can NOT sit next to Dumisani, and since one of them is next to Bongani (pos 2 or 4) and the other at the far end: if Ayanda is in pos 2, Fikile at pos 1, then pos 4 and 5 are left for C and D — but they'd be adjacent (not allowed). So Fikile must be at pos 5, Ayanda at pos 4, leaving pos 1 and 2 for C and D. Cynthia can't be next to Dumisani: pos 1 and 2 are adjacent — contradiction! Try Ayanda at pos 4, Fikile at pos 1: pos 2 and 5 for C and D. They're not adjacent. Cynthia at pos 2 (next to Bongani), Dumisani at pos 5. The other end is Dumisani!",
       "image_url": null
     },
     {
       "id": "mz027",
-      "difficulty": 40,
+      "difficulty": 50,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You have R500. Woolworths has a deal: buy 2 items, get the cheaper one half price. You want a jacket (R400) and a shirt (R200). How much do you save compared to full price, and can you afford both?",
-      "options": ["Save R100, yes you can afford it", "Save R100, no you can't", "Save R200, yes you can afford it", "Save R50, yes you can afford it"],
-      "correct_answer": 0,
-      "explanation": "The cheaper item is the R200 shirt, which is half price = R100. Total: R400 + R100 = R500. You save R100 and you can just afford it with exactly R500! Lekker deal!",
+      "question": "Which Big Five animal is NOT actually one of the Big Five?",
+      "options": [
+        "Leopard",
+        "Cheetah",
+        "Buffalo",
+        "Rhino"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Big Five are lion, leopard, rhino, elephant, and buffalo. The cheetah is NOT one of them! The Big Five were originally named by big-game hunters as the most dangerous animals to hunt on foot. The cheetah, while fast and beautiful, didn't make the list!",
       "image_url": null
     },
     {
       "id": "mz028",
-      "difficulty": 40,
-      "type": "numeric_input",
+      "difficulty": 50,
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "At a cricket match at Newlands, the scoreboard shows a team's runs after each over: 6, 14, 18, 26, 30, ?. What's the next number in the pattern?",
-      "options": [],
-      "correct_answer": 38,
-      "explanation": "The differences between consecutive overs: 8, 4, 8, 4, ... The pattern alternates between +8 and +4. After 30, we add 8 = 38. The batsmen are scoring in a lekker rhythm!",
+      "question": "What is the name of the traditional South African fermented maize porridge drink?",
+      "options": [
+        "Umqombothi",
+        "Mageu",
+        "Rooibos",
+        "Amarula"
+      ],
+      "correct_answer": 1,
+      "explanation": "Mageu (or mahewu) is a traditional non-alcoholic fermented maize drink. It's creamy, slightly sour, and super refreshing. Umqombothi is traditional beer, not porridge-based. Mageu is the working person's energy drink — cheap, filling, and proudly SA!",
       "image_url": null
     },
     {
       "id": "mz029",
-      "difficulty": 40,
+      "difficulty": 50,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "At a Durban beachfront market, a vendor makes R15 profit on each beaded necklace and R10 profit on each bracelet. She can make 4 necklaces per hour or 8 bracelets per hour. To maximise profit per hour, she should make:",
-      "options": ["Only necklaces (R60/hr)", "Only bracelets (R80/hr)", "Half and half (R70/hr)", "3 necklaces, 2 bracelets (R65/hr)"],
+      "question": "Which famous pass connects the Garden Route town of Knysna to the interior?",
+      "options": [
+        "Sani Pass",
+        "Prince Alfred's Pass",
+        "Bainskloof Pass",
+        "Franschhoek Pass"
+      ],
       "correct_answer": 1,
-      "explanation": "Necklaces: 4 per hour x R15 = R60/hr. Bracelets: 8 per hour x R10 = R80/hr. Even though each necklace has higher profit, she makes bracelets faster, earning R80/hr. Sometimes quantity beats margin!",
+      "explanation": "Prince Alfred's Pass is the famous gravel road connecting Knysna to the Langkloof valley. It was built in 1867 and named after Queen Victoria's son. Sani Pass is in KZN/Lesotho, Bainskloof is in the Western Cape near Wellington, and Franschhoek Pass leads to the winelands!",
       "image_url": null
     },
     {
       "id": "mz030",
-      "difficulty": 40,
+      "difficulty": 50,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A load shedding schedule rotates through 4 zones. Zone 1 loses power at 06:00, Zone 2 at 08:00, Zone 3 at 10:00, Zone 4 at 12:00, then Zone 1 again at 14:00, and so on. Each outage lasts 2 hours. At 11:00, which zones currently have NO power?",
-      "options": ["Zone 3 only", "Zones 2 and 3", "Zones 3 and 4", "Zone 2 only"],
-      "correct_answer": 0,
-      "explanation": "At 11:00: Zone 1 lost power 06:00-08:00 (back on). Zone 2 lost power 08:00-10:00 (back on). Zone 3 lost power 10:00-12:00 (currently off!). Zone 4 starts at 12:00 (still on). Only Zone 3 is without power at 11:00. Eish, hope they charged their phones!",
+      "question": "What does the Zulu phrase 'Sawubona' mean?",
+      "options": [
+        "Goodbye",
+        "Thank you",
+        "I see you (Hello)",
+        "How are you?"
+      ],
+      "correct_answer": 2,
+      "explanation": "Sawubona literally means 'I see you' and is used as a greeting in isiZulu. It's deeper than just 'hello' — it acknowledges the other person's existence and dignity. The response is 'Ngikhona' meaning 'I am here.' Beautiful, neh?",
       "image_url": null
     },
     {
       "id": "mz031",
-      "difficulty": 30,
+      "difficulty": 50,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You're driving from Cape Town to Joburg (1,400 km). Your car uses 7 litres per 100 km. Petrol costs R25/litre. You have R2,000 for fuel. How far short of Joburg will you run out of petrol (to the nearest km)?",
-      "options": ["You'll make it with fuel to spare", "About 257 km short", "About 143 km short", "About 200 km short"],
+      "question": "Which South African musician was known as 'MaBrrr' and the 'Queen of African Pop'?",
+      "options": [
+        "Miriam Makeba",
+        "Brenda Fassie",
+        "Yvonne Chaka Chaka",
+        "Lira"
+      ],
       "correct_answer": 1,
-      "explanation": "With R2,000 at R25/litre, you can buy 80 litres. At 7L/100km, 80 litres takes you (80 / 7) x 100 = 1,142.9 km. Distance short: 1,400 - 1,143 = about 257 km short. Eish, better budget better next time!",
+      "explanation": "Brenda Fassie — MaBrrr herself — was the undisputed Queen of African Pop! Her hit 'Weekend Special' in 1983 made her a continental star. She was bold, controversial, and wildly talented. Miriam Makeba is 'Mama Africa' and Yvonne Chaka Chaka is the 'Princess of Africa.' SA music royalty, all of them!",
       "image_url": null
     },
     {
       "id": "mz032",
-      "difficulty": 30,
+      "difficulty": 40,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A spaza shop owner buys 100 apples for R200 and sells them at R3 each. 15 apples go bad before he can sell them. What's his profit or loss?",
-      "options": ["R55 profit", "R100 profit", "R55 loss", "R45 profit"],
-      "correct_answer": 0,
-      "explanation": "Cost: R200 for 100 apples. He sells 85 apples (100 - 15 bad) at R3 each = R255. Profit = R255 - R200 = R55. Even with rotten stock, the madala still makes a profit!",
+      "question": "What is the Cradle of Humankind famous for?",
+      "options": [
+        "Ancient rock art",
+        "Fossil hominid sites",
+        "Diamond mining",
+        "Shipwrecks"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Cradle of Humankind, a UNESCO World Heritage Site near Joburg, contains the richest concentration of human ancestor fossils in the world! The famous 'Mrs Ples' skull and 'Little Foot' skeleton were found here. We're literally ALL from Mzansi if you go back far enough!",
       "image_url": null
     },
     {
       "id": "mz033",
-      "difficulty": 30,
+      "difficulty": 40,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Table Mountain cableway cabin holds 65 people and makes a trip every 10 minutes (up or down). Starting at 08:00, going UP only, how many people can reach the top by 09:00 (the first cabin departs at 08:00)?",
-      "options": ["390", "455", "325", "420"],
-      "correct_answer": 1,
-      "explanation": "From 08:00 to 09:00 is 60 minutes. Departures at 08:00, 08:10, 08:20, 08:30, 08:40, 08:50, 09:00 = 7 trips (including the one AT 09:00, since it departs by then). 7 x 65 = 455 people. That's a lot of tourists on the mountain!",
+      "question": "Which country does NOT share a border with South Africa?",
+      "options": [
+        "Mozambique",
+        "Zimbabwe",
+        "Zambia",
+        "Namibia"
+      ],
+      "correct_answer": 2,
+      "explanation": "Zambia does NOT border South Africa! SA shares borders with Namibia, Botswana, Zimbabwe, Mozambique, Eswatini, and Lesotho (which is completely surrounded by SA). Zambia is further north, separated by Zimbabwe and Botswana. Geography matters!",
       "image_url": null
     },
     {
       "id": "mz034",
-      "difficulty": 30,
-      "type": "numeric_input",
+      "difficulty": 40,
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "In a Lotto draw, you must pick 6 numbers from 1-52. If your 6 numbers are all even, how many even numbers between 1 and 52 (inclusive) did you NOT pick?",
-      "options": [],
-      "correct_answer": 20,
-      "explanation": "Even numbers from 1-52: 2, 4, 6, ..., 52. That's 52/2 = 26 even numbers. You picked 6 of them. So you didn't pick 26 - 6 = 20 even numbers. Now just wait for the draw!",
+      "question": "What is the traditional Xhosa ceremony called where young men undergo initiation into manhood?",
+      "options": [
+        "Umhlanga",
+        "Ulwaluko",
+        "Umemulo",
+        "Lobola"
+      ],
+      "correct_answer": 1,
+      "explanation": "Ulwaluko is the Xhosa male initiation ceremony, a sacred rite of passage. Young men go to the bush and return as men (amakrwala). Umhlanga is the Swazi/Zulu Reed Dance, Umemulo is a Zulu coming-of-age for women, and Lobola is bride price. Deep cultural traditions!",
       "image_url": null
     },
     {
       "id": "mz035",
-      "difficulty": 30,
+      "difficulty": 40,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Two Uber drivers in Sandton start at the same point. Driver A goes 5 km north, then 12 km east. Driver B goes 12 km south, then 5 km west. How far apart are they now (straight line)?",
-      "options": ["34 km", "13 km", "About 24 km", "17 km"],
-      "correct_answer": 2,
-      "explanation": "Driver A is at position (12 km east, 5 km north). Driver B is at (-5 km west, -12 km south). The difference: East-West = 12 + 5 = 17 km. North-South = 5 + 12 = 17 km. Straight-line distance = sqrt(17^2 + 17^2) = sqrt(578) = about 24.04 km. Don't be tempted to just add 17+17 = 34 — you need Pythagoras here! Those drivers are far apart, shame.",
+      "question": "What is the famous wine region near Cape Town called?",
+      "options": [
+        "The Karoo",
+        "The Winelands (Stellenbosch/Franschhoek/Paarl)",
+        "The Garden Route",
+        "The West Coast"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Cape Winelands — Stellenbosch, Franschhoek, and Paarl — make up one of the world's top wine-producing regions. SA is the 8th largest wine producer globally. Stellenbosch alone has over 200 wine farms. Time for a wine tasting, neh?",
       "image_url": null
     },
     {
       "id": "mz036",
-      "difficulty": 20,
+      "difficulty": 30,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A farmer has a 100m x 100m field near Mpumalanga. He wants to fence it, but there's a straight river along one full side (no fence needed there). Fencing costs R150/metre. He also needs a gate (3m wide, R2,000). If the gate replaces fencing on the side opposite the river, what's the total cost?",
-      "options": ["R46,550", "R46,700", "R44,550", "R46,850"],
-      "correct_answer": 0,
-      "explanation": "Three sides need fencing: two sides of 100m and one side of 100m (opposite river) minus the 3m gate = 97m. Total fencing: 100 + 100 + 97 = 297m. Fencing cost: 297 x R150 = R44,550. Plus gate: R2,000. Total: R44,550 + R2,000 = R46,550. Farming isn't cheap, hey!",
+      "question": "Which South African activist and cleric won the Nobel Peace Prize in 1984?",
+      "options": [
+        "Nelson Mandela",
+        "Desmond Tutu",
+        "Albert Luthuli",
+        "F.W. de Klerk"
+      ],
+      "correct_answer": 1,
+      "explanation": "Archbishop Desmond Tutu won the Nobel Peace Prize in 1984 for his nonviolent campaign against apartheid. Mandela and de Klerk shared it in 1993, and Albert Luthuli won it in 1960. SA has produced four Nobel Peace Prize winners. The Arch was a true legend!",
       "image_url": null
     },
     {
       "id": "mz037",
-      "difficulty": 20,
+      "difficulty": 30,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "At a jol, each person arrives and shakes hands with everyone already there. The 1st person shakes 0 hands, the 2nd shakes 1, the 3rd shakes 2, etc. If there were 45 total handshakes, how many people came to the jol?",
-      "options": ["9", "10", "11", "12"],
+      "question": "What unique feature do the Cango Caves near Oudtshoorn have?",
+      "options": [
+        "Underground river system",
+        "Spectacular dripstone caverns",
+        "Prehistoric cave paintings",
+        "Naturally heated pools"
+      ],
       "correct_answer": 1,
-      "explanation": "The total handshakes = 0+1+2+...+(n-1) = n(n-1)/2. We need n(n-1)/2 = 45, so n(n-1) = 90. Testing: 10 x 9 = 90. So n = 10 people. That must have been a lekker jol!",
+      "explanation": "The Cango Caves are famous for their spectacular dripstone (stalactite and stalagmite) formations, some of which are over 150,000 years old! The caves stretch for 4 km underground near Oudtshoorn in the Western Cape. Cleopatra's Needle is the most famous formation. Underground Mzansi magic!",
       "image_url": null
     },
     {
       "id": "mz038",
-      "difficulty": 20,
-      "type": "numeric_input",
+      "difficulty": 30,
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A tank collects rainwater in Limpopo. It's currently 1/3 full. After rain, it becomes 3/4 full, gaining 500 litres. What is the tank's total capacity in litres?",
-      "options": [],
-      "correct_answer": 1200,
-      "explanation": "The rain added 3/4 - 1/3 = 9/12 - 4/12 = 5/12 of the tank. If 5/12 of the tank = 500 litres, then the full tank = 500 x 12/5 = 1,200 litres. That's a lot of water — lekker for the garden!",
+      "question": "What is a 'kota' (also spelled 'kota') in SA township food culture?",
+      "options": [
+        "A type of beer",
+        "A quarter loaf of bread with fillings like chips, polony, and atchar",
+        "Grilled chicken feet",
+        "A spicy bean stew"
+      ],
+      "correct_answer": 1,
+      "explanation": "A kota is a quarter loaf of bread stuffed with chips, polony, cheese, atchar, and whatever else you fancy! It originated in Soweto and is THE street food of the townships. Cheap, filling, and absolutely delicious. The fancier versions are called 'spihatla' — loaded to the max!",
       "image_url": null
     },
     {
       "id": "mz039",
-      "difficulty": 20,
+      "difficulty": 30,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A car from Durban and a car from Joburg drive toward each other on the N3 (600 km apart). The Durban car goes 100 km/h, the Joburg car goes 80 km/h. A bird flies back and forth between them at 150 km/h from the moment they start until they meet. How far does the bird fly in total?",
-      "options": ["500 km", "450 km", "600 km", "About 333 km"],
-      "correct_answer": 0,
-      "explanation": "The trick is to ignore the bird's back-and-forth! The cars approach at 100 + 80 = 180 km/h combined. Time to meet: 600 / 180 = 3.33 hours. The bird flies the entire time at 150 km/h: 150 x 3.33 = 500 km. Eish, that bird is moeg!",
+      "question": "What is rooibos?",
+      "options": [
+        "A type of antelope",
+        "A red bush tea plant unique to South Africa",
+        "A traditional dance",
+        "A mountain range"
+      ],
+      "correct_answer": 1,
+      "explanation": "Rooibos (meaning 'red bush' in Afrikaans) is a tea plant that grows ONLY in the Cederberg region of the Western Cape. It's caffeine-free, packed with antioxidants, and loved worldwide. South Africa is the only place on Earth it grows naturally. Proudly SA!",
       "image_url": null
     },
     {
@@ -440,53 +635,78 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You have 12 identical-looking Krugerrands, but one is fake and slightly lighter. Using a balance scale, what is the MINIMUM number of weighings guaranteed to find the fake coin?",
-      "options": ["4", "3", "2", "6"],
+      "options": [
+        "4",
+        "3",
+        "2",
+        "6"
+      ],
       "correct_answer": 1,
       "explanation": "Split into 3 groups of 4. Weigh group 1 vs group 2. If they balance, the fake is in group 3; if not, it's in the lighter group. Now you have 4 suspects. Split into groups of 1, 1, and 2. Weigh the two singles — if they balance, weigh the remaining 2 to find the fake. 3 weighings guaranteed. This is a classic logic puzzle, just with Krugerrands!",
       "image_url": null
     },
     {
       "id": "mz041",
-      "difficulty": 10,
+      "difficulty": 20,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Johannesburg property agent says: 'This plot is a perfect square with an area of 2,025 m^2. The perimeter fencing costs R200/m.' Without a calculator, what's the fencing cost?",
-      "options": ["R36,000", "R34,000", "R32,000", "R38,000"],
-      "correct_answer": 0,
-      "explanation": "You need sqrt(2025) to find the side length. Note that 45^2 = 2,025 (since 45 x 45 = 2,025). Side = 45m. Perimeter = 4 x 45 = 180m. Cost = 180 x R200 = R36,000. The trick was computing the square root mentally: 40^2 = 1,600 and 50^2 = 2,500, so try 45!",
+      "question": "What was District Six in Cape Town?",
+      "options": [
+        "A military base",
+        "A vibrant multicultural neighbourhood destroyed under apartheid forced removals",
+        "A gold mining district",
+        "A wildlife reserve"
+      ],
+      "correct_answer": 1,
+      "explanation": "District Six was a vibrant, multicultural inner-city neighbourhood in Cape Town. In 1966, the apartheid government declared it a white area and forcibly removed over 60,000 residents. The District Six Museum keeps the memory alive. One of apartheid's cruelest acts.",
       "image_url": null
     },
     {
       "id": "mz042",
-      "difficulty": 10,
-      "type": "numeric_input",
+      "difficulty": 20,
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A stokvel has 8 members. Each month, every member contributes R500, and one member takes the full pot. After how many months will every member have received the pot exactly once AND the total contributed by each member equal the total received?",
-      "options": [],
-      "correct_answer": 8,
-      "explanation": "Each month the pot is 8 x R500 = R4,000. Each member needs to receive R4,000 once. After 8 months, each member has contributed 8 x R500 = R4,000 and received R4,000 once. It balances perfectly after 8 months — the same as the number of members. Stokvel maths is beautiful!",
+      "question": "What is the southernmost point of the African continent?",
+      "options": [
+        "Cape of Good Hope",
+        "Cape Agulhas",
+        "Cape Point",
+        "Cape Hangklip"
+      ],
+      "correct_answer": 1,
+      "explanation": "Cape Agulhas is the true southernmost point of Africa, NOT the Cape of Good Hope (a very common mistake!). Cape Agulhas is where the Indian and Atlantic Oceans officially meet. The Cape of Good Hope is the most south-western point. Now you know the real answer!",
       "image_url": null
     },
     {
       "id": "mz043",
-      "difficulty": 10,
+      "difficulty": 20,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Three Eskom substations (A, B, C) are connected in a triangle. The cable between A-B is 30 km, B-C is 40 km, A-C is 50 km. A new substation D must be placed on cable A-C such that D-B is the shortest possible distance. How far is D from A?",
-      "options": ["18 km", "24 km", "30 km", "20 km"],
-      "correct_answer": 0,
-      "explanation": "Notice 30-40-50 is a right triangle (30^2 + 40^2 = 900 + 1600 = 2500 = 50^2), with the right angle at B. The shortest distance from B to AC is the altitude from B to the hypotenuse. Using area: Area = 1/2 x 30 x 40 = 600. Also Area = 1/2 x 50 x h, so h = 24 km. The distance from A to D (foot of altitude): AD = AB^2/AC = 900/50 = 18 km. Heavy maths for an Eskom problem!",
+      "question": "What was the original name of the currency used in South Africa before the Rand?",
+      "options": [
+        "The Shilling",
+        "The South African Pound",
+        "The Guilder",
+        "The Crown"
+      ],
+      "correct_answer": 1,
+      "explanation": "Before 1961, South Africa used the South African Pound (and before that, the British Pound). The Rand was introduced on 14 February 1961 when SA became a republic. The name 'Rand' comes from the Witwatersrand, the ridge where Joburg's gold was discovered!",
       "image_url": null
     },
     {
       "id": "mz044",
-      "difficulty": 10,
+      "difficulty": 20,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You have a 5-litre bucket and a 3-litre bucket at a Karoo farm borehole. You need exactly 4 litres. What's the minimum number of pour/fill/empty actions needed?",
-      "options": ["5", "6", "7", "8"],
-      "correct_answer": 1,
-      "explanation": "1) Fill the 5L bucket. 2) Pour from 5L into 3L (5L now has 2L, 3L is full). 3) Empty the 3L bucket. 4) Pour the 2L from 5L into 3L (3L now has 2L). 5) Fill the 5L bucket again. 6) Pour from 5L into 3L until full (3L needs 1L more, so pour 1L; 5L now has 4L). Six steps! Classic Die Hard puzzle, but make it Karoo.",
+      "question": "Which South African Nobel Prize winner discovered that peptic ulcers can be linked to specific bacteria?",
+      "options": [
+        "Sydney Brenner",
+        "Max Theiler",
+        "Allan Cormack",
+        "None — that was an Australian discovery"
+      ],
+      "correct_answer": 3,
+      "explanation": "Trick question! The peptic ulcer/bacteria discovery was by Australians Barry Marshall and Robin Warren. SA's Nobel science winners are Sydney Brenner (Medicine, 2002, molecular biology), Max Theiler (Medicine, 1951, yellow fever vaccine), and Allan Cormack (Physics, 1979, CT scan). Know your SA science heroes!",
       "image_url": null
     },
     {
@@ -494,10 +714,15 @@
       "difficulty": 10,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "At a Pick n Pay, a 750ml bottle of olive oil costs R120, and a 500ml bottle costs R90. A loyalty card gives 15% off the bigger bottle only. Which is cheaper per ml with the card, and by how much per litre?",
-      "options": ["750ml is cheaper by R44/L", "500ml is cheaper by R44/L", "They're the same price per ml", "750ml is cheaper by R24/L"],
-      "correct_answer": 0,
-      "explanation": "750ml with 15% off: R120 x 0.85 = R102 for 750ml. Per litre: R102 / 0.75 = R136/L. 500ml at full price: R90 / 0.5 = R180/L. The 750ml bottle is cheaper by R180 - R136 = R44 per litre. That loyalty card is doing some heavy lifting!",
+      "question": "Which South African-born entrepreneur co-founded PayPal and later founded SpaceX and Tesla?",
+      "options": [
+        "Mark Shuttleworth",
+        "Elon Musk",
+        "Patrick Soon-Shiong",
+        "Vinod Khosla"
+      ],
+      "correct_answer": 1,
+      "explanation": "Elon Musk was born in Pretoria in 1971! He moved to Canada at 17. Mark Shuttleworth is also a famous SA-born tech entrepreneur — he was the first African in space. SA produces some next-level talent, neh?",
       "image_url": null
     },
     {
@@ -506,20 +731,30 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Three friends buy a R300 braai pack and each pay R100. The butcher realises it should only cost R250 and gives R50 back to a friend to split. The friend keeps R20 and gives R10 back to each of the other two. Now each person paid R90 (2 people) and R80 (the sneaky friend). That's R90 + R90 + R80 = R260. The butcher has R250. That's R510 total but they only started with R300. Where's the extra R210?",
-      "options": ["The friend stole R210", "The butcher made an error", "There is no missing money — the question adds numbers that shouldn't be added together", "Tax was added"],
+      "options": [
+        "The friend stole R210",
+        "The butcher made an error",
+        "There is no missing money — the question adds numbers that shouldn't be added together",
+        "Tax was added"
+      ],
       "correct_answer": 2,
       "explanation": "This is a classic misdirection puzzle! The R260 paid (R90+R90+R80) ALREADY INCLUDES the R20 the friend kept. The correct accounting: R250 (butcher) + R20 (sneaky friend) + R30 (returned to the three friends) = R300. You shouldn't add the R260 paid to the R250 the butcher has — the R250 is part of the R260! Eish, that's sneaky maths!",
       "image_url": null
     },
     {
       "id": "mz047",
-      "difficulty": 5,
-      "type": "numeric_input",
+      "difficulty": 10,
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Sandton clock tower chimes once at 1 o'clock, twice at 2 o'clock, etc. Each chime takes 1 second, and there's a 2-second gap between chimes. How many total seconds does it take for all chimes from 1 o'clock through 12 o'clock (inclusive)?",
-      "options": [],
-      "correct_answer": 210,
-      "explanation": "For each hour h: there are h chimes (h seconds) and (h-1) gaps of 2 seconds = 2(h-1) seconds. Total for hour h = h + 2(h-1) = 3h - 2. At 1 o'clock: 1 sec. At 2: 4 sec. At 3: 7 sec... etc. Sum from h=1 to 12: 1+4+7+10+13+16+19+22+25+28+31+34. Pair them up: (1+34)+(4+31)+(7+28)+(10+25)+(13+22)+(16+19) = 6 x 35 = 210 seconds. That's a lot of chiming, eish!",
+      "question": "What year did apartheid officially end with the first democratic elections in South Africa?",
+      "options": [
+        "1990",
+        "1992",
+        "1994",
+        "1996"
+      ],
+      "correct_answer": 2,
+      "explanation": "The first democratic elections were held on 27 April 1994, now celebrated as Freedom Day! Nelson Mandela became the first Black president. 1990 was when Mandela was released and the ANC unbanned, but the actual elections were in 1994. A date every South African should know!",
       "image_url": null
     },
     {
@@ -528,7 +763,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You're at a 4-way intersection in Bloemfontein. A sign says: 'Turn left to go to the hospital. The library is opposite the hospital. The school is to the right of the library (from the library's perspective, facing the intersection).' You're facing north. Where is the school?",
-      "options": ["North", "South", "East", "West"],
+      "options": [
+        "North",
+        "South",
+        "East",
+        "West"
+      ],
       "correct_answer": 0,
       "explanation": "You face north. Left = west, so hospital is west. Library is opposite hospital = east. From the library facing the intersection (facing west), the school is to the library's right = north. This requires carefully tracking perspectives and directions. Only about 5% would get this right!",
       "image_url": null
@@ -539,31 +779,46 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Nkosi says: 'Two days ago, I was 25. Next year, I'll turn 28.' On what date is Nkosi's birthday and what date is he saying this?",
-      "options": ["Birthday: Dec 31, Speaking: Jan 1", "Birthday: Jan 1, Speaking: Dec 31", "Birthday: Dec 31, Speaking: Jan 2", "This is impossible"],
+      "options": [
+        "Birthday: Dec 31, Speaking: Jan 1",
+        "Birthday: Jan 1, Speaking: Dec 31",
+        "Birthday: Dec 31, Speaking: Jan 2",
+        "This is impossible"
+      ],
       "correct_answer": 0,
       "explanation": "Nkosi is speaking on January 1st. His birthday is December 31st. Two days ago was December 30th — he was still 25. Yesterday (Dec 31) was his birthday and he turned 26. Today (Jan 1) he is 26. This calendar year (on Dec 31) he'll turn 27. Next year (the following Dec 31) he'll turn 28. It all works because the year boundary falls between his birthday and the day he's speaking! Eish, that's a brain-bender.",
       "image_url": null
     },
     {
       "id": "mz050",
-      "difficulty": 5,
+      "difficulty": 10,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Checkers store has 3 checkout lanes. Lane 1 processes 1 customer per minute, Lane 2 processes 2 per minute, Lane 3 processes 3 per minute. 100 customers arrive at once and split optimally across lanes. What's the minimum time (in minutes) to process everyone?",
-      "options": ["About 16.7 min", "About 20 min", "About 33.3 min", "About 25 min"],
+      "question": "Which South African province was formerly known as the Transvaal?",
+      "options": [
+        "Gauteng, Limpopo, Mpumalanga, and North West",
+        "Only Gauteng",
+        "Free State",
+        "KwaZulu-Natal"
+      ],
       "correct_answer": 0,
-      "explanation": "For optimal splitting, all lanes should finish at the same time T. Lane 1 processes T customers, Lane 2 processes 2T, Lane 3 processes 3T. Total: T + 2T + 3T = 6T = 100. So T = 100/6 = 16.67 minutes. Lane 1 handles about 17, Lane 2 about 33, Lane 3 about 50. About 16.7 minutes total. That's lekker efficient for Checkers!",
+      "explanation": "The old Transvaal province was split into FOUR provinces in 1994: Gauteng, Limpopo (formerly Northern Province), Mpumalanga (formerly Eastern Transvaal), and North West. SA went from 4 provinces to 9 after democracy. That's a geography deep cut!",
       "image_url": null
     },
     {
       "id": "mz051",
-      "difficulty": 1,
-      "type": "numeric_input",
+      "difficulty": 10,
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A jeweller in the Joburg Diamond District has a gold chain of 23 links. A customer wants to rent it for 23 days, paying 1 link per day. The jeweller must be able to make change (accept links back and give different ones). What is the minimum number of links he needs to CUT to enable exact payment for any number of days from 1 to 23?",
-      "options": [],
-      "correct_answer": 2,
-      "explanation": "Cut the 4th and 11th links. This gives pieces of: 1 (the cut link), 3, 1 (the other cut link), 6, and 12 links. With pieces of 1, 1, 3, 6, 12 you can make any number from 1-23 by combining and exchanging. For example: Day 1 = give a single link. Day 2 = give the 3-piece, get 1 back. Day 3 = give the 3-piece. Etc. Only 2 cuts needed! This is a variation of the classic chain puzzle. Only the top 1% figure out the optimal cuts!",
+      "question": "What is the Karoo?",
+      "options": [
+        "A mountain range in Limpopo",
+        "A vast semi-desert region in the interior of South Africa",
+        "A river system in KwaZulu-Natal",
+        "A type of traditional SA music"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Karoo is a vast semi-desert that covers nearly a third of South Africa! It's divided into the Great Karoo and Little Karoo. Known for wide open spaces, lamb, fossils, and stargazing (some of the clearest skies on Earth). The name comes from a Khoisan word meaning 'land of thirst.'",
       "image_url": null
     },
     {
@@ -572,7 +827,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Three wise men from Limpopo are given hats from a bag of 3 red and 2 blue hats. Each can see the other two's hats but not their own. They're asked in order. Man 1 (sees the other two) says 'I don't know my hat colour.' Man 2 (hearing Man 1, seeing Man 3) says 'I don't know either.' What colour is Man 3's hat?",
-      "options": ["Red", "Blue", "Cannot be determined", "It depends on Man 1's hat"],
+      "options": [
+        "Red",
+        "Blue",
+        "Cannot be determined",
+        "It depends on Man 1's hat"
+      ],
       "correct_answer": 0,
       "explanation": "If Man 1 saw 2 blue hats, he'd know his was red (only 2 blue exist). He doesn't know, so he sees at most 1 blue hat. Man 2 knows this. If Man 2 saw a blue hat on Man 3, he'd reason: 'Man 1 saw at most 1 blue, and I see blue on Man 3. If I were also blue, Man 1 would've seen 2 blue and known. So I must be red.' But Man 2 doesn't know, meaning he DOESN'T see blue on Man 3. Therefore Man 3's hat is RED. Pure logical deduction — only the sharpest 1% crack this one!",
       "image_url": null
@@ -580,12 +840,17 @@
     {
       "id": "mz053",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A farmer near Stellenbosch has a 1,000-litre tank of grape juice. He removes 100 litres and replaces it with water, mixes thoroughly, then repeats this process 2 more times (3 total). How many litres of pure grape juice remain (rounded to the nearest whole number)?",
-      "options": [],
-      "correct_answer": 729,
-      "explanation": "After each cycle, the fraction of juice remaining is multiplied by (1 - 100/1000) = 0.9. After 3 cycles: 1000 x 0.9^3 = 1000 x 0.729 = 729 litres. The key insight is that each removal takes out the same proportion of juice (since it's well mixed), so you multiply by 0.9 each time. Most people incorrectly try to subtract 100 litres of juice each time, but after the first mix, you're removing a mixture, not pure juice!",
+      "question": "The Mapungubwe Kingdom, which predated Great Zimbabwe, was located in which present-day South African province?",
+      "options": [
+        "KwaZulu-Natal",
+        "Limpopo",
+        "Mpumalanga",
+        "North West"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Kingdom of Mapungubwe (900-1300 AD) was located at the confluence of the Limpopo and Shashe rivers in what is now Limpopo Province. It was one of the first kingdoms in southern Africa, with gold smelting and trade links to East Africa and Asia. The famous golden rhino was found there. Deep SA history that most people don't know!",
       "image_url": null
     },
     {
@@ -593,10 +858,15 @@
       "difficulty": 1,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "100 lockers at a Pretoria school are all closed. Student 1 toggles every locker. Student 2 toggles every 2nd locker. Student 3 toggles every 3rd, and so on up to Student 100. After all 100 students are done, how many lockers are open?",
-      "options": ["50", "10", "12", "25"],
+      "question": "Who composed the original melody of 'Nkosi Sikelel' iAfrika', part of the South African national anthem?",
+      "options": [
+        "Solomon Plaatje",
+        "Enoch Sontonga",
+        "John Knox Bokwe",
+        "Reuben Caluza"
+      ],
       "correct_answer": 1,
-      "explanation": "A locker ends up open only if it's toggled an odd number of times. Locker N is toggled once for each divisor of N. Most numbers have an even number of divisors (they come in pairs: 1x12, 2x6, 3x4). Only perfect squares have an odd number of divisors (because the square root pairs with itself). Perfect squares from 1-100: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100 = 10 lockers. This is a legendary maths puzzle. If you got it, you're truly in the 1% club!",
+      "explanation": "Enoch Sontonga, a Methodist school teacher from the Eastern Cape, composed 'Nkosi Sikelel' iAfrika' in 1897. It was originally a hymn sung at his school. It became the ANC anthem and later part of the national anthem after 1994. The SA anthem is unique — it uses five of the country's eleven languages in a single song!",
       "image_url": null
     },
     {
@@ -605,7 +875,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You're on a game show in Mzansi. Behind 3 doors: one has a Krugerrand, the others have nothing. You pick Door 1. The host (who knows what's behind each door) opens Door 3, showing nothing. He offers you the chance to switch to Door 2. What's the probability of winning if you switch?",
-      "options": ["1/2", "1/3", "2/3", "It doesn't matter"],
+      "options": [
+        "1/2",
+        "1/3",
+        "2/3",
+        "It doesn't matter"
+      ],
       "correct_answer": 2,
       "explanation": "This is the famous Monty Hall problem! Your initial pick has a 1/3 chance of being right, meaning there's a 2/3 chance the Krugerrand is behind one of the other doors. When the host reveals an empty door, that entire 2/3 probability collapses onto the remaining unopened door. Switching gives you 2/3 odds vs staying at 1/3. Most people's intuition screams 50/50, but the maths don't lie. If you got this through pure reasoning, you're a proper 1-percenter. Lekker!",
       "image_url": null

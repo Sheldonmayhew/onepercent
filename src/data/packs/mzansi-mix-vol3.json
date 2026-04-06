@@ -1,7 +1,7 @@
 {
   "pack_id": "za-general-03",
   "name": "Mzansi Mix Vol. 3",
-  "description": "Logic and reasoning with a South African twist — nature, food, travel, music, and tech puzzles",
+  "description": "South African nature, food, travel, music, and tech — a Mzansi knowledge mix!",
   "author": "Game Night Crew",
   "question_count": 55,
   "questions": [
@@ -11,7 +11,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many strings does a standard guitar have?",
-      "options": ["4", "5", "6", "8"],
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
       "correct_answer": 2,
       "explanation": "A standard guitar has 6 strings. Whether you're playing maskandi or rock, it's always 6!",
       "image_url": null
@@ -21,10 +26,15 @@
       "difficulty": 90,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You bake 24 koeksisters and eat 3 yourself. How many are left to share?",
-      "options": ["27", "21", "20", "18"],
+      "question": "What is biltong made from?",
+      "options": [
+        "Fish",
+        "Dried meat",
+        "Dried fruit",
+        "Corn"
+      ],
       "correct_answer": 1,
-      "explanation": "24 minus 3 = 21 koeksisters left. Shame, try not to eat them all before the guests arrive!",
+      "explanation": "Biltong is dried, cured meat — usually beef or game. It's South Africa's favourite snack and we take it very seriously!",
       "image_url": null
     },
     {
@@ -33,7 +43,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which is bigger: Table Mountain or a table?",
-      "options": ["A table", "They're the same", "Table Mountain", "Depends on the table"],
+      "options": [
+        "A table",
+        "They're the same",
+        "Table Mountain",
+        "Depends on the table"
+      ],
       "correct_answer": 2,
       "explanation": "Table Mountain is over 1,000 metres high. Even the biggest dining table can't compete with that! Don't overthink this one.",
       "image_url": null
@@ -41,12 +56,17 @@
     {
       "id": "m3004",
       "difficulty": 90,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A recipe needs 3 eggs to make 12 muffins. How many eggs do you need for 12 muffins?",
-      "options": [],
-      "correct_answer": 3,
-      "explanation": "The answer is right there in the question — 3 eggs for 12 muffins. Don't let your brain make it harder than it is!",
+      "question": "What colour is rooibos tea?",
+      "options": [
+        "Green",
+        "Black",
+        "Reddish-brown",
+        "Yellow"
+      ],
+      "correct_answer": 2,
+      "explanation": "Rooibos means 'red bush' in Afrikaans, and the tea brews a beautiful reddish-brown colour. Proudly South African since forever!",
       "image_url": null
     },
     {
@@ -55,7 +75,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If you drive from Johannesburg heading south, which ocean would you eventually reach?",
-      "options": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Pacific Ocean",
+        "Arctic Ocean"
+      ],
       "correct_answer": 1,
       "explanation": "Heading south from Joburg takes you towards the Indian Ocean coast (think Durban way). Lekker beach vibes!",
       "image_url": null
@@ -65,10 +90,15 @@
       "difficulty": 80,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A safari guide spots 4 elephants, each with 3 birds on their backs. How many legs are there in total (elephants + birds)?",
-      "options": ["28", "24", "40", "32"],
+      "question": "Which South African city is known as the 'Mother City'?",
+      "options": [
+        "Johannesburg",
+        "Durban",
+        "Cape Town",
+        "Pretoria"
+      ],
       "correct_answer": 2,
-      "explanation": "4 elephants x 4 legs = 16 legs. 4 x 3 = 12 birds x 2 legs = 24 legs. Total: 16 + 24 = 40 legs. The bush is full of legs!",
+      "explanation": "Cape Town is called the Mother City because it was the first European settlement in South Africa, founded in 1652. She's the OG!",
       "image_url": null
     },
     {
@@ -76,21 +106,31 @@
       "difficulty": 80,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Mama's melktert recipe serves 8. She needs to make it for 20 people. If the recipe calls for 400ml of milk, how much milk does she need?",
-      "options": ["800ml", "1,200ml", "1,000ml", "600ml"],
-      "correct_answer": 2,
-      "explanation": "She needs to multiply by 20/8 = 2.5. So 400ml x 2.5 = 1,000ml (1 litre). That's one big melktert!",
+      "question": "What is a melktert?",
+      "options": [
+        "A chocolate cake",
+        "A milk tart",
+        "A cheese pie",
+        "A cream puff"
+      ],
+      "correct_answer": 1,
+      "explanation": "Melktert literally means 'milk tart' in Afrikaans. It's a creamy, cinnamon-dusted custard tart that's pure comfort food. Every tannie has her own recipe!",
       "image_url": null
     },
     {
       "id": "m3008",
       "difficulty": 80,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A playlist has 15 amapiano songs averaging 3 minutes each and 5 house songs averaging 6 minutes each. What's the total playlist length in minutes?",
-      "options": [],
-      "correct_answer": 75,
-      "explanation": "15 x 3 = 45 minutes of amapiano + 5 x 6 = 30 minutes of house = 75 minutes total. Lekker vibes for over an hour!",
+      "question": "What genre of music is DJ Maphorisa most associated with?",
+      "options": [
+        "Kwaito",
+        "Maskandi",
+        "Amapiano",
+        "Afro-pop"
+      ],
+      "correct_answer": 2,
+      "explanation": "DJ Maphorisa is one of the godfathers of amapiano, the genre that took Mzansi and the world by storm. Yanos for life!",
       "image_url": null
     },
     {
@@ -98,10 +138,15 @@
       "difficulty": 80,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "If a chameleon changes colour every 5 minutes and you watch it for an hour, how many colour changes do you see?",
-      "options": ["10", "11", "12", "13"],
+      "question": "Which animal is on the South African coat of arms?",
+      "options": [
+        "Lion",
+        "Springbok",
+        "Secretary bird",
+        "Blue crane"
+      ],
       "correct_answer": 2,
-      "explanation": "60 minutes / 5 minutes = 12 colour changes. Our little friend is putting on quite the fashion show!",
+      "explanation": "The secretary bird appears on South Africa's coat of arms, symbolising protection and growth. It's also a serious snake-stomper!",
       "image_url": null
     },
     {
@@ -109,10 +154,15 @@
       "difficulty": 80,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Durban is approximately 600 km from Joburg. If you drive at 120 km/h, how long is the trip?",
-      "options": ["4 hours", "5 hours", "6 hours", "3.5 hours"],
+      "question": "What is a 'braai' in South African culture?",
+      "options": [
+        "A dance style",
+        "A barbecue",
+        "A type of beer",
+        "A greeting"
+      ],
       "correct_answer": 1,
-      "explanation": "600 / 120 = 5 hours. That's assuming no stops for a Wimpy pie on the way! Distance = speed x time, simple maths.",
+      "explanation": "A braai is a barbecue — but don't ever call it that to a South African! It's a way of life, not just cooking. National Braai Day is 24 September, lekker!",
       "image_url": null
     },
     {
@@ -120,21 +170,31 @@
       "difficulty": 70,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Kruger Park ranger counts Big 5 sightings in a week: 12 elephants, 5 lions, 3 leopards, 8 buffalo, and 2 rhinos. What percentage of sightings were lions?",
-      "options": ["20%", "12.5%", "16.7%", "25%"],
-      "correct_answer": 2,
-      "explanation": "Total sightings: 12+5+3+8+2 = 30. Lions: 5/30 = 1/6 = 16.7%. Not bad for a week in the bush!",
+      "question": "Which province is the Kruger National Park mainly located in?",
+      "options": [
+        "KwaZulu-Natal",
+        "Limpopo",
+        "Gauteng",
+        "Mpumalanga"
+      ],
+      "correct_answer": 3,
+      "explanation": "Kruger stretches across both Limpopo and Mpumalanga, but the majority of the park and its main camps are in Mpumalanga. Pack your binoculars!",
       "image_url": null
     },
     {
       "id": "m3012",
       "difficulty": 70,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A biltong maker buys 10 kg of beef at R180/kg and sells the dried biltong (which weighs 40% of the original) at R600/kg. What's his profit in Rand?",
-      "options": [],
-      "correct_answer": 600,
-      "explanation": "Cost: 10 x R180 = R1,800. Biltong weight: 10 x 0.4 = 4 kg. Revenue: 4 x R600 = R2,400. Profit: R2,400 - R1,800 = R600. The biltong game pays!",
+      "question": "What is a koeksister?",
+      "options": [
+        "A spicy sausage roll",
+        "A braided fried dough soaked in syrup",
+        "A type of cookie",
+        "A savoury pancake"
+      ],
+      "correct_answer": 1,
+      "explanation": "A koeksister is a braided, deep-fried dough treat soaked in sweet syrup until it's crispy on the outside and syrupy inside. Sticky fingers guaranteed!",
       "image_url": null
     },
     {
@@ -142,10 +202,15 @@
       "difficulty": 70,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "An amapiano DJ plays a set with a pattern: 2 fast songs, then 1 slow song, repeating. If the set has 21 songs, how many slow songs are there?",
-      "options": ["5", "6", "7", "8"],
-      "correct_answer": 2,
-      "explanation": "Each cycle is 3 songs (2 fast + 1 slow). 21 / 3 = 7 complete cycles = 7 slow songs. That's the rhythm of the night!",
+      "question": "Which South African tech company created the messaging app Mxit?",
+      "options": [
+        "Naspers",
+        "MXit Lifestyle",
+        "Takealot",
+        "Dimension Data"
+      ],
+      "correct_answer": 1,
+      "explanation": "Mxit was built by MXit Lifestyle (Pty) Ltd in Stellenbosch. At its peak it had over 50 million users across Africa. SA was ahead of the game before WhatsApp took over!",
       "image_url": null
     },
     {
@@ -153,10 +218,15 @@
       "difficulty": 70,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Cape Town wine farm produces 500 bottles per barrel. If they have 12 barrels and sell each bottle for R85, but 5% of bottles are rejected in quality control, how much revenue do they make?",
-      "options": ["R510,000", "R484,500", "R425,000", "R475,000"],
+      "question": "What is the fynbos biome unique to?",
+      "options": [
+        "East Africa",
+        "The Western Cape of South Africa",
+        "Madagascar",
+        "The Amazon"
+      ],
       "correct_answer": 1,
-      "explanation": "Total bottles: 12 x 500 = 6,000. After 5% rejected: 6,000 x 0.95 = 5,700 bottles. Revenue: 5,700 x R85 = R484,500. Cheers to that!",
+      "explanation": "Fynbos is a unique shrubland vegetation found almost exclusively in the Western Cape. It's one of only six floral kingdoms on Earth — and the smallest! Proudly ours.",
       "image_url": null
     },
     {
@@ -165,7 +235,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Put these animals in order from SMALLEST to LARGEST: (1) African elephant, (2) Meerkat, (3) Springbok, (4) Hippopotamus",
-      "options": ["African elephant", "Meerkat", "Springbok", "Hippopotamus"],
+      "options": [
+        "African elephant",
+        "Meerkat",
+        "Springbok",
+        "Hippopotamus"
+      ],
       "correct_answer": "1,2,3,0",
       "explanation": "Meerkat (~730g), Springbok (~40kg), Hippo (~1,500kg), African Elephant (~6,000kg). From tiny to mighty in the African bush!",
       "image_url": null
@@ -175,21 +250,31 @@
       "difficulty": 60,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Your phone battery drains 12% per hour when using GPS. You start a road trip at 100% at 6am. At what time will your phone die?",
-      "options": ["2:00pm", "2:20pm", "2:30pm", "1:20pm"],
-      "correct_answer": 1,
-      "explanation": "100% / 12% per hour = 8.33 hours. 8 hours 20 minutes after 6:00am = 2:20pm. Better bring a car charger, boet!",
+      "question": "Which famous South African inventor created the Kreepy Krauly automatic pool cleaner?",
+      "options": [
+        "Elon Musk",
+        "Mark Shuttleworth",
+        "Ferdinand Chauvier",
+        "Nils Bohlin"
+      ],
+      "correct_answer": 2,
+      "explanation": "Ferdinand Chauvier, a hydraulic engineer from Johannesburg, invented the Kreepy Krauly in 1974. It's now used in pools worldwide. SA innovation at its finest!",
       "image_url": null
     },
     {
       "id": "m3017",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Nando's orders 250 chickens on Monday, 180 on Wednesday, and 320 on Friday. If each chicken weighs 1.5 kg and costs R45 per kg, what's the weekly cost in Rand?",
-      "options": [],
-      "correct_answer": 50625,
-      "explanation": "Total chickens: 250 + 180 + 320 = 750. Weight: 750 x 1.5 = 1,125 kg. Cost: 1,125 x R45 = R50,625. That's a LOT of peri-peri!",
+      "question": "What is bunny chow?",
+      "options": [
+        "A rabbit stew",
+        "A hollowed-out bread loaf filled with curry",
+        "A vegetable wrap",
+        "A corn-based porridge"
+      ],
+      "correct_answer": 1,
+      "explanation": "Bunny chow is a Durban classic — a hollowed-out quarter, half, or full loaf of white bread filled with curry. No bunnies involved! It's named after the Bania merchants who popularised it.",
       "image_url": null
     },
     {
@@ -197,10 +282,15 @@
       "difficulty": 60,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A music festival has 3 stages. Stage A plays every 30 min, Stage B every 45 min, and Stage C every 60 min. If they all start at noon, when do all three stages next play at the same time?",
-      "options": ["1:00pm", "2:00pm", "3:00pm", "4:00pm"],
+      "question": "Which South African city hosted the 2010 FIFA World Cup final?",
+      "options": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg",
+        "Pretoria"
+      ],
       "correct_answer": 2,
-      "explanation": "Find the LCM of 30, 45, and 60. LCM = 180 minutes = 3 hours. So they all sync again at 3:00pm. Time to catch all three acts!",
+      "explanation": "The 2010 World Cup final was held at Soccer City (now FNB Stadium) in Johannesburg. Spain beat the Netherlands 1-0 with that iconic Iniesta goal. Ke nako!",
       "image_url": null
     },
     {
@@ -208,21 +298,31 @@
       "difficulty": 60,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A safari lodge charges R2,500 per person per night. A family of 4 stays for 3 nights. Children under 12 get 50% off. If 2 of the family are children under 12, what's the total cost?",
-      "options": ["R22,500", "R30,000", "R15,000", "R20,000"],
+      "question": "What is the traditional Zulu shield called?",
+      "options": [
+        "Isihlangu",
+        "Assegai",
+        "Knobkierie",
+        "Umkhonto"
+      ],
       "correct_answer": 0,
-      "explanation": "2 adults: 2 x R2,500 x 3 = R15,000. 2 children at 50%: 2 x R1,250 x 3 = R7,500. Total: R15,000 + R7,500 = R22,500. Safari is not cheap, but it's worth every cent!",
+      "explanation": "The isihlangu is the large Zulu war shield made from cowhide. The assegai is the spear, the knobkierie is a club, and umkhonto means spear too. Warriors knew their gear!",
       "image_url": null
     },
     {
       "id": "m3020",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Durban bunny chow shop sells 3 sizes: quarter (R55), half (R85), and full (R120). On a busy day they sell 40 quarters, 25 halves and 15 fulls. What's the total revenue in Rand?",
-      "options": [],
-      "correct_answer": 6125,
-      "explanation": "40 x R55 = R2,200. 25 x R85 = R2,125. 15 x R120 = R1,800. Total: R2,200 + R2,125 + R1,800 = R6,125. That's a lekker day in the bunny business!",
+      "question": "Which South African national park is famous for its elephant population and is near Port Elizabeth?",
+      "options": [
+        "Kruger National Park",
+        "Hluhluwe-iMfolozi Park",
+        "Addo Elephant National Park",
+        "Pilanesberg Game Reserve"
+      ],
+      "correct_answer": 2,
+      "explanation": "Addo Elephant National Park near Port Elizabeth is home to over 600 elephants. It's the only park in the world with the Big 7 — the Big 5 plus the great white shark and southern right whale!",
       "image_url": null
     },
     {
@@ -230,21 +330,31 @@
       "difficulty": 50,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "On a hike up Lion's Head, you climb 200m in the first hour, 150m in the second, and 100m in the third (you're getting tired). If this pattern continues, what's the maximum height you can reach?",
-      "options": ["500m", "600m", "800m", "700m"],
-      "correct_answer": 0,
-      "explanation": "The pattern decreases by 50m each hour: 200, 150, 100, 50, then 0. Total: 200+150+100+50 = 500m. After that you're too tired to climb! That's your max.",
+      "question": "What plant is used to make rooibos tea?",
+      "options": [
+        "Camellia sinensis",
+        "Aspalathus linearis",
+        "Cyclopia intermedia",
+        "Protea cynaroides"
+      ],
+      "correct_answer": 1,
+      "explanation": "Rooibos comes from Aspalathus linearis, a plant that grows only in the Cederberg region of South Africa. Camellia sinensis makes regular tea, Cyclopia makes honeybush. Lekker local!",
       "image_url": null
     },
     {
       "id": "m3022",
       "difficulty": 50,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A rooibos tea farmer plants trees in a triangular pattern: 1 in row 1, 2 in row 2, 3 in row 3, etc. How many trees are there in a plantation with 12 rows?",
-      "options": [],
-      "correct_answer": 78,
-      "explanation": "Sum of 1 to 12 = 12 x 13 / 2 = 78 trees. The formula n(n+1)/2 is your friend here. That's a lot of rooibos!",
+      "question": "Which South African musician is known as the 'Queen of African Pop'?",
+      "options": [
+        "Miriam Makeba",
+        "Brenda Fassie",
+        "Yvonne Chaka Chaka",
+        "Lira"
+      ],
+      "correct_answer": 2,
+      "explanation": "Yvonne Chaka Chaka is known as the 'Princess of Africa' and 'Queen of African Pop'. Miriam Makeba was 'Mama Africa' and Brenda Fassie was 'MaBrrr'. SA has queens for days!",
       "image_url": null
     },
     {
@@ -252,10 +362,15 @@
       "difficulty": 50,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You're making potjiekos and the recipe says simmer at a temperature that's 40% of the way between 80°C and 180°C. What temperature is that?",
-      "options": ["120°C", "128°C", "112°C", "140°C"],
-      "correct_answer": 0,
-      "explanation": "Range = 180 - 80 = 100°C. 40% of 100 = 40°C. So 80 + 40 = 120°C. Lekker, now keep that potjie at a steady simmer!",
+      "question": "What is the main ingredient in potjiekos?",
+      "options": [
+        "Rice",
+        "Slow-cooked meat and vegetables",
+        "Cornmeal",
+        "Seafood"
+      ],
+      "correct_answer": 1,
+      "explanation": "Potjiekos is a slow-cooked stew made with layers of meat and vegetables in a cast-iron pot over coals. The secret? Don't stir it! Let the layers do their magic.",
       "image_url": null
     },
     {
@@ -263,10 +378,15 @@
       "difficulty": 50,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A WiFi signal loses 50% of its strength with each wall it passes through. After passing through 3 walls, what percentage of the original signal remains?",
-      "options": ["25%", "15%", "12.5%", "6.25%"],
-      "correct_answer": 2,
-      "explanation": "After wall 1: 50%. After wall 2: 25%. After wall 3: 12.5%. Each wall halves what's left. No wonder the WiFi is so slow in the back room!",
+      "question": "Which company did South African-born Elon Musk co-found before Tesla?",
+      "options": [
+        "SpaceX",
+        "PayPal",
+        "Twitter",
+        "Netflix"
+      ],
+      "correct_answer": 1,
+      "explanation": "Elon Musk, born in Pretoria, co-founded X.com which merged with Confinity to become PayPal. He was part of the 'PayPal Mafia' before going on to Tesla and SpaceX. Mzansi-born billionaire!",
       "image_url": null
     },
     {
@@ -275,7 +395,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Put these distances in order from SHORTEST to LONGEST: (1) Joburg to Pretoria (~58km), (2) Cape Town to Stellenbosch (~50km), (3) Durban to Pietermaritzburg (~80km), (4) Bloemfontein to Maseru (~140km)",
-      "options": ["Joburg to Pretoria", "Cape Town to Stellenbosch", "Durban to Pietermaritzburg", "Bloemfontein to Maseru"],
+      "options": [
+        "Joburg to Pretoria",
+        "Cape Town to Stellenbosch",
+        "Durban to Pietermaritzburg",
+        "Bloemfontein to Maseru"
+      ],
       "correct_answer": "1,0,2,3",
       "explanation": "Cape Town-Stellenbosch (~50km), Joburg-Pretoria (~58km), Durban-PMB (~80km), Bloem-Maseru (~140km). Know your SA distances, road tripper!",
       "image_url": null
@@ -285,21 +410,31 @@
       "difficulty": 40,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A food truck at a market sells gatsby sandwiches. It costs R35 to make each one and they sell for R80. Fixed costs are R900 per market day. How many gatsbys must they sell to break even?",
-      "options": ["10", "15", "20", "25"],
+      "question": "Which pass connects the Garden Route town of Knysna to the inland town of Oudtshoorn?",
+      "options": [
+        "Sani Pass",
+        "Outeniqua Pass",
+        "Prince Alfred's Pass",
+        "Chapman's Peak Drive"
+      ],
       "correct_answer": 2,
-      "explanation": "Profit per gatsby: R80 - R35 = R45. Break even: R900 / R45 = 20 gatsbys. After 20, you're making money. Hustle hard!",
+      "explanation": "Prince Alfred's Pass is a gravel road connecting Knysna to Avontuur/Oudtshoorn area through stunning indigenous forest. The Outeniqua Pass connects George to Oudtshoorn. Both are lekker drives!",
       "image_url": null
     },
     {
       "id": "m3027",
       "difficulty": 40,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A nature reserve has a rectangular dam that's 60m x 40m with a depth of 2m. How many litres of water does it hold when full? (1 cubic metre = 1,000 litres). Give answer in thousands.",
-      "options": [],
-      "correct_answer": 4800,
-      "explanation": "Volume: 60 x 40 x 2 = 4,800 cubic metres. In litres: 4,800 x 1,000 = 4,800,000 litres. Answer in thousands = 4,800. That's a big dam, literally!",
+      "question": "What is 'pap' (also called mieliepap) made from?",
+      "options": [
+        "Wheat flour",
+        "Rice",
+        "Maize meal",
+        "Sorghum"
+      ],
+      "correct_answer": 2,
+      "explanation": "Pap is made from maize meal (mielie meal) and is a staple food across South Africa. Stiff pap, soft pap, krummelpap — there's a pap for every occasion!",
       "image_url": null
     },
     {
@@ -307,10 +442,15 @@
       "difficulty": 40,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A DJ charges R2,000 for the first 3 hours and R500 for each additional hour. A year-end party runs from 7pm to 2am. How much does the DJ cost?",
-      "options": ["R3,000", "R3,500", "R4,000", "R4,500"],
+      "question": "Which South African app became Africa's first 'super app' for payments, messaging, and lifestyle services?",
+      "options": [
+        "FNB App",
+        "Capitec App",
+        "Vodapay",
+        "SnapScan"
+      ],
       "correct_answer": 2,
-      "explanation": "7pm to 2am = 7 hours. First 3 hours: R2,000. Remaining 4 hours: 4 x R500 = R2,000. Total: R4,000. Music is life, but it costs!",
+      "explanation": "Vodapay, launched by Vodacom, positioned itself as Africa's first super app — combining payments, shopping, and services in one place. SA fintech is going places!",
       "image_url": null
     },
     {
@@ -318,21 +458,31 @@
       "difficulty": 40,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You buy data bundles: 1GB for R99 or 3GB for R249. You need 9GB for the month. How much do you save by buying the bigger bundles?",
-      "options": ["R90", "R144", "R120", "R135"],
+      "question": "Which South African bird can run up to 70 km/h, making it the fastest bird on land?",
+      "options": [
+        "Secretary bird",
+        "Ostrich",
+        "Blue crane",
+        "African fish eagle"
+      ],
       "correct_answer": 1,
-      "explanation": "Buying 1GB bundles: 9 x R99 = R891. Buying 3GB bundles: 3 x R249 = R747. Savings: R891 - R747 = R144. Buy smart, save more data money!",
+      "explanation": "The ostrich can sprint at up to 70 km/h, making it the fastest bird on land (and the fastest two-legged animal!). They can't fly, but they don't need to with those legs!",
       "image_url": null
     },
     {
       "id": "m3030",
       "difficulty": 40,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Karoo farm has a windmill that pumps 200 litres of water per hour. The farm needs 3,600 litres per day. How many hours per day must the windmill run?",
-      "options": [],
-      "correct_answer": 18,
-      "explanation": "3,600 / 200 = 18 hours of pumping. That windmill better be reliable — the sheep are thirsty!",
+      "question": "What does the Afrikaans word 'lekker' mean?",
+      "options": [
+        "Scary",
+        "Nice or great",
+        "Small",
+        "Fast"
+      ],
+      "correct_answer": 1,
+      "explanation": "Lekker means nice, great, cool, delicious — basically anything good! It's the most versatile word in SA slang. 'How's the food?' 'Lekker, bru!'",
       "image_url": null
     },
     {
@@ -340,21 +490,31 @@
       "difficulty": 30,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You're at a wine tasting with 6 different wines. How many unique pairs of wines can you compare by tasting two at a time?",
-      "options": ["12", "30", "15", "18"],
+      "question": "Which wine region in South Africa is the oldest and most famous?",
+      "options": [
+        "Franschhoek",
+        "Stellenbosch",
+        "Constantia",
+        "Paarl"
+      ],
       "correct_answer": 2,
-      "explanation": "Combinations: C(6,2) = 6! / (2! x 4!) = 15 pairs. That's a lot of sipping! Use the formula n(n-1)/2 = 6x5/2 = 15.",
+      "explanation": "Constantia is SA's oldest wine-producing region, dating back to 1685. Its sweet wine was even a favourite of Napoleon! Stellenbosch is more famous today, but Constantia was first.",
       "image_url": null
     },
     {
       "id": "m3032",
       "difficulty": 30,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A hiking group walks at 4 km/h uphill and 6 km/h downhill. If the trail is 12 km up and 12 km down, how many total hours does the round trip take?",
-      "options": [],
-      "correct_answer": 5,
-      "explanation": "Uphill: 12/4 = 3 hours. Downhill: 12/6 = 2 hours. Total: 5 hours. Pack enough water and biltong for the trip!",
+      "question": "What is the name of the traditional Xhosa ceremony where young men go through initiation into manhood?",
+      "options": [
+        "Umemulo",
+        "Ulwaluko",
+        "Umhlanga",
+        "Lobola"
+      ],
+      "correct_answer": 1,
+      "explanation": "Ulwaluko is the Xhosa male initiation ceremony, a sacred tradition marking the transition from boyhood to manhood. It's deeply respected in Xhosa culture.",
       "image_url": null
     },
     {
@@ -362,10 +522,15 @@
       "difficulty": 30,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Three friends order from a food truck: a gatsby (R80), a bunny chow (R65), and a vetkoek (R30). They split the total equally. How much does each person owe?",
-      "options": ["R80.00", "R60.00", "R58.33", "R55.00"],
+      "question": "Which South African tech entrepreneur became the first African civilian in space in 2002?",
+      "options": [
+        "Elon Musk",
+        "Patrick Soon-Shiong",
+        "Mark Shuttleworth",
+        "Vinny Lingham"
+      ],
       "correct_answer": 2,
-      "explanation": "Total: R80 + R65 + R30 = R175. Split 3 ways: R175/3 = R58.33 each. Hope someone has coins for the change!",
+      "explanation": "Mark Shuttleworth from Cape Town paid $20 million to fly to the International Space Station aboard a Russian Soyuz rocket. He later founded Ubuntu Linux. Legend!",
       "image_url": null
     },
     {
@@ -373,10 +538,15 @@
       "difficulty": 30,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A wildlife photographer takes 500 photos on safari. She deletes 60% as blurry. Of the remaining, she edits 75% for her portfolio. How many edited photos does she have?",
-      "options": ["150", "200", "100", "250"],
-      "correct_answer": 0,
-      "explanation": "After deleting 60%: 500 x 0.40 = 200 clear photos. Edits 75% of those: 200 x 0.75 = 150 portfolio-ready shots. Quality over quantity!",
+      "question": "What type of shark is most commonly spotted during cage diving in Gansbaai, South Africa?",
+      "options": [
+        "Tiger shark",
+        "Bull shark",
+        "Hammerhead shark",
+        "Great white shark"
+      ],
+      "correct_answer": 3,
+      "explanation": "Gansbaai is known as the Great White Shark capital of the world! Shark Alley between Dyer Island and Geyser Rock is one of the best spots to see these apex predators up close.",
       "image_url": null
     },
     {
@@ -385,7 +555,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Put these SA music genres in order from OLDEST origin to NEWEST: (1) Amapiano, (2) Kwaito, (3) Mbaqanga, (4) Gqom",
-      "options": ["Amapiano", "Kwaito", "Mbaqanga", "Gqom"],
+      "options": [
+        "Amapiano",
+        "Kwaito",
+        "Mbaqanga",
+        "Gqom"
+      ],
       "correct_answer": "2,1,3,0",
       "explanation": "Mbaqanga (1960s), Kwaito (1990s), Gqom (2010s), Amapiano (late 2010s). SA music keeps evolving, and we love it!",
       "image_url": null
@@ -395,21 +570,31 @@
       "difficulty": 20,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Table Mountain cableway car holds 65 people and takes 5 minutes up, 2 minutes to load, 5 minutes down, 2 minutes to load. With one car running, how many people can go up in one hour?",
-      "options": ["195", "260", "278", "280"],
+      "question": "Which mountain pass in KwaZulu-Natal reaches over 2,800m and requires a 4x4 to drive?",
+      "options": [
+        "Bain's Kloof Pass",
+        "Sani Pass",
+        "Swartberg Pass",
+        "Montagu Pass"
+      ],
       "correct_answer": 1,
-      "explanation": "Full cycle: 5 + 2 + 5 + 2 = 14 minutes. In 60 minutes: 60/14 = 4.28 cycles, so 4 complete cycles. But wait — the car can take people UP more cleverly. Actually, one full round trip = 14 min. In 60 min that's 4 complete trips (56 min). 4 x 65 = 260 people up the mountain!",
+      "explanation": "Sani Pass connects KZN to Lesotho and climbs to about 2,876m. It's one of the most dramatic 4x4 routes in Africa. The reward? A beer at the highest pub in Africa at the top!",
       "image_url": null
     },
     {
       "id": "m3037",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A protea grows 2cm in its first year, and each subsequent year it grows 1.5 times the previous year's growth. How many centimetres tall is it after 5 years? Round to the nearest whole number.",
-      "options": [],
-      "correct_answer": 26,
-      "explanation": "Year 1: 2cm. Year 2: 3cm. Year 3: 4.5cm. Year 4: 6.75cm. Year 5: 10.125cm. Total height: 2 + 3 + 4.5 + 6.75 + 10.125 = 26.375, rounds to 26cm. Geometric growth is lekker powerful!",
+      "question": "What is the king protea's claim to fame in South Africa?",
+      "options": [
+        "It's the tallest flower in Africa",
+        "It's South Africa's national flower",
+        "It only blooms once every 10 years",
+        "It's the oldest flowering plant on Earth"
+      ],
+      "correct_answer": 1,
+      "explanation": "The king protea (Protea cynaroides) is South Africa's national flower. It's part of the fynbos biome and appears on the SA cricket team's logo. A true Mzansi beauty!",
       "image_url": null
     },
     {
@@ -417,10 +602,15 @@
       "difficulty": 20,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You have a 10-digit SA phone number (starting with 0). How many unique phone numbers are possible if the second digit must be 6, 7, or 8 (mobile prefixes)?",
-      "options": ["300 million", "3 billion", "30 million", "3 million"],
-      "correct_answer": 0,
-      "explanation": "First digit is fixed (0). Second digit: 3 choices. Remaining 8 digits: 10 choices each = 10^8 = 100,000,000. Total: 3 x 100,000,000 = 300 million possible numbers. That's a lot of phone numbers for Mzansi!",
+      "question": "Which South African artist's hit 'Jerusalema' went viral worldwide during the COVID-19 pandemic?",
+      "options": [
+        "Kabza De Small",
+        "Casper Nyovest",
+        "Master KG",
+        "Black Coffee"
+      ],
+      "correct_answer": 2,
+      "explanation": "Master KG's 'Jerusalema' featuring Nomcebo Zikode became a global sensation in 2020, with dance challenges from Angola to Switzerland. SA music conquering the world!",
       "image_url": null
     },
     {
@@ -428,32 +618,47 @@
       "difficulty": 20,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "On a road trip, you notice your car's fuel efficiency drops by 20% when the aircon is on. Normally you get 12 km/L. If you drive 300 km with aircon in 35°C Durban heat, how many extra litres of fuel do you use compared to no aircon?",
-      "options": ["5.25 litres", "6.00 litres", "6.25 litres", "7.50 litres"],
-      "correct_answer": 2,
-      "explanation": "Normal: 300/12 = 25 litres. With aircon (80% efficiency = 9.6 km/L): 300/9.6 = 31.25 litres. Extra: 31.25 - 25 = 6.25 litres. But in that heat, you NEED the aircon!",
+      "question": "What is the Drakensberg also known as in Zulu?",
+      "options": [
+        "uKhahlamba",
+        "iNtaba yeSilo",
+        "uMgungundlovu",
+        "iSandlwana"
+      ],
+      "correct_answer": 0,
+      "explanation": "The Drakensberg is called uKhahlamba in Zulu, meaning 'barrier of spears'. The Afrikaans name means 'dragon mountains'. Both names capture how dramatic these peaks are!",
       "image_url": null
     },
     {
       "id": "m3040",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A tech startup in Cape Town has 5 developers. Each developer reviews every other developer's code once per sprint. Each review takes 30 minutes. How many total hours are spent on code reviews per sprint?",
-      "options": [],
-      "correct_answer": 10,
-      "explanation": "Each of 5 devs reviews 4 others = 20 reviews total. 20 x 30 min = 600 minutes = 10 hours. That's a lot of PR reviews, but quality code matters!",
+      "question": "Which South African mobile payment system was a pioneer in QR code payments when it launched in 2013?",
+      "options": [
+        "Zapper",
+        "SnapScan",
+        "Yoco",
+        "Ozow"
+      ],
+      "correct_answer": 1,
+      "explanation": "SnapScan, developed in Stellenbosch and acquired by Standard Bank, was one of the first QR code-based payment apps in the world. SA fintech was way ahead of the curve!",
       "image_url": null
     },
     {
       "id": "m3041",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A circular lapa (outdoor area) has a diameter of 14 metres. If you want to put fairy lights around the entire circumference, how many metres of lights do you need? Use pi = 22/7. Give your answer as a whole number.",
-      "options": [],
-      "correct_answer": 44,
-      "explanation": "Circumference = pi x diameter = 22/7 x 14 = 44 metres exactly. That lapa is going to look stunning for the jol!",
+      "question": "Which South African Nobel Prize winner discovered the CT scan?",
+      "options": [
+        "Sydney Brenner",
+        "Allan Cormack",
+        "Aaron Klug",
+        "Max Theiler"
+      ],
+      "correct_answer": 1,
+      "explanation": "Allan Cormack from Johannesburg co-invented the CT scan and won the 1979 Nobel Prize in Medicine. He shared it with Godfrey Hounsfield. SA brains changing the world!",
       "image_url": null
     },
     {
@@ -461,10 +666,15 @@
       "difficulty": 10,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Karoo farmer has a water tank that loses 2% of its water each day to evaporation. Starting with 10,000 litres, approximately how many litres remain after 10 days?",
-      "options": ["8,000", "8,171", "8,200", "7,800"],
+      "question": "What is the 'Cape Floral Kingdom' and why is it remarkable?",
+      "options": [
+        "The largest flower market in Africa",
+        "The smallest of Earth's six floral kingdoms, with extraordinary biodiversity",
+        "A botanical garden in Cape Town",
+        "A chain of florist shops"
+      ],
       "correct_answer": 1,
-      "explanation": "It's compound: 10,000 x (0.98)^10 = 10,000 x 0.8171 = 8,171 litres. Not 80% because the 2% applies to a decreasing amount each day! Compound effects are sneaky.",
+      "explanation": "The Cape Floral Kingdom is the smallest of Earth's six floral kingdoms but has the highest density of plant species. Over 9,000 species, 70% found nowhere else on Earth. UNESCO World Heritage, no less!",
       "image_url": null
     },
     {
@@ -472,10 +682,15 @@
       "difficulty": 10,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You have a 4-digit PIN for your banking app. If no digit can be repeated, and the first digit can't be 0, how many possible PINs are there?",
-      "options": ["5,040", "4,536", "3,024", "10,000"],
-      "correct_answer": 1,
-      "explanation": "First digit: 9 choices (1-9). Second: 9 remaining (0-9 minus the first). Third: 8. Fourth: 7. Total: 9 x 9 x 8 x 7 = 4,536. Keep that PIN safe, boet!",
+      "question": "What is a 'gatsby' in Cape Town food culture?",
+      "options": [
+        "A fancy cocktail",
+        "A type of wine",
+        "A long roll stuffed with chips and various fillings",
+        "A dried fish snack"
+      ],
+      "correct_answer": 2,
+      "explanation": "A gatsby is a massive sandwich — a long roll packed with hot chips (fries), plus your choice of polony, steak, masala steak, or other fillings. One gatsby can feed a whole family. Cape Flats legend!",
       "image_url": null
     },
     {
@@ -484,7 +699,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A sundial in a Stellenbosch garden shows 2pm. If you look at it in a mirror, what time does it appear to show?",
-      "options": ["10am", "8am", "10pm", "2pm"],
+      "options": [
+        "10am",
+        "8am",
+        "10pm",
+        "2pm"
+      ],
       "correct_answer": 0,
       "explanation": "A mirror reverses the image. On a clock face, 2 o'clock reflected becomes 10 o'clock. The mirror flips left-right, so the hands appear at the mirror position. Clever, ne?",
       "image_url": null
@@ -495,7 +715,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Put these SA creatures in order of MOST to FEWEST legs: (1) Shongololo (millipede), (2) Crab, (3) Spider, (4) Beetle",
-      "options": ["Shongololo (millipede)", "Crab", "Spider", "Beetle"],
+      "options": [
+        "Shongololo (millipede)",
+        "Crab",
+        "Spider",
+        "Beetle"
+      ],
       "correct_answer": "0,1,2,3",
       "explanation": "Shongololo (hundreds of legs!), Crab (10 legs), Spider (8 legs), Beetle (6 legs). From creepy-crawly champion to six-legged beetle. Know your critters!",
       "image_url": null
@@ -503,12 +728,17 @@
     {
       "id": "m3046",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A Fibonacci-loving chef creates a tasting menu where each course has a number of bites equal to the Fibonacci sequence (1, 1, 2, 3, 5, 8, 13...). If there are 8 courses, how many bites in total?",
-      "options": [],
-      "correct_answer": 54,
-      "explanation": "Fibonacci: 1, 1, 2, 3, 5, 8, 13, 21. Sum: 1+1+2+3+5+8+13+21 = 54 bites total. That's one mathematical feast!",
+      "question": "Which ancient hominin fossil, discovered near Johannesburg, was nicknamed 'Mrs Ples'?",
+      "options": [
+        "Homo naledi",
+        "Australopithecus africanus",
+        "Homo erectus",
+        "Paranthropus robustus"
+      ],
+      "correct_answer": 1,
+      "explanation": "Mrs Ples is a famous Australopithecus africanus skull found at Sterkfontein Caves in the Cradle of Humankind, dated to about 2.1 million years ago. SA is literally where humanity began!",
       "image_url": null
     },
     {
@@ -516,10 +746,15 @@
       "difficulty": 5,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "In a photo, 5 friends stand in a row. How many different arrangements are possible if the two tallest friends refuse to stand next to each other?",
-      "options": ["48", "72", "96", "60"],
+      "question": "What is maskandi music, and which instrument is central to it?",
+      "options": [
+        "Electronic dance music using synthesizers",
+        "Zulu folk music featuring the guitar or concertina",
+        "Sotho choral music with drums",
+        "Cape jazz using the saxophone"
+      ],
       "correct_answer": 1,
-      "explanation": "Total arrangements: 5! = 120. Arrangements where the two ARE together: treat them as one unit = 4! x 2 = 48. So arrangements where they're NOT together: 120 - 48 = 72. Complementary counting for the win!",
+      "explanation": "Maskandi is a traditional Zulu folk music genre where the guitar (acoustic, often with unique tunings) or concertina takes centre stage. Artists like Shwi noMtekhala and Phuzekhemisi are legends!",
       "image_url": null
     },
     {
@@ -528,7 +763,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You're lost in the Cederberg mountains with no compass. At noon, the sun is roughly north (Southern Hemisphere). Your shadow points south. If you face your shadow, which direction is to your LEFT?",
-      "options": ["West", "East", "North", "South-East"],
+      "options": [
+        "West",
+        "East",
+        "North",
+        "South-East"
+      ],
       "correct_answer": 1,
       "explanation": "In the Southern Hemisphere at noon, the sun is roughly north. Facing your shadow (south), east is to your left. This is the opposite of the Northern Hemisphere! Knowing this could save your life in the veld.",
       "image_url": null
@@ -536,12 +776,17 @@
     {
       "id": "m3049",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A password must be 6 characters: first 2 are uppercase letters, next 2 are digits, last 2 are lowercase letters. No character can repeat within its category. How many possible passwords are there? Express your answer in millions, rounded to the nearest million.",
-      "options": [],
-      "correct_answer": 38,
-      "explanation": "Uppercase: 26 x 25 = 650. Digits: 10 x 9 = 90. Lowercase: 26 x 25 = 650. Total: 650 x 90 x 650 = 38,025,000. Rounded = 38 million possible passwords. Good luck guessing that!",
+      "question": "Which rare antelope, once thought extinct, was rediscovered in South Africa and is now bred at a nature reserve in Limpopo?",
+      "options": [
+        "Sable antelope",
+        "Bontebok",
+        "Blue duiker",
+        "Roan antelope"
+      ],
+      "correct_answer": 1,
+      "explanation": "The bontebok was down to just 17 individuals in the 1830s, making it critically close to extinction. Conservation efforts brought them back, and Bontebok National Park near Swellendam was created just for them!",
       "image_url": null
     },
     {
@@ -549,21 +794,31 @@
       "difficulty": 5,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "An ant starts at corner A of a cube and wants to reach the diagonally opposite corner B by walking along edges only. What's the MINIMUM number of edges it must traverse?",
-      "options": ["2", "3", "4", "5"],
+      "question": "What is the significance of the MeerKAT radio telescope in the Northern Cape?",
+      "options": [
+        "It studies meerkats with radio tracking",
+        "It's a precursor to the Square Kilometre Array (SKA), the world's largest radio telescope",
+        "It provides internet to rural communities",
+        "It monitors weather patterns"
+      ],
       "correct_answer": 1,
-      "explanation": "To get from one corner of a cube to the diagonally opposite corner along edges, you need exactly 3 edges — one in each dimension (x, y, z). Think of it as going right, up, then forward. No shortcuts on a cube!",
+      "explanation": "MeerKAT is a 64-dish radio telescope near Carnarvon in the Northern Cape. It's a precursor to the SKA, which will be the most sensitive radio telescope ever built. SA is at the frontier of space science!",
       "image_url": null
     },
     {
       "id": "m3051",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A perfect number equals the sum of its proper divisors (excluding itself). 6 is perfect (1+2+3=6). What is the next perfect number after 6?",
-      "options": [],
-      "correct_answer": 28,
-      "explanation": "28's divisors: 1, 2, 4, 7, 14. Sum: 1+2+4+7+14 = 28. Perfect! The next ones are 496 and 8128. These numbers are incredibly rare — only 51 are known to exist. Maths is beautiful, ne?",
+      "question": "Which South African fossil site, discovered by Lee Berger in 2013, yielded a new species of human ancestor?",
+      "options": [
+        "Sterkfontein Caves",
+        "Rising Star Cave (Homo naledi)",
+        "Blombos Cave",
+        "Border Cave"
+      ],
+      "correct_answer": 1,
+      "explanation": "Rising Star Cave in the Cradle of Humankind yielded Homo naledi, discovered by Lee Berger's team in 2013. Over 1,500 fossil elements were found — the largest collection of a single hominin species in Africa. Mind-blowing!",
       "image_url": null
     },
     {
@@ -571,10 +826,15 @@
       "difficulty": 1,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A winemaker blends 3 wines. Blend A is 60% Cabernet, 40% Merlot. Blend B is 80% Cabernet, 20% Shiraz. She mixes A and B in a 2:3 ratio. What percentage of the final blend is Cabernet?",
-      "options": ["68%", "72%", "70%", "74%"],
+      "question": "What is 'umqombothi' and what is it made from?",
+      "options": [
+        "A fermented milk drink made from cow's milk",
+        "A traditional beer made from maize, sorghum malt, and water",
+        "A fruit wine made from marula berries",
+        "A honey-based mead from the Eastern Cape"
+      ],
       "correct_answer": 1,
-      "explanation": "In the 2:3 mix: Cabernet from A: 2/5 x 60% = 24%. Cabernet from B: 3/5 x 80% = 48%. Total Cabernet: 24% + 48% = 72%. That's a bold Cabernet-dominant blend!",
+      "explanation": "Umqombothi is a traditional African beer brewed from maize (corn), maize malt, sorghum malt, yeast, and water. It has a thick, gritty texture and is shared from a communal pot at celebrations. Yvonne Chaka Chaka even sang about it!",
       "image_url": null
     },
     {
@@ -582,21 +842,31 @@
       "difficulty": 1,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You have 5 different spices and want to create unique curry blends using AT LEAST 2 spices. How many different blends can you make?",
-      "options": ["20", "26", "16", "31"],
+      "question": "What makes the quiver tree (Aloidendron dichotomum) culturally significant to the San people of the Northern Cape?",
+      "options": [
+        "They used the bark to make poison",
+        "They hollowed out the branches to make quivers for arrows",
+        "They worshipped it as a sacred tree",
+        "They brewed tea from its leaves"
+      ],
       "correct_answer": 1,
-      "explanation": "Total subsets of 5 items: 2^5 = 32. Minus the empty set (1) and single-spice sets (5) = 32 - 6 = 26 unique blends. Combinatorics meets the kitchen!",
+      "explanation": "The San (Bushmen) hollowed out the soft, fibrous branches of the quiver tree to make quivers for their arrows — that's how the tree got its name! The Quiver Tree Forest near Keetmanshoop is a national monument.",
       "image_url": null
     },
     {
       "id": "m3054",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "In the word STELLENBOSCH, how many distinct ways can you arrange all the letters? S(2), T(1), E(2), L(2), N(1), B(1), O(1), C(1), H(1). Give your answer as a number.",
-      "options": [],
-      "correct_answer": 59875200,
-      "explanation": "STELLENBOSCH has 12 letters with repeats: S(2), E(2), L(2). Arrangements: 12! / (2! x 2! x 2!) = 479,001,600 / 8 = 59,875,200. Eish, that's a lot of anagrams for one wine town!",
+      "question": "Which South African DJ won the Grammy Award for Best Dance/Electronic Music Album in 2022?",
+      "options": [
+        "DJ Maphorisa",
+        "Euphonik",
+        "Black Coffee",
+        "Master KG"
+      ],
+      "correct_answer": 2,
+      "explanation": "Black Coffee (Nkosinathi Innocent Maphumulo) won the 2022 Grammy for his album 'Subconsciously'. He's from Durban and is one of the biggest DJs on the planet. Mzansi to the world!",
       "image_url": null
     },
     {
@@ -605,7 +875,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Rank these SA national parks by size from SMALLEST to LARGEST: (1) Kruger National Park, (2) Table Mountain National Park, (3) Kgalagadi Transfrontier Park, (4) Addo Elephant National Park",
-      "options": ["Kruger National Park", "Table Mountain National Park", "Kgalagadi Transfrontier Park", "Addo Elephant National Park"],
+      "options": [
+        "Kruger National Park",
+        "Table Mountain National Park",
+        "Kgalagadi Transfrontier Park",
+        "Addo Elephant National Park"
+      ],
       "correct_answer": "1,3,0,2",
       "explanation": "Table Mountain NP (~221 km²), Addo Elephant NP (~1,640 km²), Kruger NP (~19,485 km²), Kgalagadi Transfrontier (~38,000 km² total). The Kgalagadi is massive — it spans SA and Botswana! Only a true nature lover gets this right.",
       "image_url": null

@@ -22,7 +22,13 @@
       "Bash(claude mcp:*)",
       "Read(//c/Users/Sheldon.Mayhew/Desktop/onepercent/**)",
       "Read(//c/Users/Sheldon.Mayhew/Desktop/onepercent/src/**)",
-      "Read(//c/Users/Sheldon.Mayhew/Desktop/onepercent/src/types/**)"
+      "Read(//c/Users/Sheldon.Mayhew/Desktop/onepercent/src/types/**)",
+      "Bash(grep -c \"\\\\\"id\\\\\":\" c:/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
+      "Bash(cat c:/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
+      "Bash(sort -t':' -k2 -rn)",
+      "Bash(grep -h '\"type\":' c:/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
+      "Bash(node scripts/convert-numeric-to-mc.js)",
+      "Bash(node scripts/convert-numeric-to-mc.cjs)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Sheldon.Mayhew"

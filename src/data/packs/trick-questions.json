@@ -11,7 +11,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many months have 28 days?",
-      "options": ["1", "2", "All 12", "Only February"],
+      "options": [
+        "1",
+        "2",
+        "All 12",
+        "Only February"
+      ],
       "correct_answer": 2,
       "explanation": "Every single month has at least 28 days! Don't fall for the February trap -- all 12 months qualify.",
       "image_url": null
@@ -22,7 +27,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A farmer has 5 chickens, 3 cows, and 2 pigs. How many feet does the farmer have?",
-      "options": ["2", "26", "30", "20"],
+      "options": [
+        "2",
+        "26",
+        "30",
+        "20"
+      ],
       "correct_answer": 0,
       "explanation": "The question asks about THE FARMER, not the animals! A farmer has 2 feet. Haibo, read the question!",
       "image_url": null
@@ -33,7 +43,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What do you find at the centre of Johannesburg?",
-      "options": ["The Carlton Centre", "Gold Reef City", "The letter 'n'", "A taxi rank"],
+      "options": [
+        "The Carlton Centre",
+        "Gold Reef City",
+        "The letter 'n'",
+        "A taxi rank"
+      ],
       "correct_answer": 2,
       "explanation": "JohanNesburg -- the letter 'n' is literally at the centre of the word! Eish, wordplay got you.",
       "image_url": null
@@ -44,7 +59,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If you have a bowl with 6 apples and you take away 4, how many do YOU have?",
-      "options": ["2", "4", "6", "0"],
+      "options": [
+        "2",
+        "4",
+        "6",
+        "0"
+      ],
       "correct_answer": 1,
       "explanation": "You TOOK 4 apples, so YOU have 4! The bowl has 2 left, but the question asks what YOU have. Tricky hey!",
       "image_url": null
@@ -55,7 +75,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What weighs more: a kilogram of biltong or a kilogram of feathers?",
-      "options": ["Biltong", "Feathers", "They weigh the same", "Depends on the type of biltong"],
+      "options": [
+        "Biltong",
+        "Feathers",
+        "They weigh the same",
+        "Depends on the type of biltong"
+      ],
       "correct_answer": 2,
       "explanation": "A kilogram is a kilogram, my bru! Whether it's biltong or feathers, 1kg = 1kg. Classic trick!",
       "image_url": null
@@ -66,7 +91,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "I have cities but no houses, forests but no trees, and rivers but no water. What am I?",
-      "options": ["A dream", "A map", "A story", "South Africa"],
+      "options": [
+        "A dream",
+        "A map",
+        "A story",
+        "South Africa"
+      ],
       "correct_answer": 1,
       "explanation": "A map has cities, forests, and rivers marked on it -- but none of the real things! Clever, ne?",
       "image_url": null
@@ -77,7 +107,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A taxi driver is going the wrong way on a one-way street in Joburg. He passes three traffic cops. None of them stop him. Why?",
-      "options": ["He's bribing them", "He's walking", "He's driving an ambulance", "The cops are off duty"],
+      "options": [
+        "He's bribing them",
+        "He's walking",
+        "He's driving an ambulance",
+        "The cops are off duty"
+      ],
       "correct_answer": 1,
       "explanation": "He's a taxi DRIVER but he's walking, not driving! You can walk any direction on a one-way street. Gotcha!",
       "image_url": null
@@ -85,12 +120,17 @@
     {
       "id": "tq008",
       "difficulty": 80,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "How many times can you subtract 5 from 25?",
-      "options": [],
-      "correct_answer": 1,
-      "explanation": "Only once! After the first subtraction, you're subtracting 5 from 20, not from 25 anymore. Think about it...",
+      "question": "What was the largest island in the world BEFORE Australia was discovered?",
+      "options": [
+        "Greenland",
+        "Borneo",
+        "Australia",
+        "Madagascar"
+      ],
+      "correct_answer": 2,
+      "explanation": "Australia was still the largest island even before it was discovered -- it just hadn't been found yet! Discovery doesn't change geography.",
       "image_url": null
     },
     {
@@ -99,7 +139,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What has a head and a tail but no body?",
-      "options": ["A snake", "A coin", "A ghost", "A comet"],
+      "options": [
+        "A snake",
+        "A coin",
+        "A ghost",
+        "A comet"
+      ],
       "correct_answer": 1,
       "explanation": "A coin has heads and tails but definitely no body! Could be a nice shiny R5 coin too.",
       "image_url": null
@@ -110,7 +155,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If there are 3 apples and you take away 2, how many apples do you have?",
-      "options": ["1", "2", "3", "0"],
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
       "correct_answer": 1,
       "explanation": "You took 2 apples, so YOU have 2 apples! There's 1 left where they were, but you have the 2 you took.",
       "image_url": null
@@ -121,7 +171,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What gets wetter the more it dries?",
-      "options": ["A sponge", "A towel", "The Vaal Dam", "Rain"],
+      "options": [
+        "A sponge",
+        "A towel",
+        "The Vaal Dam",
+        "Rain"
+      ],
       "correct_answer": 1,
       "explanation": "A towel gets wetter as it dries YOU off! Classic lateral thinking question, that one.",
       "image_url": null
@@ -129,11 +184,16 @@
     {
       "id": "tq012",
       "difficulty": 70,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A rooster lays an egg on top of Table Mountain. Which way does it roll?",
-      "options": [],
-      "correct_answer": 0,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "correct_answer": 3,
       "explanation": "Roosters don't lay eggs! This is a classic trick -- enter 0 because it never happens. Only hens lay eggs, my friend.",
       "image_url": null
     },
@@ -143,7 +203,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Before Table Mountain was discovered, what was the tallest mountain in South Africa?",
-      "options": ["Mafadi Peak", "Table Mountain", "Thabana Ntlenyana", "It was still Mafadi Peak"],
+      "options": [
+        "Mafadi Peak",
+        "Table Mountain",
+        "Thabana Ntlenyana",
+        "It was still Mafadi Peak"
+      ],
       "correct_answer": 3,
       "explanation": "Mafadi Peak was always the tallest -- it doesn't matter if it was 'discovered' or not! It was still there being tall.",
       "image_url": null
@@ -154,7 +219,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What can you hold in your right hand but never in your left hand?",
-      "options": ["A pen", "Your phone", "Your left elbow", "A secret"],
+      "options": [
+        "A pen",
+        "Your phone",
+        "Your left elbow",
+        "A secret"
+      ],
       "correct_answer": 2,
       "explanation": "Try it -- you literally cannot hold your left elbow in your left hand! Go on, try. We'll wait.",
       "image_url": null
@@ -162,11 +232,16 @@
     {
       "id": "tq015",
       "difficulty": 70,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If you're in a race and pass the person in 2nd place, what position are you in?",
-      "options": [],
-      "correct_answer": 2,
+      "options": [
+        "0",
+        "1",
+        "3",
+        "2"
+      ],
+      "correct_answer": 3,
       "explanation": "If you pass the person in 2nd, you take THEIR position -- you're now 2nd! Not 1st. You'd need to pass 1st place for that.",
       "image_url": null
     },
@@ -176,7 +251,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A man builds a house with all 4 sides facing south. A bear walks past. What colour is the bear?",
-      "options": ["Brown", "Black", "White", "There is no bear"],
+      "options": [
+        "Brown",
+        "Black",
+        "White",
+        "There is no bear"
+      ],
       "correct_answer": 2,
       "explanation": "The only place where all 4 walls face south is the North Pole. The bear is a polar bear -- white! Lekker logic puzzle.",
       "image_url": null
@@ -184,11 +264,16 @@
     {
       "id": "tq017",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many letters are in 'the alphabet'?",
-      "options": [],
-      "correct_answer": 11,
+      "options": [
+        "1",
+        "6",
+        "16",
+        "11"
+      ],
+      "correct_answer": 3,
       "explanation": "Count the letters in the words 'the alphabet': T-H-E-A-L-P-H-A-B-E-T = 11 letters. Not 26! Read the question carefully.",
       "image_url": null
     },
@@ -198,7 +283,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What has keys but no locks, space but no room, and you can enter but can't go inside?",
-      "options": ["A hotel", "A car", "A keyboard", "A dream"],
+      "options": [
+        "A hotel",
+        "A car",
+        "A keyboard",
+        "A dream"
+      ],
       "correct_answer": 2,
       "explanation": "A keyboard has keys, a space bar, and an enter key! No locks, no rooms, and you can't physically go inside it.",
       "image_url": null
@@ -206,12 +296,17 @@
     {
       "id": "tq019",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A butcher is 1.8m tall and wears size 10 shoes. What does he weigh?",
-      "options": [],
-      "correct_answer": 0,
-      "explanation": "A butcher weighs MEAT! That's his job. The question didn't ask how much he weighs. Enter 0 for the trick -- or think about what butchers do all day!",
+      "options": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ],
+      "correct_answer": 2,
+      "explanation": "A butcher weighs MEAT! That's his job. The question didn't ask how much he weighs. Enter 0 because 'the match' isn't one of the numbered options -- it's the trick!",
       "image_url": null
     },
     {
@@ -220,7 +315,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which word in the dictionary is always spelled incorrectly?",
-      "options": ["Definitely", "Incorrectly", "Bureaucracy", "Accommodation"],
+      "options": [
+        "Definitely",
+        "Incorrectly",
+        "Bureaucracy",
+        "Accommodation"
+      ],
       "correct_answer": 1,
       "explanation": "The word 'incorrectly' is literally always spelled I-N-C-O-R-R-E-C-T-L-Y. It's always spelled 'incorrectly'! Wordplay at its finest.",
       "image_url": null
@@ -228,12 +328,17 @@
     {
       "id": "tq021",
       "difficulty": 50,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "If you have 3 cars and each car has 4 people inside, how many people total are NOT outside the cars?",
-      "options": [],
-      "correct_answer": 12,
-      "explanation": "3 cars x 4 people = 12 people inside the cars. The 'NOT outside' part means inside. Don't overthink it -- 12!",
+      "question": "What country has the most pyramids in the world?",
+      "options": [
+        "Egypt",
+        "Mexico",
+        "Sudan",
+        "Peru"
+      ],
+      "correct_answer": 2,
+      "explanation": "Everyone thinks Egypt, but Sudan actually has around 255 pyramids -- more than double Egypt's roughly 118! The Nubian pyramids don't get enough love.",
       "image_url": null
     },
     {
@@ -242,7 +347,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A woman shoots her husband, then holds him underwater for 5 minutes. Later, they enjoy a braai together. How?",
-      "options": ["She missed", "He's a ghost", "She shot a photo of him", "He wore a bulletproof vest"],
+      "options": [
+        "She missed",
+        "He's a ghost",
+        "She shot a photo of him",
+        "He wore a bulletproof vest"
+      ],
       "correct_answer": 2,
       "explanation": "She SHOT him (with a camera), then held the photo underwater to develop it! Old-school darkroom photography. Then they had a lekker braai.",
       "image_url": null
@@ -250,12 +360,17 @@
     {
       "id": "tq023",
       "difficulty": 50,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "If it takes 5 machines 5 minutes to make 5 widgets, how many minutes would it take 100 machines to make 100 widgets?",
-      "options": [],
-      "correct_answer": 5,
-      "explanation": "Each machine makes 1 widget in 5 minutes. So 100 machines each making 1 widget still takes 5 minutes! Not 100 minutes.",
+      "question": "Which famous scientist was born on the same day that Galileo died?",
+      "options": [
+        "Isaac Newton",
+        "Albert Einstein",
+        "Stephen Hawking",
+        "No one famous"
+      ],
+      "correct_answer": 2,
+      "explanation": "Stephen Hawking was born on 8 January 1942, exactly 300 years after Galileo died on 8 January 1642. Most people guess Newton or Einstein, but it's Hawking!",
       "image_url": null
     },
     {
@@ -264,7 +379,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What breaks but never falls, and what falls but never breaks?",
-      "options": ["Glass and feathers", "Day and night", "Waves and rain", "Promises and dreams"],
+      "options": [
+        "Glass and feathers",
+        "Day and night",
+        "Waves and rain",
+        "Promises and dreams"
+      ],
       "correct_answer": 1,
       "explanation": "Day BREAKS (daybreak) but never falls, and night FALLS (nightfall) but never breaks. Poetic, ne?",
       "image_url": null
@@ -275,7 +395,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Put these in order from LEAST to MOST: (1) A dozen eggs (2) Unlucky number (3) Days in February (4) Letters in 'cat'",
-      "options": ["A dozen eggs (12)", "Unlucky number (13)", "Days in February (28)", "Letters in 'cat' (3)"],
+      "options": [
+        "A dozen eggs (12)",
+        "Unlucky number (13)",
+        "Days in February (28)",
+        "Letters in 'cat' (3)"
+      ],
       "correct_answer": "3,0,1,2",
       "explanation": "Letters in 'cat' = 3, dozen eggs = 12, unlucky 13, Feb has 28 days. Order: 3, 12, 13, 28. Easy if you don't rush!",
       "image_url": null
@@ -283,11 +408,16 @@
     {
       "id": "tq026",
       "difficulty": 40,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You enter a dark room with a match. There's a candle, a paraffin lamp, and a fireplace. What do you light first?",
-      "options": [],
-      "correct_answer": 0,
+      "options": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ],
+      "correct_answer": 2,
       "explanation": "You light the MATCH first! You can't light anything else without lighting the match. Enter 0 because 'the match' isn't one of the numbered options -- it's the trick!",
       "image_url": null
     },
@@ -297,7 +427,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Is it legal for a man to marry his widow's sister in South Africa?",
-      "options": ["Yes, it's legal", "No, it's illegal", "Only in the Western Cape", "He can't -- he's dead"],
+      "options": [
+        "Yes, it's legal",
+        "No, it's illegal",
+        "Only in the Western Cape",
+        "He can't -- he's dead"
+      ],
       "correct_answer": 3,
       "explanation": "If a man has a WIDOW, he's already dead! Dead men can't marry anyone. The word 'widow' is the giveaway.",
       "image_url": null
@@ -305,11 +440,16 @@
     {
       "id": "tq028",
       "difficulty": 40,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You're a bus driver. At the first stop, 10 people get on. At the second stop, 5 get off and 3 get on. At the third stop, 7 get on. How old is the bus driver?",
-      "options": [],
-      "correct_answer": 0,
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "correct_answer": 1,
       "explanation": "YOU are the bus driver! So the answer is YOUR age. Since we can't know that, the trick is recognising the question. Enter 0 -- the maths was a distraction all along!",
       "image_url": null
     },
@@ -319,7 +459,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In SA cricket, if the umpire declares 3 players out before lunch, and 2 more before tea, how many players batted if 4 were not out at stumps?",
-      "options": ["9", "5", "At least 9", "Exactly 7"],
+      "options": [
+        "9",
+        "5",
+        "At least 9",
+        "Exactly 7"
+      ],
       "correct_answer": 2,
       "explanation": "We know at least 5 got out and 4 were not out at stumps. But those 4 could include batters who came in later. At least 9 players must have batted (5 out + 4 not out). Could be more if not-out batters retired.",
       "image_url": null
@@ -330,7 +475,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Order these trick answers correctly: (1) What 'the alphabet' has (2) Roosters lay per year (3) Times you subtract 5 from 25 (4) Sides of a coin",
-      "options": ["11 letters", "0 eggs", "1 time", "2 sides"],
+      "options": [
+        "11 letters",
+        "0 eggs",
+        "1 time",
+        "2 sides"
+      ],
       "correct_answer": "1,2,3,0",
       "explanation": "Roosters lay 0 eggs, subtract 5 from 25 only 1 time, a coin has 2 sides, 'the alphabet' has 11 letters. Order: 0, 1, 2, 11.",
       "image_url": null
@@ -338,11 +488,16 @@
     {
       "id": "tq031",
       "difficulty": 30,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A plane crashes exactly on the border between South Africa and Mozambique. Where do they bury the survivors?",
-      "options": [],
-      "correct_answer": 0,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "correct_answer": 3,
       "explanation": "You don't bury SURVIVORS! They're alive! Enter 0 because nowhere -- they survived. Classic misdirection with the border detail.",
       "image_url": null
     },
@@ -352,7 +507,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What word becomes shorter when you add 2 letters to it?",
-      "options": ["Brief", "Short", "Small", "Tiny"],
+      "options": [
+        "Brief",
+        "Short",
+        "Small",
+        "Tiny"
+      ],
       "correct_answer": 1,
       "explanation": "Add 'er' to 'short' and you get 'shorter'! The word literally becomes 'shorter'. Beautiful wordplay.",
       "image_url": null
@@ -360,12 +520,17 @@
     {
       "id": "tq033",
       "difficulty": 30,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "If you have a 7-minute hourglass and an 11-minute hourglass, what is the shortest time you can measure exactly 15 minutes?",
-      "options": [],
-      "correct_answer": 15,
-      "explanation": "Start both at once. When the 7-min runs out (at 7 min), flip it. When the 11-min runs out (at 11 min), flip it. When the 7-min runs out again (at 14 min), flip the 11-min (which has 8 min of sand, 3 min ran). It'll run for 3 min = 15 min total. But the answer is just 15 -- that's the time measured!",
+      "question": "Which of these animals can jump higher than a house?",
+      "options": [
+        "A kangaroo",
+        "A flea",
+        "All of them",
+        "None of them"
+      ],
+      "correct_answer": 2,
+      "explanation": "ALL animals can jump higher than a house -- because houses can't jump! The trick is you're comparing to a house, which has zero jumping ability.",
       "image_url": null
     },
     {
@@ -374,7 +539,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If you overtake the last person in a race, what position are you in?",
-      "options": ["Last place", "Second to last", "It's impossible", "First place"],
+      "options": [
+        "Last place",
+        "Second to last",
+        "It's impossible",
+        "First place"
+      ],
       "correct_answer": 2,
       "explanation": "You can't overtake the person in LAST place -- if you were behind them, you'd be last! It's impossible. The question itself is a trap.",
       "image_url": null
@@ -385,7 +555,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Two fathers and two sons go fishing. They each catch one fish. They come home with 3 fish total. How?",
-      "options": ["One fish escaped", "They're lying", "One is a grandfather, father, and son (3 people)", "They shared a fish"],
+      "options": [
+        "One fish escaped",
+        "They're lying",
+        "One is a grandfather, father, and son (3 people)",
+        "They shared a fish"
+      ],
       "correct_answer": 2,
       "explanation": "There are only 3 people: a grandfather, his son, and his grandson. The middle one is both a father AND a son. Three people, three fish!",
       "image_url": null
@@ -393,11 +568,16 @@
     {
       "id": "tq036",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "I start with 'e', end with 'e', and contain only one letter. What number of letters does the answer have?",
-      "options": [],
-      "correct_answer": 8,
+      "options": [
+        "5",
+        "8",
+        "6",
+        "7"
+      ],
+      "correct_answer": 1,
       "explanation": "The answer is 'envelope' -- it starts with 'e', ends with 'e', and contains a letter (mail) inside! Envelope has 8 letters.",
       "image_url": null
     },
@@ -407,7 +587,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If Mrs Nkosi's one-storey house in Sandton is entirely pink -- pink walls, pink doors, pink floors, pink furniture -- what colour are the stairs?",
-      "options": ["Pink", "White", "Brown", "There are no stairs"],
+      "options": [
+        "Pink",
+        "White",
+        "Brown",
+        "There are no stairs"
+      ],
       "correct_answer": 3,
       "explanation": "It's a ONE-STOREY house! There are no stairs. All the pink details were just there to distract you from the key word: 'one-storey'.",
       "image_url": null
@@ -415,11 +600,16 @@
     {
       "id": "tq038",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "You have 2 coins that add up to 30 cents. One of them is NOT a 10 cent coin. What is the value in cents of the coin that IS the 10c?",
-      "options": [],
-      "correct_answer": 10,
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "correct_answer": 3,
       "explanation": "ONE of them is not a 10c coin -- but the OTHER one is! The coins are 10c and 20c. 'One of them is not 10c' refers to the 20c coin. The trick is the word 'one of them'.",
       "image_url": null
     },
@@ -428,10 +618,15 @@
       "difficulty": 20,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "What is 1+1+1+1+1+1+1+1+1+1-1+1+1+1+1+1+1x0?",
-      "options": ["0", "14", "13", "30"],
-      "correct_answer": 1,
-      "explanation": "Order of operations! 1x0 = 0 first. Then add up: nine 1s = 9, minus 1 = 8, plus six 1s = 14, plus 0 = 14. BODMAS saves the day!",
+      "question": "Panama hats are famously made in which country?",
+      "options": [
+        "Panama",
+        "Colombia",
+        "Ecuador",
+        "Mexico"
+      ],
+      "correct_answer": 2,
+      "explanation": "Panama hats are actually made in Ecuador! They got the misleading name because they were shipped through Panama to reach international markets. The name is the trick!",
       "image_url": null
     },
     {
@@ -440,7 +635,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Order by ACTUAL value, least to most: (1) Number of SA provinces (2) Legs on 3 Springboks (3) Letters in 'Pretoria' (4) Months with 31 days",
-      "options": ["SA provinces (9)", "Legs on 3 Springboks (12)", "Letters in 'Pretoria' (8)", "Months with 31 days (7)"],
+      "options": [
+        "SA provinces (9)",
+        "Legs on 3 Springboks (12)",
+        "Letters in 'Pretoria' (8)",
+        "Months with 31 days (7)"
+      ],
       "correct_answer": "3,2,0,1",
       "explanation": "Months with 31 days = 7, Letters in Pretoria = 8, SA provinces = 9, Legs on 3 Springboks = 12. Order: 7, 8, 9, 12.",
       "image_url": null
@@ -448,11 +648,16 @@
     {
       "id": "tq041",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A lily pad doubles in size every day. If it takes 48 days to cover the entire Hartbeespoort Dam, how many days does it take to cover half the dam?",
-      "options": [],
-      "correct_answer": 47,
+      "options": [
+        "47",
+        "32",
+        "37",
+        "42"
+      ],
+      "correct_answer": 0,
       "explanation": "If it doubles daily and covers the whole dam on day 48, it covered HALF the dam on day 47. Exponential growth is wild!",
       "image_url": null
     },
@@ -462,7 +667,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What occurs once in a minute, twice in a moment, but never in a thousand years?",
-      "options": ["The letter 'o'", "The letter 'm'", "Time itself", "A heartbeat"],
+      "options": [
+        "The letter 'o'",
+        "The letter 'm'",
+        "Time itself",
+        "A heartbeat"
+      ],
       "correct_answer": 1,
       "explanation": "The letter 'M'! It appears once in 'minute', twice in 'moment', and zero times in 'a thousand years'. Pure wordplay -- nothing to do with actual time!",
       "image_url": null
@@ -470,11 +680,16 @@
     {
       "id": "tq043",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "3 friends check into a hotel room that costs R300. They each pay R100. The manager realises the room only costs R250 and gives R50 to the bellboy to return. The bellboy keeps R20 and gives each friend R10 back. Each friend paid R90 (R270 total), the bellboy has R20. That's R290. Where is the missing R10?",
-      "options": [],
-      "correct_answer": 0,
+      "options": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ],
+      "correct_answer": 2,
       "explanation": "There IS no missing R10! The question uses dodgy maths to confuse you. The R270 paid INCLUDES the bellboy's R20 (R250 to hotel + R20 to bellboy = R270). You shouldn't add the R20 to R270 -- enter 0 because nothing is missing!",
       "image_url": null
     },
@@ -484,7 +699,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "If you have it, you want to share it. If you share it, you don't have it. What is it?",
-      "options": ["Love", "A secret", "Money", "Knowledge"],
+      "options": [
+        "Love",
+        "A secret",
+        "Money",
+        "Knowledge"
+      ],
       "correct_answer": 1,
       "explanation": "A secret! Once you share a secret, it's no longer a secret. Unlike love or knowledge, sharing it destroys it.",
       "image_url": null
@@ -495,7 +715,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Thabo's mother has 4 children. The first is named April, the second May, the third June. What is the fourth child's name?",
-      "options": ["July", "Thabo", "August", "March"],
+      "options": [
+        "July",
+        "Thabo",
+        "August",
+        "March"
+      ],
       "correct_answer": 1,
       "explanation": "THABO's mother has 4 children -- and Thabo is one of them! The fourth child is Thabo. It's right there in the question!",
       "image_url": null
@@ -503,12 +728,17 @@
     {
       "id": "tq046",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "How many times does the digit 9 appear when you write out all numbers from 1 to 100?",
-      "options": [],
-      "correct_answer": 20,
-      "explanation": "The 9 appears in the units place: 9, 19, 29, 39, 49, 59, 69, 79, 89, 99 (10 times). And in the tens place: 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 (10 times). That's 20 total. Note 99 has TWO 9s!",
+      "question": "What colour are the black boxes on commercial aeroplanes?",
+      "options": [
+        "Black",
+        "Orange",
+        "Red",
+        "Yellow"
+      ],
+      "correct_answer": 1,
+      "explanation": "They're actually bright orange! They're painted that way so they can be found easily in wreckage. The name 'black box' is completely misleading. Gotcha!",
       "image_url": null
     },
     {
@@ -517,7 +747,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Turn me on my side and I am everything. Cut me in half and I am nothing. What am I?",
-      "options": ["The letter O", "The number 8", "A circle", "A zero"],
+      "options": [
+        "The letter O",
+        "The number 8",
+        "A circle",
+        "A zero"
+      ],
       "correct_answer": 1,
       "explanation": "The number 8 on its side is the infinity symbol (everything). Cut it in half horizontally and you get two zeros (nothing). Genius!",
       "image_url": null
@@ -525,12 +760,17 @@
     {
       "id": "tq048",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "You have a 3-litre jug and a 5-litre jug. How many steps does it take to measure exactly 4 litres? (Fill, pour, or empty counts as 1 step each)",
-      "options": [],
-      "correct_answer": 6,
-      "explanation": "Fill 5L (1). Pour into 3L until full, leaving 2L in the 5L jug (2). Empty the 3L (3). Pour the 2L from 5L into 3L (4). Fill the 5L again (5). Pour from 5L into 3L (which has 2L, so only 1L fits), leaving 4L in the 5L jug (6). Six steps!",
+      "question": "In which month do Russians celebrate the October Revolution?",
+      "options": [
+        "October",
+        "November",
+        "September",
+        "December"
+      ],
+      "correct_answer": 1,
+      "explanation": "The October Revolution is celebrated in November! It happened in October under the old Julian calendar, but when Russia switched to the Gregorian calendar, the date shifted to November 7th.",
       "image_url": null
     },
     {
@@ -539,7 +779,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A man is looking at a photo. Someone asks who it is. He replies: 'Brothers and sisters I have none, but that man's father is my father's son.' Who is in the photo?",
-      "options": ["Himself", "His father", "His son", "His uncle"],
+      "options": [
+        "Himself",
+        "His father",
+        "His son",
+        "His uncle"
+      ],
       "correct_answer": 2,
       "explanation": "Since he has no brothers or sisters, 'my father's son' is himself. So 'that man's father is me' -- meaning the man in the photo is his SON.",
       "image_url": null
@@ -550,7 +795,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Order these classic trick answer values from smallest to largest: (1) Survivors buried from a crash (2) Farmer's own feet (3) Times subtract 5 from 25 (4) Letters in 'short' + 'er'",
-      "options": ["Survivors buried (0)", "Farmer's feet (2)", "Subtract 5 from 25 (1)", "Letters in 'shorter' (7)"],
+      "options": [
+        "Survivors buried (0)",
+        "Farmer's feet (2)",
+        "Subtract 5 from 25 (1)",
+        "Letters in 'shorter' (7)"
+      ],
       "correct_answer": "0,2,1,3",
       "explanation": "Survivors buried = 0, subtract once = 1, farmer's 2 feet, 'shorter' = 7 letters. Order: 0, 1, 2, 7.",
       "image_url": null
@@ -558,11 +808,16 @@
     {
       "id": "tq051",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "A snail climbs a 30-metre pole. Each day it climbs 3 metres, but each night it slips back 2 metres. On which day does the snail reach the top?",
-      "options": [],
-      "correct_answer": 28,
+      "options": [
+        "13",
+        "18",
+        "23",
+        "28"
+      ],
+      "correct_answer": 3,
       "explanation": "Each day it gains a net 1 metre, so after 27 days it's at 27m. On day 28, it climbs 3m to reach 30m -- it's at the top before nightfall! So it doesn't slip back. Day 28.",
       "image_url": null
     },
@@ -571,21 +826,31 @@
       "difficulty": 1,
       "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "There are 100 locker rooms, all closed. Person 1 opens every locker. Person 2 closes every 2nd locker. Person 3 toggles every 3rd. This continues to person 100. How many lockers are open at the end?",
-      "options": ["50", "10", "12", "25"],
+      "question": "The Canary Islands are named after which animal?",
+      "options": [
+        "Canaries (birds)",
+        "Dogs",
+        "Cats",
+        "Seals"
+      ],
       "correct_answer": 1,
-      "explanation": "A locker is open if it's toggled an odd number of times. Only perfect squares have an odd number of factors: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100 -- that's 10 lockers!",
+      "explanation": "The Canary Islands are named after dogs, not canaries! The name comes from the Latin 'Canariae Insulae' meaning 'Island of the Dogs'. The bird was actually named after the islands, not the other way around!",
       "image_url": null
     },
     {
       "id": "tq053",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "Using only addition, how can you add eight 8s to get the number 1000?",
-      "options": [],
-      "correct_answer": 1000,
-      "explanation": "888 + 88 + 8 + 8 + 8 = 1000. That's eight 8s adding up to exactly 1000! The answer IS 1000 because the question asks what you get.",
+      "question": "How long did the Hundred Years' War last?",
+      "options": [
+        "100 years",
+        "99 years",
+        "116 years",
+        "105 years"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Hundred Years' War actually lasted 116 years (1337-1453)! The name is just a rounded-down label. History loves a misleading name, hey.",
       "image_url": null
     },
     {
@@ -594,7 +859,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",
-      "options": ["A flag", "An echo", "A whistle", "A ghost"],
+      "options": [
+        "A flag",
+        "An echo",
+        "A whistle",
+        "A ghost"
+      ],
       "correct_answer": 1,
       "explanation": "An echo! It 'speaks' (repeats sound) without a mouth, 'hears' without ears, has no body, and works with sound waves through air (wind). Philosophical trick!",
       "image_url": null
@@ -602,12 +872,17 @@
     {
       "id": "tq055",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "What is the smallest number of people needed in a room to guarantee that at least 3 of them share the same birthday month?",
-      "options": [],
-      "correct_answer": 25,
-      "explanation": "By the pigeonhole principle: 12 months x 2 people each = 24 people could all have different month-pairs. The 25th person MUST share a month with at least 2 others, guaranteeing 3 in the same month.",
+      "question": "Which country gifted the Statue of Liberty to the United States?",
+      "options": [
+        "England",
+        "Germany",
+        "France",
+        "Italy"
+      ],
+      "correct_answer": 2,
+      "explanation": "France gifted the Statue of Liberty in 1886! Most people hesitate because they associate it so strongly with America, but it was designed by French sculptor Bartholdi. The obvious-sounding answer IS correct here -- but the trick is making you doubt it!",
       "image_url": null
     }
   ]

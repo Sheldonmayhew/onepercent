@@ -11,7 +11,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What colour is the 'M' in the McDonald's logo?",
-      "options": ["Red", "Yellow", "White", "Orange"],
+      "options": [
+        "Red",
+        "Yellow",
+        "White",
+        "Orange"
+      ],
       "correct_answer": 1,
       "explanation": "The Golden Arches — that big yellow M is iconic. You see it from the highway and your stomach starts talking!",
       "image_url": null
@@ -22,7 +27,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA fast food chain is famous for its flame-grilled chicken and cheeky advertising?",
-      "options": ["KFC", "Nando's", "Steers", "Galito's"],
+      "options": [
+        "KFC",
+        "Nando's",
+        "Steers",
+        "Galito's"
+      ],
       "correct_answer": 1,
       "explanation": "Nando's is legendary for their peri-peri chicken AND their savage ads. Nobody roasts like Nando's — pun intended!",
       "image_url": null
@@ -33,7 +43,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the Marvel Cinematic Universe, what is Iron Man's real name?",
-      "options": ["Bruce Wayne", "Tony Stark", "Peter Parker", "Steve Rogers"],
+      "options": [
+        "Bruce Wayne",
+        "Tony Stark",
+        "Peter Parker",
+        "Steve Rogers"
+      ],
       "correct_answer": 1,
       "explanation": "Tony Stark is Iron Man. Bruce Wayne is Batman (wrong universe, bru!), Peter Parker is Spider-Man, and Steve Rogers is Captain America.",
       "image_url": null
@@ -44,7 +59,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA soapie has been airing since 1994 and is set in the world of media and fashion?",
-      "options": ["Isidingo", "Generations", "7de Laan", "Rhythm City"],
+      "options": [
+        "Isidingo",
+        "Generations",
+        "7de Laan",
+        "Rhythm City"
+      ],
       "correct_answer": 1,
       "explanation": "Generations has been running since 1994 (later rebranded as Generations: The Legacy in 2014). It's basically SA TV royalty!",
       "image_url": null
@@ -52,11 +72,16 @@
     {
       "id": "pc005",
       "difficulty": 90,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many players are on a standard FIFA football (soccer) team on the pitch at one time?",
-      "options": [],
-      "correct_answer": 11,
+      "options": [
+        "1",
+        "6",
+        "11",
+        "16"
+      ],
+      "correct_answer": 2,
       "explanation": "11 players per side. Every braai conversation about Bafana Bafana starts with this basic fact!",
       "image_url": null
     },
@@ -66,7 +91,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which streaming platform's opening sound is 'ta-dum'?",
-      "options": ["Disney+", "Amazon Prime", "Netflix", "Showmax"],
+      "options": [
+        "Disney+",
+        "Amazon Prime",
+        "Netflix",
+        "Showmax"
+      ],
       "correct_answer": 2,
       "explanation": "That iconic 'ta-dum' belongs to Netflix. It was designed to be recognizable even with your eyes closed. Netflix and chill, anyone?",
       "image_url": null
@@ -77,7 +107,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "DJ Maphorisa and Kabza De Small are known as the pioneers of which SA music genre?",
-      "options": ["Gqom", "Amapiano", "Kwaito", "Maskandi"],
+      "options": [
+        "Gqom",
+        "Amapiano",
+        "Kwaito",
+        "Maskandi"
+      ],
       "correct_answer": 1,
       "explanation": "The Scorpion Kings are amapiano royalty! They helped take the genre from the townships to the world stage. Amaaa!",
       "image_url": null
@@ -88,7 +123,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which video game franchise features a character called Master Chief?",
-      "options": ["Call of Duty", "Halo", "Gears of War", "Destiny"],
+      "options": [
+        "Call of Duty",
+        "Halo",
+        "Gears of War",
+        "Destiny"
+      ],
       "correct_answer": 1,
       "explanation": "Master Chief is the iconic protagonist of Halo. If you grew up gaming in SA, you definitely had LAN parties playing this!",
       "image_url": null
@@ -96,11 +136,16 @@
     {
       "id": "pc009",
       "difficulty": 80,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the Harry Potter series, how many Horcruxes did Voldemort intentionally create?",
-      "options": [],
-      "correct_answer": 6,
+      "options": [
+        "3",
+        "4",
+        "6",
+        "5"
+      ],
+      "correct_answer": 2,
       "explanation": "Voldemort made 6 Horcruxes on purpose: the diary, ring, locket, cup, diadem, and Nagini. Harry was an accidental 7th. Voldemort wanted 7 soul pieces total (including the bit in himself).",
       "image_url": null
     },
@@ -110,7 +155,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA supermarket chain's slogan is 'Lower prices you can trust. Always.'?",
-      "options": ["Pick n Pay", "Shoprite", "Checkers", "Woolworths"],
+      "options": [
+        "Pick n Pay",
+        "Shoprite",
+        "Checkers",
+        "Woolworths"
+      ],
       "correct_answer": 1,
       "explanation": "Shoprite — lower prices you can trust, always! It's SA's biggest supermarket chain by store count. Every township knows Shoprite!",
       "image_url": null
@@ -121,7 +171,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The TikTok trend 'Buss It' used which classic hip-hop song?",
-      "options": ["Back That Thang Up", "Drop It Like It's Hot", "Get Low", "Nelly - Hot in Herre"],
+      "options": [
+        "Back That Thang Up",
+        "Drop It Like It's Hot",
+        "Get Low",
+        "Nelly - Hot in Herre"
+      ],
       "correct_answer": 2,
       "explanation": "The 'Buss It' challenge used 'Get Low' by Lil Jon & the East Side Boyz. People would go from casual to glammed up when the beat dropped!",
       "image_url": null
@@ -132,7 +187,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the movie 'Black Panther', what is the fictional African country where the story takes place?",
-      "options": ["Zamunda", "Wakanda", "Genosha", "Latveria"],
+      "options": [
+        "Zamunda",
+        "Wakanda",
+        "Genosha",
+        "Latveria"
+      ],
       "correct_answer": 1,
       "explanation": "Wakanda forever! The fictional East African nation is powered by vibranium. Zamunda is from Coming to America — different vibe entirely!",
       "image_url": null
@@ -140,11 +200,16 @@
     {
       "id": "pc013",
       "difficulty": 70,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many seasons did the original 'Game of Thrones' TV series run for?",
-      "options": [],
-      "correct_answer": 8,
+      "options": [
+        "5",
+        "8",
+        "6",
+        "7"
+      ],
+      "correct_answer": 1,
       "explanation": "Game of Thrones ran for 8 seasons (2011-2019). And ja, we're still not over that finale. The North remembers!",
       "image_url": null
     },
@@ -154,7 +219,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA comedian became internationally famous for hosting The Daily Show in the US?",
-      "options": ["Loyiso Gola", "Trevor Noah", "Riaad Moosa", "David Kau"],
+      "options": [
+        "Loyiso Gola",
+        "Trevor Noah",
+        "Riaad Moosa",
+        "David Kau"
+      ],
       "correct_answer": 1,
       "explanation": "Trevor Noah, born in Soweto, hosted The Daily Show from 2015 to 2022. From Alexandra to New York — what a journey!",
       "image_url": null
@@ -165,7 +235,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these social media platforms from OLDEST to NEWEST by launch year.",
-      "options": ["TikTok", "Instagram", "Facebook", "Twitter/X"],
+      "options": [
+        "TikTok",
+        "Instagram",
+        "Facebook",
+        "Twitter/X"
+      ],
       "correct_answer": "2,3,1,0",
       "explanation": "Facebook (2004), Twitter (2006), Instagram (2010), TikTok (2016 as Douyin, international 2017). Facebook is the OG of modern social media!",
       "image_url": null
@@ -176,7 +251,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the Pixar movie 'Inside Out', which emotion is NOT one of the original 5 in Riley's head?",
-      "options": ["Anger", "Anxiety", "Disgust", "Fear"],
+      "options": [
+        "Anger",
+        "Anxiety",
+        "Disgust",
+        "Fear"
+      ],
       "correct_answer": 1,
       "explanation": "The original 5 emotions are Joy, Sadness, Anger, Fear, and Disgust. Anxiety only appears in Inside Out 2! She showed up uninvited, like loadshedding.",
       "image_url": null
@@ -184,11 +264,16 @@
     {
       "id": "pc017",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "As of the end of 2023, how many FIFA World Cup tournaments have been held (men's)? Count from the first in 1930.",
-      "options": [],
-      "correct_answer": 22,
+      "options": [
+        "7",
+        "22",
+        "12",
+        "17"
+      ],
+      "correct_answer": 1,
       "explanation": "22 World Cups from 1930 to 2022. SA hosted in 2010 — remember the vuvuzelas? The whole world heard us!",
       "image_url": null
     },
@@ -198,7 +283,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA music legend is known as the 'Queen of African Pop' and sang 'Pata Pata'?",
-      "options": ["Brenda Fassie", "Miriam Makeba", "Yvonne Chaka Chaka", "Letta Mbulu"],
+      "options": [
+        "Brenda Fassie",
+        "Miriam Makeba",
+        "Yvonne Chaka Chaka",
+        "Letta Mbulu"
+      ],
       "correct_answer": 1,
       "explanation": "Mama Africa — Miriam Makeba! 'Pata Pata' (1967) became a worldwide hit. She's a true SA icon who used her music to fight apartheid.",
       "image_url": null
@@ -209,7 +299,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In 'Squid Game', what is the final game played between the last two contestants?",
-      "options": ["Red Light Green Light", "Tug of War", "Squid Game", "Marbles"],
+      "options": [
+        "Red Light Green Light",
+        "Tug of War",
+        "Squid Game",
+        "Marbles"
+      ],
       "correct_answer": 2,
       "explanation": "The final game is the actual Squid Game — the Korean children's game the show is named after! Full circle, ne?",
       "image_url": null
@@ -220,7 +315,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which tech company's logo is a bitten apple?",
-      "options": ["Samsung", "Apple", "Huawei", "Google"],
+      "options": [
+        "Samsung",
+        "Apple",
+        "Huawei",
+        "Google"
+      ],
       "correct_answer": 1,
       "explanation": "Apple's logo is one of the most recognizable in the world. The bite was added so it wouldn't be confused with a cherry or tomato. Design matters!",
       "image_url": null
@@ -231,7 +331,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA kwaito hit by Mandoza became an unofficial anthem in the early 2000s?",
-      "options": ["Mazola", "Nkalakatha", "Kaffir", "Godoba"],
+      "options": [
+        "Mazola",
+        "Nkalakatha",
+        "Kaffir",
+        "Godoba"
+      ],
       "correct_answer": 1,
       "explanation": "Nkalakatha! Mandoza's 2000 hit was everywhere — taxis, clubs, braais. It basically defined an era. Rest in peace, Mandoza.",
       "image_url": null
@@ -242,7 +347,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the Marvel Cinematic Universe, which Infinity Stone is hidden on the planet Vormir?",
-      "options": ["Time Stone", "Soul Stone", "Reality Stone", "Power Stone"],
+      "options": [
+        "Time Stone",
+        "Soul Stone",
+        "Reality Stone",
+        "Power Stone"
+      ],
       "correct_answer": 1,
       "explanation": "The Soul Stone is on Vormir, guarded by Red Skull. You have to sacrifice what you love most to get it. Thanos threw Gamora... eish, still hurts.",
       "image_url": null
@@ -250,11 +360,16 @@
     {
       "id": "pc023",
       "difficulty": 50,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many Grand Slam tennis tournaments are played each year?",
-      "options": [],
-      "correct_answer": 4,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_answer": 3,
       "explanation": "The 4 Grand Slams: Australian Open, French Open, Wimbledon, US Open. SA's Kevin Anderson made the Wimbledon final in 2018 — proudly South African!",
       "image_url": null
     },
@@ -264,7 +379,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA TV show features characters like Tbose, Pretty, and Lehasa and is set in Turfloop?",
-      "options": ["Uzalo", "Skeem Saam", "Generations", "The River"],
+      "options": [
+        "Uzalo",
+        "Skeem Saam",
+        "Generations",
+        "The River"
+      ],
       "correct_answer": 1,
       "explanation": "Skeem Saam is set in Turfloop (University of Limpopo area). Tbose and Pretty have been giving us drama since 2011!",
       "image_url": null
@@ -275,7 +395,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What does the '__(number)K' format mean on social media (e.g., '10K')?",
-      "options": ["10 Kilobytes", "10,000 followers/likes", "10 Karma points", "Top 10 ranking"],
+      "options": [
+        "10 Kilobytes",
+        "10,000 followers/likes",
+        "10 Karma points",
+        "Top 10 ranking"
+      ],
       "correct_answer": 1,
       "explanation": "K stands for 'kilo' meaning thousand. 10K = 10,000. Whether it's followers, likes, or rands — K always means thousand!",
       "image_url": null
@@ -286,7 +411,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The viral 'Distracted Boyfriend' meme uses a stock photo. What is the name of the stock photo agency that owns the original?",
-      "options": ["Getty Images", "Shutterstock", "iStock", "Adobe Stock"],
+      "options": [
+        "Getty Images",
+        "Shutterstock",
+        "iStock",
+        "Adobe Stock"
+      ],
       "correct_answer": 2,
       "explanation": "The famous meme photo was taken by Antonio Guillem and is from iStock. It's been used millions of times but the original is a paid stock photo!",
       "image_url": null
@@ -294,11 +424,16 @@
     {
       "id": "pc027",
       "difficulty": 40,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the original 'The Lion King' (1994), how many minutes long is the film (rounded to nearest 5)?",
-      "options": [],
-      "correct_answer": 90,
+      "options": [
+        "90",
+        "75",
+        "80",
+        "85"
+      ],
+      "correct_answer": 0,
       "explanation": "The Lion King (1994) runs about 88 minutes, which rounds to 90. Feels longer because Mufasa's death scene lasts an emotional eternity!",
       "image_url": null
     },
@@ -308,7 +443,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA-born billionaire founded SpaceX and acquired Twitter (now X)?",
-      "options": ["Mark Shuttleworth", "Elon Musk", "Patrick Soon-Shiong", "Nicky Oppenheimer"],
+      "options": [
+        "Mark Shuttleworth",
+        "Elon Musk",
+        "Patrick Soon-Shiong",
+        "Nicky Oppenheimer"
+      ],
       "correct_answer": 1,
       "explanation": "Elon Musk was born in Pretoria and grew up in SA before moving to Canada and then the US. Love him or hate him, he's Mzansi-made!",
       "image_url": null
@@ -319,7 +459,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which video game holds the record as the best-selling game of all time (as of 2024)?",
-      "options": ["GTA V", "Minecraft", "Tetris", "Wii Sports"],
+      "options": [
+        "GTA V",
+        "Minecraft",
+        "Tetris",
+        "Wii Sports"
+      ],
       "correct_answer": 1,
       "explanation": "Minecraft has sold over 300 million copies, making it the best-selling game ever. Every kid in SA has built a virtual braai area in Minecraft at some point!",
       "image_url": null
@@ -330,7 +475,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these music streaming services from MOST to FEWEST global subscribers (as of 2024).",
-      "options": ["Apple Music", "YouTube Music", "Spotify", "Amazon Music"],
+      "options": [
+        "Apple Music",
+        "YouTube Music",
+        "Spotify",
+        "Amazon Music"
+      ],
       "correct_answer": "2,0,3,1",
       "explanation": "Spotify (~230M), Apple Music (~90M), Amazon Music (~80M), YouTube Music (~80M). Spotify dominates, but in SA we also love our data-friendly options!",
       "image_url": null
@@ -341,7 +491,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the Netflix series 'Stranger Things', the Upside Down is accessed through gates connected to which fictional laboratory?",
-      "options": ["Stark Industries", "Hawkins National Laboratory", "Umbrella Corporation", "Dharma Initiative"],
+      "options": [
+        "Stark Industries",
+        "Hawkins National Laboratory",
+        "Umbrella Corporation",
+        "Dharma Initiative"
+      ],
       "correct_answer": 1,
       "explanation": "Hawkins Lab in Hawkins, Indiana is where Eleven was experimented on and the gate to the Upside Down first opened. Creepy stuff!",
       "image_url": null
@@ -349,11 +504,16 @@
     {
       "id": "pc032",
       "difficulty": 30,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The song 'Jerusalema' by Master KG went viral worldwide. In what year was it originally released?",
-      "options": [],
-      "correct_answer": 2019,
+      "options": [
+        "2019",
+        "1716",
+        "1857",
+        "2181"
+      ],
+      "correct_answer": 0,
       "explanation": "Jerusalema was released in November 2019, but went viral globally in 2020 during COVID lockdowns. The dance challenge united the whole world — proudly SA!",
       "image_url": null
     },
@@ -363,7 +523,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which company originally developed the game 'Fortnite'?",
-      "options": ["Activision", "Epic Games", "Riot Games", "Valve"],
+      "options": [
+        "Activision",
+        "Epic Games",
+        "Riot Games",
+        "Valve"
+      ],
       "correct_answer": 1,
       "explanation": "Epic Games developed Fortnite, first released in 2017. They also made Unreal Engine, which powers half the games industry!",
       "image_url": null
@@ -374,7 +539,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In SA slang, if someone says something is 'hectic', what do they mean?",
-      "options": ["It's boring", "It's intense or extreme", "It's cheap", "It's broken"],
+      "options": [
+        "It's boring",
+        "It's intense or extreme",
+        "It's cheap",
+        "It's broken"
+      ],
       "correct_answer": 1,
       "explanation": "Hectic in SA means intense, crazy, or extreme. 'That braai was hectic, bru!' — could be good or bad depending on context!",
       "image_url": null
@@ -385,7 +555,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which actress played Katniss Everdeen in 'The Hunger Games' films?",
-      "options": ["Emma Stone", "Jennifer Lawrence", "Shailene Woodley", "Scarlett Johansson"],
+      "options": [
+        "Emma Stone",
+        "Jennifer Lawrence",
+        "Shailene Woodley",
+        "Scarlett Johansson"
+      ],
       "correct_answer": 1,
       "explanation": "Jennifer Lawrence brought Katniss to life and became one of the highest-paid actresses in the world. May the odds be ever in your favour!",
       "image_url": null
@@ -393,11 +568,16 @@
     {
       "id": "pc036",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Brenda Fassie's hit 'Weekend Special' was released in what year?",
-      "options": [],
-      "correct_answer": 1983,
+      "options": [
+        "1686",
+        "1983",
+        "1824",
+        "2142"
+      ],
+      "correct_answer": 1,
       "explanation": "Weekend Special dropped in 1983, making Brenda Fassie (MaBrrr) a star at just 19 years old. A true SA music legend — gone but never forgotten!",
       "image_url": null
     },
@@ -407,7 +587,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the 'John Wick' franchise, what is the name of the underground hotel where assassins stay and no 'business' can be conducted?",
-      "options": ["The Continental", "The Sanctuary", "The National", "The Embassy"],
+      "options": [
+        "The Continental",
+        "The Sanctuary",
+        "The National",
+        "The Embassy"
+      ],
       "correct_answer": 0,
       "explanation": "The Continental hotel is the neutral ground where assassins can't kill each other. Break the rules and you're 'excommunicado'!",
       "image_url": null
@@ -418,7 +603,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA artist created the hit 'iMali' and is known for blending amapiano with deep house?",
-      "options": ["Focalistic", "DBN Gogo", "Kelvin Momo", "De Mthuda"],
+      "options": [
+        "Focalistic",
+        "DBN Gogo",
+        "Kelvin Momo",
+        "De Mthuda"
+      ],
       "correct_answer": 2,
       "explanation": "Kelvin Momo is known as the 'Amapiano Private School' sound — smoother and deeper than mainstream amapiano. 'iMali' was a vibe!",
       "image_url": null
@@ -429,7 +619,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The 'GTA' video game series is made by Rockstar Games. In which country is Rockstar North (the lead studio) based?",
-      "options": ["USA", "Canada", "Scotland", "England"],
+      "options": [
+        "USA",
+        "Canada",
+        "Scotland",
+        "England"
+      ],
       "correct_answer": 2,
       "explanation": "Rockstar North is based in Edinburgh, Scotland! One of the most American-feeling game series is actually made by Scottish developers. Plot twist!",
       "image_url": null
@@ -437,11 +632,16 @@
     {
       "id": "pc040",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many Oscar nominations did the movie 'Tsotsi' (2005) receive? (It won Best Foreign Language Film.)",
-      "options": [],
-      "correct_answer": 1,
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "correct_answer": 0,
       "explanation": "Tsotsi received 1 Oscar nomination and WON it — Best Foreign Language Film. SA's proudest moment at the Academy Awards! Directed by Gavin Hood.",
       "image_url": null
     },
@@ -451,7 +651,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA musician released the album 'Music is King' and pioneered the 'new age kwaito' sound?",
-      "options": ["Black Coffee", "Zakes Bantwini", "Euphonik", "Heavy K"],
+      "options": [
+        "Black Coffee",
+        "Zakes Bantwini",
+        "Euphonik",
+        "Heavy K"
+      ],
       "correct_answer": 1,
       "explanation": "Zakes Bantwini's 'Osama' from that era was massive, but 'Music is King' is his concert brand too. He's been a force in SA music for years!",
       "image_url": null
@@ -462,7 +667,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the anime 'Attack on Titan', what is the name of the power that allows certain Titans to inherit memories from previous holders?",
-      "options": ["The Founding Titan's Path", "Paths", "The Coordinate", "Titan Inheritance"],
+      "options": [
+        "The Founding Titan's Path",
+        "Paths",
+        "The Coordinate",
+        "Titan Inheritance"
+      ],
       "correct_answer": 1,
       "explanation": "Paths connect all Subjects of Ymir across time and space. It's how Titan powers and memories are passed down. If you know, you know — anime heads unite!",
       "image_url": null
@@ -470,11 +680,16 @@
     {
       "id": "pc043",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Checkers launched its Xtra Savings rewards card programme in South Africa. In what year did the programme launch?",
-      "options": [],
-      "correct_answer": 2019,
+      "options": [
+        "1716",
+        "1857",
+        "2181",
+        "2019"
+      ],
+      "correct_answer": 3,
       "explanation": "Checkers Xtra Savings launched in 2019 and changed the SA grocery game. Those specials hit different when you've got the card!",
       "image_url": null
     },
@@ -484,7 +699,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which director made the SA film 'District 9' (2009), a sci-fi allegory for apartheid?",
-      "options": ["Gavin Hood", "Neill Blomkamp", "Oliver Hermanus", "John Trengrove"],
+      "options": [
+        "Gavin Hood",
+        "Neill Blomkamp",
+        "Oliver Hermanus",
+        "John Trengrove"
+      ],
       "correct_answer": 1,
       "explanation": "Neill Blomkamp directed District 9, set in Johannesburg. It was nominated for 4 Oscars including Best Picture. Aliens in Joburg — only in Mzansi!",
       "image_url": null
@@ -495,7 +715,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these gaming consoles from EARLIEST to LATEST release.",
-      "options": ["PlayStation 2", "Nintendo Wii", "Xbox 360", "Nintendo Switch"],
+      "options": [
+        "PlayStation 2",
+        "Nintendo Wii",
+        "Xbox 360",
+        "Nintendo Switch"
+      ],
       "correct_answer": "0,2,1,3",
       "explanation": "PS2 (2000), Xbox 360 (2005), Nintendo Wii (2006), Nintendo Switch (2017). The 360 beat the Wii by a year — that trips people up!",
       "image_url": null
@@ -506,7 +731,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The SA band Seether had an international hit with 'Broken' featuring which artist?",
-      "options": ["Evanescence's Amy Lee", "Paramore's Hayley Williams", "No Doubt's Gwen Stefani", "Flyleaf's Lacey Sturm"],
+      "options": [
+        "Evanescence's Amy Lee",
+        "Paramore's Hayley Williams",
+        "No Doubt's Gwen Stefani",
+        "Flyleaf's Lacey Sturm"
+      ],
       "correct_answer": 0,
       "explanation": "Shaun Morgan (from Pretoria!) teamed up with Amy Lee of Evanescence for 'Broken' in 2004. A proper SA export that conquered rock radio worldwide!",
       "image_url": null
@@ -514,11 +744,16 @@
     {
       "id": "pc047",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The SA reality show 'Big Brother Mzansi' first aired in what year?",
-      "options": [],
-      "correct_answer": 2001,
+      "options": [
+        "2001",
+        "1701",
+        "1841",
+        "2161"
+      ],
+      "correct_answer": 0,
       "explanation": "Big Brother South Africa (later Big Brother Mzansi) first aired in 2001 on M-Net. SA was watching people live in a house before it was cool!",
       "image_url": null
     },
@@ -528,7 +763,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA fashion brand, founded in Cape Town, became internationally known for its colourful African-print sneakers?",
-      "options": ["Bathu", "Veldskoen", "Shelflife", "Superga SA"],
+      "options": [
+        "Bathu",
+        "Veldskoen",
+        "Shelflife",
+        "Superga SA"
+      ],
       "correct_answer": 0,
       "explanation": "Bathu, founded by Theo Baloyi from Limpopo (based in CPT), became a proudly SA sneaker brand. From a small stall to a national brand — that's hustle!",
       "image_url": null
@@ -539,7 +779,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the anime 'Death Note', what is the real name of the detective known as 'L'?",
-      "options": ["Nate River", "L Lawliet", "Mihael Keehl", "Quillsh Wammy"],
+      "options": [
+        "Nate River",
+        "L Lawliet",
+        "Mihael Keehl",
+        "Quillsh Wammy"
+      ],
       "correct_answer": 1,
       "explanation": "L's real name is L Lawliet (pronounced Law-light). Nate River is Near, Mihael Keehl is Mello, and Quillsh Wammy is Watari. Deep anime knowledge required!",
       "image_url": null
@@ -547,11 +792,16 @@
     {
       "id": "pc050",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many episodes are in the first season of the SA Netflix series 'Blood & Water'?",
-      "options": [],
-      "correct_answer": 6,
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct_answer": 3,
       "explanation": "Blood & Water Season 1 has 6 episodes. It was one of the first SA Netflix originals and put Parkhurst College (fictional!) on the map.",
       "image_url": null
     },
@@ -561,7 +811,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The SA film 'Searching for Sugar Man' (2012) is a documentary about which musician who was unknown in the US but massive in SA?",
-      "options": ["Sixto Rodriguez", "Gil Scott-Heron", "Bill Withers", "Terry Callier"],
+      "options": [
+        "Sixto Rodriguez",
+        "Gil Scott-Heron",
+        "Bill Withers",
+        "Terry Callier"
+      ],
       "correct_answer": 0,
       "explanation": "Sixto Rodriguez from Detroit had no idea he was bigger than Elvis in South Africa. The documentary won an Oscar. One of the most incredible music stories ever told!",
       "image_url": null
@@ -569,11 +824,16 @@
     {
       "id": "pc052",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Woolworths South Africa (the retailer) was founded in what year?",
-      "options": [],
-      "correct_answer": 1931,
+      "options": [
+        "1641",
+        "1777",
+        "1931",
+        "2085"
+      ],
+      "correct_answer": 2,
       "explanation": "Woolworths SA was founded in 1931 in Cape Town. Despite the name, it has NO connection to the American or British Woolworths chains. It's 100% South African!",
       "image_url": null
     },
@@ -583,7 +843,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In gaming, the 'Konami Code' is a famous cheat code. What is the correct sequence on a standard controller?",
-      "options": ["Up Up Down Down Left Right Left Right B A", "Up Down Up Down Left Right Left Right A B", "Up Up Down Down Right Left Right Left B A", "Down Down Up Up Left Right Left Right A B"],
+      "options": [
+        "Up Up Down Down Left Right Left Right B A",
+        "Up Down Up Down Left Right Left Right A B",
+        "Up Up Down Down Right Left Right Left B A",
+        "Down Down Up Up Left Right Left Right A B"
+      ],
       "correct_answer": 0,
       "explanation": "Up Up Down Down Left Right Left Right B A (Start) — the Konami Code first appeared in Gradius (1986). It's embedded in gaming DNA. If you knew this without Googling, respect!",
       "image_url": null
@@ -594,7 +859,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which South African actress appeared in the Marvel film 'Black Panther' as a member of the Merchant Tribe?",
-      "options": ["Thuso Mbedu", "Nomzamo Mbatha", "Connie Chiume", "Terry Pheto"],
+      "options": [
+        "Thuso Mbedu",
+        "Nomzamo Mbatha",
+        "Connie Chiume",
+        "Terry Pheto"
+      ],
       "correct_answer": 2,
       "explanation": "Connie Chiume played the Mining Tribe Elder in Black Panther. She's a veteran SA actress also known for Gomora and Zone 14. Mzansi represent in the MCU!",
       "image_url": null
@@ -602,11 +872,16 @@
     {
       "id": "pc055",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The first episode of the SA soap opera 'Generations' aired on SABC1. How many of the original 1994 cast members returned for the rebranded 'Generations: The Legacy' in 2014?",
-      "options": [],
-      "correct_answer": 0,
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "correct_answer": 1,
       "explanation": "Zero! When Generations was rebooted as 'Generations: The Legacy' in 2014, it came after the famous actors' strike. The entire original cast was replaced with new characters. Eish, that was dramatic — on AND off screen!",
       "image_url": null
     },
@@ -616,7 +891,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the name of the block-building survival game where you mine resources and craft tools?",
-      "options": ["Roblox", "Minecraft", "Terraria", "Fortnite"],
+      "options": [
+        "Roblox",
+        "Minecraft",
+        "Terraria",
+        "Fortnite"
+      ],
       "correct_answer": 1,
       "explanation": "Minecraft! It's the best-selling game of all time. You mine stuff, you craft stuff — the name literally tells you what to do!",
       "image_url": null
@@ -627,7 +907,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which singer released the worldwide hit 'Shake It Off' and is known for her 'Eras Tour'?",
-      "options": ["Beyonce", "Taylor Swift", "Dua Lipa", "Ariana Grande"],
+      "options": [
+        "Beyonce",
+        "Taylor Swift",
+        "Dua Lipa",
+        "Ariana Grande"
+      ],
       "correct_answer": 1,
       "explanation": "Taylor Swift and the Eras Tour broke every record going. Swifties are a whole movement — you don't mess with that fandom!",
       "image_url": null
@@ -638,7 +923,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the most popular colour of the WhatsApp logo?",
-      "options": ["Blue", "Green", "Purple", "Red"],
+      "options": [
+        "Blue",
+        "Green",
+        "Purple",
+        "Red"
+      ],
       "correct_answer": 1,
       "explanation": "WhatsApp is green — the colour of every group chat notification that won't stop buzzing. In SA, WhatsApp basically IS the internet!",
       "image_url": null
@@ -646,11 +936,16 @@
     {
       "id": "pc059",
       "difficulty": 90,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many letters are in the word 'NETFLIX'?",
-      "options": [],
-      "correct_answer": 7,
+      "options": [
+        "7",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct_answer": 0,
       "explanation": "N-E-T-F-L-I-X = 7 letters. Easy one to get you warmed up!",
       "image_url": null
     },
@@ -660,7 +955,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA mobile network's colour is red and its slogan includes 'Power to you'?",
-      "options": ["MTN", "Vodacom", "Cell C", "Telkom"],
+      "options": [
+        "MTN",
+        "Vodacom",
+        "Cell C",
+        "Telkom"
+      ],
       "correct_answer": 1,
       "explanation": "Vodacom rocks the red! They've been in SA since 1994 and their 'Power to you' slogan is everywhere from billboards to your data bundles.",
       "image_url": null
@@ -671,7 +971,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the movie 'Finding Nemo', what type of fish is Nemo?",
-      "options": ["Blue Tang", "Clownfish", "Goldfish", "Angelfish"],
+      "options": [
+        "Blue Tang",
+        "Clownfish",
+        "Goldfish",
+        "Angelfish"
+      ],
       "correct_answer": 1,
       "explanation": "Nemo is a clownfish! Dory is the Blue Tang. After this movie came out, every kid wanted a pet clownfish. Shame, the pet shops were overwhelmed!",
       "image_url": null
@@ -682,7 +987,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which app uses a ghost as its logo and is known for disappearing messages?",
-      "options": ["Telegram", "Signal", "Snapchat", "WhatsApp"],
+      "options": [
+        "Telegram",
+        "Signal",
+        "Snapchat",
+        "WhatsApp"
+      ],
       "correct_answer": 2,
       "explanation": "Snapchat's little ghost logo is iconic. The disappearing messages feature made it the go-to for, well... things people don't want saved!",
       "image_url": null
@@ -693,7 +1003,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the name of the SA chicken fast food chain with the red and white striped bucket?",
-      "options": ["Chicken Licken", "KFC", "Nando's", "Hungry Lion"],
+      "options": [
+        "Chicken Licken",
+        "KFC",
+        "Nando's",
+        "Hungry Lion"
+      ],
       "correct_answer": 1,
       "explanation": "KFC and that famous bucket! Colonel Sanders' recipe is finger lickin' good. In SA, KFC is basically a national institution — especially the Streetwise Two!",
       "image_url": null
@@ -701,11 +1016,16 @@
     {
       "id": "pc064",
       "difficulty": 90,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In a standard game of Uno, how many cards does each player start with?",
-      "options": [],
-      "correct_answer": 7,
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_answer": 3,
       "explanation": "7 cards each to start! Uno is the game that ends friendships faster than Monopoly. 'Draw 4' has broken up many families at game night!",
       "image_url": null
     },
@@ -715,7 +1035,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which superhero is known as the 'Dark Knight'?",
-      "options": ["Superman", "Spider-Man", "Batman", "Iron Man"],
+      "options": [
+        "Superman",
+        "Spider-Man",
+        "Batman",
+        "Iron Man"
+      ],
       "correct_answer": 2,
       "explanation": "Batman is the Dark Knight of Gotham City. No superpowers, just money and trust issues. Basically the Elon Musk of superheroes!",
       "image_url": null
@@ -726,7 +1051,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Tyla's Grammy-winning hit 'Water' is primarily from which music genre?",
-      "options": ["Amapiano", "Afrobeats", "Pop", "R&B"],
+      "options": [
+        "Amapiano",
+        "Afrobeats",
+        "Pop",
+        "R&B"
+      ],
       "correct_answer": 0,
       "explanation": "Tyla's 'Water' brought amapiano to the Grammys! She won Best African Music Performance in 2024 and put SA's sound on the global stage. Lekker!",
       "image_url": null
@@ -737,7 +1067,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which K-pop group's fandom is called 'ARMY'?",
-      "options": ["BLACKPINK", "BTS", "EXO", "TWICE"],
+      "options": [
+        "BLACKPINK",
+        "BTS",
+        "EXO",
+        "TWICE"
+      ],
       "correct_answer": 1,
       "explanation": "BTS ARMY is one of the most powerful fandoms on Earth. They trend hashtags, break records, and vote like their lives depend on it!",
       "image_url": null
@@ -745,11 +1080,16 @@
     {
       "id": "pc068",
       "difficulty": 80,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many original Avengers were there in the first 'Avengers' movie (2012)?",
-      "options": [],
-      "correct_answer": 6,
+      "options": [
+        "3",
+        "4",
+        "6",
+        "5"
+      ],
+      "correct_answer": 2,
       "explanation": "The OG 6: Iron Man, Captain America, Thor, Hulk, Black Widow, and Hawkeye. The team that started it all!",
       "image_url": null
     },
@@ -759,7 +1099,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA burger chain is known for its slogan 'Real burgers since 1960'?",
-      "options": ["McDonald's", "Burger King", "Steers", "Spur"],
+      "options": [
+        "McDonald's",
+        "Burger King",
+        "Steers",
+        "Spur"
+      ],
       "correct_answer": 2,
       "explanation": "Steers has been flipping real burgers since 1960! Their flame-grilled patties and thick shakes are proudly South African. Lekker!",
       "image_url": null
@@ -770,7 +1115,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In 'The Office' (US version), what is the name of the paper company where the characters work?",
-      "options": ["Staples", "Dunder Mifflin", "Wernham Hogg", "Michael Scott Paper Co"],
+      "options": [
+        "Staples",
+        "Dunder Mifflin",
+        "Wernham Hogg",
+        "Michael Scott Paper Co"
+      ],
       "correct_answer": 1,
       "explanation": "Dunder Mifflin, Scranton branch! Michael Scott's management style is... unique. 'That's what she said' — if you know, you know.",
       "image_url": null
@@ -781,7 +1131,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the default character skin called in Fortnite?",
-      "options": ["Steve", "Jonesy", "Ramirez", "Recruit"],
+      "options": [
+        "Steve",
+        "Jonesy",
+        "Ramirez",
+        "Recruit"
+      ],
       "correct_answer": 1,
       "explanation": "Jonesy is the blonde default skin that became a meme. If you played Fortnite with no skins, you were a 'default' and people underestimated you!",
       "image_url": null
@@ -792,7 +1147,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA retailer uses the tagline 'The difference' and sells premium food and clothing?",
-      "options": ["Pick n Pay", "Woolworths", "Checkers", "Mr Price"],
+      "options": [
+        "Pick n Pay",
+        "Woolworths",
+        "Checkers",
+        "Mr Price"
+      ],
       "correct_answer": 1,
       "explanation": "Woolworths — 'The difference.' When you shop at Woolies, you feel fancy. Their food section is basically a religious experience for South Africans!",
       "image_url": null
@@ -800,11 +1160,16 @@
     {
       "id": "pc073",
       "difficulty": 80,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many members are in BTS?",
-      "options": [],
-      "correct_answer": 7,
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_answer": 3,
       "explanation": "BTS has 7 members: RM, Jin, Suga, J-Hope, Jimin, V, and Jungkook. The number 7 is actually special to ARMY!",
       "image_url": null
     },
@@ -814,7 +1179,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In 'Friends', what is the name of the coffee shop where the group hangs out?",
-      "options": ["Starbucks", "Central Perk", "The Coffee Bean", "Perk Avenue"],
+      "options": [
+        "Starbucks",
+        "Central Perk",
+        "The Coffee Bean",
+        "Perk Avenue"
+      ],
       "correct_answer": 1,
       "explanation": "Central Perk! That orange couch was always magically available. In real life, you'd never get a seat. It's like trying to find parking at Sandton City in December!",
       "image_url": null
@@ -825,7 +1195,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which platform is known for short-form videos and the phrase 'For You Page' (FYP)?",
-      "options": ["YouTube", "Instagram", "TikTok", "Twitter"],
+      "options": [
+        "YouTube",
+        "Instagram",
+        "TikTok",
+        "Twitter"
+      ],
       "correct_answer": 2,
       "explanation": "TikTok's For You Page algorithm is scary good at knowing what you like. You open the app for 5 minutes and suddenly it's 3am!",
       "image_url": null
@@ -836,7 +1211,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Nasty C, the SA rapper, is originally from which city?",
-      "options": ["Johannesburg", "Cape Town", "Durban", "Pretoria"],
+      "options": [
+        "Johannesburg",
+        "Cape Town",
+        "Durban",
+        "Pretoria"
+      ],
       "correct_answer": 2,
       "explanation": "Nasty C (Nsikayesizwe David Junior Ngcobo) is from Durban! He put Durban hip-hop on the map and went international. eThekwini represent!",
       "image_url": null
@@ -847,7 +1227,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In 'Breaking Bad', what subject does Walter White teach before becoming a drug manufacturer?",
-      "options": ["Biology", "Physics", "Chemistry", "Mathematics"],
+      "options": [
+        "Biology",
+        "Physics",
+        "Chemistry",
+        "Mathematics"
+      ],
       "correct_answer": 2,
       "explanation": "Mr. White was a chemistry teacher. He used his chemistry knowledge to cook the purest meth in New Mexico. From teacher to kingpin — that's career pivot!",
       "image_url": null
@@ -855,11 +1240,16 @@
     {
       "id": "pc078",
       "difficulty": 70,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many Star Wars films are in the 'Skywalker Saga' (the main episodic films)?",
-      "options": [],
-      "correct_answer": 9,
+      "options": [
+        "6",
+        "9",
+        "7",
+        "8"
+      ],
+      "correct_answer": 1,
       "explanation": "9 films: the Original Trilogy (4-6), the Prequel Trilogy (1-3), and the Sequel Trilogy (7-9). May the Force be with you!",
       "image_url": null
     },
@@ -869,7 +1259,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Bunny chow, a famous SA street food, originates from which city?",
-      "options": ["Johannesburg", "Cape Town", "Durban", "Port Elizabeth"],
+      "options": [
+        "Johannesburg",
+        "Cape Town",
+        "Durban",
+        "Port Elizabeth"
+      ],
       "correct_answer": 2,
       "explanation": "Bunny chow was born in Durban's Indian community! A hollowed-out bread loaf filled with curry — it's messy, it's lekker, it's iconic Durban!",
       "image_url": null
@@ -880,7 +1275,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which video game series features a character named 'Link' who is often mistakenly called 'Zelda'?",
-      "options": ["Final Fantasy", "The Legend of Zelda", "Elder Scrolls", "Dragon Quest"],
+      "options": [
+        "Final Fantasy",
+        "The Legend of Zelda",
+        "Elder Scrolls",
+        "Dragon Quest"
+      ],
       "correct_answer": 1,
       "explanation": "Link is the hero, Zelda is the princess! Gamers have been correcting this mistake for decades. It's like calling every robot a Transformer!",
       "image_url": null
@@ -891,7 +1291,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Ed Sheeran's 'Shape of You' held the Spotify record for most-streamed song. Which album is it from?",
-      "options": ["+", "x", "Divide", "Equals"],
+      "options": [
+        "+",
+        "x",
+        "Divide",
+        "Equals"
+      ],
       "correct_answer": 2,
       "explanation": "Shape of You is from the 'Divide' album (represented by the symbol /). It was streamed billions of times — the whole planet was singing it!",
       "image_url": null
@@ -899,11 +1304,16 @@
     {
       "id": "pc082",
       "difficulty": 70,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In Dragon Ball Z, how many Dragon Balls do you need to collect to summon Shenron?",
-      "options": [],
-      "correct_answer": 7,
+      "options": [
+        "4",
+        "5",
+        "7",
+        "6"
+      ],
+      "correct_answer": 2,
       "explanation": "7 Dragon Balls! Collect all seven and Shenron grants your wish. Finding them is the hard part — just ask Goku!",
       "image_url": null
     },
@@ -913,7 +1323,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA TV soapie is set in KwaMashu, KwaZulu-Natal and airs on SABC1?",
-      "options": ["The River", "Uzalo", "Generations", "Muvhango"],
+      "options": [
+        "The River",
+        "Uzalo",
+        "Generations",
+        "Muvhango"
+      ],
       "correct_answer": 1,
       "explanation": "Uzalo is set in KwaMashu and has been a ratings giant since 2015. The church vs crime storyline had everyone talking. SA soapie excellence!",
       "image_url": null
@@ -924,7 +1339,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What does 'GTA' stand for in the famous video game series?",
-      "options": ["Grand Theft Automobile", "Grand Theft Auto", "Great Theft Auto", "Grand Track Auto"],
+      "options": [
+        "Grand Theft Automobile",
+        "Grand Theft Auto",
+        "Great Theft Auto",
+        "Grand Track Auto"
+      ],
       "correct_answer": 1,
       "explanation": "Grand Theft Auto! The game where you can do anything — mostly steal cars and cause chaos. It's the game your parents didn't want you playing!",
       "image_url": null
@@ -935,7 +1355,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these Beyonce albums from EARLIEST to LATEST release.",
-      "options": ["Lemonade", "Renaissance", "Dangerously in Love", "4"],
+      "options": [
+        "Lemonade",
+        "Renaissance",
+        "Dangerously in Love",
+        "4"
+      ],
       "correct_answer": "2,3,0,1",
       "explanation": "Dangerously in Love (2003), 4 (2011), Lemonade (2016), Renaissance (2022). Queen Bey has been dominating for two decades straight!",
       "image_url": null
@@ -946,7 +1371,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Cassper Nyovest made history by filling which SA venue for his 'Fill Up' concerts?",
-      "options": ["Sun Arena", "The Dome", "FNB Stadium", "Ticketpro Dome"],
+      "options": [
+        "Sun Arena",
+        "The Dome",
+        "FNB Stadium",
+        "Ticketpro Dome"
+      ],
       "correct_answer": 2,
       "explanation": "Cassper filled up The Dome first in 2015, then went bigger! But FNB Stadium (now Soccer City) in 2020 was the ultimate flex — filling the biggest stadium in Africa. Mufasa did THAT!",
       "image_url": null
@@ -957,7 +1387,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the Call of Duty franchise, what does 'UAV' stand for (the scorestreak/killstreak)?",
-      "options": ["Unmanned Aerial Vehicle", "Universal Attack Vector", "Upper Atmosphere Viewer", "Unified Air Vehicle"],
+      "options": [
+        "Unmanned Aerial Vehicle",
+        "Universal Attack Vector",
+        "Upper Atmosphere Viewer",
+        "Unified Air Vehicle"
+      ],
       "correct_answer": 0,
       "explanation": "Unmanned Aerial Vehicle — it's a drone that reveals enemy positions on the minimap. That 3-killstreak UAV has won more rounds than any weapon!",
       "image_url": null
@@ -965,11 +1400,16 @@
     {
       "id": "pc088",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many chapters does the 'One Piece' manga's first saga (East Blue Saga) span? Round to the nearest 10.",
-      "options": [],
-      "correct_answer": 100,
+      "options": [
+        "100",
+        "85",
+        "90",
+        "95"
+      ],
+      "correct_answer": 0,
       "explanation": "The East Blue Saga covers chapters 1-100. And that's just the beginning — One Piece has over 1,100 chapters total. Oda never stops!",
       "image_url": null
     },
@@ -979,7 +1419,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA pay-TV provider is owned by MultiChoice and broadcasts DStv?",
-      "options": ["StarSat", "MultiChoice", "Naspers", "M-Net"],
+      "options": [
+        "StarSat",
+        "MultiChoice",
+        "Naspers",
+        "M-Net"
+      ],
       "correct_answer": 1,
       "explanation": "MultiChoice operates DStv across Africa. DStv has been the king of SA living rooms for decades — from SuperSport to Mzansi Magic!",
       "image_url": null
@@ -990,7 +1435,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In Roblox, what is the in-game currency called?",
-      "options": ["V-Bucks", "Robux", "Coins", "Gems"],
+      "options": [
+        "V-Bucks",
+        "Robux",
+        "Coins",
+        "Gems"
+      ],
       "correct_answer": 1,
       "explanation": "Robux! Kids are spending real money to get Robux. Parents worldwide are checking their bank statements and getting heart attacks!",
       "image_url": null
@@ -1001,7 +1451,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Adele's album '21' is named after what?",
-      "options": ["Her lucky number", "Her age when she wrote it", "The number of songs she recorded", "Her street address"],
+      "options": [
+        "Her lucky number",
+        "Her age when she wrote it",
+        "The number of songs she recorded",
+        "Her street address"
+      ],
       "correct_answer": 1,
       "explanation": "Adele names her albums after the age she was during their creation. 19, 21, 25, 30 — it's like a musical autobiography!",
       "image_url": null
@@ -1009,11 +1464,16 @@
     {
       "id": "pc092",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In what year did the first iPhone launch?",
-      "options": [],
-      "correct_answer": 2007,
+      "options": [
+        "2007",
+        "1706",
+        "1846",
+        "2168"
+      ],
+      "correct_answer": 0,
       "explanation": "The first iPhone dropped in 2007 and changed the world forever. Before that, we were all on Nokia 3310s and BlackBerrys. What a time!",
       "image_url": null
     },
@@ -1023,7 +1483,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA cricketer is known as 'AB' and is considered one of the greatest batsmen of all time?",
-      "options": ["Hashim Amla", "AB de Villiers", "Jacques Kallis", "Graeme Smith"],
+      "options": [
+        "Hashim Amla",
+        "AB de Villiers",
+        "Jacques Kallis",
+        "Graeme Smith"
+      ],
       "correct_answer": 1,
       "explanation": "AB de Villiers — Mr 360! He could hit the ball anywhere on the field. The man retired too early, but what a legend. Proudly South African!",
       "image_url": null
@@ -1034,7 +1499,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these smartphones from EARLIEST to LATEST first release.",
-      "options": ["Samsung Galaxy S", "iPhone", "Google Pixel", "Huawei P-series"],
+      "options": [
+        "Samsung Galaxy S",
+        "iPhone",
+        "Google Pixel",
+        "Huawei P-series"
+      ],
       "correct_answer": "1,0,3,2",
       "explanation": "iPhone (2007), Samsung Galaxy S (2010), Huawei P-series (2012), Google Pixel (2016). Apple started the smartphone revolution!",
       "image_url": null
@@ -1045,7 +1515,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is bobotie, a famous South African dish?",
-      "options": ["Grilled meat skewers", "Spiced minced meat bake with egg topping", "Deep-fried dough balls", "Dried meat snack"],
+      "options": [
+        "Grilled meat skewers",
+        "Spiced minced meat bake with egg topping",
+        "Deep-fried dough balls",
+        "Dried meat snack"
+      ],
       "correct_answer": 1,
       "explanation": "Bobotie is spiced mince with a creamy egg custard topping, often served with yellow rice and chutney. It's basically SA's national dish — Cape Malay heritage at its finest!",
       "image_url": null
@@ -1056,7 +1531,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "DJ Black Coffee won a Grammy in 2022 for Best Dance/Electronic Album. What was the album called?",
-      "options": ["Pieces of Me", "Africa Rising", "Subconsciously", "Home Brewed"],
+      "options": [
+        "Pieces of Me",
+        "Africa Rising",
+        "Subconsciously",
+        "Home Brewed"
+      ],
       "correct_answer": 2,
       "explanation": "Subconsciously won the Grammy! Black Coffee became the first SA artist to win in this category. From Durban to the Grammys — absolute legend!",
       "image_url": null
@@ -1067,7 +1547,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In EA FC (formerly FIFA), what colour is a 'Team of the Year' (TOTY) card?",
-      "options": ["Gold", "Blue", "Purple", "Red"],
+      "options": [
+        "Gold",
+        "Blue",
+        "Purple",
+        "Red"
+      ],
       "correct_answer": 1,
       "explanation": "TOTY cards are blue and are some of the most overpowered cards in the game. Packing a TOTY is basically winning the lottery for FIFA players!",
       "image_url": null
@@ -1075,11 +1560,16 @@
     {
       "id": "pc098",
       "difficulty": 50,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many studio albums did Drake release between 2010 and 2023 (inclusive)?",
-      "options": [],
-      "correct_answer": 7,
+      "options": [
+        "4",
+        "5",
+        "7",
+        "6"
+      ],
+      "correct_answer": 2,
       "explanation": "Drake dropped 7 studio albums: Thank Me Later, Take Care, Nothing Was the Same, Views, Scorpion, Certified Lover Boy, and For All the Dogs. The man does not stop!",
       "image_url": null
     },
@@ -1089,7 +1579,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA TV drama on 1Magic follows the Dikana family and their media empire?",
-      "options": ["The Queen", "The River", "Legacy", "Gomora"],
+      "options": [
+        "The Queen",
+        "The River",
+        "Legacy",
+        "Gomora"
+      ],
       "correct_answer": 1,
       "explanation": "The River follows the Dikana and Mokoena families. It's full of twists, betrayals, and drama that keeps Mzansi glued to the screen every weeknight!",
       "image_url": null
@@ -1100,7 +1595,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The YouTube video 'Charlie Bit My Finger' was once the most-viewed video on the platform. It was later sold as what?",
-      "options": ["A Netflix special", "An NFT", "A Super Bowl ad", "A children's book"],
+      "options": [
+        "A Netflix special",
+        "An NFT",
+        "A Super Bowl ad",
+        "A children's book"
+      ],
       "correct_answer": 1,
       "explanation": "Charlie Bit My Finger was sold as an NFT in 2021 for about $760,000! The original was removed from YouTube after the sale. The NFT craze was wild!",
       "image_url": null
@@ -1111,7 +1611,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In Naruto, what is the name of the nine-tailed fox sealed inside Naruto?",
-      "options": ["Shukaku", "Kurama", "Matatabi", "Gyuki"],
+      "options": [
+        "Shukaku",
+        "Kurama",
+        "Matatabi",
+        "Gyuki"
+      ],
       "correct_answer": 1,
       "explanation": "Kurama, the Nine-Tails! Naruto and Kurama's relationship went from enemies to best friends. That bond hits different. Believe it!",
       "image_url": null
@@ -1119,11 +1624,16 @@
     {
       "id": "pc102",
       "difficulty": 50,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many official languages does South Africa have?",
-      "options": [],
-      "correct_answer": 11,
+      "options": [
+        "11",
+        "1",
+        "6",
+        "16"
+      ],
+      "correct_answer": 0,
       "explanation": "SA has 11 official languages! From isiZulu to Afrikaans to Tshivenda. We're the rainbow nation for a reason — try saying that in all 11 languages!",
       "image_url": null
     },
@@ -1133,7 +1643,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which fast-food chain uses the advertising slogan 'I'm lovin' it'?",
-      "options": ["Burger King", "KFC", "McDonald's", "Wendy's"],
+      "options": [
+        "Burger King",
+        "KFC",
+        "McDonald's",
+        "Wendy's"
+      ],
       "correct_answer": 2,
       "explanation": "McDonald's — ba da ba ba ba, I'm lovin' it! That jingle lives rent-free in everyone's head worldwide.",
       "image_url": null
@@ -1144,7 +1659,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these Taylor Swift albums from EARLIEST to LATEST.",
-      "options": ["1989", "Folklore", "Reputation", "Midnights"],
+      "options": [
+        "1989",
+        "Folklore",
+        "Reputation",
+        "Midnights"
+      ],
       "correct_answer": "0,2,1,3",
       "explanation": "1989 (2014), Reputation (2017), Folklore (2020), Midnights (2022). Taylor reinvents herself with every album — from country to pop to indie folk!",
       "image_url": null
@@ -1155,7 +1675,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What type of pastry is a South African koeksister?",
-      "options": ["Baked pie", "Fried and syrup-coated doughnut braid", "Steamed pudding", "Grilled flatbread"],
+      "options": [
+        "Baked pie",
+        "Fried and syrup-coated doughnut braid",
+        "Steamed pudding",
+        "Grilled flatbread"
+      ],
       "correct_answer": 1,
       "explanation": "Koeksisters are braided, deep-fried dough soaked in cold sugar syrup. They're sticky, sweet, and absolutely lekker — especially on a Saturday morning!",
       "image_url": null
@@ -1166,7 +1691,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA hip-hop artist released the debut album 'Refiloe' and is known for his hit 'Doc Shebeleza'?",
-      "options": ["Nasty C", "AKA", "Cassper Nyovest", "Kwesta"],
+      "options": [
+        "Nasty C",
+        "AKA",
+        "Cassper Nyovest",
+        "Kwesta"
+      ],
       "correct_answer": 2,
       "explanation": "Cassper Nyovest's debut album 'Refiloe' dropped in 2015 (Refiloe is his real first name). Doc Shebeleza was the anthem that started it all!",
       "image_url": null
@@ -1174,11 +1704,16 @@
     {
       "id": "pc107",
       "difficulty": 40,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "YouTube was founded in 2005. In what year did Google acquire it?",
-      "options": [],
-      "correct_answer": 2006,
+      "options": [
+        "1705",
+        "1846",
+        "2166",
+        "2006"
+      ],
+      "correct_answer": 3,
       "explanation": "Google bought YouTube in October 2006 for $1.65 billion. At the time people thought it was overpaying — now it's worth hundreds of billions. Eish, hindsight!",
       "image_url": null
     },
@@ -1188,7 +1723,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In 'Star Wars', what is Baby Yoda's actual name (revealed in The Mandalorian)?",
-      "options": ["Yoda Jr", "Grogu", "Yaddle", "Din"],
+      "options": [
+        "Yoda Jr",
+        "Grogu",
+        "Yaddle",
+        "Din"
+      ],
       "correct_answer": 1,
       "explanation": "His name is Grogu! But let's be honest, everyone still calls him Baby Yoda. The internet chose, and the internet wins!",
       "image_url": null
@@ -1199,7 +1739,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA restaurant chain is known for its 'Spur' steak ranches with a Native American theme?",
-      "options": ["Cattle Baron", "The Hussar Grill", "Spur Steak Ranches", "Mike's Kitchen"],
+      "options": [
+        "Cattle Baron",
+        "The Hussar Grill",
+        "Spur Steak Ranches",
+        "Mike's Kitchen"
+      ],
       "correct_answer": 2,
       "explanation": "Spur has been feeding SA families since 1967! Every SA kid has had a birthday party at Spur with those colouring-in placemats and the birthday song. Shame, good times!",
       "image_url": null
@@ -1210,7 +1755,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The meme 'This is Fine' shows a dog sitting in a burning room. What is the dog doing?",
-      "options": ["Running away", "Drinking coffee", "Sleeping", "Reading a newspaper"],
+      "options": [
+        "Running away",
+        "Drinking coffee",
+        "Sleeping",
+        "Reading a newspaper"
+      ],
       "correct_answer": 1,
       "explanation": "The dog is calmly drinking coffee while everything burns around him. It's from KC Green's 'Gunshow' webcomic. Basically how South Africans handle loadshedding!",
       "image_url": null
@@ -1221,7 +1771,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA swimmer won a gold medal at the 2016 Rio Olympics in the 400m freestyle?",
-      "options": ["Roland Schoeman", "Chad le Clos", "Cameron van der Burgh", "None — no SA gold in swimming at 2016"],
+      "options": [
+        "Roland Schoeman",
+        "Chad le Clos",
+        "Cameron van der Burgh",
+        "None — no SA gold in swimming at 2016"
+      ],
       "correct_answer": 3,
       "explanation": "Trick question! No SA swimmer won gold at Rio 2016. Chad le Clos won gold at London 2012 (200m butterfly). Van der Burgh won gold at London 2012 too (100m breaststroke). Rio was a different story!",
       "image_url": null
@@ -1229,11 +1784,16 @@
     {
       "id": "pc112",
       "difficulty": 40,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many infinity stones exist in the Marvel Cinematic Universe?",
-      "options": [],
-      "correct_answer": 6,
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct_answer": 3,
       "explanation": "6 Infinity Stones: Space, Mind, Reality, Power, Time, and Soul. Thanos collected all six and... well, we don't talk about the snap!",
       "image_url": null
     },
@@ -1243,7 +1803,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Focalistic's amapiano hit 'Ke Star' features which other major SA artist?",
-      "options": ["Kabza De Small", "Davido", "Vigro Deep", "DBN Gogo"],
+      "options": [
+        "Kabza De Small",
+        "Davido",
+        "Vigro Deep",
+        "DBN Gogo"
+      ],
       "correct_answer": 2,
       "explanation": "Ke Star features Vigro Deep! The song went massive in 2020 and even got a remix with Davido. Focalistic really said 'Asambe' to the world!",
       "image_url": null
@@ -1254,7 +1819,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these GTA games from EARLIEST to LATEST release.",
-      "options": ["GTA San Andreas", "GTA IV", "GTA V", "GTA Vice City"],
+      "options": [
+        "GTA San Andreas",
+        "GTA IV",
+        "GTA V",
+        "GTA Vice City"
+      ],
       "correct_answer": "3,0,1,2",
       "explanation": "Vice City (2002), San Andreas (2004), GTA IV (2008), GTA V (2013). And we're STILL waiting for GTA VI — Rockstar takes their sweet time!",
       "image_url": null
@@ -1265,7 +1835,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the traditional Durban street food made of curry inside a hollowed-out loaf of bread called?",
-      "options": ["Gatsby", "Bunny chow", "Vetkoek", "Roti roll"],
+      "options": [
+        "Gatsby",
+        "Bunny chow",
+        "Vetkoek",
+        "Roti roll"
+      ],
       "correct_answer": 1,
       "explanation": "Bunny chow! A quarter, half, or full loaf stuffed with curry. It's Durban's gift to the food world. Warning: it gets messy, but that's the beauty of it!",
       "image_url": null
@@ -1276,7 +1851,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA artist's real name is Nsikayesizwe David Junior Ngcobo?",
-      "options": ["A-Reece", "Nasty C", "Emtee", "Shane Eagle"],
+      "options": [
+        "A-Reece",
+        "Nasty C",
+        "Emtee",
+        "Shane Eagle"
+      ],
       "correct_answer": 1,
       "explanation": "Nasty C's full name is a mouthful! Nsikayesizwe David Junior Ngcobo — but the world knows him as Nasty C, one of SA's biggest rap exports.",
       "image_url": null
@@ -1284,11 +1864,16 @@
     {
       "id": "pc117",
       "difficulty": 30,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In Minecraft, what is the maximum number of items that can stack in one inventory slot (for stackable items)?",
-      "options": [],
-      "correct_answer": 64,
+      "options": [
+        "64",
+        "49",
+        "54",
+        "59"
+      ],
+      "correct_answer": 0,
       "explanation": "64 items per stack! It's a power of 2 (2^6) because the game was coded that way. Every Minecraft player knows the magic number 64!",
       "image_url": null
     },
@@ -1298,7 +1883,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The SA Netflix series 'Queen Sono' was the first African Netflix original. Who plays Queen Sono?",
-      "options": ["Thuso Mbedu", "Pearl Thusi", "Nomzamo Mbatha", "Sindi Dlathu"],
+      "options": [
+        "Thuso Mbedu",
+        "Pearl Thusi",
+        "Nomzamo Mbatha",
+        "Sindi Dlathu"
+      ],
       "correct_answer": 1,
       "explanation": "Pearl Thusi stars as Queen Sono, a spy working for a secret agency. It was groundbreaking for African content on Netflix — even though it only got one season. Shame!",
       "image_url": null
@@ -1309,7 +1899,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which maskandi artist is known as the 'King of Maskandi' and has sold millions of albums in SA?",
-      "options": ["Ladysmith Black Mambazo", "Khuzani", "Shwi noMtekhala", "Mbongeni Ngema"],
+      "options": [
+        "Ladysmith Black Mambazo",
+        "Khuzani",
+        "Shwi noMtekhala",
+        "Mbongeni Ngema"
+      ],
       "correct_answer": 1,
       "explanation": "Khuzani Mpungose is the reigning King of Maskandi! His rivalry with Mthandeni was bigger than any boxing match. Maskandi fans are passionate!",
       "image_url": null
@@ -1320,7 +1915,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the anime One Piece, what is the name of Luffy's pirate crew?",
-      "options": ["Red Hair Pirates", "Straw Hat Pirates", "Heart Pirates", "Blackbeard Pirates"],
+      "options": [
+        "Red Hair Pirates",
+        "Straw Hat Pirates",
+        "Heart Pirates",
+        "Blackbeard Pirates"
+      ],
       "correct_answer": 1,
       "explanation": "The Straw Hat Pirates, named after Luffy's iconic straw hat given to him by Shanks. They're the most wanted crew on the Grand Line!",
       "image_url": null
@@ -1328,11 +1928,16 @@
     {
       "id": "pc121",
       "difficulty": 30,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many people can play in a standard Fortnite Battle Royale match?",
-      "options": [],
-      "correct_answer": 100,
+      "options": [
+        "85",
+        "100",
+        "90",
+        "95"
+      ],
+      "correct_answer": 1,
       "explanation": "100 players drop into the island and fight until one remains. 100 players, one winner — those odds are worse than finding data deals at month end!",
       "image_url": null
     },
@@ -1342,7 +1947,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which MTN colour scheme is used across all their branding in SA?",
-      "options": ["Red and white", "Blue and silver", "Yellow and white", "Green and gold"],
+      "options": [
+        "Red and white",
+        "Blue and silver",
+        "Yellow and white",
+        "Green and gold"
+      ],
       "correct_answer": 2,
       "explanation": "MTN is bright yellow! 'Everywhere you go' — that yellow branding is impossible to miss. It's basically the colour of mobile data in Africa!",
       "image_url": null
@@ -1353,7 +1963,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Springbok captain Siya Kolisi led South Africa to Rugby World Cup victory in 2019. Where was the final held?",
-      "options": ["London", "Tokyo", "Yokohama", "Paris"],
+      "options": [
+        "London",
+        "Tokyo",
+        "Yokohama",
+        "Paris"
+      ],
       "correct_answer": 2,
       "explanation": "The 2019 final was at International Stadium Yokohama, Japan. SA beat England 32-12. Siya lifting that trophy as the first Black Springbok captain was historic!",
       "image_url": null
@@ -1364,7 +1979,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which viral internet challenge involved people lying flat in unusual locations and posting photos?",
-      "options": ["Ice Bucket Challenge", "Planking", "Mannequin Challenge", "Bottle Cap Challenge"],
+      "options": [
+        "Ice Bucket Challenge",
+        "Planking",
+        "Mannequin Challenge",
+        "Bottle Cap Challenge"
+      ],
       "correct_answer": 1,
       "explanation": "Planking was the 2011 trend where people lay face down in random places. It was silly, dangerous, and absolutely everywhere. The internet was simpler then!",
       "image_url": null
@@ -1375,7 +1995,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these SA music genres from OLDEST to NEWEST emergence.",
-      "options": ["Amapiano", "Kwaito", "Gqom", "Maskandi"],
+      "options": [
+        "Amapiano",
+        "Kwaito",
+        "Gqom",
+        "Maskandi"
+      ],
       "correct_answer": "3,1,2,0",
       "explanation": "Maskandi (1960s+), Kwaito (1990s), Gqom (2010s, Durban), Amapiano (late 2010s). SA keeps innovating — every decade brings a new sound!",
       "image_url": null
@@ -1386,7 +2011,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA gospel artist sang 'Bayede' and is known as one of the biggest gospel stars in Africa?",
-      "options": ["Benjamin Dube", "Sipho Makhabane", "Rebecca Malope", "Lundi Tyamara"],
+      "options": [
+        "Benjamin Dube",
+        "Sipho Makhabane",
+        "Rebecca Malope",
+        "Lundi Tyamara"
+      ],
       "correct_answer": 2,
       "explanation": "Rebecca Malope is the 'Queen of Gospel' in SA. She's been filling stadiums and touching souls since the 1990s. Her voice is a national treasure!",
       "image_url": null
@@ -1394,11 +2024,16 @@
     {
       "id": "pc127",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The original 'Pac-Man' arcade game was released in what year?",
-      "options": [],
-      "correct_answer": 1980,
+      "options": [
+        "1683",
+        "1822",
+        "2138",
+        "1980"
+      ],
+      "correct_answer": 3,
       "explanation": "Pac-Man hit arcades in 1980 and became a global phenomenon. Waka waka waka — gaming's first real pop culture icon!",
       "image_url": null
     },
@@ -1408,7 +2043,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA TV show on Mzansi Magic is set in Alexandra township and features the Gomora characters?",
-      "options": ["The Queen", "Gomora", "Isibaya", "DiepCity"],
+      "options": [
+        "The Queen",
+        "Gomora",
+        "Isibaya",
+        "DiepCity"
+      ],
       "correct_answer": 1,
       "explanation": "Gomora is set in Alexandra (Alex) and became one of Mzansi Magic's biggest shows. The storylines about township life hit close to home for many South Africans.",
       "image_url": null
@@ -1419,7 +2059,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the MCU, which actor played Thanos through motion capture performance?",
-      "options": ["Mark Ruffalo", "Josh Brolin", "James Spader", "Andy Serkis"],
+      "options": [
+        "Mark Ruffalo",
+        "Josh Brolin",
+        "James Spader",
+        "Andy Serkis"
+      ],
       "correct_answer": 1,
       "explanation": "Josh Brolin brought Thanos to life! He made a giant purple alien feel genuinely terrifying and even sympathetic. 'I am inevitable' — chills every time!",
       "image_url": null
@@ -1430,7 +2075,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The first tweet ever posted on Twitter was by co-founder Jack Dorsey. What did it say?",
-      "options": ["Hello World", "just setting up my twttr", "Welcome to Twitter", "Testing testing 123"],
+      "options": [
+        "Hello World",
+        "just setting up my twttr",
+        "Welcome to Twitter",
+        "Testing testing 123"
+      ],
       "correct_answer": 1,
       "explanation": "'just setting up my twttr' was posted on March 21, 2006. The original name was 'twttr' without vowels. That tweet later sold as an NFT for $2.9 million!",
       "image_url": null
@@ -1438,11 +2088,16 @@
     {
       "id": "pc131",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many times has Usain Bolt won the Olympic 100m gold medal?",
-      "options": [],
-      "correct_answer": 3,
+      "options": [
+        "0",
+        "1",
+        "3",
+        "2"
+      ],
+      "correct_answer": 2,
       "explanation": "Usain Bolt won 100m gold at Beijing 2008, London 2012, and Rio 2016. Three-peat! The Lightning Bolt is the fastest human ever. Nobody else comes close!",
       "image_url": null
     },
@@ -1452,7 +2107,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA Muvhango actress is also known for her role in 'The River' and 'Generations'?",
-      "options": ["Sindi Dlathu", "Brenda Ngxoli", "Phuti Khomo", "Liteboho Molise"],
+      "options": [
+        "Sindi Dlathu",
+        "Brenda Ngxoli",
+        "Phuti Khomo",
+        "Liteboho Molise"
+      ],
       "correct_answer": 0,
       "explanation": "Sindi Dlathu is an SA acting powerhouse! She was in Generations for years, then became the star of The River as Lindiwe Dikana. That woman can ACT!",
       "image_url": null
@@ -1463,7 +2123,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the 'Breaking Bad' universe, what is the name of the chicken restaurant that serves as a front for Gus Fring's drug operation?",
-      "options": ["Pollos Locos", "Los Pollos Hermanos", "El Pollo Loco", "Hermanos Chicken"],
+      "options": [
+        "Pollos Locos",
+        "Los Pollos Hermanos",
+        "El Pollo Loco",
+        "Hermanos Chicken"
+      ],
       "correct_answer": 1,
       "explanation": "Los Pollos Hermanos — 'The Chicken Brothers.' Gus Fring ran the most professional drug empire ever, hidden behind fried chicken. The man was in a class of his own!",
       "image_url": null
@@ -1474,7 +2139,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these SA fast food chains from EARLIEST to LATEST founding year.",
-      "options": ["Nando's", "Steers", "Chicken Licken", "Wimpy SA"],
+      "options": [
+        "Nando's",
+        "Steers",
+        "Chicken Licken",
+        "Wimpy SA"
+      ],
       "correct_answer": "3,1,2,0",
       "explanation": "Wimpy SA (1967), Steers (1960 — wait, that's earlier! Actually Steers 1960, Wimpy SA 1967). Correction: Steers (1960), Wimpy SA (1967), Chicken Licken (1981), Nando's (1987). SA fast food has a lekker long history!",
       "image_url": null
@@ -1485,7 +2155,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which energy drink brand originated in Austria but is the world's best-selling energy drink?",
-      "options": ["Monster", "Red Bull", "Rockstar", "Prime"],
+      "options": [
+        "Monster",
+        "Red Bull",
+        "Rockstar",
+        "Prime"
+      ],
       "correct_answer": 1,
       "explanation": "Red Bull was founded in Austria in 1987 by Dietrich Mateschitz, inspired by a Thai energy drink. It gives you wings — or at least heart palpitations!",
       "image_url": null
@@ -1496,7 +2171,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Black Coffee (Nkosinathi Maphumulo) is originally from which SA province?",
-      "options": ["Gauteng", "Western Cape", "KwaZulu-Natal", "Eastern Cape"],
+      "options": [
+        "Gauteng",
+        "Western Cape",
+        "KwaZulu-Natal",
+        "Eastern Cape"
+      ],
       "correct_answer": 2,
       "explanation": "Black Coffee is from Umlazi, Durban, KwaZulu-Natal. He grew up in the township and became one of the biggest DJs on the planet. From Umlazi to Ibiza!",
       "image_url": null
@@ -1504,11 +2184,16 @@
     {
       "id": "pc137",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In what year did Naruto Shippuden (the anime) finish its final episode broadcast?",
-      "options": [],
-      "correct_answer": 2017,
+      "options": [
+        "1714",
+        "1856",
+        "2178",
+        "2017"
+      ],
+      "correct_answer": 3,
       "explanation": "Naruto Shippuden's final episode (500) aired on March 23, 2017. After 500 episodes and countless fillers, Naruto's story finally ended. What a journey!",
       "image_url": null
     },
@@ -1518,7 +2203,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which viral meme format features a woman yelling at a confused white cat sitting at a dinner table?",
-      "options": ["Woman Yelling at Cat", "Grumpy Cat", "Keyboard Cat", "Nyan Cat"],
+      "options": [
+        "Woman Yelling at Cat",
+        "Grumpy Cat",
+        "Keyboard Cat",
+        "Nyan Cat"
+      ],
       "correct_answer": 0,
       "explanation": "The 'Woman Yelling at a Cat' meme combines a Real Housewives screenshot with a photo of a cat named Smudge. It became one of the most versatile meme templates ever!",
       "image_url": null
@@ -1529,7 +2219,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In GTA V, how many playable protagonist characters can you switch between?",
-      "options": ["1", "2", "3", "4"],
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
       "correct_answer": 2,
       "explanation": "GTA V has 3 playable characters: Michael, Franklin, and Trevor. The character-switching mechanic was revolutionary for the series. Trevor is everyone's favourite psycho!",
       "image_url": null
@@ -1540,7 +2235,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The SA music duo 'Mafikizolo' had which major international hit that blended Afro-pop with house music?",
-      "options": ["Khona", "Loot", "Emlanjeni", "Ndihamba Nawe"],
+      "options": [
+        "Khona",
+        "Loot",
+        "Emlanjeni",
+        "Ndihamba Nawe"
+      ],
       "correct_answer": 0,
       "explanation": "Khona (2013) was massive! Mafikizolo (Nhlanhla Nciza and Theo Kgosinkwe) took SA Afro-pop to the world. That song was played at every event for years!",
       "image_url": null
@@ -1548,11 +2248,16 @@
     {
       "id": "pc141",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many Pick n Pay stores were there in South Africa when the chain celebrated its 50th anniversary in 2017? Round to the nearest 100.",
-      "options": [],
-      "correct_answer": 800,
+      "options": [
+        "640",
+        "720",
+        "880",
+        "800"
+      ],
+      "correct_answer": 3,
       "explanation": "Pick n Pay had roughly 800 stores by its 50th anniversary. Raymond Ackerman built an empire from one store in Cape Town. That's SA entrepreneurship!",
       "image_url": null
     },
@@ -1562,7 +2267,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA rugby player holds the record for most tries scored in Rugby World Cup history?",
-      "options": ["Bryan Habana", "Cheslin Kolbe", "Jonah Lomu", "Shane Williams"],
+      "options": [
+        "Bryan Habana",
+        "Cheslin Kolbe",
+        "Jonah Lomu",
+        "Shane Williams"
+      ],
       "correct_answer": 0,
       "explanation": "Bryan Habana is tied with Jonah Lomu for the all-time World Cup try record with 15 tries! The man was lightning fast. SA rugby royalty!",
       "image_url": null
@@ -1573,7 +2283,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Call of Duty map 'Nuketown' is set in a simulated what?",
-      "options": ["Military base", "Nuclear test town", "Space station", "Suburban neighbourhood"],
+      "options": [
+        "Military base",
+        "Nuclear test town",
+        "Space station",
+        "Suburban neighbourhood"
+      ],
       "correct_answer": 1,
       "explanation": "Nuketown is a nuclear test site with mannequins and model houses! It's designed to simulate a nuclear blast test from the 1950s. The most chaotic small map in CoD history!",
       "image_url": null
@@ -1584,7 +2299,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these SA TV shows from EARLIEST to LATEST first air date.",
-      "options": ["Uzalo", "Skeem Saam", "Blood & Water", "Generations"],
+      "options": [
+        "Uzalo",
+        "Skeem Saam",
+        "Blood & Water",
+        "Generations"
+      ],
       "correct_answer": "3,1,0,2",
       "explanation": "Generations (1994), Skeem Saam (2011), Uzalo (2015), Blood & Water (2020). SA TV has evolved massively from soapies to Netflix originals!",
       "image_url": null
@@ -1595,7 +2315,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Caster Semenya, the SA Olympic medallist, competes in which athletics event?",
-      "options": ["100m sprint", "800m", "Marathon", "Long jump"],
+      "options": [
+        "100m sprint",
+        "800m",
+        "Marathon",
+        "Long jump"
+      ],
       "correct_answer": 1,
       "explanation": "Caster Semenya is an 800m specialist who won Olympic gold at Rio 2016. She's faced unfair regulations but remains an SA sporting hero. Strength personified!",
       "image_url": null
@@ -1606,7 +2331,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which amapiano producer is known as the 'Piano King' and released the hit 'Sponono' with Kabza De Small?",
-      "options": ["Vigro Deep", "Mr JazziQ", "Busta 929", "Mdu aka TRP"],
+      "options": [
+        "Vigro Deep",
+        "Mr JazziQ",
+        "Busta 929",
+        "Mdu aka TRP"
+      ],
       "correct_answer": 0,
       "explanation": "Vigro Deep released 'Sponono' on his 'Baby Boy' album. He was just a teenager when he blew up! The Piano King title is well earned. Young talent!",
       "image_url": null
@@ -1614,11 +2344,16 @@
     {
       "id": "pc147",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In what year was the first 'Call of Duty' game released?",
-      "options": [],
-      "correct_answer": 2003,
+      "options": [
+        "1703",
+        "2003",
+        "1843",
+        "2163"
+      ],
+      "correct_answer": 1,
       "explanation": "The original Call of Duty dropped in 2003, set in World War II. From there it became the biggest FPS franchise ever. Two decades of 'enemy spotted'!",
       "image_url": null
     },
@@ -1628,7 +2363,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The SA film 'Happiness is a Four-Letter Word' (2016) is based on a novel by which author?",
-      "options": ["Cynthia Jele", "Zakes Mda", "Deon Meyer", "Lauren Beukes"],
+      "options": [
+        "Cynthia Jele",
+        "Zakes Mda",
+        "Deon Meyer",
+        "Lauren Beukes"
+      ],
       "correct_answer": 0,
       "explanation": "Cynthia Jele wrote the novel that became one of SA's biggest local films. Reneilwe Sema, Khanyi Mbau, and Mmabatho Montsho starred. SA film excellence!",
       "image_url": null
@@ -1639,7 +2379,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In Dragon Ball, what is Goku's Saiyan birth name?",
-      "options": ["Vegeta", "Kakarot", "Bardock", "Raditz"],
+      "options": [
+        "Vegeta",
+        "Kakarot",
+        "Bardock",
+        "Raditz"
+      ],
       "correct_answer": 1,
       "explanation": "Goku's Saiyan name is Kakarot! Vegeta never lets him forget it. Grandpa Gohan named him Goku on Earth. Two names, one legend!",
       "image_url": null
@@ -1650,7 +2395,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA athlete won the Comrades Marathon the most times in the modern era (post-2000)?",
-      "options": ["Bruce Fordyce", "Bongmusa Mthembu", "Leonid Shvetsov", "Ludwick Mamabolo"],
+      "options": [
+        "Bruce Fordyce",
+        "Bongmusa Mthembu",
+        "Leonid Shvetsov",
+        "Ludwick Mamabolo"
+      ],
       "correct_answer": 1,
       "explanation": "Bongmusa Mthembu won the Comrades 3 times (2014, 2017, 2019) in the modern era. Bruce Fordyce has more overall (9) but in an earlier era. Mthembu is the modern king!",
       "image_url": null
@@ -1658,11 +2408,16 @@
     {
       "id": "pc151",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many seasons did the SA telenovela 'The Queen' run for on Mzansi Magic before ending?",
-      "options": [],
-      "correct_answer": 7,
+      "options": [
+        "4",
+        "5",
+        "7",
+        "6"
+      ],
+      "correct_answer": 2,
       "explanation": "The Queen ran for 7 seasons (2016-2023) on Mzansi Magic. Connie Ferguson's Harriet Khoza was one of the most iconic characters in SA TV history!",
       "image_url": null
     },
@@ -1672,7 +2427,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "TikTok's parent company ByteDance is headquartered in which country?",
-      "options": ["USA", "Japan", "China", "South Korea"],
+      "options": [
+        "USA",
+        "Japan",
+        "China",
+        "South Korea"
+      ],
       "correct_answer": 2,
       "explanation": "ByteDance is a Chinese company headquartered in Beijing. TikTok's Chinese version is called Douyin. The app that's taking over the world started in China!",
       "image_url": null
@@ -1683,7 +2443,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the traditional SA dried meat snack called that's similar to beef jerky but much better?",
-      "options": ["Droewors", "Biltong", "Boerewors", "Sosatie"],
+      "options": [
+        "Droewors",
+        "Biltong",
+        "Boerewors",
+        "Sosatie"
+      ],
       "correct_answer": 1,
       "explanation": "Biltong! It's cured, dried meat that's a national obsession. Don't ever compare it to jerky in front of a South African — that's a fight waiting to happen!",
       "image_url": null
@@ -1694,7 +2459,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these Mr Price Group brands from EARLIEST to LATEST year of founding/acquisition.",
-      "options": ["Mr Price Sport", "Mr Price Home", "Mr Price (clothing)", "Sheet Street"],
+      "options": [
+        "Mr Price Sport",
+        "Mr Price Home",
+        "Mr Price (clothing)",
+        "Sheet Street"
+      ],
       "correct_answer": "2,1,0,3",
       "explanation": "Mr Price clothing (1985), Mr Price Home (1999), Mr Price Sport (2001), Sheet Street (2009 acquisition). From budget fashion to a retail empire — proudly SA!",
       "image_url": null
@@ -1702,11 +2472,16 @@
     {
       "id": "pc155",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In what year did Roblox first launch to the public?",
-      "options": [],
-      "correct_answer": 2006,
+      "options": [
+        "2006",
+        "1705",
+        "1846",
+        "2166"
+      ],
+      "correct_answer": 0,
       "explanation": "Roblox launched in 2006 but didn't blow up until much later. Now it's got hundreds of millions of users and kids are making actual money building games on it. Wild!",
       "image_url": null
     },
@@ -1716,7 +2491,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The SA kwaito group Trompies had a massive hit in the late 90s. Which song featured the famous 'Magasman' dance?",
-      "options": ["Magasman", "Fohloza", "Sweetie Lavo", "De la Cream"],
+      "options": [
+        "Magasman",
+        "Fohloza",
+        "Sweetie Lavo",
+        "De la Cream"
+      ],
       "correct_answer": 1,
       "explanation": "Fohloza was the track that had everyone doing the Magasman dance! Trompies (with Mafikizolo and others on the remix) defined late 90s kwaito. Pure nostalgia!",
       "image_url": null
@@ -1724,11 +2504,16 @@
     {
       "id": "pc157",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In what year did DStv (Digital Satellite Television) first launch in South Africa?",
-      "options": [],
-      "correct_answer": 1995,
+      "options": [
+        "1995",
+        "1696",
+        "1835",
+        "2155"
+      ],
+      "correct_answer": 0,
       "explanation": "DStv launched in 1995 and transformed SA television. Before DStv, we only had SABC channels and M-Net. Now there are hundreds of channels — and we still can't find anything to watch!",
       "image_url": null
     },
@@ -1738,7 +2523,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In the anime 'Naruto', which eye technique (dojutsu) is unique to the Hyuga clan?",
-      "options": ["Sharingan", "Rinnegan", "Byakugan", "Tenseigan"],
+      "options": [
+        "Sharingan",
+        "Rinnegan",
+        "Byakugan",
+        "Tenseigan"
+      ],
       "correct_answer": 2,
       "explanation": "The Byakugan gives the Hyuga clan 360-degree vision and the ability to see chakra points. Neji and Hinata's clan. Those white eyes don't miss anything!",
       "image_url": null
@@ -1749,7 +2539,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA tech company, founded by Mark Shuttleworth, created the Ubuntu Linux operating system?",
-      "options": ["Naspers", "Canonical", "Dimension Data", "Takealot"],
+      "options": [
+        "Naspers",
+        "Canonical",
+        "Dimension Data",
+        "Takealot"
+      ],
       "correct_answer": 1,
       "explanation": "Canonical, founded by Mark Shuttleworth (the first African in space!), created Ubuntu. The name means 'humanity to others' in Zulu/Xhosa. SA tech excellence!",
       "image_url": null
@@ -1757,11 +2552,16 @@
     {
       "id": "pc160",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many world records did Michael Phelps hold at his peak for individual swimming events? (Count only individual events, not relays.)",
-      "options": [],
-      "correct_answer": 7,
+      "options": [
+        "7",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct_answer": 0,
       "explanation": "Michael Phelps held 7 individual world records at his peak. The man won 23 Olympic gold medals total — the most decorated Olympian ever. He was basically a dolphin in human form!",
       "image_url": null
     },
@@ -1771,7 +2571,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The SA dish 'umngqusho' is made primarily from which two ingredients?",
-      "options": ["Rice and beans", "Samp and beans", "Maize meal and spinach", "Potatoes and meat"],
+      "options": [
+        "Rice and beans",
+        "Samp and beans",
+        "Maize meal and spinach",
+        "Potatoes and meat"
+      ],
       "correct_answer": 1,
       "explanation": "Umngqusho is samp (dried corn kernels) and beans — it was Nelson Mandela's favourite dish! Simple, filling, and deeply traditional. Soul food, Mzansi style!",
       "image_url": null
@@ -1782,7 +2587,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA-born actress starred in 'The Woman King' (2022) and 'The Underground Railroad'?",
-      "options": ["Nomzamo Mbatha", "Thuso Mbedu", "Pearl Thusi", "Charlize Theron"],
+      "options": [
+        "Nomzamo Mbatha",
+        "Thuso Mbedu",
+        "Pearl Thusi",
+        "Charlize Theron"
+      ],
       "correct_answer": 1,
       "explanation": "Thuso Mbedu from Pietermaritzburg, KZN! She went from SA TV (Is'Thunzi, Scandal!) to Hollywood. Her performance in The Underground Railroad was incredible. Mzansi talent!",
       "image_url": null
@@ -1793,7 +2603,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Arrange these viral internet moments from EARLIEST to LATEST.",
-      "options": ["Gangnam Style hits 1B YouTube views", "Ice Bucket Challenge", "Harlem Shake trend", "Bottle Cap Challenge"],
+      "options": [
+        "Gangnam Style hits 1B YouTube views",
+        "Ice Bucket Challenge",
+        "Harlem Shake trend",
+        "Bottle Cap Challenge"
+      ],
       "correct_answer": "0,2,1,3",
       "explanation": "Gangnam Style hit 1B views (Dec 2012), Harlem Shake (Feb 2013), Ice Bucket Challenge (mid 2014), Bottle Cap Challenge (2019). The internet's greatest hits!",
       "image_url": null
@@ -1801,11 +2616,16 @@
     {
       "id": "pc164",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "In what year was the SA clothing retailer Mr Price founded?",
-      "options": [],
-      "correct_answer": 1985,
+      "options": [
+        "1687",
+        "1985",
+        "1826",
+        "2144"
+      ],
+      "correct_answer": 1,
       "explanation": "Mr Price was founded in 1985 in Durban. From one store to hundreds across Africa — they proved affordable fashion doesn't have to be boring. Budget drip since '85!",
       "image_url": null
     },
@@ -1815,7 +2635,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which SA DJ/producer's real name is Nkosinathi Innocent Maphumulo and he performed at Coachella?",
-      "options": ["DJ Zinhle", "Black Coffee", "Euphonik", "DJ Fresh"],
+      "options": [
+        "DJ Zinhle",
+        "Black Coffee",
+        "Euphonik",
+        "DJ Fresh"
+      ],
       "correct_answer": 1,
       "explanation": "Black Coffee! Born Nkosinathi Innocent Maphumulo in Umlazi, Durban. He played Coachella, won a Grammy, and put SA deep house on the global map. The man is a living legend!",
       "image_url": null

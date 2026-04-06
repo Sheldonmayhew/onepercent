@@ -11,7 +11,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What gas do humans breathe in to stay alive?",
-      "options": ["Carbon dioxide", "Nitrogen", "Oxygen", "Hydrogen"],
+      "options": [
+        "Carbon dioxide",
+        "Nitrogen",
+        "Oxygen",
+        "Hydrogen"
+      ],
       "correct_answer": 2,
       "explanation": "Oxygen! We breathe it in and breathe out carbon dioxide. Even though the air is mostly nitrogen, it's the oxygen our bodies need.",
       "image_url": null
@@ -22,7 +27,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many legs does a spider have?",
-      "options": ["6", "8", "10", "12"],
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
       "correct_answer": 1,
       "explanation": "8 legs! That's what makes them arachnids, not insects. South Africa has over 3,000 spider species, including the famous rain spider that likes to visit your bathroom.",
       "image_url": null
@@ -33,7 +43,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the largest land animal on Earth, found roaming the Kruger National Park?",
-      "options": ["Hippopotamus", "White rhinoceros", "African elephant", "Giraffe"],
+      "options": [
+        "Hippopotamus",
+        "White rhinoceros",
+        "African elephant",
+        "Giraffe"
+      ],
       "correct_answer": 2,
       "explanation": "The African elephant is the largest land animal, weighing up to 6,000 kg! The Kruger has around 17,000 of these magnificent giants.",
       "image_url": null
@@ -44,7 +59,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Water boils at 100°C. What happens to it?",
-      "options": ["It freezes", "It turns to steam", "It turns to ice", "It evaporates slowly"],
+      "options": [
+        "It freezes",
+        "It turns to steam",
+        "It turns to ice",
+        "It evaporates slowly"
+      ],
       "correct_answer": 1,
       "explanation": "At 100°C (at sea level), water boils and turns to steam. Fun fact: in Joburg at 1,753m above sea level, water actually boils at about 95°C because of the lower air pressure!",
       "image_url": null
@@ -52,11 +72,16 @@
     {
       "id": "sn005",
       "difficulty": 90,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many planets are in our solar system?",
-      "options": [],
-      "correct_answer": 8,
+      "options": [
+        "5",
+        "8",
+        "6",
+        "7"
+      ],
+      "correct_answer": 1,
       "explanation": "8 planets since Pluto got demoted in 2006. South Africa's SALT telescope in the Karoo helps us study them all! Sorry Pluto, you're a dwarf planet now.",
       "image_url": null
     },
@@ -66,7 +91,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the chemical formula for water?",
-      "options": ["HO", "H2O", "H2O2", "OH2"],
+      "options": [
+        "HO",
+        "H2O",
+        "H2O2",
+        "OH2"
+      ],
       "correct_answer": 1,
       "explanation": "H2O — two hydrogen atoms bonded to one oxygen atom. H2O2 would be hydrogen peroxide, and you definitely don't want to drink that!",
       "image_url": null
@@ -77,7 +107,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Which of the Big Five animals is actually the most dangerous to humans in Africa?",
-      "options": ["Lion", "Elephant", "Cape buffalo", "Leopard"],
+      "options": [
+        "Lion",
+        "Elephant",
+        "Cape buffalo",
+        "Leopard"
+      ],
       "correct_answer": 2,
       "explanation": "The Cape buffalo! Known as 'the Black Death' by hunters, it's unpredictable and aggressive, killing an estimated 200 people per year in Africa. Even lions think twice before taking one on.",
       "image_url": null
@@ -85,11 +120,16 @@
     {
       "id": "sn008",
       "difficulty": 80,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many bones does an adult human body have?",
-      "options": [],
-      "correct_answer": 206,
+      "options": [
+        "165",
+        "185",
+        "227",
+        "206"
+      ],
+      "correct_answer": 3,
       "explanation": "206 bones! Babies are born with about 270, but many fuse together as we grow. The smallest bone is the stapes in your ear — only about 3mm long.",
       "image_url": null
     },
@@ -99,7 +139,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What causes the seasons on Earth?",
-      "options": ["Distance from the sun", "The Earth's tilted axis", "The moon's gravity", "Solar flares"],
+      "options": [
+        "Distance from the sun",
+        "The Earth's tilted axis",
+        "The moon's gravity",
+        "Solar flares"
+      ],
       "correct_answer": 1,
       "explanation": "It's Earth's 23.5° axial tilt! That's why SA has summer when Europe has winter. The distance from the sun barely changes — in fact, Earth is closest to the sun during SA's summer!",
       "image_url": null
@@ -110,7 +155,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Knysna seahorse is found only in South Africa. What is unusual about seahorse reproduction?",
-      "options": ["They lay eggs on land", "The male carries and gives birth to the young", "They reproduce by splitting in two", "The female dies after giving birth"],
+      "options": [
+        "They lay eggs on land",
+        "The male carries and gives birth to the young",
+        "They reproduce by splitting in two",
+        "The female dies after giving birth"
+      ],
       "correct_answer": 1,
       "explanation": "The male seahorse carries the babies in a pouch and 'gives birth'! The Knysna seahorse is one of the most endangered seahorse species in the world, found only in three estuaries along the Garden Route.",
       "image_url": null
@@ -121,7 +171,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the hardest natural substance on Earth, famously mined in South Africa?",
-      "options": ["Gold", "Platinum", "Diamond", "Titanium"],
+      "options": [
+        "Gold",
+        "Platinum",
+        "Diamond",
+        "Titanium"
+      ],
       "correct_answer": 2,
       "explanation": "Diamond! A 10 on the Mohs hardness scale. South Africa's diamond mining history changed the world — the famous Kimberley 'Big Hole' was dug entirely by hand.",
       "image_url": null
@@ -129,11 +184,16 @@
     {
       "id": "sn012",
       "difficulty": 70,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "At what temperature in Celsius does water freeze?",
-      "options": [],
-      "correct_answer": 0,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "correct_answer": 3,
       "explanation": "0°C — that's when water turns to ice at sea level. In the Drakensberg mountains in winter, temperatures regularly drop well below this, creating stunning frozen waterfalls.",
       "image_url": null
     },
@@ -143,7 +203,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The coelacanth, thought to have been extinct for 65 million years, was rediscovered alive off which country's coast in 1938?",
-      "options": ["Madagascar", "South Africa", "Mozambique", "Tanzania"],
+      "options": [
+        "Madagascar",
+        "South Africa",
+        "Mozambique",
+        "Tanzania"
+      ],
       "correct_answer": 1,
       "explanation": "A living coelacanth was caught off East London, South Africa in 1938! Museum curator Marjorie Courtenay-Latimer identified the remarkable find. It's one of the greatest zoological discoveries of the 20th century.",
       "image_url": null
@@ -154,7 +219,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What type of rock is granite?",
-      "options": ["Sedimentary", "Metamorphic", "Igneous", "Volcanic ash"],
+      "options": [
+        "Sedimentary",
+        "Metamorphic",
+        "Igneous",
+        "Volcanic ash"
+      ],
       "correct_answer": 2,
       "explanation": "Granite is igneous rock — formed from cooled magma deep underground. Table Mountain's base is actually granite, about 540 million years old, with sandstone on top!",
       "image_url": null
@@ -162,11 +232,16 @@
     {
       "id": "sn015",
       "difficulty": 70,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Roughly how fast does light travel in kilometres per second?",
-      "options": [],
-      "correct_answer": 300000,
+      "options": [
+        "300000",
+        "255000",
+        "276000",
+        "324000"
+      ],
+      "correct_answer": 0,
       "explanation": "About 300,000 km/s (more precisely 299,792 km/s). That means light from the sun takes about 8 minutes to reach SA. Nothing in the universe moves faster!",
       "image_url": null
     },
@@ -176,7 +251,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The fynbos biome in the Western Cape is one of six floral kingdoms in the world. What makes it remarkable?",
-      "options": ["It has the tallest trees in Africa", "It has more plant species per square km than any tropical rainforest", "It only grows in volcanic soil", "All its plants are edible"],
+      "options": [
+        "It has the tallest trees in Africa",
+        "It has more plant species per square km than any tropical rainforest",
+        "It only grows in volcanic soil",
+        "All its plants are edible"
+      ],
       "correct_answer": 1,
       "explanation": "Fynbos has an incredible density of plant species — over 9,000 species, 70% of which are found nowhere else on Earth! The Cape Floral Region packs more biodiversity per square km than the Amazon.",
       "image_url": null
@@ -184,11 +264,16 @@
     {
       "id": "sn017",
       "difficulty": 60,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "How many chromosomes do humans have in each body cell?",
-      "options": [],
-      "correct_answer": 46,
+      "options": [
+        "31",
+        "46",
+        "36",
+        "41"
+      ],
+      "correct_answer": 1,
       "explanation": "46 chromosomes arranged in 23 pairs. You get 23 from mom and 23 from dad. Fun fact: a potato has 48 chromosomes — more than us! Chromosome count doesn't equal complexity.",
       "image_url": null
     },
@@ -198,7 +283,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Why does Johannesburg have frequent lightning storms?",
-      "options": ["It's near the equator", "Its high altitude creates strong convection currents", "Mineral deposits in the ground attract lightning", "Pollution creates static electricity"],
+      "options": [
+        "It's near the equator",
+        "Its high altitude creates strong convection currents",
+        "Mineral deposits in the ground attract lightning",
+        "Pollution creates static electricity"
+      ],
       "correct_answer": 1,
       "explanation": "Joburg sits at about 1,753m above sea level. The warm surface air rises rapidly in the afternoon, meeting cold air above, creating powerful thunderstorms. Joburg is one of the world's lightning capitals!",
       "image_url": null
@@ -209,7 +299,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the primary reason the Drakensberg mountains exist?",
-      "options": ["Volcanic eruption", "Tectonic plate collision", "Erosion of a basalt plateau", "Glacier formation"],
+      "options": [
+        "Volcanic eruption",
+        "Tectonic plate collision",
+        "Erosion of a basalt plateau",
+        "Glacier formation"
+      ],
       "correct_answer": 2,
       "explanation": "The Drakensberg is actually the eroded edge of a massive basalt plateau! Ancient lava flows created a thick layer of basalt, and millions of years of erosion carved the dramatic escarpment we see today.",
       "image_url": null
@@ -220,7 +315,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Rank these animals from FASTEST to SLOWEST: 1) African elephant 2) Cheetah 3) Ostrich 4) Black mamba",
-      "options": ["African elephant", "Cheetah", "Ostrich", "Black mamba"],
+      "options": [
+        "African elephant",
+        "Cheetah",
+        "Ostrich",
+        "Black mamba"
+      ],
       "correct_answer": "1,2,0,3",
       "explanation": "Cheetah (120 km/h), Ostrich (70 km/h), Elephant (40 km/h), Black mamba (20 km/h). The elephant is surprisingly quick at a full charge! And the mamba's 20 km/h is still terrifying when you're on foot.",
       "image_url": null
@@ -231,7 +331,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the largest organ in the human body?",
-      "options": ["Liver", "Brain", "Lungs", "Skin"],
+      "options": [
+        "Liver",
+        "Brain",
+        "Lungs",
+        "Skin"
+      ],
       "correct_answer": 3,
       "explanation": "Your skin! Covering about 1.5-2 square metres on an average adult, it's your body's largest organ. In the SA sun, you'd better be putting sunscreen on all of it!",
       "image_url": null
@@ -239,12 +344,17 @@
     {
       "id": "sn022",
       "difficulty": 50,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
-      "question": "A cheetah can reach its top speed of about 120 km/h. If it runs at top speed for 30 seconds, roughly how many kilometres does it cover?",
-      "options": [],
-      "correct_answer": 1,
-      "explanation": "120 km/h = 2 km per minute = 1 km in 30 seconds. But in reality, cheetahs can only maintain top speed for about 20-30 seconds before overheating. That sprint uses everything they've got!",
+      "question": "A cheetah is the fastest land animal, but roughly how long can it maintain its top speed before overheating?",
+      "options": [
+        "About 5 minutes",
+        "About 2 minutes",
+        "About 30 seconds",
+        "About 10 seconds"
+      ],
+      "correct_answer": 2,
+      "explanation": "A cheetah can only hold its top speed of around 120 km/h for about 20-30 seconds before it risks overheating. That's why they rely on getting close before the sprint — it's all or nothing!",
       "image_url": null
     },
     {
@@ -253,7 +363,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Southern Right Whale visits South Africa's coast each year. Why is it called 'Right'?",
-      "options": ["It only turns right when swimming", "It was the 'right' whale to hunt", "It was first identified in the Right Bay", "Its right eye is larger than its left"],
+      "options": [
+        "It only turns right when swimming",
+        "It was the 'right' whale to hunt",
+        "It was first identified in the Right Bay",
+        "Its right eye is larger than its left"
+      ],
       "correct_answer": 1,
       "explanation": "Whalers considered it the 'right' whale to hunt because it swam slowly, floated when dead, and had lots of valuable oil. Thankfully they're now protected, and Hermanus is one of the best places in the world to watch them!",
       "image_url": null
@@ -264,7 +379,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What happens to an astronaut's height in space?",
-      "options": ["They shrink by about 2cm", "They grow taller by about 5cm", "Their height stays the same", "They grow wider but not taller"],
+      "options": [
+        "They shrink by about 2cm",
+        "They grow taller by about 5cm",
+        "Their height stays the same",
+        "They grow wider but not taller"
+      ],
       "correct_answer": 1,
       "explanation": "Without gravity compressing their spine, astronauts grow about 5cm (2 inches) taller in space! Their spinal discs expand. SA astronaut Mark Shuttleworth would have experienced this on his 2002 space trip.",
       "image_url": null
@@ -272,11 +392,16 @@
     {
       "id": "sn025",
       "difficulty": 50,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The African penguin colony at Boulders Beach near Cape Town breeds there. At roughly what latitude south is Cape Town located? (Round to nearest degree)",
-      "options": [],
-      "correct_answer": 34,
+      "options": [
+        "19",
+        "34",
+        "24",
+        "29"
+      ],
+      "correct_answer": 1,
       "explanation": "Cape Town is at approximately 34°S latitude. That's why our African penguins can survive here — the cold Benguela Current keeps the water chilly enough for them, even this close to the tropics!",
       "image_url": null
     },
@@ -286,7 +411,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Karoo is rich in fossils. What type of ancient animals are most commonly found there?",
-      "options": ["Dinosaurs", "Therapsids (mammal-like reptiles)", "Ancient whales", "Giant insects"],
+      "options": [
+        "Dinosaurs",
+        "Therapsids (mammal-like reptiles)",
+        "Ancient whales",
+        "Giant insects"
+      ],
       "correct_answer": 1,
       "explanation": "The Karoo is world-famous for therapsid fossils — the mammal-like reptiles that lived 250-300 million years ago. These were the ancestors of all modern mammals, and the Karoo has the best fossil record of them anywhere on Earth!",
       "image_url": null
@@ -294,11 +424,16 @@
     {
       "id": "sn027",
       "difficulty": 40,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Gold has an atomic number on the periodic table. What is it?",
-      "options": [],
-      "correct_answer": 79,
+      "options": [
+        "64",
+        "69",
+        "79",
+        "74"
+      ],
+      "correct_answer": 2,
       "explanation": "Gold is element 79 (Au, from the Latin 'aurum'). South Africa was the world's largest gold producer for over a century. The Witwatersrand Basin alone has produced over 40% of all the gold ever mined!",
       "image_url": null
     },
@@ -308,7 +443,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Why do flamingos at Kamfers Dam near Kimberley appear pink?",
-      "options": ["They're born pink", "UV radiation from the sun", "Carotenoid pigments in the algae and crustaceans they eat", "Minerals in the water stain their feathers"],
+      "options": [
+        "They're born pink",
+        "UV radiation from the sun",
+        "Carotenoid pigments in the algae and crustaceans they eat",
+        "Minerals in the water stain their feathers"
+      ],
       "correct_answer": 2,
       "explanation": "Flamingos get their pink colour from carotenoid pigments in the algae and brine shrimp they eat. Without this diet, they'd actually be white/grey! Kamfers Dam is one of only four flamingo breeding sites in southern Africa.",
       "image_url": null
@@ -319,7 +459,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The MeerKAT radio telescope in the Northern Cape is a precursor to which massive international project?",
-      "options": ["The James Webb Space Telescope", "The Square Kilometre Array (SKA)", "The European Space Agency Mars Mission", "The International Space Station expansion"],
+      "options": [
+        "The James Webb Space Telescope",
+        "The Square Kilometre Array (SKA)",
+        "The European Space Agency Mars Mission",
+        "The International Space Station expansion"
+      ],
       "correct_answer": 1,
       "explanation": "MeerKAT is a precursor to the Square Kilometre Array (SKA), which will be the world's largest radio telescope. SA's Karoo was chosen for its extremely low radio frequency interference. The SKA will be 50 times more sensitive than any current telescope!",
       "image_url": null
@@ -330,7 +475,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Rank these from SMALLEST to LARGEST: 1) Atom 2) Cell 3) Molecule 4) Virus",
-      "options": ["Atom", "Cell", "Molecule", "Virus"],
+      "options": [
+        "Atom",
+        "Cell",
+        "Molecule",
+        "Virus"
+      ],
       "correct_answer": "0,2,3,1",
       "explanation": "Atom (0.1-0.5 nm) < Molecule (1-10 nm) < Virus (20-300 nm) < Cell (10,000-100,000 nm). A human cell is about 100,000 times bigger than an atom!",
       "image_url": null
@@ -341,7 +491,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Agulhas Current along SA's east coast is one of the strongest ocean currents in the world. In which direction does it flow?",
-      "options": ["North to south", "South to north", "East to west", "West to east"],
+      "options": [
+        "North to south",
+        "South to north",
+        "East to west",
+        "West to east"
+      ],
       "correct_answer": 0,
       "explanation": "The Agulhas Current flows southward along the east coast, carrying warm water from the Indian Ocean. When it meets the cold Benguela Current at Cape Agulhas, it creates some of the wildest seas on Earth!",
       "image_url": null
@@ -349,11 +504,16 @@
     {
       "id": "sn032",
       "difficulty": 30,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The deepest gold mine in South Africa (Mponeng) reaches approximately how many kilometres below the surface?",
-      "options": [],
-      "correct_answer": 4,
+      "options": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "correct_answer": 0,
       "explanation": "Mponeng Mine near Carletonville reaches about 4 km (3.9 km) below the surface — it's the deepest mine in the world! At that depth, rock temperatures reach 66°C and massive ice slurry plants are needed to cool the tunnels.",
       "image_url": null
     },
@@ -363,7 +523,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Why is the Cape Peninsula home to so many endemic plant species found nowhere else?",
-      "options": ["Volcanic soil provides unique nutrients", "The Mediterranean climate combined with poor, acidic soils drives speciation", "Ancient glaciers isolated plant populations", "Ocean spray deposits unique minerals"],
+      "options": [
+        "Volcanic soil provides unique nutrients",
+        "The Mediterranean climate combined with poor, acidic soils drives speciation",
+        "Ancient glaciers isolated plant populations",
+        "Ocean spray deposits unique minerals"
+      ],
       "correct_answer": 1,
       "explanation": "The combination of a Mediterranean climate (wet winters, dry summers) and nutrient-poor, acidic, sandy soils created extreme selective pressure. Plants had to specialise to survive, driving incredible speciation over millions of years.",
       "image_url": null
@@ -371,11 +536,16 @@
     {
       "id": "sn034",
       "difficulty": 30,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Table Mountain's flat top is made of sandstone. Approximately how many million years old is this sandstone layer?",
-      "options": [],
-      "correct_answer": 450,
+      "options": [
+        "450",
+        "360",
+        "405",
+        "495"
+      ],
+      "correct_answer": 0,
       "explanation": "The Table Mountain Sandstone is approximately 450-510 million years old (Ordovician period). It's older than the first dinosaurs! The granite base below it is even older at about 540 million years.",
       "image_url": null
     },
@@ -385,7 +555,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Homo naledi, discovered in South Africa's Rising Star Cave in 2013, surprised scientists because of what finding?",
-      "options": ["It could speak", "It appeared to deliberately dispose of its dead", "It used metal tools", "It was taller than modern humans"],
+      "options": [
+        "It could speak",
+        "It appeared to deliberately dispose of its dead",
+        "It used metal tools",
+        "It was taller than modern humans"
+      ],
       "correct_answer": 1,
       "explanation": "The remains of at least 15 individuals were found deep in an almost inaccessible cave chamber, suggesting deliberate body disposal — a behaviour previously thought unique to much larger-brained species. Lee Berger's team made the discovery.",
       "image_url": null
@@ -393,11 +568,16 @@
     {
       "id": "sn036",
       "difficulty": 20,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Vredefort crater in the Free State is the largest confirmed impact crater on Earth. Approximately how many kilometres is its diameter?",
-      "options": [],
-      "correct_answer": 300,
+      "options": [
+        "240",
+        "270",
+        "330",
+        "300"
+      ],
+      "correct_answer": 3,
       "explanation": "The Vredefort crater is approximately 300 km in diameter! The asteroid that created it about 2 billion years ago was estimated to be 10-15 km wide. It's a UNESCO World Heritage Site and the largest verified impact structure on Earth.",
       "image_url": null
     },
@@ -407,7 +587,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Cape Floral Kingdom is the smallest of the world's six floral kingdoms but has the highest concentration of plant species. Roughly how many plant species does it contain?",
-      "options": ["About 3,000", "About 6,000", "About 9,000", "About 15,000"],
+      "options": [
+        "About 3,000",
+        "About 6,000",
+        "About 9,000",
+        "About 15,000"
+      ],
       "correct_answer": 2,
       "explanation": "About 9,000 plant species in an area smaller than Portugal! Around 70% are endemic (found nowhere else). For comparison, the entire United Kingdom has only about 1,500 native plant species.",
       "image_url": null
@@ -418,7 +603,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What special property of platinum makes it essential in catalytic converters, which South Africa supplies most of the world's raw material for?",
-      "options": ["It absorbs exhaust gases permanently", "It catalyses reactions without being consumed", "It generates electricity from heat", "It filters particulate matter physically"],
+      "options": [
+        "It absorbs exhaust gases permanently",
+        "It catalyses reactions without being consumed",
+        "It generates electricity from heat",
+        "It filters particulate matter physically"
+      ],
       "correct_answer": 1,
       "explanation": "Platinum acts as a catalyst — it speeds up chemical reactions (converting toxic CO and NOx to less harmful CO2, N2, and water) without being consumed in the process. South Africa produces about 70% of the world's platinum!",
       "image_url": null
@@ -429,7 +619,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The sardine run along SA's east coast is triggered by what oceanographic event?",
-      "options": ["The Agulhas Current reversing direction", "A cold water band moving northward along the coast", "Underwater volcanic activity warming the water", "Tidal forces from the full moon"],
+      "options": [
+        "The Agulhas Current reversing direction",
+        "A cold water band moving northward along the coast",
+        "Underwater volcanic activity warming the water",
+        "Tidal forces from the full moon"
+      ],
       "correct_answer": 1,
       "explanation": "A narrow band of cool water (below 21°C) moves northward along the KZN coast, and the sardines follow it. This happens between May and July and attracts sharks, dolphins, whales, and seabirds in one of nature's greatest spectacles!",
       "image_url": null
@@ -440,7 +635,12 @@
       "type": "sequence",
       "time_limit_seconds": 30,
       "question": "Rank these geological formations from OLDEST to YOUNGEST: 1) Karoo Supergroup sediments 2) Barberton Greenstone Belt 3) Vredefort impact structure 4) Table Mountain Sandstone",
-      "options": ["Karoo Supergroup sediments", "Barberton Greenstone Belt", "Vredefort impact structure", "Table Mountain Sandstone"],
+      "options": [
+        "Karoo Supergroup sediments",
+        "Barberton Greenstone Belt",
+        "Vredefort impact structure",
+        "Table Mountain Sandstone"
+      ],
       "correct_answer": "1,2,3,0",
       "explanation": "Barberton Greenstone Belt (~3.5 billion years), Vredefort impact (~2 billion years), Table Mountain Sandstone (~500 million years), Karoo Supergroup (~300-180 million years). SA's geology spans most of Earth's history!",
       "image_url": null
@@ -448,11 +648,16 @@
     {
       "id": "sn041",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The African elephant has the longest gestation period of any land animal. How many months is it approximately?",
-      "options": [],
-      "correct_answer": 22,
+      "options": [
+        "7",
+        "22",
+        "12",
+        "17"
+      ],
+      "correct_answer": 1,
       "explanation": "About 22 months — nearly two years! That's the longest gestation of any land mammal. No wonder elephants are so clever when they're born; they've had plenty of time to develop.",
       "image_url": null
     },
@@ -462,7 +667,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Blyde River Canyon in Mpumalanga is one of the largest canyons on Earth. What type of rock primarily makes up its walls?",
-      "options": ["Granite", "Limestone", "Quartzite and dolomite", "Basalt"],
+      "options": [
+        "Granite",
+        "Limestone",
+        "Quartzite and dolomite",
+        "Basalt"
+      ],
       "correct_answer": 2,
       "explanation": "The Blyde River Canyon is carved through quartzite and dolomite rocks. It's the largest 'green canyon' in the world — lush vegetation covers its walls unlike the bare rock of the Grand Canyon.",
       "image_url": null
@@ -473,7 +683,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "What is the Chandrasekhar limit, relevant to the death of massive stars?",
-      "options": ["The maximum mass of a white dwarf star (~1.4 solar masses)", "The minimum size for nuclear fusion to begin", "The maximum temperature a star can reach", "The distance at which a black hole's gravity becomes inescapable"],
+      "options": [
+        "The maximum mass of a white dwarf star (~1.4 solar masses)",
+        "The minimum size for nuclear fusion to begin",
+        "The maximum temperature a star can reach",
+        "The distance at which a black hole's gravity becomes inescapable"
+      ],
       "correct_answer": 0,
       "explanation": "The Chandrasekhar limit is about 1.4 times the mass of our Sun — above this mass, a white dwarf will collapse further into a neutron star or black hole. Named after astrophysicist Subrahmanyan Chandrasekhar.",
       "image_url": null
@@ -481,11 +696,16 @@
     {
       "id": "sn044",
       "difficulty": 10,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Bushveld Igneous Complex in South Africa contains what percentage of the world's known platinum reserves?",
-      "options": [],
-      "correct_answer": 70,
+      "options": [
+        "55",
+        "60",
+        "70",
+        "65"
+      ],
+      "correct_answer": 2,
       "explanation": "About 70% of the world's known platinum reserves are in the Bushveld Igneous Complex! This massive geological formation in Limpopo, North West, and Mpumalanga is one of the most mineral-rich areas on the planet.",
       "image_url": null
     },
@@ -495,7 +715,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The honey badger (ratel) is notoriously tough. What biological adaptation helps it survive venomous snake bites?",
-      "options": ["Scales under its fur deflect fangs", "It has thick skin and partial resistance to venom through nicotinic acetylcholine receptor mutations", "Its blood clots faster than any other mammal", "It produces its own antivenom in its liver"],
+      "options": [
+        "Scales under its fur deflect fangs",
+        "It has thick skin and partial resistance to venom through nicotinic acetylcholine receptor mutations",
+        "Its blood clots faster than any other mammal",
+        "It produces its own antivenom in its liver"
+      ],
       "correct_answer": 1,
       "explanation": "Honey badgers have incredibly thick, loose skin (hard for fangs to penetrate deeply) AND genetic mutations in their nicotinic acetylcholine receptors that make them partially resistant to neurotoxic venom. They literally evolved to not care!",
       "image_url": null
@@ -506,7 +731,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Barberton Greenstone Belt contains some of the oldest rocks on Earth. What evidence of early life has been found there?",
-      "options": ["Fossilised fish", "Stromatolites and microbial fossils dating to 3.5 billion years", "Petrified wood from ancient forests", "Fossilised insect wings"],
+      "options": [
+        "Fossilised fish",
+        "Stromatolites and microbial fossils dating to 3.5 billion years",
+        "Petrified wood from ancient forests",
+        "Fossilised insect wings"
+      ],
       "correct_answer": 1,
       "explanation": "The Barberton Greenstone Belt contains stromatolites and microbial fossils dating back approximately 3.5 billion years — some of the oldest evidence of life on Earth! This is world-class evidence of early microbial life.",
       "image_url": null
@@ -514,11 +744,16 @@
     {
       "id": "sn047",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The SALT (Southern African Large Telescope) in Sutherland has a primary mirror made up of how many hexagonal segments?",
-      "options": [],
-      "correct_answer": 91,
+      "options": [
+        "76",
+        "81",
+        "86",
+        "91"
+      ],
+      "correct_answer": 3,
       "explanation": "SALT's primary mirror consists of 91 hexagonal segments, creating an effective aperture of about 11 metres. It's the largest single optical telescope in the southern hemisphere!",
       "image_url": null
     },
@@ -528,7 +763,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Tugela Falls in KwaZulu-Natal is one of the world's tallest waterfalls. It drops in how many distinct stages?",
-      "options": ["3", "5", "7", "9"],
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
       "correct_answer": 1,
       "explanation": "Tugela Falls drops in 5 stages, with a total height of 948 metres. It's the second tallest waterfall in the world after Venezuela's Angel Falls (979m). Some argue Tugela should actually be ranked first!",
       "image_url": null
@@ -539,7 +779,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Welwitschia plant, found in the Namib Desert near SA's border, can live for over 1,000 years. How many leaves does it produce in its entire lifetime?",
-      "options": ["2", "12", "Hundreds, but they fall off", "None — it photosynthesises through its stem"],
+      "options": [
+        "2",
+        "12",
+        "Hundreds, but they fall off",
+        "None — it photosynthesises through its stem"
+      ],
       "correct_answer": 0,
       "explanation": "Just 2 leaves! The Welwitschia mirabilis produces only two leaves that grow continuously from the base and split over time, making it look like it has many. Some specimens are estimated to be over 2,000 years old!",
       "image_url": null
@@ -547,22 +792,32 @@
     {
       "id": "sn050",
       "difficulty": 5,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Karoo region of South Africa sits atop rocks from the Permian-Triassic boundary. What percentage of marine species went extinct during this 'Great Dying' event approximately 252 million years ago?",
-      "options": [],
-      "correct_answer": 96,
+      "options": [
+        "81",
+        "96",
+        "86",
+        "91"
+      ],
+      "correct_answer": 1,
       "explanation": "About 96% of marine species and 70% of terrestrial vertebrate species went extinct! It's the largest mass extinction in Earth's history. The Karoo's fossils give us a unique window into life before and after this catastrophe.",
       "image_url": null
     },
     {
       "id": "sn051",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Witwatersrand Basin gold deposits were formed approximately how many billion years ago?",
-      "options": [],
-      "correct_answer": 3,
+      "options": [
+        "0",
+        "1",
+        "3",
+        "2"
+      ],
+      "correct_answer": 2,
       "explanation": "The Witwatersrand gold deposits are approximately 2.7-3 billion years old! The gold was likely deposited by ancient rivers flowing into an inland sea. It's one of the largest known gold deposits on Earth and has fundamentally shaped SA's history.",
       "image_url": null
     },
@@ -572,7 +827,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Nkalimeva daptocephalus fossils found in the Karoo helped prove what crucial geological theory?",
-      "options": ["That Africa was once underwater", "Continental drift — matching fossils found in Antarctica", "That meteor impacts caused mass extinctions", "That mammals evolved from fish"],
+      "options": [
+        "That Africa was once underwater",
+        "Continental drift — matching fossils found in Antarctica",
+        "That meteor impacts caused mass extinctions",
+        "That mammals evolved from fish"
+      ],
       "correct_answer": 1,
       "explanation": "Fossils of Lystrosaurus and other therapsids found in both the Karoo and Antarctica were key evidence for continental drift. They proved these landmasses were once connected as part of Gondwana!",
       "image_url": null
@@ -583,7 +843,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Pilanesberg Game Reserve near Sun City sits in an unusual geological structure. What is it?",
-      "options": ["A collapsed lava tube", "An alkaline ring complex (ancient volcanic crater)", "A meteorite impact crater", "A glacial cirque from the last ice age"],
+      "options": [
+        "A collapsed lava tube",
+        "An alkaline ring complex (ancient volcanic crater)",
+        "A meteorite impact crater",
+        "A glacial cirque from the last ice age"
+      ],
       "correct_answer": 1,
       "explanation": "Pilanesberg is one of the largest alkaline ring complexes in the world — the eroded remains of a volcanic crater approximately 1.3 billion years old. The concentric rings of hills are the remnants of different volcanic rock layers.",
       "image_url": null
@@ -591,10 +856,15 @@
     {
       "id": "sn054",
       "difficulty": 1,
-      "type": "numeric_input",
+      "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "Extremophile bacteria were discovered living at what depth (in kilometres) in SA's TauTona gold mine, surviving on radiation-driven chemistry rather than sunlight?",
-      "options": [],
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
       "correct_answer": 3,
       "explanation": "At approximately 2.8-3 km deep, scientists discovered bacteria living in complete isolation from the surface, deriving energy from radioactive decay of uranium. They've been isolated for millions of years — practically alien life on Earth!",
       "image_url": null
@@ -605,7 +875,12 @@
       "type": "multiple_choice",
       "time_limit_seconds": 30,
       "question": "The Bushveld Igneous Complex formed about 2 billion years ago. What geological process created its layered mineral deposits (including platinum, chromium, and vanadium)?",
-      "options": ["Sedimentary layering from ancient seas", "Fractional crystallization of a massive magma chamber", "Hydrothermal vent deposits", "Metamorphic recrystallization from tectonic pressure"],
+      "options": [
+        "Sedimentary layering from ancient seas",
+        "Fractional crystallization of a massive magma chamber",
+        "Hydrothermal vent deposits",
+        "Metamorphic recrystallization from tectonic pressure"
+      ],
       "correct_answer": 1,
       "explanation": "Fractional crystallization! As the massive magma chamber cooled over millions of years, different minerals crystallized and settled at different rates, creating distinct layers. This is why the mineral deposits are so concentrated and accessible in layers.",
       "image_url": null
