@@ -48,7 +48,19 @@ export default function TvReveal({ gameState, lastRound }: TvRevealProps) {
     }
   }, [phase, reveal, play]);
 
-  if (!reveal) return null;
+  if (!reveal) {
+    return (
+      <div className="min-h-dvh flex items-center justify-center">
+        <motion.p
+          className="text-text-muted text-2xl font-display tracking-wide"
+          animate={{ opacity: [0.4, 1, 0.4] }}
+          transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
+        >
+          Revealing answer...
+        </motion.p>
+      </div>
+    );
+  }
 
   const correctPlayers = players.filter((p) => reveal.correctPlayerIds.includes(p.id));
   const incorrectPlayers = players.filter((p) => reveal.incorrectPlayerIds.includes(p.id));
