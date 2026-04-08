@@ -184,11 +184,8 @@ export function useHostMultiplayer() {
         hostBeforeUnloadHandler = null;
       }
 
-      // Use self:true so that spectators sharing the same Supabase client
-      // (same browser / SPA) receive game_state broadcasts. The host has no
-      // game_state listener so self-delivery is harmless.
       const channel = supabase.channel(`room:${code}`, {
-        config: { broadcast: { self: true }, presence: { key: 'host' } },
+        config: { broadcast: { self: false }, presence: { key: 'host' } },
       });
 
       channel
