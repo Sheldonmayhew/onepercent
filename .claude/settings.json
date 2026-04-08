@@ -33,7 +33,8 @@
       "Bash(xargs grep:*)",
       "Bash(grep -E \"\\\\.\\(tsx|ts\\)$\")",
       "Bash(grep -l \"myth\\\\|god\\\\|ancient\\\\|Greece\\\\|Rome\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
-      "Bash(grep -i \"mythology\\\\|mytholog\\\\|greek\\\\|roman\\\\|god\\\\|goddes\\\\|Odin\\\\|Ares\\\\|Aphrodite\\\\|Hermes\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)"
+      "Bash(grep -i \"mythology\\\\|mytholog\\\\|greek\\\\|roman\\\\|god\\\\|goddes\\\\|Odin\\\\|Ares\\\\|Aphrodite\\\\|Hermes\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
+      "Bash(ls -la c:/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/world-*.json c:/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/mythology.json)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Sheldon.Mayhew"
