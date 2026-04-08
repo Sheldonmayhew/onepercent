@@ -387,25 +387,47 @@ export default function TvReveal({ gameState, lastRound }: TvRevealProps) {
                     })}
                   </div>
                 ) : (
-                  <div className="flex flex-wrap gap-3">
-                    {sortedPlayers.map((p, idx) => (
-                      <motion.div
-                        key={p.id}
-                        layout
-                        className="flex items-center gap-2 px-4 py-2 rounded-full bg-bg-elevated"
-                      >
-                        <span className={`font-score text-sm w-5 text-center ${
-                          idx === 0 ? 'text-neon-gold' : 'text-text-muted'
-                        }`}>
-                          {idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `${idx + 1}`}
-                        </span>
-                        <span className="text-xl">{p.avatar}</span>
-                        <span className="text-text-primary font-medium">{p.name}</span>
-                        <span className="font-score text-neon-gold text-sm">
-                          {formatRands(p.score)}
-                        </span>
-                      </motion.div>
-                    ))}
+                  <div className="flex flex-col gap-3">
+                    {sortedPlayers.map((p, idx) => {
+                      const wasCorrect = reveal.correctPlayerIds.includes(p.id);
+                      return (
+                        <motion.div
+                          key={p.id}
+                          className="flex items-center gap-4 px-4 py-3 rounded-xl bg-bg-elevated"
+                          initial={{ opacity: 0, x: -12 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 0.35 + idx * 0.07 }}
+                        >
+                          <div
+                            className={`w-10 h-10 rounded-full flex items-center justify-center text-base font-bold ${
+                              idx === 0
+                                ? 'bg-neon-gold/20 text-neon-gold'
+                                : idx === 1
+                                  ? 'bg-text-secondary/15 text-text-secondary'
+                                  : idx === 2
+                                    ? 'bg-neon-pink/15 text-neon-pink'
+                                    : 'bg-bg-card text-text-muted'
+                            }`}
+                          >
+                            {idx + 1}
+                          </div>
+                          <span className="text-3xl">{p.avatar}</span>
+                          <div
+                            className="w-3 h-3 rounded-full flex-shrink-0"
+                            style={{ backgroundColor: p.colour }}
+                          />
+                          <div className="flex-1 min-w-0">
+                            <p className="text-xl font-medium text-text-primary">{p.name}</p>
+                            <p className={`text-sm font-score ${wasCorrect ? 'text-neon-green' : 'text-text-muted'}`}>
+                              {wasCorrect ? `+${formatRands(points)}` : 'No points'}
+                            </p>
+                          </div>
+                          <span className="font-score text-xl text-neon-gold">
+                            {formatRands(p.score)}
+                          </span>
+                        </motion.div>
+                      );
+                    })}
                   </div>
                 )}
               </motion.div>
