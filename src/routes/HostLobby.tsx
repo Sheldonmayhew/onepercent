@@ -257,7 +257,7 @@ export function Component() {
               </p>
               <div className="grid grid-cols-2 gap-3">
                 <AnimatePresence mode="popLayout">
-                  {players.map((player, idx) => {
+                  {players.map((player) => {
                     const pTeam = teams.find((t) => t.id === player.teamId);
                     const isSelected = selectedPlayerId === player.id;
                     return (

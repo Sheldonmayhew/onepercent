@@ -31,10 +31,7 @@ export function Component() {
   }, [gameState?.route, navigate]);
 
   const isCorrect = playerId != null && (reveal?.correctPlayerIds.includes(playerId) ?? false);
-  const correctPlayers = players.filter((p) => reveal?.correctPlayerIds.includes(p.id));
-  const incorrectPlayers = players.filter((p) => reveal?.incorrectPlayerIds.includes(p.id));
   const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
-  const myRank = sortedPlayers.findIndex((p) => p.id === playerId) + 1;
 
   const getPlayerTeam = (pId: string) => teams.find((t) => t.playerIds.includes(pId));
   const totalTeamScore = teams.reduce((acc, t) => acc + t.score, 0) || 1;
