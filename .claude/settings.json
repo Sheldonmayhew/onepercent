@@ -34,7 +34,17 @@
       "Bash(grep -E \"\\\\.\\(tsx|ts\\)$\")",
       "Bash(grep -l \"myth\\\\|god\\\\|ancient\\\\|Greece\\\\|Rome\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
       "Bash(grep -i \"mythology\\\\|mytholog\\\\|greek\\\\|roman\\\\|god\\\\|goddes\\\\|Odin\\\\|Ares\\\\|Aphrodite\\\\|Hermes\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
-      "Bash(ls -la c:/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/world-*.json c:/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/mythology.json)"
+      "Bash(ls -la c:/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/world-*.json c:/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/mythology.json)",
+      "Bash(grep -l \"export\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/routes/*.tsx)",
+      "Bash(npm list:*)",
+      "Bash(pkill -f \"npm run dev\")",
+      "Bash(grep -r \"export\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/routes/*.tsx)",
+      "Bash(grep -l \"circular\\\\|import.*from.*store\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/hooks/*.ts)",
+      "Bash(npm ls:*)",
+      "Bash(grep -E \"\\\\.tsx?$\")",
+      "Bash(git diff:*)",
+      "Bash(file /c/Users/Sheldon.Mayhew/Desktop/onepercent/dist/assets/*.js)",
+      "Bash(grep -n \"export\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/routes/*.tsx)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Sheldon.Mayhew"

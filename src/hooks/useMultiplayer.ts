@@ -17,6 +17,10 @@ let readyPlayersRound = -1;
 
 let lastBroadcastRoute: string | null = null;
 
+export function resetBroadcastRoute() {
+  lastBroadcastRoute = null;
+}
+
 let hostBeforeUnloadHandler: (() => void) | null = null;
 let playerBeforeUnloadHandler: (() => void) | null = null;
 
@@ -129,6 +133,8 @@ export function broadcastHostState(route?: string) {
 // End the game
 // ──────────────────────────────────────────
 export function endHostGame() {
+  resetBroadcastRoute();
+
   if (hostBeforeUnloadHandler) {
     window.removeEventListener('beforeunload', hostBeforeUnloadHandler);
     hostBeforeUnloadHandler = null;
@@ -154,6 +160,7 @@ export function useHostMultiplayer() {
     const settings = store.session.settings;
 
     const code = generateRoomCode();
+    resetBroadcastRoute();
 
     try {
       const { error: dbError } = await supabase.from('game_rooms').insert({
