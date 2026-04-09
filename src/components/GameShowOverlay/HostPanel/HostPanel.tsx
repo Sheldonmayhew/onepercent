@@ -60,8 +60,9 @@ export default function HostPanel() {
     const roundType = gameState.round?.roundType ?? gameState.reveal?.roundType;
     const tier = getTier(roundType);
 
-    // Only trigger on phase or round changes
-    const phaseKey = `${phase}_${roundIndex}`;
+    // Trigger on phase, round, or question-within-round changes
+    const questionInRound = gameState.round?.questionInRound ?? 0;
+    const phaseKey = `${phase}_${roundIndex}_${questionInRound}`;
     if (phaseKey === lastPhaseRef.current) return;
     lastPhaseRef.current = phaseKey;
 
