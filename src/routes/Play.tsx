@@ -300,6 +300,14 @@ export function Component() {
                     roundState={session.activeRoundState}
                     onSubmit={(_, answer) => handleAnswer(answer)}
                     onBuzzIn={(_, timestamp, answer) => {
+                      useGameStore.setState({
+                        session: {
+                          ...session,
+                          players: session.players.map((p) =>
+                            p.id === currentPlayer.id ? { ...p, answerTimestamp: timestamp } : p
+                          ),
+                        },
+                      });
                       handleAnswer(answer);
                     }}
                     onUpdateState={useGameStore.getState().updateRoundState}

@@ -12,7 +12,6 @@ export default function PlayerInput({
 }: any) {
   const me = players.find((p: any) => p.id === playerId);
   const myPick = roundState?.categoryPicks?.[playerId];
-  const phase: 'picking' | 'answering' = roundState?.phase ?? 'picking';
 
   const handleCategoryPick = (category: string) => {
     if (onUpdateState) {
