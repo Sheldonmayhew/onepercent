@@ -3,7 +3,7 @@
   "name": "World Travel",
   "description": "Airports, landmarks, cuisines, and bucket-list destinations -- for the armchair travellers and jet-setters alike!",
   "author": "Game Night Crew",
-  "question_count": 50,
+  "question_count": 70,
   "questions": [
     {
       "id": "wt001",
@@ -803,6 +803,326 @@
       ],
       "correct_answer": 1,
       "explanation": "Gibraltar Airport's runway crosses Winston Churchill Avenue, a major road! Cars have to stop at barriers like a railway crossing when planes land or take off. It's like the N1 and OR Tambo runway had a baby -- chaos!",
+      "image_url": null
+    },
+    {
+      "id": "wt051",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which city is known as 'The Big Apple'?",
+      "options": [
+        "Los Angeles",
+        "Chicago",
+        "New York City",
+        "Boston"
+      ],
+      "correct_answer": 2,
+      "explanation": "New York City has been called 'The Big Apple' since the 1920s. The nickname came from horse racing slang before becoming the city's official tourism brand. Everyone wants a bite!",
+      "image_url": null
+    },
+    {
+      "id": "wt052",
+      "difficulty": 82,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Leaning Tower of Pisa is located in which country?",
+      "options": [
+        "Spain",
+        "Greece",
+        "Italy",
+        "France"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Leaning Tower of Pisa has been tilting since construction in 1173. It leans about 4 degrees -- less than before, thanks to engineering work. Every tourist does the 'holding it up' pose. Every. Single. One.",
+      "image_url": null
+    },
+    {
+      "id": "wt053",
+      "difficulty": 78,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which African city is known as the 'Mother City'?",
+      "options": [
+        "Cairo",
+        "Nairobi",
+        "Cape Town",
+        "Lagos"
+      ],
+      "correct_answer": 2,
+      "explanation": "Cape Town is South Africa's 'Mother City' -- the oldest city in the country, founded in 1652. Table Mountain, the V&A Waterfront, and beaches that rival anywhere in the world. Proudly South African!",
+      "image_url": null
+    },
+    {
+      "id": "wt054",
+      "difficulty": 72,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which country would you find the ancient ruins of Chichén Itzá?",
+      "options": [
+        "Guatemala",
+        "Mexico",
+        "Peru",
+        "Honduras"
+      ],
+      "correct_answer": 1,
+      "explanation": "Chichén Itzá is a Mayan city on Mexico's Yucatán Peninsula. The El Castillo pyramid is a New Seven Wonders of the World. During the equinox, shadows create the illusion of a serpent slithering down the steps.",
+      "image_url": null
+    },
+    {
+      "id": "wt055",
+      "difficulty": 68,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Trans-Siberian Railway, the longest railway line in the world, connects Moscow to which city?",
+      "options": [
+        "Beijing",
+        "Vladivostok",
+        "Novosibirsk",
+        "Ulaanbaatar"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Trans-Siberian runs 9,289 km from Moscow to Vladivostok. The journey takes about 6 days non-stop. That's a lot of train time -- bring a good book. Or twenty.",
+      "image_url": null
+    },
+    {
+      "id": "wt056",
+      "difficulty": 62,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Caribbean island nation is known for its jerk chicken, reggae music, and Blue Mountain coffee?",
+      "options": [
+        "Cuba",
+        "Jamaica",
+        "Barbados",
+        "Trinidad"
+      ],
+      "correct_answer": 1,
+      "explanation": "Jamaica -- home of Bob Marley, Usain Bolt, and some of the best food in the Caribbean. Blue Mountain coffee is among the most expensive in the world. One day, we'll all make the trip.",
+      "image_url": null
+    },
+    {
+      "id": "wt057",
+      "difficulty": 55,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Camino de Santiago is a famous pilgrimage route ending in which country?",
+      "options": [
+        "Portugal",
+        "France",
+        "Spain",
+        "Italy"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Camino de Santiago ends at the Cathedral of Santiago de Compostela in northwestern Spain. Pilgrims have been walking it for over 1,000 years. The most popular route is about 800 km from France. Your feet will never forgive you, but your soul will thank you.",
+      "image_url": null
+    },
+    {
+      "id": "wt058",
+      "difficulty": 50,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these famous structures from OLDEST to NEWEST: (1) Eiffel Tower (2) Great Wall of China (3) Burj Khalifa (4) Colosseum",
+      "options": [
+        "Eiffel Tower",
+        "Great Wall of China",
+        "Burj Khalifa",
+        "Colosseum"
+      ],
+      "correct_answer": "1,3,0,2",
+      "explanation": "Great Wall (~700 BC first sections), Colosseum (70-80 AD), Eiffel Tower (1889), Burj Khalifa (2010). The Great Wall has been around so long it's seen empires rise and fall. The Burj Khalifa is a baby by comparison.",
+      "image_url": null
+    },
+    {
+      "id": "wt059",
+      "difficulty": 45,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Southeast Asian country is made up of over 7,000 islands?",
+      "options": [
+        "Indonesia",
+        "Philippines",
+        "Malaysia",
+        "Thailand"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Philippines has 7,641 islands. Only about 2,000 are inhabited. That's a lot of beaches to explore. Pack your sunscreen and a very flexible itinerary.",
+      "image_url": null
+    },
+    {
+      "id": "wt060",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the busiest international air route in the world by number of flights?",
+      "options": [
+        "London-Dublin",
+        "Kuala Lumpur-Singapore",
+        "New York-London",
+        "Hong Kong-Taipei"
+      ],
+      "correct_answer": 1,
+      "explanation": "Kuala Lumpur to Singapore is one of the world's busiest air routes with over 30,000 flights per year. The cities are only about 300 km apart. Some people commute this route for work. Wild.",
+      "image_url": null
+    },
+    {
+      "id": "wt061",
+      "difficulty": 35,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The 'Golden Triangle' in Southeast Asia, known for opium production, borders which three countries?",
+      "options": [
+        "Vietnam, Laos, Cambodia",
+        "Thailand, Laos, Myanmar",
+        "Myanmar, China, Vietnam",
+        "Cambodia, Thailand, Vietnam"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Golden Triangle is where Thailand, Laos, and Myanmar meet along the Mekong River. It was once the world's largest opium-producing area. Today it's become more of a tourist attraction.",
+      "image_url": null
+    },
+    {
+      "id": "wt062",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country has the most UNESCO World Heritage Sites as of 2024?",
+      "options": [
+        "China",
+        "Italy",
+        "Spain",
+        "France"
+      ],
+      "correct_answer": 1,
+      "explanation": "Italy has 59 UNESCO World Heritage Sites -- more than any other country. China is second with 57. South Africa has 10, including Robben Island and the Cradle of Humankind.",
+      "image_url": null
+    },
+    {
+      "id": "wt063",
+      "difficulty": 25,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Inca Trail to Machu Picchu is limited to how many people per day (including porters and guides)?",
+      "options": [
+        "200",
+        "500",
+        "800",
+        "1,200"
+      ],
+      "correct_answer": 1,
+      "explanation": "Only 500 people per day can hike the Inca Trail, including guides and porters. You need to book months in advance. It's a 4-day trek through the Andes at altitudes over 4,000m. Not for the faint of heart -- or lungs.",
+      "image_url": null
+    },
+    {
+      "id": "wt064",
+      "difficulty": 22,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which remote island in the South Atlantic is where Napoleon Bonaparte was exiled and died?",
+      "options": [
+        "Ascension Island",
+        "Saint Helena",
+        "Tristan da Cunha",
+        "Falkland Islands"
+      ],
+      "correct_answer": 1,
+      "explanation": "Napoleon was exiled to Saint Helena in 1815 and died there in 1821. The island is about 1,900 km from the nearest land. Talk about being sent to the naughty corner.",
+      "image_url": null
+    },
+    {
+      "id": "wt065",
+      "difficulty": 18,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these world airports by annual passenger traffic (2023), from BUSIEST to LEAST busy: (1) Dubai (DXB) (2) Hartsfield-Jackson Atlanta (ATL) (3) London Heathrow (LHR) (4) Istanbul (IST)",
+      "options": [
+        "Dubai (DXB)",
+        "Hartsfield-Jackson Atlanta (ATL)",
+        "London Heathrow (LHR)",
+        "Istanbul (IST)"
+      ],
+      "correct_answer": "1,0,3,2",
+      "explanation": "Atlanta (~93M), Dubai (~87M), Istanbul (~76M), Heathrow (~79M). Atlanta has been the world's busiest airport for decades. OR Tambo in Joburg handles about 21 million -- respectable for Africa's busiest!",
+      "image_url": null
+    },
+    {
+      "id": "wt066",
+      "difficulty": 15,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which tiny nation, entirely within Rome, issues its own passports and has the world's shortest railway at 300 metres?",
+      "options": [
+        "San Marino",
+        "Monaco",
+        "Vatican City",
+        "Liechtenstein"
+      ],
+      "correct_answer": 2,
+      "explanation": "Vatican City is the world's smallest independent state at just 0.44 km². Its railway is used mainly for freight and the Pope's occasional travel. The country has about 800 residents and its own post office, radio station, and army (the Swiss Guard).",
+      "image_url": null
+    },
+    {
+      "id": "wt067",
+      "difficulty": 10,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Darien Gap, an impenetrable stretch of jungle that breaks the Pan-American Highway, lies between which two countries?",
+      "options": [
+        "Costa Rica and Panama",
+        "Panama and Colombia",
+        "Colombia and Ecuador",
+        "Mexico and Guatemala"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Darien Gap is a 100 km stretch of dense jungle between Panama and Colombia. It's the only break in the 30,000 km Pan-American Highway. No road has ever been built through it. The jungle wins.",
+      "image_url": null
+    },
+    {
+      "id": "wt068",
+      "difficulty": 7,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which African country requires visitors to pay a 'gorilla trekking permit' of approximately $1,500 per person to see mountain gorillas?",
+      "options": [
+        "Uganda",
+        "Rwanda",
+        "DR Congo",
+        "Cameroon"
+      ],
+      "correct_answer": 1,
+      "explanation": "Rwanda charges $1,500 per person for a gorilla trekking permit in Volcanoes National Park. Uganda charges less (~$700). The money funds conservation -- there are fewer than 1,100 mountain gorillas left in the wild. Worth every cent.",
+      "image_url": null
+    },
+    {
+      "id": "wt069",
+      "difficulty": 4,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The 'Chunnel' (Channel Tunnel) between England and France runs under the English Channel for approximately how long?",
+      "options": [
+        "31 km",
+        "50 km",
+        "75 km",
+        "95 km"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Channel Tunnel is about 50.5 km long, with 37.9 km under the sea -- making it the longest underwater tunnel in the world. The Eurostar train does the crossing in about 35 minutes. Engineering marvel.",
+      "image_url": null
+    },
+    {
+      "id": "wt070",
+      "difficulty": 1,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which obscure Pacific island, part of Kiribati, was the first permanently inhabited place to enter the year 2000?",
+      "options": [
+        "Caroline Island",
+        "Christmas Island",
+        "Millennium Island",
+        "Tonga"
+      ],
+      "correct_answer": 0,
+      "explanation": "Caroline Island (renamed Millennium Island for the occasion) in Kiribati was the first place to see the sunrise on January 1, 2000. Kiribati moved the International Date Line in 1995 specifically so they could claim this honour. Strategic time zone manipulation at its finest.",
       "image_url": null
     }
   ]

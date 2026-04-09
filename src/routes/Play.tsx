@@ -69,6 +69,98 @@ export function Component() {
     }
   }, [isHost, session?.timerStarted]);
 
+  // Auto-reveal for timed_reveal (Snap) and progressive_reveal (LookBeforeYouLeap)
+  const autoRevealInterval = useRef<ReturnType<typeof setInterval> | null>(null);
+  useEffect(() => {
+    if (autoRevealInterval.current) {
+      clearInterval(autoRevealInterval.current);
+      autoRevealInterval.current = null;
+    }
+
+    if (!session) return;
+    const timerActive = isQuickPlay || session.timerStarted;
+    if (!timerActive) return;
+
+    const roundTypeId = session.roundTypeSequence?.[session.currentRound];
+    if (!roundTypeId) return;
+    const def = getRoundDefinition(roundTypeId);
+    const q = getCurrentQuestion();
+    if (!q) return;
+
+    // Snap: reveal answer options one at a time
+    if (def.questionFormat === 'timed_reveal' && q.options) {
+      const delayMs = q.reveal_delay_ms ?? 3000;
+      const total = q.options.length;
+
+      // Reveal first option immediately if none revealed yet
+      const cur = (session.activeRoundState as any)?.revealedOptions ?? [];
+      if (cur.length === 0) {
+        useGameStore.getState().updateRoundState((prev: any) => ({
+          ...prev,
+          revealedOptions: [0],
+        }));
+        if (isHost) broadcastHostState();
+      }
+
+      autoRevealInterval.current = setInterval(() => {
+        const s = useGameStore.getState().session;
+        if (!s) return;
+        const revealed: number[] = (s.activeRoundState as any)?.revealedOptions ?? [];
+        if (revealed.length >= total) {
+          clearInterval(autoRevealInterval.current!);
+          autoRevealInterval.current = null;
+          return;
+        }
+        const nextIdx = revealed.length;
+        useGameStore.getState().updateRoundState((prev: any) => ({
+          ...prev,
+          revealedOptions: [...((prev as any)?.revealedOptions ?? []), nextIdx],
+        }));
+        if (isHost) broadcastHostState();
+      }, delayMs);
+    }
+
+    // LookBeforeYouLeap: reveal clue chunks one at a time
+    if (def.questionFormat === 'progressive_reveal' && q.reveal_chunks) {
+      const total = q.reveal_chunks.length;
+      // Spread reveals over ~80% of the timer, leaving time to answer at end
+      const chunkDelay = Math.floor((q.time_limit_seconds * 1000 * 0.8) / Math.max(total, 1));
+
+      // Reveal first chunk immediately if none revealed yet
+      const cur = (session.activeRoundState as any)?.revealedChunks ?? 0;
+      if (cur === 0) {
+        useGameStore.getState().updateRoundState((prev: any) => ({
+          ...prev,
+          revealedChunks: 1,
+        }));
+        if (isHost) broadcastHostState();
+      }
+
+      autoRevealInterval.current = setInterval(() => {
+        const s = useGameStore.getState().session;
+        if (!s) return;
+        const current: number = (s.activeRoundState as any)?.revealedChunks ?? 0;
+        if (current >= total) {
+          clearInterval(autoRevealInterval.current!);
+          autoRevealInterval.current = null;
+          return;
+        }
+        useGameStore.getState().updateRoundState((prev: any) => ({
+          ...prev,
+          revealedChunks: ((prev as any)?.revealedChunks ?? 0) + 1,
+        }));
+        if (isHost) broadcastHostState();
+      }, chunkDelay);
+    }
+
+    return () => {
+      if (autoRevealInterval.current) {
+        clearInterval(autoRevealInterval.current);
+        autoRevealInterval.current = null;
+      }
+    };
+  }, [session?.currentRound, session?.timerStarted, isQuickPlay, isHost]);
+
   // Redirect if no session
   useEffect(() => {
     if (!session) {

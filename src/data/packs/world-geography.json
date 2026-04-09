@@ -3,7 +3,7 @@
   "name": "World Geography",
   "description": "Mountains, rivers, capitals, and continents — how well do you know planet Earth?",
   "author": "Game Night Crew",
-  "question_count": 50,
+  "question_count": 70,
   "questions": [
     {
       "id": "wg001",
@@ -553,6 +553,226 @@
       "options": ["3.8 km", "12.4 km", "25.7 km", "42.1 km"],
       "correct_answer": 0,
       "explanation": "Big Diomede and Little Diomede are only 3.8 km apart, but the International Date Line runs between them. So you can technically 'see tomorrow' from one island — that's a proper mind-bender!",
+      "image_url": null
+    },
+    {
+      "id": "wg051",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which continent has the most countries?",
+      "options": ["Africa", "Europe", "Asia", "South America"],
+      "correct_answer": 0,
+      "explanation": "Africa has 54 countries — more than any other continent. Asia is second with 49. That's a lot of flags to memorise!",
+      "image_url": null
+    },
+    {
+      "id": "wg052",
+      "difficulty": 85,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Sahara is the largest hot desert in the world. Which continent is it on?",
+      "options": ["Asia", "Africa", "South America", "Australia"],
+      "correct_answer": 1,
+      "explanation": "The Sahara covers most of North Africa — about 9.2 million square km. That's bigger than the entire USA! Our Kalahari is impressive, but the Sahara is on another level.",
+      "image_url": null
+    },
+    {
+      "id": "wg053",
+      "difficulty": 80,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the longest river in Europe?",
+      "options": ["Danube", "Rhine", "Volga", "Thames"],
+      "correct_answer": 2,
+      "explanation": "The Volga River stretches about 3,530 km through Russia. The Danube is second at 2,850 km. The Thames? Only 346 km — cute by comparison.",
+      "image_url": null
+    },
+    {
+      "id": "wg054",
+      "difficulty": 75,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country has the most islands in the world?",
+      "options": ["Indonesia", "Philippines", "Sweden", "Norway"],
+      "correct_answer": 2,
+      "explanation": "Sweden has about 267,570 islands! Most are tiny and uninhabited, but still — that's a mind-blowing number. Norway is second with about 239,000. Indonesia only has about 17,500.",
+      "image_url": null
+    },
+    {
+      "id": "wg055",
+      "difficulty": 72,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Tigris and Euphrates rivers flow through which modern-day country?",
+      "options": ["Iran", "Turkey", "Iraq", "Syria"],
+      "correct_answer": 2,
+      "explanation": "Both the Tigris and Euphrates flow through Iraq, where ancient Mesopotamia — the 'cradle of civilisation' — once flourished. They also pass through Turkey and Syria, but Iraq is where they converge.",
+      "image_url": null
+    },
+    {
+      "id": "wg056",
+      "difficulty": 68,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which African country is completely surrounded by Senegal (except for its coastline)?",
+      "options": ["Guinea-Bissau", "The Gambia", "Sierra Leone", "Cape Verde"],
+      "correct_answer": 1,
+      "explanation": "The Gambia is a thin strip of land along the Gambia River, completely enclosed by Senegal on three sides with the Atlantic on the fourth. It's one of Africa's smallest countries and one of the world's quirkiest borders.",
+      "image_url": null
+    },
+    {
+      "id": "wg057",
+      "difficulty": 65,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the deepest point in the Atlantic Ocean?",
+      "options": ["Puerto Rico Trench", "South Sandwich Trench", "Romanche Trench", "Cayman Trench"],
+      "correct_answer": 0,
+      "explanation": "The Puerto Rico Trench reaches about 8,376 metres deep — the Atlantic's deepest point. Still not as deep as the Mariana Trench in the Pacific (nearly 11,000m), but you wouldn't want to swim there!",
+      "image_url": null
+    },
+    {
+      "id": "wg058",
+      "difficulty": 60,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which European country has the most volcanoes?",
+      "options": ["Italy", "Iceland", "Greece", "Spain"],
+      "correct_answer": 1,
+      "explanation": "Iceland has about 130 volcanic mountains, with around 30 active volcanic systems. It sits right on the Mid-Atlantic Ridge where two tectonic plates meet. Italy has Vesuvius and Etna, but Iceland is basically one big volcano waiting to happen.",
+      "image_url": null
+    },
+    {
+      "id": "wg059",
+      "difficulty": 55,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Mekong River, one of Asia's major rivers, flows through how many countries?",
+      "options": ["4", "6", "3", "8"],
+      "correct_answer": 1,
+      "explanation": "The Mekong flows through 6 countries: China, Myanmar, Laos, Thailand, Cambodia, and Vietnam. It's about 4,350 km long — the 12th longest river in the world.",
+      "image_url": null
+    },
+    {
+      "id": "wg060",
+      "difficulty": 50,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these African great lakes from SMALLEST to LARGEST by surface area:",
+      "options": ["Lake Victoria", "Lake Tanganyika", "Lake Malawi", "Lake Turkana"],
+      "correct_answer": "3,2,1,0",
+      "explanation": "Turkana (6,405 km²), Malawi (29,600 km²), Tanganyika (32,600 km²), Victoria (68,800 km²). Lake Victoria is by far the largest — it's the size of Ireland!",
+      "image_url": null
+    },
+    {
+      "id": "wg061",
+      "difficulty": 45,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country contains the majority of the Caspian Sea's coastline?",
+      "options": ["Russia", "Kazakhstan", "Iran", "Turkmenistan"],
+      "correct_answer": 1,
+      "explanation": "Kazakhstan has the longest Caspian coastline at about 2,320 km. The Caspian borders five countries total. Despite being called a 'sea', it's technically the world's largest lake.",
+      "image_url": null
+    },
+    {
+      "id": "wg062",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the world's largest salt flat, located in Bolivia?",
+      "options": ["Salar de Uyuni", "Salar de Atacama", "Bonneville Salt Flats", "Etosha Pan"],
+      "correct_answer": 0,
+      "explanation": "Salar de Uyuni covers over 10,000 square km and sits at about 3,656m above sea level. When it rains, a thin layer of water creates the world's largest natural mirror. Absolutely jaw-dropping.",
+      "image_url": null
+    },
+    {
+      "id": "wg063",
+      "difficulty": 35,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which narrow body of water separates the Asian and North American tectonic plates in Iceland?",
+      "options": ["Silfra Fissure", "Thingvellir Rift", "Almannagjá Canyon", "Öxarárfoss Gorge"],
+      "correct_answer": 0,
+      "explanation": "The Silfra Fissure in Thingvellir National Park is where you can literally snorkel between two continental plates. The water visibility is over 100 metres — one of the clearest diving spots on Earth.",
+      "image_url": null
+    },
+    {
+      "id": "wg064",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "How many countries does the Danube River flow through or form a border of?",
+      "options": ["7", "10", "8", "6"],
+      "correct_answer": 1,
+      "explanation": "The Danube touches 10 countries: Germany, Austria, Slovakia, Hungary, Croatia, Serbia, Romania, Bulgaria, Moldova, and Ukraine. It's the second-longest river in Europe and passes through more countries than any other river in the world.",
+      "image_url": null
+    },
+    {
+      "id": "wg065",
+      "difficulty": 25,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the only country in the world that lies entirely above 1,000 metres in elevation?",
+      "options": ["Bhutan", "Lesotho", "Nepal", "Andorra"],
+      "correct_answer": 1,
+      "explanation": "Lesotho — our neighbour! The entire country sits above 1,000m, with its lowest point at about 1,400m. It's nicknamed 'The Kingdom in the Sky'. The only country in the world where every single point is that high up.",
+      "image_url": null
+    },
+    {
+      "id": "wg066",
+      "difficulty": 20,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Ob-Irtysh river system in Russia is one of the longest in the world. Approximately how long is it?",
+      "options": ["About 3,650 km", "About 4,250 km", "About 5,410 km", "About 6,300 km"],
+      "correct_answer": 2,
+      "explanation": "The Ob-Irtysh system stretches about 5,410 km across Siberia. It's the 7th longest river system in the world, draining into the Arctic Ocean. Most people have never even heard of it!",
+      "image_url": null
+    },
+    {
+      "id": "wg067",
+      "difficulty": 15,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these seas from SHALLOWEST to DEEPEST average depth:",
+      "options": ["Caribbean Sea", "Sea of Azov", "North Sea", "Mediterranean Sea"],
+      "correct_answer": "1,2,3,0",
+      "explanation": "Sea of Azov (~7m avg), North Sea (~95m avg), Mediterranean (~1,500m avg), Caribbean (~2,200m avg). The Sea of Azov is absurdly shallow — you could practically wade across parts of it. Wait, actually no, please don't try that.",
+      "image_url": null
+    },
+    {
+      "id": "wg068",
+      "difficulty": 10,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country has the most diverse topography, containing every climate zone on Earth according to the Köppen system?",
+      "options": ["China", "United States", "Russia", "India"],
+      "correct_answer": 0,
+      "explanation": "China contains every single Köppen climate classification — from tropical rainforest to polar ice. No other country comes close. Its elevation ranges from -154m (Turpan Depression) to 8,849m (Everest). Absolute geographical madness.",
+      "image_url": null
+    },
+    {
+      "id": "wg069",
+      "difficulty": 5,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Strait of Malacca, one of the world's busiest shipping lanes, separates which two landmasses?",
+      "options": ["Malay Peninsula and Sumatra", "Java and Borneo", "Sulawesi and Papua", "Philippines and Taiwan"],
+      "correct_answer": 0,
+      "explanation": "The Strait of Malacca runs between the Malay Peninsula (Malaysia/Thailand) and the Indonesian island of Sumatra. About 25% of all traded goods pass through it annually. If this strait shut down, the global economy would have a very bad day.",
+      "image_url": null
+    },
+    {
+      "id": "wg070",
+      "difficulty": 2,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Richat Structure (Eye of the Sahara) in Mauritania was once theorised to be a meteor impact crater. What is its approximate diameter?",
+      "options": ["About 10 km", "About 25 km", "About 40 km", "About 55 km"],
+      "correct_answer": 2,
+      "explanation": "The Richat Structure is about 40 km in diameter and is visible from space. It's now believed to be a deeply eroded geological dome, not an impact crater. It looks like someone drew a perfect bullseye in the desert. Absolutely bizarre.",
       "image_url": null
     }
   ]

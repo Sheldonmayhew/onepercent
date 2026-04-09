@@ -3,7 +3,7 @@
   "name": "World Music",
   "description": "From Beethoven to Beyonc\u00e9 \u2014 how well do you know the world of music?",
   "author": "Game Night Crew",
-  "question_count": 50,
+  "question_count": 70,
   "questions": [
     {
       "id": "wm001",
@@ -803,6 +803,326 @@
       ],
       "correct_answer": 1,
       "explanation": "John Cage's '4\u203233\u2033' (1952) is literally silence \u2014 the 'music' is whatever ambient sounds occur. It's either genius or the biggest troll in music history. Maybe both!",
+      "image_url": null
+    },
+    {
+      "id": "wm051",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which singer is known as the 'Queen of Pop'?",
+      "options": [
+        "Whitney Houston",
+        "Madonna",
+        "Lady Gaga",
+        "Beyonc\u00e9"
+      ],
+      "correct_answer": 1,
+      "explanation": "Madonna has sold over 300 million records worldwide and has been called the 'Queen of Pop' since the 1980s. Like her or not, the title is hers.",
+      "image_url": null
+    },
+    {
+      "id": "wm052",
+      "difficulty": 85,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What instrument does a conductor use to lead an orchestra?",
+      "options": [
+        "A baton",
+        "A whistle",
+        "A tuning fork",
+        "A metronome"
+      ],
+      "correct_answer": 0,
+      "explanation": "The conductor's baton helps direct tempo and dynamics. Some conductors use just their hands though \u2014 Leonard Bernstein often conducted baton-free. Either way, try leading 100 musicians without breaking a sweat.",
+      "image_url": null
+    },
+    {
+      "id": "wm053",
+      "difficulty": 78,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which rapper released the album 'The Marshall Mathers LP' in 2000?",
+      "options": [
+        "50 Cent",
+        "Jay-Z",
+        "Eminem",
+        "Kanye West"
+      ],
+      "correct_answer": 2,
+      "explanation": "Eminem (Marshall Mathers III) released the album that sold 1.76 million copies in its first week. It's still one of the best-selling rap albums of all time.",
+      "image_url": null
+    },
+    {
+      "id": "wm054",
+      "difficulty": 72,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country is famous for flamenco music and dance?",
+      "options": [
+        "Portugal",
+        "Mexico",
+        "Italy",
+        "Spain"
+      ],
+      "correct_answer": 3,
+      "explanation": "Flamenco originated in Andalusia, southern Spain. It combines guitar, singing, dance, and hand clapping (palmas). UNESCO recognised it as part of humanity's cultural heritage. Incredible energy.",
+      "image_url": null
+    },
+    {
+      "id": "wm055",
+      "difficulty": 68,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "How many keys does a standard full-size piano have?",
+      "options": [
+        "66",
+        "76",
+        "88",
+        "94"
+      ],
+      "correct_answer": 2,
+      "explanation": "A standard piano has 88 keys \u2014 52 white and 36 black. That covers over 7 octaves. Some B\u00f6sendorfer pianos have 97 keys, but 88 is the standard. That's a lot of notes to learn!",
+      "image_url": null
+    },
+    {
+      "id": "wm056",
+      "difficulty": 62,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Bob Marley song is often considered the anthem of reggae music worldwide?",
+      "options": [
+        "Buffalo Soldier",
+        "One Love",
+        "Three Little Birds",
+        "Redemption Song"
+      ],
+      "correct_answer": 1,
+      "explanation": "One Love has become synonymous with peace, unity, and reggae music itself. It's been covered countless times and used in everything from ads to World Cup ceremonies. Bob Marley's legacy is eternal.",
+      "image_url": null
+    },
+    {
+      "id": "wm057",
+      "difficulty": 55,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What does the musical term 'fortissimo' mean?",
+      "options": [
+        "Very slow",
+        "Very loud",
+        "Very soft",
+        "Very fast"
+      ],
+      "correct_answer": 1,
+      "explanation": "Fortissimo (ff) means 'very loud' in music. Piano means soft, forte means loud, and fortissimo is basically telling the orchestra to give it everything they've got.",
+      "image_url": null
+    },
+    {
+      "id": "wm058",
+      "difficulty": 50,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Nigerian artist released the global hit 'Essence' featuring Tems in 2020?",
+      "options": [
+        "Davido",
+        "Burna Boy",
+        "Wizkid",
+        "Fireboy DML"
+      ],
+      "correct_answer": 2,
+      "explanation": "Wizkid's 'Essence' was called the 'song of the summer' by multiple publications. It peaked at #9 on the Billboard Hot 100. Afrobeats officially went global!",
+      "image_url": null
+    },
+    {
+      "id": "wm059",
+      "difficulty": 45,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Arrange these music genres in the order they ORIGINATED, from EARLIEST to LATEST:",
+      "options": [
+        "Hip Hop",
+        "Jazz",
+        "Rock and Roll",
+        "Electronic/EDM"
+      ],
+      "correct_answer": "1,2,0,3",
+      "explanation": "Jazz (1900s), Rock and Roll (1950s), Hip Hop (1970s), EDM (1980s). Each genre evolved from what came before it. Music is one big family tree.",
+      "image_url": null
+    },
+    {
+      "id": "wm060",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which composer wrote 'The Four Seasons', a set of four violin concertos?",
+      "options": [
+        "Mozart",
+        "Vivaldi",
+        "Bach",
+        "Handel"
+      ],
+      "correct_answer": 1,
+      "explanation": "Antonio Vivaldi composed The Four Seasons around 1725. It's probably the most recognised piece of classical music ever. You've definitely heard 'Spring' even if you don't know classical music.",
+      "image_url": null
+    },
+    {
+      "id": "wm061",
+      "difficulty": 35,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Miriam Makeba was exiled from South Africa for how many years?",
+      "options": [
+        "15 years",
+        "21 years",
+        "31 years",
+        "38 years"
+      ],
+      "correct_answer": 2,
+      "explanation": "Mama Africa was exiled for 31 years (1960-1990) after speaking out against apartheid. She testified before the UN, won a Grammy, and became one of the most important African artists ever. A true South African hero.",
+      "image_url": null
+    },
+    {
+      "id": "wm062",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which instrument, central to Indian classical music, has sympathetic strings that vibrate without being directly played?",
+      "options": [
+        "Tabla",
+        "Sitar",
+        "Sarangi",
+        "Harmonium"
+      ],
+      "correct_answer": 1,
+      "explanation": "The sitar has 18-21 strings, with 11-13 sympathetic strings that resonate and create that distinctive buzzing sound. Ravi Shankar made it famous worldwide. George Harrison of the Beatles was a huge fan.",
+      "image_url": null
+    },
+    {
+      "id": "wm063",
+      "difficulty": 25,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Hugh Masekela, the legendary South African musician, was primarily known for playing which instrument?",
+      "options": [
+        "Saxophone",
+        "Trumpet",
+        "Piano",
+        "Guitar"
+      ],
+      "correct_answer": 1,
+      "explanation": "Hugh Masekela was a trumpet virtuoso whose hit 'Grazing in the Grass' reached #1 in the US in 1968. He used music as a weapon against apartheid. Bra Hugh \u2014 a South African legend.",
+      "image_url": null
+    },
+    {
+      "id": "wm064",
+      "difficulty": 22,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In Western music, what is the circle of fifths used for?",
+      "options": [
+        "Tuning drums",
+        "Understanding key relationships",
+        "Measuring tempo",
+        "Rating song popularity"
+      ],
+      "correct_answer": 1,
+      "explanation": "The circle of fifths shows the relationships between all 12 chromatic pitches and their key signatures. It's the cheat sheet every music theory student needs. Once it clicks, everything makes sense.",
+      "image_url": null
+    },
+    {
+      "id": "wm065",
+      "difficulty": 18,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Arrange these South African music genres from OLDEST to most RECENT:",
+      "options": [
+        "Amapiano",
+        "Kwaito",
+        "Mbaqanga",
+        "Gqom"
+      ],
+      "correct_answer": "2,1,3,0",
+      "explanation": "Mbaqanga (1960s), Kwaito (1990s), Gqom (2010s), Amapiano (late 2010s). South African music keeps evolving and the world keeps catching on. Amapiano is literally everywhere now!",
+      "image_url": null
+    },
+    {
+      "id": "wm066",
+      "difficulty": 15,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the lowest-pitched instrument in a standard symphony orchestra?",
+      "options": [
+        "Tuba",
+        "Contrabassoon",
+        "Double Bass",
+        "Bass Trombone"
+      ],
+      "correct_answer": 1,
+      "explanation": "The contrabassoon can play down to Bb0, lower than the tuba or double bass. It's the orchestra's deepest voice. If you've ever felt a rumble in a concert hall, the contrabassoon might be responsible.",
+      "image_url": null
+    },
+    {
+      "id": "wm067",
+      "difficulty": 12,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Philip Glass is a pioneer of which musical movement that uses repetitive, slowly evolving patterns?",
+      "options": [
+        "Impressionism",
+        "Minimalism",
+        "Serialism",
+        "Neo-Romanticism"
+      ],
+      "correct_answer": 1,
+      "explanation": "Glass, along with Steve Reich and Terry Riley, pioneered minimalism in the 1960s-70s. His music is hypnotic \u2014 once it gets into your head, it doesn't leave. Some people love it, some can't stand it. No middle ground.",
+      "image_url": null
+    },
+    {
+      "id": "wm068",
+      "difficulty": 8,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The theremin, one of the earliest electronic instruments, is played by doing what?",
+      "options": [
+        "Blowing into a tube",
+        "Moving hands near antennas without touching",
+        "Pressing membrane buttons",
+        "Striking metal keys"
+      ],
+      "correct_answer": 1,
+      "explanation": "The theremin is played entirely without physical contact \u2014 you move your hands near two metal antennas to control pitch and volume. Invented in 1920 by L\u00e9on Theremin. It's the instrument that makes those spooky sci-fi sounds.",
+      "image_url": null
+    },
+    {
+      "id": "wm069",
+      "difficulty": 5,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Isicathamiya, the a cappella singing style made famous by Ladysmith Black Mambazo, originated among which group in South Africa?",
+      "options": [
+        "Zulu migrant workers",
+        "Xhosa church choirs",
+        "Sotho village musicians",
+        "Tswana royal courts"
+      ],
+      "correct_answer": 0,
+      "explanation": "Isicathamiya developed among Zulu migrant workers in the mines and hostels of South Africa. The name comes from the Zulu word 'cathama' meaning 'to walk softly'. Ladysmith Black Mambazo took it to the world stage with Paul Simon's Graceland album.",
+      "image_url": null
+    },
+    {
+      "id": "wm070",
+      "difficulty": 2,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Conlon Nancarrow composed his most famous works for which instrument because he found human performers too limited?",
+      "options": [
+        "Pipe organ",
+        "Player piano",
+        "Synthesizer",
+        "Music box"
+      ],
+      "correct_answer": 1,
+      "explanation": "Nancarrow composed incredibly complex rhythmic pieces for player piano \u2014 music so mathematically intricate that no human could play it. He punched holes in piano rolls by hand. The ultimate perfectionist. His studies are mind-bending to listen to.",
       "image_url": null
     }
   ]

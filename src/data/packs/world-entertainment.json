@@ -3,7 +3,7 @@
   "name": "World Entertainment",
   "description": "Movies, TV shows, gaming, and pop culture from around the world — lights, camera, trivia!",
   "author": "Game Night Crew",
-  "question_count": 50,
+  "question_count": 70,
   "questions": [
     {
       "id": "we001",
@@ -803,6 +803,326 @@
       ],
       "correct_answer": 2,
       "explanation": "Metropolis (1927) by Fritz Lang was way ahead of its time. The visuals influenced everything from Blade Runner to music videos. Nearly 100 years old and still iconic!",
+      "image_url": null
+    },
+    {
+      "id": "we051",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which superhero is also known as 'The Man of Steel'?",
+      "options": [
+        "Batman",
+        "Superman",
+        "Iron Man",
+        "Captain America"
+      ],
+      "correct_answer": 1,
+      "explanation": "Superman, aka Clark Kent, aka Kal-El. The OG superhero, flying around in a cape since 1938. Not to be confused with Iron Man — that one's just a rich guy in a suit.",
+      "image_url": null
+    },
+    {
+      "id": "we052",
+      "difficulty": 85,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which fantasy film trilogy is based on J.R.R. Tolkien's novels and directed by Peter Jackson?",
+      "options": [
+        "The Hunger Games",
+        "Harry Potter",
+        "The Lord of the Rings",
+        "Narnia"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Lord of the Rings trilogy won 17 Oscars across all three films. Return of the King alone won 11 — tying the record for most wins in a single year. Absolute cinematic masterclass.",
+      "image_url": null
+    },
+    {
+      "id": "we053",
+      "difficulty": 80,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which streaming service created the hit series 'Stranger Things'?",
+      "options": [
+        "Amazon Prime",
+        "Disney+",
+        "Hulu",
+        "Netflix"
+      ],
+      "correct_answer": 3,
+      "explanation": "Stranger Things debuted on Netflix in 2016 and became one of the most-watched shows in streaming history. If you haven't watched it yet... what have you been doing?",
+      "image_url": null
+    },
+    {
+      "id": "we054",
+      "difficulty": 75,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which actress played Katniss Everdeen in 'The Hunger Games' films?",
+      "options": [
+        "Emma Stone",
+        "Scarlett Johansson",
+        "Jennifer Lawrence",
+        "Brie Larson"
+      ],
+      "correct_answer": 2,
+      "explanation": "Jennifer Lawrence was just 20 years old when she was cast as Katniss. She went on to win an Oscar for 'Silver Linings Playbook' the same year. Busy woman.",
+      "image_url": null
+    },
+    {
+      "id": "we055",
+      "difficulty": 70,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The video game 'The Legend of Zelda' is made by which company?",
+      "options": [
+        "Sony",
+        "Microsoft",
+        "Nintendo",
+        "Sega"
+      ],
+      "correct_answer": 2,
+      "explanation": "Nintendo has been making Zelda games since 1986. Fun fact: you play as Link, not Zelda. Zelda is the princess. Every gamer has had this argument at least once.",
+      "image_url": null
+    },
+    {
+      "id": "we056",
+      "difficulty": 65,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which animated TV show has been on the air since 1989, making it the longest-running American animated series?",
+      "options": [
+        "Family Guy",
+        "South Park",
+        "The Simpsons",
+        "King of the Hill"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Simpsons has been going since 1989 — over 35 seasons! At this point, the show has been on longer than many of its viewers have been alive.",
+      "image_url": null
+    },
+    {
+      "id": "we057",
+      "difficulty": 60,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which film was the first to use CGI (computer-generated imagery) for a main character?",
+      "options": [
+        "Jurassic Park",
+        "Toy Story",
+        "Tron",
+        "The Abyss"
+      ],
+      "correct_answer": 2,
+      "explanation": "Tron (1982) was the first film to use extensive CGI, featuring computer-generated environments and characters. Jurassic Park (1993) later raised the bar with photorealistic dinosaurs. Both were groundbreaking.",
+      "image_url": null
+    },
+    {
+      "id": "we058",
+      "difficulty": 55,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these video game consoles in order of release, EARLIEST to LATEST: (1) PlayStation 2 (2) Nintendo 64 (3) Xbox 360 (4) Nintendo Wii",
+      "options": [
+        "PlayStation 2",
+        "Nintendo 64",
+        "Xbox 360",
+        "Nintendo Wii"
+      ],
+      "correct_answer": "1,0,2,3",
+      "explanation": "N64 (1996), PS2 (2000), Xbox 360 (2005), Wii (2006). The PS2 is still the best-selling console ever with over 155 million units sold. Absolute legend.",
+      "image_url": null
+    },
+    {
+      "id": "we059",
+      "difficulty": 50,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which TV series features a chemistry teacher who turns to manufacturing methamphetamine and has a spin-off called 'Better Call Saul'?",
+      "options": [
+        "Ozark",
+        "Breaking Bad",
+        "Narcos",
+        "The Wire"
+      ],
+      "correct_answer": 1,
+      "explanation": "Breaking Bad (2008-2013) is widely considered one of the greatest TV dramas ever made. Better Call Saul (2015-2022) is its prequel. Both are absolutely brilliant.",
+      "image_url": null
+    },
+    {
+      "id": "we060",
+      "difficulty": 45,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In the Marvel Cinematic Universe, what is the name of Thanos's home planet?",
+      "options": [
+        "Xandar",
+        "Titan",
+        "Vormir",
+        "Sakaar"
+      ],
+      "correct_answer": 1,
+      "explanation": "Thanos is from Titan, one of Saturn's moons in the MCU. He's called the 'Mad Titan' for a reason. Collecting infinity stones like they're Pokémon cards.",
+      "image_url": null
+    },
+    {
+      "id": "we061",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which acclaimed TV series set in the 1960s advertising world stars Jon Hamm as Don Draper?",
+      "options": [
+        "Suits",
+        "Mad Men",
+        "Boardwalk Empire",
+        "The Crown"
+      ],
+      "correct_answer": 1,
+      "explanation": "Mad Men ran from 2007-2015 and won 16 Emmy Awards. It's basically a masterclass in how to dress sharp, drink whiskey, and make bad life decisions.",
+      "image_url": null
+    },
+    {
+      "id": "we062",
+      "difficulty": 35,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which director created the sci-fi film 'Blade Runner' (1982) and later directed 'Gladiator' (2000)?",
+      "options": [
+        "James Cameron",
+        "Ridley Scott",
+        "Steven Spielberg",
+        "George Lucas"
+      ],
+      "correct_answer": 1,
+      "explanation": "Ridley Scott directed both Blade Runner and Gladiator, plus Alien. The man basically defined three different genres. Still going strong in his 80s!",
+      "image_url": null
+    },
+    {
+      "id": "we063",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which 2019 film by Bong Joon-ho became the first non-English language film to win the Academy Award for Best Picture?",
+      "options": [
+        "Drive My Car",
+        "Roma",
+        "Parasite",
+        "Shoplifters"
+      ],
+      "correct_answer": 2,
+      "explanation": "Parasite won four Oscars including Best Picture and Best Director. Bong Joon-ho's acceptance speech where he said 'I'm ready to drink tonight' was iconic.",
+      "image_url": null
+    },
+    {
+      "id": "we064",
+      "difficulty": 25,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In the TV series 'The Wire', which fictional city is the primary setting?",
+      "options": [
+        "Philadelphia",
+        "Detroit",
+        "Baltimore",
+        "Newark"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Wire is set in Baltimore, Maryland and examines the city through its drug trade, ports, government, schools, and media. Often called the greatest TV series ever made. If you haven't watched it, sort that out immediately.",
+      "image_url": null
+    },
+    {
+      "id": "we065",
+      "difficulty": 22,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which video game series, created by Hideo Kojima, features a character named Solid Snake?",
+      "options": [
+        "Splinter Cell",
+        "Metal Gear",
+        "Hitman",
+        "Resident Evil"
+      ],
+      "correct_answer": 1,
+      "explanation": "Metal Gear has been running since 1987. Kojima's storytelling is legendary — the plots are so complex they make Inception look like a children's book.",
+      "image_url": null
+    },
+    {
+      "id": "we066",
+      "difficulty": 18,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these Best Picture Oscar winners from EARLIEST to LATEST: (1) Schindler's List (2) The Godfather (3) No Country for Old Men (4) 12 Years a Slave",
+      "options": [
+        "Schindler's List",
+        "The Godfather",
+        "No Country for Old Men",
+        "12 Years a Slave"
+      ],
+      "correct_answer": "1,0,2,3",
+      "explanation": "The Godfather (1972), Schindler's List (1993), No Country for Old Men (2007), 12 Years a Slave (2013). All absolute masterpieces. If you haven't seen any of these, clear your weekend.",
+      "image_url": null
+    },
+    {
+      "id": "we067",
+      "difficulty": 15,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which South Korean TV drama, aired on tvN in 2016, became the highest-rated Korean drama in cable television history at the time?",
+      "options": [
+        "Crash Landing on You",
+        "Goblin (Guardian)",
+        "Descendants of the Sun",
+        "Reply 1988"
+      ],
+      "correct_answer": 1,
+      "explanation": "Goblin (Guardian: The Lonely and Great God) peaked at 20.5% viewership in South Korea. K-dramas have taken over the world — Netflix figured that out fast.",
+      "image_url": null
+    },
+    {
+      "id": "we068",
+      "difficulty": 10,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which 1994 film, considered one of the greatest ever made, was a box office disappointment on release but became a hit through home video rentals?",
+      "options": [
+        "Pulp Fiction",
+        "The Shawshank Redemption",
+        "Forrest Gump",
+        "The Lion King"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Shawshank Redemption earned only $58 million against a $25 million budget in theatres. It's now #1 on IMDb's Top 250. Goes to show — sometimes the world needs time to catch up with greatness.",
+      "image_url": null
+    },
+    {
+      "id": "we069",
+      "difficulty": 5,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which experimental 1929 film by Luis Buñuel and Salvador Dalí features the infamous eyeball-slicing scene?",
+      "options": [
+        "Nosferatu",
+        "Un Chien Andalou",
+        "The Cabinet of Dr. Caligari",
+        "Battleship Potemkin"
+      ],
+      "correct_answer": 1,
+      "explanation": "Un Chien Andalou is a 21-minute surrealist film that still shocks audiences nearly 100 years later. Dalí and Buñuel intentionally made it impossible to interpret logically. Mission accomplished.",
+      "image_url": null
+    },
+    {
+      "id": "we070",
+      "difficulty": 2,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which was the first commercial video game to generate $1 billion in revenue?",
+      "options": [
+        "Pac-Man",
+        "Space Invaders",
+        "Pong",
+        "Donkey Kong"
+      ],
+      "correct_answer": 1,
+      "explanation": "Space Invaders (1978) by Taito generated over $1 billion in revenue by 1982 — that's about $3.8 billion adjusted for inflation. It caused a 100-yen coin shortage in Japan. The game that started an entire industry.",
       "image_url": null
     }
   ]

@@ -3,7 +3,7 @@
   "name": "World Sport",
   "description": "From the World Cup to the Olympics — test your knowledge of sport around the globe!",
   "author": "Game Night Crew",
-  "question_count": 50,
+  "question_count": 70,
   "questions": [
     {
       "id": "ws001",
@@ -803,6 +803,326 @@
       ],
       "correct_answer": 0,
       "explanation": "The chistera (also called cesta) is the curved wicker basket strapped to the player's hand. Jai alai is one of the fastest ball sports in the world — the ball can travel over 300 km/h!",
+      "image_url": null
+    },
+    {
+      "id": "ws051",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which sport is played at Wimbledon?",
+      "options": [
+        "Cricket",
+        "Tennis",
+        "Golf",
+        "Football"
+      ],
+      "correct_answer": 1,
+      "explanation": "Wimbledon is the oldest and arguably most prestigious tennis tournament in the world. Players must wear all white. Strawberries and cream are basically mandatory for spectators.",
+      "image_url": null
+    },
+    {
+      "id": "ws052",
+      "difficulty": 82,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "How many players are on a basketball team on the court at one time?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_answer": 1,
+      "explanation": "Five players per team on court, ten total. Basketball was invented in 1891 by James Naismith using a peach basket. The game has come a long way since then!",
+      "image_url": null
+    },
+    {
+      "id": "ws053",
+      "difficulty": 78,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country won the 2022 FIFA World Cup in Qatar?",
+      "options": [
+        "France",
+        "Argentina",
+        "Brazil",
+        "Croatia"
+      ],
+      "correct_answer": 1,
+      "explanation": "Argentina beat France in what many call the greatest World Cup final ever. Messi finally got his World Cup trophy, Mbappé scored a hat-trick in the final, and everyone's heart rate was dangerously high.",
+      "image_url": null
+    },
+    {
+      "id": "ws054",
+      "difficulty": 72,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In rugby union, how many points is a converted try worth (try + conversion)?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct_answer": 2,
+      "explanation": "A try is worth 5 points and a conversion is worth 2, totalling 7. Every Springbok fan knows this in their sleep. If you're watching the game and don't know this, are you really watching?",
+      "image_url": null
+    },
+    {
+      "id": "ws055",
+      "difficulty": 68,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Grand Slam tennis tournament is held in Melbourne, Australia?",
+      "options": [
+        "US Open",
+        "French Open",
+        "Australian Open",
+        "Wimbledon"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Australian Open is held in January every year. It's played on hard courts in summer heat that can reach over 40°C. Players have literally fried eggs on the court surface during heatwaves.",
+      "image_url": null
+    },
+    {
+      "id": "ws056",
+      "difficulty": 62,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Sachin Tendulkar, regarded as one of cricket's greatest players, represented which country?",
+      "options": [
+        "Pakistan",
+        "Australia",
+        "England",
+        "India"
+      ],
+      "correct_answer": 3,
+      "explanation": "Sachin Tendulkar played for India from 1989 to 2013, scoring 100 international centuries — a record that may never be broken. He's basically a deity in India.",
+      "image_url": null
+    },
+    {
+      "id": "ws057",
+      "difficulty": 55,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which city hosted the 2020 Summer Olympics (held in 2021 due to COVID-19)?",
+      "options": [
+        "Paris",
+        "Beijing",
+        "Tokyo",
+        "London"
+      ],
+      "correct_answer": 2,
+      "explanation": "Tokyo hosted the Olympics a year late with no spectators in most venues. Strange times. Japan put on a fantastic show despite the circumstances.",
+      "image_url": null
+    },
+    {
+      "id": "ws058",
+      "difficulty": 50,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Arrange these rugby-playing nations by the number of Rugby World Cup titles they've won, from MOST to FEWEST:",
+      "options": [
+        "New Zealand",
+        "South Africa",
+        "England",
+        "Australia"
+      ],
+      "correct_answer": "1,0,3,2",
+      "explanation": "South Africa (4 titles), New Zealand (3), Australia (2), England (1). The Springboks are the most successful Rugby World Cup team EVER. Four-time champs! 🏆🏆🏆🏆",
+      "image_url": null
+    },
+    {
+      "id": "ws059",
+      "difficulty": 45,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which martial art became an Olympic sport for the first time at the 2020 Tokyo Olympics?",
+      "options": [
+        "Judo",
+        "Taekwondo",
+        "Karate",
+        "Kung Fu"
+      ],
+      "correct_answer": 2,
+      "explanation": "Karate made its Olympic debut in Tokyo — fitting, since karate originated in Japan (Okinawa). Sadly, it was dropped for the 2024 Paris Olympics. At least it had its moment.",
+      "image_url": null
+    },
+    {
+      "id": "ws060",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which footballer holds the record for the most Ballon d'Or awards?",
+      "options": [
+        "Cristiano Ronaldo",
+        "Lionel Messi",
+        "Pelé",
+        "Johan Cruyff"
+      ],
+      "correct_answer": 1,
+      "explanation": "Lionel Messi has won 8 Ballon d'Or awards. Cristiano Ronaldo has 5. The debate about who's better will outlive us all, but the stats don't lie.",
+      "image_url": null
+    },
+    {
+      "id": "ws061",
+      "difficulty": 35,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which South African cricketer infamously tampered with a ball using sandpaper during a 2018 Test match in Cape Town?",
+      "options": [
+        "AB de Villiers",
+        "Faf du Plessis",
+        "Cameron Bancroft",
+        "Steve Smith"
+      ],
+      "correct_answer": 2,
+      "explanation": "Trick question territory — Cameron Bancroft (Australian) was caught on camera using sandpaper during the infamous Newlands Test. Steve Smith was captain and copped a ban too. One of cricket's biggest scandals, and it happened right here in SA!",
+      "image_url": null
+    },
+    {
+      "id": "ws062",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Comrades Marathon in South Africa is approximately how long?",
+      "options": [
+        "42 km",
+        "56 km",
+        "72 km",
+        "89 km"
+      ],
+      "correct_answer": 3,
+      "explanation": "The Comrades Marathon is about 89 km (it alternates between 'up' and 'down' runs between Durban and Pietermaritzburg). It's not a marathon — it's an ultramarathon. Absolute madness, and absolute South African pride.",
+      "image_url": null
+    },
+    {
+      "id": "ws063",
+      "difficulty": 25,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In which year did South Africa win its first Rugby World Cup?",
+      "options": [
+        "1991",
+        "1995",
+        "1999",
+        "2003"
+      ],
+      "correct_answer": 1,
+      "explanation": "1995 — the famous final at Ellis Park where Mandela wore the Springbok jersey and presented the trophy to François Pienaar. It wasn't just a rugby moment; it was a nation-defining moment.",
+      "image_url": null
+    },
+    {
+      "id": "ws064",
+      "difficulty": 22,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the 'Duckworth-Lewis-Stern' method used for in cricket?",
+      "options": [
+        "Calculating bowling averages",
+        "Adjusting targets in rain-interrupted matches",
+        "Determining fielding positions",
+        "Measuring pitch conditions"
+      ],
+      "correct_answer": 1,
+      "explanation": "DLS is a complex mathematical formula that recalculates target scores when rain interrupts a limited-overs match. It's been both praised and cursed by fans depending on which team benefits. Maths ruling sport — love it or hate it.",
+      "image_url": null
+    },
+    {
+      "id": "ws065",
+      "difficulty": 18,
+      "type": "sequence",
+      "time_limit_seconds": 60,
+      "question": "Arrange these Springbok Rugby World Cup victories from EARLIEST to LATEST:",
+      "options": [
+        "2023 France",
+        "2019 Japan",
+        "1995 South Africa",
+        "2007 France"
+      ],
+      "correct_answer": "2,3,1,0",
+      "explanation": "1995 (SA), 2007 (France), 2019 (Japan), 2023 (France). Four titles! The 2023 win made the Boks the first team ever to win back-to-back Rugby World Cups. Absolute legends.",
+      "image_url": null
+    },
+    {
+      "id": "ws066",
+      "difficulty": 15,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which Olympic sport combines cross-country skiing and rifle shooting?",
+      "options": [
+        "Nordic Combined",
+        "Biathlon",
+        "Pentathlon",
+        "Triathlon"
+      ],
+      "correct_answer": 1,
+      "explanation": "Biathlon is the one where athletes ski their hearts out, then have to calm down enough to hit tiny targets with a rifle. It's the ultimate test of endurance and composure. Imagine sprinting and then threading a needle.",
+      "image_url": null
+    },
+    {
+      "id": "ws067",
+      "difficulty": 12,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Hashim Amla became the fastest player in ODI cricket history to reach which milestone?",
+      "options": [
+        "1,000 runs",
+        "3,000 runs",
+        "5,000 runs",
+        "7,000 runs"
+      ],
+      "correct_answer": 2,
+      "explanation": "Hashim Amla reached 5,000 ODI runs in just 101 innings — faster than Virat Kohli, Sachin Tendulkar, or anyone else. A quiet genius of South African cricket.",
+      "image_url": null
+    },
+    {
+      "id": "ws068",
+      "difficulty": 8,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "In the ancient Olympics, athletes competed in the nude. What was the Greek word for the training ground where they practiced?",
+      "options": [
+        "Agora",
+        "Gymnasium",
+        "Palaestra",
+        "Stoa"
+      ],
+      "correct_answer": 1,
+      "explanation": "The word 'gymnasium' comes from the Greek 'gymnos' meaning 'naked'. So every time you go to the gym, you're going to the 'naked place'. You're welcome for that mental image.",
+      "image_url": null
+    },
+    {
+      "id": "ws069",
+      "difficulty": 5,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country has won the most Davis Cup titles in tennis?",
+      "options": [
+        "Australia",
+        "United States",
+        "France",
+        "Spain"
+      ],
+      "correct_answer": 1,
+      "explanation": "The United States has won 32 Davis Cup titles — more than any other country. Australia is second with 28. The Davis Cup has been running since 1900, making it one of the oldest team competitions in sport.",
+      "image_url": null
+    },
+    {
+      "id": "ws070",
+      "difficulty": 2,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Caster Semenya, the South African middle-distance runner, won Olympic gold in 2012 and 2016 in which event?",
+      "options": [
+        "400 metres",
+        "800 metres",
+        "1500 metres",
+        "400m hurdles"
+      ],
+      "correct_answer": 1,
+      "explanation": "Caster Semenya dominated the 800m, winning Olympic gold in London (2012) and Rio (2016). Her career was overshadowed by controversial testosterone regulations. Regardless of the politics, she's a South African sporting icon and an incredible athlete.",
       "image_url": null
     }
   ]

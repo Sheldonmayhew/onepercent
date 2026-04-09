@@ -3,7 +3,7 @@
   "name": "World Knowledge",
   "description": "Geography, world facts, and international knowledge -- some with a South African twist!",
   "author": "Game Night Crew",
-  "question_count": 55,
+  "question_count": 75,
   "questions": [
     {
       "id": "wk001",
@@ -883,6 +883,326 @@
       ],
       "correct_answer": 2,
       "explanation": "Point Nemo is about 2,688 km from the nearest land (Ducie Island). It's so remote that the closest humans are often astronauts on the ISS overhead! Absolutely mind-blowing.",
+      "image_url": null
+    },
+    {
+      "id": "wk056",
+      "difficulty": 88,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the most widely spoken language in the world by total number of speakers?",
+      "options": [
+        "Mandarin Chinese",
+        "Spanish",
+        "English",
+        "Hindi"
+      ],
+      "correct_answer": 2,
+      "explanation": "English has about 1.5 billion total speakers (native + second language). Mandarin has more native speakers, but English wins overall because so many people learn it as a second language.",
+      "image_url": null
+    },
+    {
+      "id": "wk057",
+      "difficulty": 85,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which metal is the most abundant in the Earth's crust?",
+      "options": [
+        "Iron",
+        "Aluminium",
+        "Copper",
+        "Gold"
+      ],
+      "correct_answer": 1,
+      "explanation": "Aluminium makes up about 8% of the Earth's crust by weight. Despite being so common, it wasn't isolated until 1825. Before that, it was more valuable than gold!",
+      "image_url": null
+    },
+    {
+      "id": "wk058",
+      "difficulty": 78,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "How many bones does an adult human body have?",
+      "options": [
+        "186",
+        "206",
+        "226",
+        "256"
+      ],
+      "correct_answer": 1,
+      "explanation": "Adults have 206 bones. Babies are born with about 270, but many fuse together as you grow. Your skeleton is literally reshaping itself. Biology is wild.",
+      "image_url": null
+    },
+    {
+      "id": "wk059",
+      "difficulty": 75,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which gas makes up the majority of Earth's atmosphere?",
+      "options": [
+        "Oxygen",
+        "Carbon Dioxide",
+        "Nitrogen",
+        "Hydrogen"
+      ],
+      "correct_answer": 2,
+      "explanation": "Nitrogen makes up about 78% of the atmosphere. Oxygen is only about 21%. So every breath you take is mostly nitrogen. Bet you didn't think about that this morning!",
+      "image_url": null
+    },
+    {
+      "id": "wk060",
+      "difficulty": 70,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the hardest natural substance on Earth?",
+      "options": [
+        "Titanium",
+        "Quartz",
+        "Diamond",
+        "Sapphire"
+      ],
+      "correct_answer": 2,
+      "explanation": "Diamond scores a perfect 10 on the Mohs hardness scale. Only a diamond can scratch another diamond. South Africa has some of the world's richest diamond mines -- we know a thing or two about them!",
+      "image_url": null
+    },
+    {
+      "id": "wk061",
+      "difficulty": 65,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which planet in our solar system has the most moons?",
+      "options": [
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune"
+      ],
+      "correct_answer": 1,
+      "explanation": "Saturn has over 140 confirmed moons as of 2024, overtaking Jupiter. Scientists keep finding new ones. Saturn is basically collecting moons like infinity stones.",
+      "image_url": null
+    },
+    {
+      "id": "wk062",
+      "difficulty": 58,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the most consumed beverage in the world after water?",
+      "options": [
+        "Coffee",
+        "Tea",
+        "Beer",
+        "Milk"
+      ],
+      "correct_answer": 1,
+      "explanation": "Tea is the world's second most consumed beverage. Over 3 billion cups are drunk every day. In South Africa we love our rooibos -- the rest of the world is slowly catching on!",
+      "image_url": null
+    },
+    {
+      "id": "wk063",
+      "difficulty": 52,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these inventions from OLDEST to most RECENT: (1) Printing Press (2) Wheel (3) Internet (4) Telephone",
+      "options": [
+        "Printing Press",
+        "Wheel",
+        "Internet",
+        "Telephone"
+      ],
+      "correct_answer": "1,0,3,2",
+      "explanation": "Wheel (~3500 BC), Printing Press (1440), Telephone (1876), Internet (1983). The wheel took thousands of years to improve upon. The internet changed everything in about 20 years. We're speeding up!",
+      "image_url": null
+    },
+    {
+      "id": "wk064",
+      "difficulty": 48,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What percentage of the world's fresh water is locked in ice caps and glaciers?",
+      "options": [
+        "About 40%",
+        "About 55%",
+        "About 69%",
+        "About 85%"
+      ],
+      "correct_answer": 2,
+      "explanation": "About 69% of Earth's fresh water is frozen in glaciers and ice caps. Only about 1% of all water on Earth is available as fresh liquid water. Makes you think twice about leaving the tap running, hey?",
+      "image_url": null
+    },
+    {
+      "id": "wk065",
+      "difficulty": 42,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which country produces the most coffee in the world?",
+      "options": [
+        "Colombia",
+        "Vietnam",
+        "Ethiopia",
+        "Brazil"
+      ],
+      "correct_answer": 3,
+      "explanation": "Brazil produces about a third of the world's coffee. Vietnam is second, Colombia third. Ethiopia is where coffee was first discovered, though. A goat herder noticed his goats getting hyper after eating coffee berries. True story!",
+      "image_url": null
+    },
+    {
+      "id": "wk066",
+      "difficulty": 38,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "How many countries in the world currently have nuclear weapons?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "12"
+      ],
+      "correct_answer": 2,
+      "explanation": "Nine countries have nuclear weapons: the USA, Russia, UK, France, China, India, Pakistan, Israel (unofficially), and North Korea. South Africa is the only country that voluntarily gave up its nuclear weapons. We're peaceful like that.",
+      "image_url": null
+    },
+    {
+      "id": "wk067",
+      "difficulty": 32,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the most translated book in the world after the Bible?",
+      "options": [
+        "Don Quixote",
+        "The Little Prince",
+        "Harry Potter",
+        "The Quran"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Little Prince by Antoine de Saint-Exupéry has been translated into over 500 languages and dialects. A children's book that hits different when you read it as an adult.",
+      "image_url": null
+    },
+    {
+      "id": "wk068",
+      "difficulty": 25,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Approximately what percentage of the world's population lives in the Northern Hemisphere?",
+      "options": [
+        "About 60%",
+        "About 75%",
+        "About 87%",
+        "About 93%"
+      ],
+      "correct_answer": 2,
+      "explanation": "About 87-90% of the world's population lives in the Northern Hemisphere. The Southern Hemisphere is mostly ocean. Down here in South Africa, we're in the exclusive minority!",
+      "image_url": null
+    },
+    {
+      "id": "wk069",
+      "difficulty": 20,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these elements by their abundance in the human body, from MOST to LEAST: (1) Carbon (2) Oxygen (3) Hydrogen (4) Nitrogen",
+      "options": [
+        "Carbon",
+        "Oxygen",
+        "Hydrogen",
+        "Nitrogen"
+      ],
+      "correct_answer": "1,0,2,3",
+      "explanation": "Oxygen (65%), Carbon (18.5%), Hydrogen (9.5%), Nitrogen (3.2%). You are mostly oxygen and carbon. Basically, you're a very complicated arrangement of some very common stuff.",
+      "image_url": null
+    },
+    {
+      "id": "wk070",
+      "difficulty": 15,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "How many sovereign nations existed in 1900 compared to today?",
+      "options": [
+        "About 30 vs 195",
+        "About 57 vs 195",
+        "About 85 vs 195",
+        "About 120 vs 195"
+      ],
+      "correct_answer": 1,
+      "explanation": "In 1900, there were roughly 57 sovereign states. Most of Africa and Asia were under colonial rule. The explosion of new nations came mainly after World War II with decolonisation. South Africa only became truly free in 1994!",
+      "image_url": null
+    },
+    {
+      "id": "wk071",
+      "difficulty": 12,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What is the most common blood type in the world?",
+      "options": [
+        "A positive",
+        "B positive",
+        "O positive",
+        "AB positive"
+      ],
+      "correct_answer": 2,
+      "explanation": "O positive is the most common blood type globally, found in about 38% of people. AB negative is the rarest at about 1%. O negative is the universal donor -- if you have it, please donate blood. The SA National Blood Service always needs it!",
+      "image_url": null
+    },
+    {
+      "id": "wk072",
+      "difficulty": 8,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Svalbard Global Seed Vault stores backup copies of the world's crop seeds. Approximately how many seed samples does it hold?",
+      "options": [
+        "About 250,000",
+        "About 600,000",
+        "About 1.1 million",
+        "About 2.5 million"
+      ],
+      "correct_answer": 2,
+      "explanation": "The vault holds over 1.1 million seed samples from almost every country on Earth. It's designed to survive natural disasters and even nuclear war. Humanity's agricultural insurance policy, buried in a frozen mountain in Norway.",
+      "image_url": null
+    },
+    {
+      "id": "wk073",
+      "difficulty": 5,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "What fraction of all species that have ever lived on Earth are now extinct?",
+      "options": [
+        "About 50%",
+        "About 75%",
+        "About 90%",
+        "Over 99%"
+      ],
+      "correct_answer": 3,
+      "explanation": "Over 99% of all species that ever existed are now extinct. Earth has had five mass extinction events. We're potentially in the sixth one right now. Heavy stuff, but important to know.",
+      "image_url": null
+    },
+    {
+      "id": "wk074",
+      "difficulty": 3,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Voyager 1 spacecraft, launched in 1977, is the most distant human-made object from Earth. Approximately how far away is it?",
+      "options": [
+        "About 5 billion km",
+        "About 12 billion km",
+        "About 24 billion km",
+        "About 48 billion km"
+      ],
+      "correct_answer": 2,
+      "explanation": "Voyager 1 is about 24 billion km from Earth and still sending data back! A signal takes over 22 hours to reach it. It carries a golden record with sounds and images from Earth -- just in case aliens find it.",
+      "image_url": null
+    },
+    {
+      "id": "wk075",
+      "difficulty": 1,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Library of Congress in Washington, D.C. is the world's largest library. Approximately how many items does it hold?",
+      "options": [
+        "About 50 million",
+        "About 100 million",
+        "About 170 million",
+        "About 250 million"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Library of Congress holds over 170 million items including books, recordings, maps, photographs, and manuscripts. If you read one item per minute, 24/7, it would take you over 300 years to get through it all. Good luck!",
       "image_url": null
     }
   ]

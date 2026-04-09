@@ -3,7 +3,7 @@
   "name": "World History",
   "description": "From ancient empires to modern revolutions -- how well do you know the story of humanity?",
   "author": "Game Night Crew",
-  "question_count": 50,
+  "question_count": 70,
   "questions": [
     {
       "id": "wh001",
@@ -803,6 +803,326 @@
       ],
       "correct_answer": 1,
       "explanation": "Chinese papermakers captured at the Battle of Talas shared their craft with the Abbasids. Paper then spread to Europe, revolutionising knowledge. One battle changed how the whole world communicates -- lekker important, that!",
+      "image_url": null
+    },
+    {
+      "id": "wh051",
+      "difficulty": 85,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which famous queen ruled Egypt and had relationships with both Julius Caesar and Mark Antony?",
+      "options": [
+        "Nefertiti",
+        "Cleopatra",
+        "Hatshepsut",
+        "Nzinga"
+      ],
+      "correct_answer": 1,
+      "explanation": "Cleopatra VII was the last active ruler of the Ptolemaic Kingdom of Egypt. She's one of history's most famous figures -- and no, she probably didn't look like Elizabeth Taylor.",
+      "image_url": null
+    },
+    {
+      "id": "wh052",
+      "difficulty": 82,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Great Fire of London took place in which year?",
+      "options": [
+        "1666",
+        "1712",
+        "1588",
+        "1550"
+      ],
+      "correct_answer": 0,
+      "explanation": "The Great Fire of London raged from 2-6 September 1666, destroying over 13,000 houses and 87 churches. On the bright side, it basically ended the plague that had been devastating the city.",
+      "image_url": null
+    },
+    {
+      "id": "wh053",
+      "difficulty": 78,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "options": [
+        "Bessie Coleman",
+        "Amelia Earhart",
+        "Harriet Quimby",
+        "Amy Johnson"
+      ],
+      "correct_answer": 1,
+      "explanation": "Amelia Earhart made the solo crossing in 1932, five years after Lindbergh's famous flight. She later disappeared over the Pacific in 1937 -- one of aviation's greatest mysteries.",
+      "image_url": null
+    },
+    {
+      "id": "wh054",
+      "difficulty": 75,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Zulu Kingdom reached its peak under which warrior king in the early 19th century?",
+      "options": [
+        "Cetshwayo",
+        "Shaka",
+        "Dingane",
+        "Mpande"
+      ],
+      "correct_answer": 1,
+      "explanation": "Shaka Zulu revolutionised warfare in southern Africa with new tactics and weapons like the iklwa (short stabbing spear). His military innovations shook the entire subcontinent. A true legend of South African history!",
+      "image_url": null
+    },
+    {
+      "id": "wh055",
+      "difficulty": 70,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which treaty ended World War I in 1919?",
+      "options": [
+        "Treaty of Paris",
+        "Treaty of Versailles",
+        "Treaty of Ghent",
+        "Treaty of Tordesillas"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Treaty of Versailles placed heavy reparations on Germany and redrew European borders. Many historians argue it planted the seeds for World War II. Not exactly a 'peace' treaty in the long run.",
+      "image_url": null
+    },
+    {
+      "id": "wh056",
+      "difficulty": 65,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Mughal Empire, which built the Taj Mahal, was based in which modern-day country?",
+      "options": [
+        "Pakistan",
+        "Iran",
+        "India",
+        "Bangladesh"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Mughal Empire ruled much of the Indian subcontinent from the 1500s to the 1800s. Emperor Shah Jahan built the Taj Mahal as a tomb for his wife. Now that's dedication.",
+      "image_url": null
+    },
+    {
+      "id": "wh057",
+      "difficulty": 60,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which European country was the first to establish a sea route to India by sailing around Africa?",
+      "options": [
+        "Spain",
+        "England",
+        "Netherlands",
+        "Portugal"
+      ],
+      "correct_answer": 3,
+      "explanation": "Vasco da Gama of Portugal reached India in 1498 by sailing around the Cape of Good Hope. South Africans know this well -- he literally sailed past our doorstep!",
+      "image_url": null
+    },
+    {
+      "id": "wh058",
+      "difficulty": 55,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Boxer Rebellion of 1899-1901 took place in which country?",
+      "options": [
+        "Japan",
+        "China",
+        "Korea",
+        "India"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Boxer Rebellion was an anti-foreign, anti-Christian uprising in China. A coalition of eight nations intervened militarily. It marked a turning point in China's relationship with Western powers.",
+      "image_url": null
+    },
+    {
+      "id": "wh059",
+      "difficulty": 50,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these revolutions in chronological order, EARLIEST to LATEST: (1) Russian Revolution (2) French Revolution (3) American Revolution (4) Cuban Revolution",
+      "options": [
+        "Russian Revolution",
+        "French Revolution",
+        "American Revolution",
+        "Cuban Revolution"
+      ],
+      "correct_answer": "2,1,0,3",
+      "explanation": "American (1776), French (1789), Russian (1917), Cuban (1959). Each one changed the world in its own way -- and each one got very messy very quickly.",
+      "image_url": null
+    },
+    {
+      "id": "wh060",
+      "difficulty": 45,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which ancient Greek city-state was known for its powerful navy and democratic government?",
+      "options": [
+        "Sparta",
+        "Athens",
+        "Thebes",
+        "Corinth"
+      ],
+      "correct_answer": 1,
+      "explanation": "Athens gave us democracy, philosophy, theatre, and a navy that defeated Persia at the Battle of Salamis. Sparta had the army, Athens had... well, everything else.",
+      "image_url": null
+    },
+    {
+      "id": "wh061",
+      "difficulty": 40,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Tokugawa shogunate isolated Japan from most foreign contact for over 200 years. What was this policy called?",
+      "options": [
+        "Meiji",
+        "Sakoku",
+        "Bushido",
+        "Shogun"
+      ],
+      "correct_answer": 1,
+      "explanation": "Sakoku ('closed country') lasted from 1633 to 1853, when American Commodore Perry showed up with warships and basically said 'open up'. Japan then modernised at incredible speed.",
+      "image_url": null
+    },
+    {
+      "id": "wh062",
+      "difficulty": 35,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Inca Empire's road system, at its peak, was approximately how long?",
+      "options": [
+        "About 10,000 km",
+        "About 25,000 km",
+        "About 40,000 km",
+        "About 55,000 km"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Inca road network (Qhapaq Nan) stretched about 40,000 km through the Andes -- longer than the circumference of Earth! And they built it without wheels or horses. Incredible engineering.",
+      "image_url": null
+    },
+    {
+      "id": "wh063",
+      "difficulty": 30,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "Which medieval Islamic scholar is considered the 'father of modern optics'?",
+      "options": [
+        "Avicenna",
+        "Al-Khwarizmi",
+        "Ibn al-Haytham",
+        "Al-Biruni"
+      ],
+      "correct_answer": 2,
+      "explanation": "Ibn al-Haytham (Alhazen) wrote the 'Book of Optics' around 1011 AD, revolutionising our understanding of light and vision. He basically proved that we see because light enters our eyes, not the other way around.",
+      "image_url": null
+    },
+    {
+      "id": "wh064",
+      "difficulty": 25,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Congress of Berlin in 1884-85, which divided Africa among European powers, was hosted by which leader?",
+      "options": [
+        "Napoleon III",
+        "Otto von Bismarck",
+        "Queen Victoria",
+        "Leopold II"
+      ],
+      "correct_answer": 1,
+      "explanation": "German Chancellor Bismarck hosted the conference that carved up Africa like a birthday cake. Not a single African leader was invited. The borders drawn there still cause problems today.",
+      "image_url": null
+    },
+    {
+      "id": "wh065",
+      "difficulty": 20,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Battle of Isandlwana in 1879, where Zulu warriors defeated the British, took place in which modern-day province of South Africa?",
+      "options": [
+        "Eastern Cape",
+        "KwaZulu-Natal",
+        "Mpumalanga",
+        "Free State"
+      ],
+      "correct_answer": 1,
+      "explanation": "Isandlwana in KwaZulu-Natal saw the Zulu army inflict one of the worst defeats on the British Empire in the 19th century. Over 1,300 British soldiers fell. A proud and powerful moment in Zulu history.",
+      "image_url": null
+    },
+    {
+      "id": "wh066",
+      "difficulty": 18,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Library of Alexandria, one of the ancient world's greatest centres of learning, was located in which modern-day country?",
+      "options": [
+        "Greece",
+        "Egypt",
+        "Turkey",
+        "Iraq"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Library of Alexandria in Egypt held hundreds of thousands of scrolls. Its destruction (which happened gradually, not in one dramatic fire) remains one of history's greatest intellectual losses.",
+      "image_url": null
+    },
+    {
+      "id": "wh067",
+      "difficulty": 15,
+      "type": "sequence",
+      "time_limit_seconds": 30,
+      "question": "Arrange these ancient writing systems from OLDEST to most RECENT: (1) Egyptian Hieroglyphics (2) Cuneiform (3) Chinese Oracle Bone Script (4) Phoenician Alphabet",
+      "options": [
+        "Egyptian Hieroglyphics",
+        "Cuneiform",
+        "Chinese Oracle Bone Script",
+        "Phoenician Alphabet"
+      ],
+      "correct_answer": "1,0,2,3",
+      "explanation": "Cuneiform (~3400 BC), Egyptian Hieroglyphics (~3200 BC), Chinese Oracle Bone Script (~1200 BC), Phoenician Alphabet (~1050 BC). Writing changed everything -- imagine trying to run an empire on voice notes!",
+      "image_url": null
+    },
+    {
+      "id": "wh068",
+      "difficulty": 10,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Siege of Candia (modern Heraklion) was one of the longest sieges in history. How many years did it last?",
+      "options": [
+        "8 years",
+        "14 years",
+        "21 years",
+        "28 years"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Ottoman siege of Candia in Crete lasted 21 years (1648-1669)! The Venetians held out incredibly long before finally surrendering. Makes any traffic jam feel insignificant.",
+      "image_url": null
+    },
+    {
+      "id": "wh069",
+      "difficulty": 5,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Peace of Augsburg (1555) established which principle regarding religion in the Holy Roman Empire?",
+      "options": [
+        "Freedom of worship for all",
+        "Cuius regio, eius religio",
+        "Mandatory Catholic conversion",
+        "Separation of church and state"
+      ],
+      "correct_answer": 1,
+      "explanation": "Cuius regio, eius religio ('whose realm, his religion') meant each prince could decide the religion of their territory. Not exactly religious freedom, but it was a start. Baby steps.",
+      "image_url": null
+    },
+    {
+      "id": "wh070",
+      "difficulty": 2,
+      "type": "multiple_choice",
+      "time_limit_seconds": 30,
+      "question": "The Antikythera mechanism, an ancient Greek analogue computer found in a shipwreck, is dated to approximately which century BC?",
+      "options": [
+        "5th century BC",
+        "3rd century BC",
+        "2nd century BC",
+        "1st century BC"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Antikythera mechanism dates to roughly 150-100 BC and could predict astronomical positions and eclipses. The ancient Greeks basically built a computer 2,000 years before anyone else. Technology so advanced it wasn't matched until the 14th century!",
       "image_url": null
     }
   ]
