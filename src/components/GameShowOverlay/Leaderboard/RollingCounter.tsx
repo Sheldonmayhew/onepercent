@@ -1,25 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion, useSpring, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface RollingCounterProps {
   value: number;
   className?: string;
-}
-
-function AnimatedDigit({ digit }: { digit: number }) {
-  const spring = useSpring(digit, { stiffness: 100, damping: 20 });
-  const display = useTransform(spring, (v) => Math.round(v));
-  const [shown, setShown] = useState(digit);
-
-  useEffect(() => {
-    spring.set(digit);
-  }, [digit, spring]);
-
-  useEffect(() => {
-    return display.on('change', (v) => setShown(v));
-  }, [display]);
-
-  return <span>{shown}</span>;
 }
 
 export default function RollingCounter({ value, className = '' }: RollingCounterProps) {

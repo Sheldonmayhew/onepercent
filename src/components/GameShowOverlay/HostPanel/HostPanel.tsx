@@ -28,8 +28,8 @@ export default function HostPanel() {
   const [visible, setVisible] = useState(false);
   const lastPhaseRef = useRef('');
   const lastRoundRef = useRef(-1);
-  const hideTimerRef = useRef<ReturnType<typeof setTimeout>>();
-  const revealDelayRef = useRef<ReturnType<typeof setTimeout>>();
+  const hideTimerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const revealDelayRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   const showLine = useCallback(
     (text: string, tier: Tier) => {
