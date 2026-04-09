@@ -14,9 +14,9 @@ import TvOverlayManager from '../components/GameShowOverlay/TvOverlayManager';
 function getPhase(route: string): string {
   if (route.includes('/lobby')) return 'lobby';
   if (route.includes('/round-intro')) return 'round-intro';
-  if (route.includes('/play')) return 'play';
   if (route.includes('/reveal')) return 'reveal';
   if (route.includes('/results')) return 'results';
+  if (route.includes('/play')) return 'play';
   return 'lobby';
 }
 
