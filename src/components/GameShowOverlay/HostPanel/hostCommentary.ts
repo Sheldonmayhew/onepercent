@@ -3,6 +3,8 @@ import type { Tier } from './ttsEngine';
 
 export type CommentaryEvent =
   | 'round_intro'
+  | 'read_question'
+  | 'reveal_answer'
   | 'many_correct'
   | 'few_correct'
   | 'none_correct'
@@ -26,11 +28,57 @@ interface CommentaryContext {
   mvp?: string;
   mvpScore?: number;
   newTier?: string;
+  question?: string;
+  answer?: string;
+  correctNames?: string;
+  incorrectNames?: string;
 }
 
 type CommentaryPool = Record<Tier, string[]>;
 
 const POOLS: Record<CommentaryEvent, CommentaryPool> = {
+  read_question: {
+    warmup: [
+      "Here's your question. {question}",
+      "Alright, listen up. {question}",
+      "Question time! {question}",
+    ],
+    midgame: [
+      "Here we go. {question}",
+      "Think carefully. {question}",
+      "{question}",
+    ],
+    pressure: [
+      "This one's tricky. {question}",
+      "Focus now. {question}",
+      "{question}",
+    ],
+    gauntlet: [
+      "{question}",
+      "Final question. {question}",
+    ],
+  },
+  reveal_answer: {
+    warmup: [
+      "The answer is... {answer}! {correctNames} got it right. {incorrectNames} not so lucky.",
+      "And the answer... {answer}! Well done {correctNames}!",
+      "It's {answer}! {correctNames} nailed it.",
+    ],
+    midgame: [
+      "The answer is {answer}. {correctNames} got through. {incorrectNames} got caught out.",
+      "It was {answer}! Congratulations {correctNames}.",
+      "{answer} is correct! {correctNames} survive this one.",
+    ],
+    pressure: [
+      "The answer... {answer}. {correctNames} lives to fight another round.",
+      "It's {answer}. {incorrectNames} falls short.",
+      "{answer}. Only {correctNames} got it.",
+    ],
+    gauntlet: [
+      "The answer is... {answer}.",
+      "{answer}. {correctNames} survives.",
+    ],
+  },
   round_intro: {
     warmup: [
       "Let's kick things off with {roundName}!",

@@ -11,9 +11,9 @@ const TRACK_PATHS: Record<Tier, string> = {
   gauntlet: '/audio/music/gauntlet.mp3',
 };
 
-const PLAY_VOLUME = 0.3;
-const TRANSITION_VOLUME = 0.5;
-const DUCK_VOLUME = 0.1;
+const PLAY_VOLUME = 0.12;
+const TRANSITION_VOLUME = 0.2;
+const DUCK_VOLUME = 0.05;
 const FADE_DURATION = 2000;
 
 class MusicManager {

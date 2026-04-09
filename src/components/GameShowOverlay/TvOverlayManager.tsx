@@ -52,6 +52,9 @@ export default function TvOverlayManager({ children }: TvOverlayManagerProps) {
     };
   }, []);
 
+  // Track whether we already fired crowd reactions for this reveal
+  const revealHandledRef = useRef('');
+
   // React to phase changes for music and crowd SFX
   useEffect(() => {
     if (!gameState) return;
@@ -59,71 +62,77 @@ export default function TvOverlayManager({ children }: TvOverlayManagerProps) {
     const phase = getPhase(gameState.route);
     const roundType = gameState.round?.roundType ?? gameState.reveal?.roundType;
     const tier = getTier(roundType as RoundTypeId | undefined);
-    const roundIndex = gameState.round?.index ?? -1;
+    // Use round index from either round or reveal data
+    const roundIndex = gameState.round?.index ?? lastRoundRef.current;
     const phaseKey = `${phase}_${roundIndex}`;
 
-    if (phaseKey === lastPhaseRef.current) return;
-    lastPhaseRef.current = phaseKey;
+    // Phase-change-driven logic (only fires once per phase+round)
+    if (phaseKey !== lastPhaseRef.current) {
+      lastPhaseRef.current = phaseKey;
 
-    // Start music on first round intro
-    if (phase === 'round-intro') {
-      // Show transition overlay when advancing to a new round (not the first)
-      if (lastRoundRef.current >= 0 && roundIndex > lastRoundRef.current && transitionDataRef.current) {
-        setShowTransition(true);
-        musicManager.setMode('transition');
-      }
-
-      musicManager.play(tier);
-      if (!showTransition) {
-        musicManager.setMode('play');
-      }
-
-      // Start heartbeat loop for gauntlet rounds
-      if (tier === 'gauntlet') {
-        crowdSfxManager.startLoop('heartbeat');
-      } else {
-        crowdSfxManager.stopLoop();
-      }
-    }
-
-    // Tension drum before reveals
-    if (phase === 'reveal') {
-      musicManager.briefSilence(1500);
-      crowdSfxManager.play('tension_drum');
-    }
-
-    // Trigger crowd reactions on reveal
-    if (phase === 'reveal' && gameState.reveal) {
-      const correct = gameState.reveal.correctPlayerIds.length;
-      const incorrect = gameState.reveal.incorrectPlayerIds.length;
-      const total = correct + incorrect;
-
-      setTimeout(() => {
-        if (correct === 0) {
-          crowdSfxManager.play('aww');
-        } else if (correct >= total * 0.6) {
-          crowdSfxManager.play('cheer');
-        } else if (correct <= 2 && total > 4) {
-          crowdSfxManager.play('gasp');
-        } else {
-          crowdSfxManager.play('ooh');
+      if (phase === 'round-intro') {
+        // Show transition overlay when advancing to a new round (not the first)
+        if (lastRoundRef.current >= 0 && roundIndex > lastRoundRef.current && transitionDataRef.current) {
+          setShowTransition(true);
+          musicManager.setMode('transition');
         }
-      }, 3000); // After answer reveal animation
 
-      // Check for steals
-      const steals = gameState.reveal.scoreUpdates?.filter((u) => u.stealFromId);
-      if (steals && steals.length > 0) {
-        setTimeout(() => crowdSfxManager.play('gasp'), 4500);
+        // Always play the correct tier music (handles tier changes)
+        musicManager.play(tier);
+        if (!showTransition) {
+          musicManager.setMode('play');
+        }
+
+        // Start heartbeat loop for gauntlet rounds
+        if (tier === 'gauntlet') {
+          crowdSfxManager.startLoop('heartbeat');
+        } else {
+          crowdSfxManager.stopLoop();
+        }
+
+        lastRoundRef.current = roundIndex;
+      }
+
+      if (phase === 'reveal') {
+        musicManager.briefSilence(1500);
+        crowdSfxManager.play('tension_drum');
+      }
+
+      if (phase === 'results') {
+        crowdSfxManager.stopLoop();
+        crowdSfxManager.play('applause');
+        musicManager.stop();
       }
     }
 
-    lastRoundRef.current = roundIndex;
+    // Reveal-data-driven logic (fires when reveal data arrives, even if phase already changed)
+    if (phase === 'reveal' && gameState.reveal) {
+      const revealKey = `${roundIndex}_${gameState.reveal.correctPlayerIds.length}`;
+      if (revealKey !== revealHandledRef.current) {
+        revealHandledRef.current = revealKey;
 
-    // Results phase
-    if (phase === 'results') {
-      crowdSfxManager.stopLoop();
-      crowdSfxManager.play('applause');
-      musicManager.stop();
+        const correct = gameState.reveal.correctPlayerIds.length;
+        const incorrect = gameState.reveal.incorrectPlayerIds.length;
+        const total = correct + incorrect;
+
+        setTimeout(() => {
+          if (correct === 0) {
+            crowdSfxManager.play('aww');
+          } else if (correct >= total * 0.6) {
+            crowdSfxManager.play('cheer');
+          } else if (correct <= 2 && total > 4) {
+            crowdSfxManager.play('gasp');
+          } else {
+            crowdSfxManager.play('ooh');
+          }
+        }, 3000);
+
+        // Check for steals
+        const steals = gameState.reveal.scoreUpdates?.filter((u) => u.stealFromId);
+        if (steals && steals.length > 0) {
+          setTimeout(() => crowdSfxManager.play('gasp'), 4500);
+        }
+      }
     }
   }, [gameState]);
 

@@ -89,24 +89,38 @@ export default function HostPanel() {
       showLine(text, tier);
     }
 
+    // Read the question aloud during play phase
+    if (phase === 'play' && gameState.round) {
+      const questionText = gameState.round.question.question;
+      if (questionText) {
+        const text = getCommentary('read_question', tier, {
+          question: questionText,
+        });
+        showLine(text, tier);
+      }
+    }
+
     if (phase === 'reveal' && gameState.reveal) {
       const correct = gameState.reveal.correctPlayerIds;
       const incorrect = gameState.reveal.incorrectPlayerIds;
-      const total = correct.length + incorrect.length;
 
-      let event: import('./hostCommentary').CommentaryEvent;
-      if (correct.length === 0) {
-        event = 'none_correct';
-      } else if (correct.length >= total * 0.6) {
-        event = 'many_correct';
-      } else {
-        event = 'few_correct';
-      }
+      // Build player name lists
+      const correctNames = correct
+        .map((id) => gameState.players.find((p) => p.id === id)?.name)
+        .filter(Boolean)
+        .join(', ');
+      const incorrectNames = incorrect
+        .map((id) => gameState.players.find((p) => p.id === id)?.name)
+        .filter(Boolean)
+        .join(', ');
 
-      // Delay commentary to let the reveal animation start
+      // First: announce the answer with who got it right/wrong
       clearTimeout(revealDelayRef.current);
       revealDelayRef.current = setTimeout(() => {
-        const text = getCommentary(event, tier, {
+        const text = getCommentary('reveal_answer', tier, {
+          answer: gameState.reveal!.correctAnswer,
+          correctNames: correctNames || 'Nobody',
+          incorrectNames: incorrectNames || 'nobody',
           correctCount: correct.length,
         });
         showLine(text, tier);
