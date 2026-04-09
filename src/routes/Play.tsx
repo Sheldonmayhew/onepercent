@@ -161,6 +161,30 @@ export function Component() {
     };
   }, [session?.currentRound, session?.timerStarted, isQuickPlay, isHost]);
 
+  // Switchagories: auto-transition from picking → answering when all players have picked
+  useEffect(() => {
+    if (!session) return;
+    const roundTypeId = session.roundTypeSequence?.[session.currentRound];
+    if (!roundTypeId) return;
+    const def = getRoundDefinition(roundTypeId);
+    if (def.questionFormat !== 'categorized') return;
+
+    const state = session.activeRoundState as any;
+    if (state?.phase === 'answering') return;
+
+    const picks: Record<string, string> = state?.categoryPicks ?? {};
+    const activePlayers = getActivePlayers();
+    const allPicked = activePlayers.length > 0 && activePlayers.every((p) => picks[p.id]);
+
+    if (allPicked) {
+      useGameStore.getState().updateRoundState((prev: any) => ({
+        ...prev,
+        phase: 'answering',
+      }));
+      if (isHost) broadcastHostState();
+    }
+  });
+
   // Redirect if no session
   useEffect(() => {
     if (!session) {
@@ -275,6 +299,9 @@ export function Component() {
                     players={players}
                     roundState={session.activeRoundState}
                     onSubmit={(_, answer) => handleAnswer(answer)}
+                    onBuzzIn={(_, timestamp, answer) => {
+                      handleAnswer(answer);
+                    }}
                     onUpdateState={useGameStore.getState().updateRoundState}
                     playerId={currentPlayer.id}
                     timerStarted={true}

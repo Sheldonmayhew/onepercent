@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import BuzzButton from '../Shared/BuzzButton';
 
-export default function PlayerInput({ question, onBuzzIn, playerId, players: _players, roundState, allAnswersIn }: any) {
+export default function PlayerInput({ question, onSubmit, onBuzzIn, playerId, players: _players, roundState, allAnswersIn }: any) {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [hasBuzzed, setHasBuzzed] = useState(false);
 
@@ -16,7 +16,8 @@ export default function PlayerInput({ question, onBuzzIn, playerId, players: _pl
   const handleBuzz = (timestamp: number) => {
     if (selectedOption === null || hasBuzzed) return;
     setHasBuzzed(true);
-    onBuzzIn(playerId, timestamp, selectedOption);
+    onBuzzIn?.(playerId, timestamp, selectedOption);
+    onSubmit(playerId, selectedOption);
   };
 
   return (

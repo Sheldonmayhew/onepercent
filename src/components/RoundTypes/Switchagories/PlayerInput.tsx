@@ -11,18 +11,19 @@ export default function PlayerInput({
   onUpdateState,
 }: any) {
   const me = players.find((p: any) => p.id === playerId);
+  const myPick = roundState?.categoryPicks?.[playerId];
   const phase: 'picking' | 'answering' = roundState?.phase ?? 'picking';
 
   const handleCategoryPick = (category: string) => {
     if (onUpdateState) {
-      onUpdateState({
-        ...roundState,
-        picks: { ...(roundState?.picks ?? {}), [playerId]: category },
-      });
+      onUpdateState((prev: any) => ({
+        ...prev,
+        categoryPicks: { ...(prev?.categoryPicks ?? {}), [playerId]: category },
+      }));
     }
   };
 
-  if (phase === 'picking') {
+  if (!myPick) {
     return (
       <CategoryPicker
         categories={question.categories ?? []}
