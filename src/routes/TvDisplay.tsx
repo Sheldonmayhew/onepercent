@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMultiplayerStore } from '../stores/multiplayerStore';
@@ -8,6 +8,8 @@ import TvRoundIntro from '../components/Tv/TvRoundIntro';
 import TvPlay from '../components/Tv/TvPlay';
 import TvReveal from '../components/Tv/TvReveal';
 import TvResults from '../components/Tv/TvResults';
+import { getRoundDefinition } from '../roundTypes/registry';
+import TvOverlayManager from '../components/GameShowOverlay/TvOverlayManager';
 
 function getPhase(route: string): string {
   if (route.includes('/lobby')) return 'lobby';
@@ -67,7 +69,8 @@ export function Component() {
   const phase = getPhase(gameState.route);
 
   return (
-    <div className="min-h-dvh bg-bg-primary overflow-hidden">
+    <TvOverlayManager>
+      <div className="min-h-dvh bg-bg-primary overflow-hidden">
       {/* Room code watermark — always visible, bottom-right */}
       {roomCode && (
         <div className="fixed bottom-4 right-6 z-50 opacity-30">
@@ -83,27 +86,140 @@ export function Component() {
             <TvLobby gameState={gameState} roomCode={roomCode} />
           </motion.div>
         )}
-        {phase === 'round-intro' && (
-          <motion.div key="round-intro" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <TvRoundIntro gameState={gameState} />
-          </motion.div>
-        )}
-        {phase === 'play' && (
-          <motion.div key="play" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <TvPlay gameState={gameState} />
-          </motion.div>
-        )}
-        {phase === 'reveal' && (
-          <motion.div key="reveal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <TvReveal gameState={gameState} lastRound={lastRoundRef.current} />
-          </motion.div>
-        )}
+        {phase === 'round-intro' && (() => {
+          const roundType = gameState.round?.roundType;
+          if (roundType) {
+            const def = getRoundDefinition(roundType);
+            const RoundIntro = def.slots.TvIntro;
+            const round = gameState.round!;
+            return (
+              <motion.div key="round-intro" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                <Suspense fallback={<TvRoundIntro gameState={gameState} />}>
+                  <RoundIntro
+                    roundIndex={round.index}
+                    totalRounds={round.totalRounds}
+                    difficulty={round.difficulty}
+                    points={round.points}
+                    roundName={def.name}
+                    tagline={def.tagline}
+                    theme={def.theme}
+                  />
+                </Suspense>
+              </motion.div>
+            );
+          }
+          return (
+            <motion.div key="round-intro" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+              <TvRoundIntro gameState={gameState} />
+            </motion.div>
+          );
+        })()}
+        {phase === 'play' && (() => {
+          const roundType = gameState.round?.roundType;
+          if (roundType) {
+            const def = getRoundDefinition(roundType);
+            const RoundTvPlay = def.slots.TvPlay;
+            const round = gameState.round!;
+            return (
+              <motion.div key="play" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                <Suspense fallback={<TvPlay gameState={gameState} />}>
+                  <RoundTvPlay
+                    question={{
+                      id: `round-${round.index}`,
+                      difficulty: round.difficulty,
+                      type: round.question.type,
+                      time_limit_seconds: round.timerDuration,
+                      question: round.question.question,
+                      options: round.question.options,
+                      correct_answer: 0,
+                      explanation: '',
+                      image_url: round.question.image_url,
+                      sequence_items: round.question.sequence_items,
+                      correct_answers: round.question.correct_answers,
+                      ranking_criterion: round.question.ranking_criterion,
+                      reveal_delay_ms: round.question.reveal_delay_ms,
+                      reveal_chunks: round.question.reveal_chunks,
+                      categories: round.question.categories,
+                    }}
+                    players={gameState.players.map((p) => ({
+                      ...p,
+                      currentAnswer: null,
+                      score: p.score,
+                    }))}
+                    roundState={round.roundState}
+                    timerStarted={gameState.timerStarted ?? false}
+                    allAnswersIn={false}
+                    roundIndex={round.index}
+                    difficulty={round.difficulty}
+                    points={round.points}
+                    theme={def.theme}
+                  />
+                </Suspense>
+              </motion.div>
+            );
+          }
+          return (
+            <motion.div key="play" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+              <TvPlay gameState={gameState} />
+            </motion.div>
+          );
+        })()}
+        {phase === 'reveal' && (() => {
+          const roundType = gameState.reveal?.roundType ?? lastRoundRef.current?.roundType;
+          if (roundType) {
+            const def = getRoundDefinition(roundType);
+            const RoundTvReveal = def.slots.TvReveal;
+            const lastRound = lastRoundRef.current;
+            const reveal = gameState.reveal;
+            if (reveal && lastRound) {
+              return (
+                <motion.div key="reveal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                  <Suspense fallback={<TvReveal gameState={gameState} lastRound={lastRoundRef.current} />}>
+                    <RoundTvReveal
+                      question={{
+                        id: `round-${lastRound.index}`,
+                        difficulty: lastRound.difficulty,
+                        type: lastRound.question.type,
+                        time_limit_seconds: lastRound.timerDuration,
+                        question: lastRound.question.question,
+                        options: lastRound.question.options,
+                        correct_answer: 0,
+                        explanation: '',
+                        image_url: lastRound.question.image_url,
+                        sequence_items: lastRound.question.sequence_items,
+                      }}
+                      players={gameState.players.map((p) => ({
+                        ...p,
+                        currentAnswer: null,
+                        score: p.score,
+                      }))}
+                      roundState={lastRound.roundState}
+                      correctAnswer={reveal.correctAnswer}
+                      explanation={reveal.explanation}
+                      correctPlayerIds={reveal.correctPlayerIds}
+                      incorrectPlayerIds={reveal.incorrectPlayerIds}
+                      scoreUpdates={reveal.scoreUpdates ?? []}
+                      theme={def.theme}
+                      teams={gameState.teams}
+                    />
+                  </Suspense>
+                </motion.div>
+              );
+            }
+          }
+          return (
+            <motion.div key="reveal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+              <TvReveal gameState={gameState} lastRound={lastRoundRef.current} />
+            </motion.div>
+          );
+        })()}
         {phase === 'results' && (
           <motion.div key="results" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <TvResults gameState={gameState} />
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+      </div>
+    </TvOverlayManager>
   );
 }
