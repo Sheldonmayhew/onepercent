@@ -14,6 +14,8 @@ interface QuestionDisplayProps {
   timeLeft?: number;
   timerProgress?: number;
   showTimer?: boolean;
+  questionInRound?: number;
+  questionsInRound?: number;
 }
 
 export default function QuestionDisplay({
@@ -27,6 +29,8 @@ export default function QuestionDisplay({
   timeLeft,
   timerProgress,
   showTimer = false,
+  questionInRound = 0,
+  questionsInRound = 1,
 }: QuestionDisplayProps) {
   const isUrgent = (timeLeft ?? 99) <= 5;
   const isCritical = (timeLeft ?? 99) <= 3;
@@ -42,6 +46,11 @@ export default function QuestionDisplay({
       <div className="flex items-start justify-between mb-1">
         <span className="font-display text-sm font-bold text-text-secondary uppercase tracking-wider">
           Round {roundIndex + 1} of {totalRounds}
+          {questionsInRound > 1 && (
+            <span className="text-text-muted font-normal ml-2">
+              Q{questionInRound + 1}/{questionsInRound}
+            </span>
+          )}
         </span>
         {playerName && (
           <span className="inline-flex items-center gap-2 bg-bg-card shadow-soft rounded-full px-3 py-1.5">

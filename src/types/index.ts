@@ -1,6 +1,27 @@
 export type QuestionType = 'multiple_choice' | 'numeric_input' | 'image_based' | 'sequence';
 export type GameMode = 'classic' | 'quick';
 
+export type QuestionFormat =
+  | 'standard_mc'
+  | 'timed_reveal'
+  | 'categorized'
+  | 'multi_select'
+  | 'ranking'
+  | 'progressive_reveal';
+
+export type RoundTypeId =
+  | 'point_builder'
+  | 'quickstarter'
+  | 'snap'
+  | 'switchagories'
+  | 'pass_the_bomb'
+  | 'grab_bag'
+  | 'close_call'
+  | 'point_stealer'
+  | 'look_before_you_leap'
+  | 'hot_seat'
+  | 'final_round';
+
 export interface Question {
   id: string;
   difficulty: number;
@@ -14,6 +35,15 @@ export interface Question {
   image_url?: string | null;
   sequence_items?: string[];
   category?: string;
+
+  // Round type format fields
+  question_format?: QuestionFormat;
+  correct_answers?: number[];        // multi_select: indices of all correct options
+  ranking_criterion?: string;        // ranking: e.g. "oldest to newest"
+  ranking_order?: number[];          // ranking: correct order of option indices
+  reveal_delay_ms?: number;          // timed_reveal: ms between option reveals
+  reveal_chunks?: string[];          // progressive_reveal: question text chunks
+  categories?: string[];             // categorized: available category labels
 }
 
 export interface QuestionPack {
@@ -46,6 +76,16 @@ export interface Player {
   hasAnswered: boolean;
   isHost?: boolean;
   teamId?: string | null;
+  answerTimestamp?: number;
+  eliminated?: boolean;
+  selectedCategory?: string;
+  stealTarget?: string;
+}
+
+export interface PlayerScoreUpdate {
+  playerId: string;
+  delta: number;
+  stealFromId?: string;
 }
 
 export interface Team {
@@ -69,15 +109,18 @@ export interface GameSession {
   pack: QuestionPack;
   players: Player[];
   currentRound: number;
+  currentQuestionInRound: number;
   settings: GameSettings;
   roundHistory: RoundResult[];
-  selectedQuestions: Question[];
+  selectedQuestions: Question[][];  // 2D: selectedQuestions[round][questionIndex]
   currentPlayerIndex: number;
   allAnswersIn: boolean;
   timerStarted: boolean;
   teams: Team[];
   roomCode?: string;
   multiplayerMode?: MultiplayerMode;
+  roundTypeSequence: RoundTypeId[];
+  activeRoundState: unknown;
 }
 
 export const DIFFICULTY_TIERS = [90, 80, 70, 60, 50, 40, 30, 20, 10, 5, 1] as const;
@@ -96,6 +139,21 @@ export const POINTS_PER_ROUND: Record<number, number> = {
   5: 50_000,
   1: 100_000,
 };
+
+// Questions per round, indexed by difficulty tier
+export const QUESTIONS_PER_ROUND: Record<number, number> = {
+  90: 4, 80: 4, 70: 4,     // Warm-up: 4 questions
+  60: 3, 50: 3, 40: 3,     // Mid-game: 3 questions
+  30: 2, 20: 2, 10: 2,     // Pressure: 2 questions
+  5: 1, 1: 1,              // Gauntlet: 1 question
+};
+
+// Escalating point multipliers within a round (by question index)
+// e.g., 4 questions → [0.25, 0.5, 0.75, 1.0]
+export function getQuestionMultiplier(questionIndex: number, totalQuestions: number): number {
+  if (totalQuestions <= 1) return 1;
+  return (questionIndex + 1) / totalQuestions;
+}
 
 export const PLAYER_COLOURS = [
   '#4F46E5', // indigo

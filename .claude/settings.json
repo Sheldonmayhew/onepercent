@@ -44,7 +44,14 @@
       "Bash(grep -E \"\\\\.tsx?$\")",
       "Bash(git diff:*)",
       "Bash(file /c/Users/Sheldon.Mayhew/Desktop/onepercent/dist/assets/*.js)",
-      "Bash(grep -n \"export\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/routes/*.tsx)"
+      "Bash(grep -n \"export\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/routes/*.tsx)",
+      "Bash(grep -l \"interface PlayerInputProps\\\\|interface TvPlayProps\\\\|interface TvRevealProps\\\\|interface HostControl\" src/components/RoundTypes/*/PlayerInput.tsx src/components/RoundTypes/*/TvPlay.tsx src/components/RoundTypes/*/TvReveal.tsx src/components/RoundTypes/*/HostControls.tsx)",
+      "Bash(echo \"EXIT CODE: $?\")",
+      "Bash(grep -l \"correct_answers\\\\|reveal_chunks\\\\|ranking_order\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
+      "Bash(wc -l \"c:\\\\Users\\\\Sheldon.Mayhew\\\\Desktop\\\\onepercent\\\\src\\\\roundTypes\\\\definitions\"/*.ts)",
+      "Bash(grep -l \"TvPlay\\\\|TvReveal\" \"c:\\\\Users\\\\Sheldon.Mayhew\\\\Desktop\\\\onepercent\\\\src\\\\components\\\\RoundTypes\\\\PointStealer\"/*.tsx)",
+      "WebFetch(domain:docs.ollama.com)",
+      "WebSearch"
     ],
     "additionalDirectories": [
       "C:\\Users\\Sheldon.Mayhew"

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useMultiplayerStore } from '../stores/multiplayerStore';
 import { usePlayerMultiplayer } from '../hooks/useMultiplayer';
 import { getDifficultyColour, formatRands } from '../utils/helpers';
+import { getRoundDefinition } from '../roundTypes/registry';
 
 const CURRENT_ROUTE = '/player/round-intro';
 
@@ -84,14 +85,40 @@ export function Component() {
           Round {roundIndex + 1} of {totalRounds}
         </motion.p>
 
+        {/* Round type name + icon */}
+        {(() => {
+          const roundType = round?.roundType;
+          if (!roundType) return null;
+          const def = getRoundDefinition(roundType);
+          return (
+            <motion.div
+              className="flex flex-col items-center gap-2"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.15, type: 'spring', stiffness: 300, damping: 18 }}
+            >
+              <span className="text-4xl">{def.theme.icon}</span>
+              <span
+                className="font-display text-xl font-bold tracking-wide uppercase"
+                style={{ color: def.theme.primary }}
+              >
+                {def.name}
+              </span>
+              <span className="text-text-secondary text-xs text-center italic">
+                {def.tagline}
+              </span>
+            </motion.div>
+          );
+        })()}
+
         {/* Difficulty badge */}
         <motion.div
           className="flex flex-col items-center gap-2"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, type: 'spring', stiffness: 240, damping: 20 }}
+          transition={{ delay: 0.25, type: 'spring', stiffness: 240, damping: 20 }}
         >
-          <span className="font-display text-8xl font-bold tracking-tight" style={{ color: diffColour }}>
+          <span className="font-display text-7xl font-bold tracking-tight" style={{ color: diffColour }}>
             {difficulty}%
           </span>
           <span className="text-text-muted text-sm">difficulty</span>
@@ -102,7 +129,7 @@ export function Component() {
           className="flex flex-col items-center gap-1"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.35 }}
         >
           <span className="text-xs text-text-muted tracking-[0.15em] uppercase">Worth</span>
           <span className="font-score text-3xl text-neon-gold font-bold">{formatRands(points)}</span>
@@ -113,7 +140,7 @@ export function Component() {
           className="flex items-center gap-2 bg-neon-cyan/10 border border-neon-cyan/20 rounded-full px-4 py-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.45 }}
         >
           <div className="w-2 h-2 rounded-full bg-neon-cyan animate-pulse" />
           <span className="text-neon-cyan text-xs font-medium tracking-wide">READY — WAITING FOR HOST</span>

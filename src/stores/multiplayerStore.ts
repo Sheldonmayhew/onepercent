@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { QuestionType } from '../types';
+import type { QuestionType, RoundTypeId, QuestionFormat } from '../types';
 
 export type AppRole = 'host' | 'player' | 'spectator' | null;
 
@@ -10,6 +10,9 @@ export interface BroadcastPlayer {
   avatar: string;
   score: number;
   hasAnswered: boolean;
+  answerTimestamp?: number;
+  eliminated?: boolean;
+  selectedCategory?: string;
 }
 
 export interface BroadcastRound {
@@ -19,12 +22,22 @@ export interface BroadcastRound {
   totalRounds: number;
   timerDuration: number;
   categoryName?: string;
+  roundType: RoundTypeId;
+  roundState?: unknown;
+  questionFormat?: QuestionFormat;
+  questionInRound: number;
+  questionsInRound: number;
   question: {
     question: string;
     type: QuestionType;
     options?: string[];
     image_url?: string | null;
     sequence_items?: string[];
+    correct_answers?: number[];
+    ranking_criterion?: string;
+    reveal_delay_ms?: number;
+    reveal_chunks?: string[];
+    categories?: string[];
   };
 }
 
@@ -33,6 +46,8 @@ export interface BroadcastReveal {
   explanation: string;
   correctPlayerIds: string[];
   incorrectPlayerIds: string[];
+  roundType?: RoundTypeId;
+  scoreUpdates?: { playerId: string; delta: number; stealFromId?: string }[];
 }
 
 export interface GameBroadcast {

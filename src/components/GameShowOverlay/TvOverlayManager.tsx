@@ -67,8 +67,16 @@ export default function TvOverlayManager({ children }: TvOverlayManagerProps) {
 
     // Start music on first round intro
     if (phase === 'round-intro') {
+      // Show transition overlay when advancing to a new round (not the first)
+      if (lastRoundRef.current >= 0 && roundIndex > lastRoundRef.current && transitionDataRef.current) {
+        setShowTransition(true);
+        musicManager.setMode('transition');
+      }
+
       musicManager.play(tier);
-      musicManager.setMode('play');
+      if (!showTransition) {
+        musicManager.setMode('play');
+      }
 
       // Start heartbeat loop for gauntlet rounds
       if (tier === 'gauntlet') {
@@ -141,6 +149,7 @@ export default function TvOverlayManager({ children }: TvOverlayManagerProps) {
   const handleTransitionComplete = useCallback(() => {
     setShowTransition(false);
     transitionDataRef.current = null;
+    musicManager.setMode('play');
   }, []);
 
   return (

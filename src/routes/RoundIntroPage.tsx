@@ -5,6 +5,7 @@ import { useGameStore } from '../stores/gameStore';
 import { useMultiplayerStore } from '../stores/multiplayerStore';
 import { broadcastHostState } from '../hooks/useMultiplayer';
 import { getDifficultyColour, getDifficultyLabel, formatRands } from '../utils/helpers';
+import { getRoundDefinition } from '../roundTypes/registry';
 
 export function Component() {
   const navigate = useNavigate();
@@ -53,6 +54,9 @@ export function Component() {
   const roundIndex = session.currentRound;
   const diffColour = getDifficultyColour(difficulty);
 
+  const roundTypeId = session.roundTypeSequence?.[roundIndex];
+  const roundDef = roundTypeId ? getRoundDefinition(roundTypeId) : null;
+
   return (
     <motion.div
       className="min-h-dvh flex flex-col items-center justify-center bg-bg-primary px-6"
@@ -73,15 +77,36 @@ export function Component() {
           Round {roundIndex + 1} of {totalRounds}
         </motion.p>
 
+        {/* Round type name + icon */}
+        {roundDef && (
+          <motion.div
+            className="flex flex-col items-center gap-2"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.15, type: 'spring', stiffness: 300, damping: 18 }}
+          >
+            <span className="text-5xl">{roundDef.theme.icon}</span>
+            <span
+              className="font-display text-2xl font-bold tracking-wide uppercase"
+              style={{ color: roundDef.theme.primary }}
+            >
+              {roundDef.name}
+            </span>
+            <span className="text-text-secondary text-sm text-center italic">
+              {roundDef.tagline}
+            </span>
+          </motion.div>
+        )}
+
         {/* Difficulty badge */}
         <motion.div
           className="flex flex-col items-center gap-2"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, type: 'spring', stiffness: 240, damping: 20 }}
+          transition={{ delay: 0.25, type: 'spring', stiffness: 240, damping: 20 }}
         >
           <span
-            className="font-display text-8xl font-bold tracking-tight"
+            className="font-display text-7xl font-bold tracking-tight"
             style={{ color: diffColour }}
           >
             {getDifficultyLabel(difficulty)}
@@ -94,7 +119,7 @@ export function Component() {
           className="flex flex-col items-center gap-1"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.35 }}
         >
           <span className="text-xs text-text-muted tracking-[0.15em] uppercase">Worth</span>
           <span className="font-score text-3xl text-neon-gold font-bold">
@@ -106,7 +131,7 @@ export function Component() {
         <motion.div className="w-full h-1.5 bg-bg-elevated rounded-full overflow-hidden mt-4">
           <motion.div
             className="h-full rounded-full"
-            style={{ backgroundColor: diffColour }}
+            style={{ backgroundColor: roundDef?.theme.primary ?? diffColour }}
             initial={{ width: '0%' }}
             animate={{ width: '100%' }}
             transition={{ duration: 3, ease: 'linear' }}

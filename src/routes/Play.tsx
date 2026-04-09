@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, Suspense } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useGameStore } from '../stores/gameStore';
@@ -10,6 +10,7 @@ import { DEFAULT_TIMER_SECONDS } from '../types';
 import QuestionDisplay from '../components/Game/QuestionDisplay';
 import AnswerInput from '../components/Game/AnswerInput';
 import PlayerStatusBar from '../components/Game/PlayerStatusBar';
+import { getRoundDefinition } from '../roundTypes/registry';
 
 export function Component() {
   const navigate = useNavigate();
@@ -43,10 +44,10 @@ export function Component() {
     }
   };
 
-  const { timeLeft, progress, isRunning, start } = useTimer({
+  const { timeLeft, progress, isRunning } = useTimer({
     duration: DEFAULT_TIMER_SECONDS,
     onExpire: handleTimerExpire,
-    autoStart: isQuickPlay,
+    autoStart: true,
   });
 
   // Sound: tick on each second change
@@ -58,12 +59,15 @@ export function Component() {
     prevTimeRef.current = timeLeft;
   }, [timeLeft, isRunning, play]);
 
-  // Host: watch for timerStarted flag from realtime
+  // Host: auto-start timer and broadcast to players on mount
   useEffect(() => {
-    if (isHost && session?.timerStarted && !isRunning) {
-      start();
+    if (isHost && session && !session.timerStarted) {
+      useGameStore.setState({
+        session: { ...session, timerStarted: true },
+      });
+      broadcastHostState();
     }
-  }, [isHost, session?.timerStarted, isRunning, start]);
+  }, [isHost, session?.timerStarted]);
 
   // Redirect if no session
   useEffect(() => {
@@ -86,13 +90,8 @@ export function Component() {
       navigate(`${prefix}/reveal`, { replace: true });
     };
 
-    if (isQuickPlay) {
-      // Small delay so the player sees the locked-in state before transition
-      setTimeout(doReveal, 500);
-    } else {
-      // Host must tap "REVEAL ANSWER" — don't auto-navigate
-      revealCalledRef.current = false;
-    }
+    // Small delay so the player sees the locked-in state before transition
+    setTimeout(doReveal, 500);
   }, [session?.allAnswersIn, isQuickPlay, isHost, revealAnswers, navigate, prefix]);
 
   if (!session) return null;
@@ -157,19 +156,52 @@ export function Component() {
             timeLeft={timeLeft}
             timerProgress={progress}
             showTimer
+            questionInRound={session.currentQuestionInRound}
+            questionsInRound={session.selectedQuestions[roundIndex]?.length ?? 1}
           />
           {players.length > 1 && (
             <PlayerStatusBar players={players} showAnswerStatus />
           )}
-          {currentPlayer && !session.allAnswersIn && (
-            <AnswerInput
-              key={`${roundIndex}-${currentPlayer.id}`}
-              question={question}
-              onSubmit={handleAnswer}
-              playerName={currentPlayer.name}
-              playerColour={currentPlayer.colour}
-            />
-          )}
+          {currentPlayer && !session.allAnswersIn && (() => {
+            const roundTypeId = session.roundTypeSequence?.[roundIndex];
+            if (roundTypeId) {
+              const def = getRoundDefinition(roundTypeId);
+              const RoundInput = def.slots.PlayerInput;
+              return (
+                <Suspense fallback={
+                  <AnswerInput
+                    key={`${roundIndex}-${currentPlayer.id}`}
+                    question={question}
+                    onSubmit={handleAnswer}
+                    playerName={currentPlayer.name}
+                    playerColour={currentPlayer.colour}
+                  />
+                }>
+                  <RoundInput
+                    key={`${roundIndex}-${currentPlayer.id}-rt`}
+                    question={question}
+                    players={players}
+                    roundState={session.activeRoundState}
+                    onSubmit={(_, answer) => handleAnswer(answer)}
+                    onUpdateState={useGameStore.getState().updateRoundState}
+                    playerId={currentPlayer.id}
+                    timerStarted={true}
+                    allAnswersIn={session.allAnswersIn}
+                    isHost={false}
+                  />
+                </Suspense>
+              );
+            }
+            return (
+              <AnswerInput
+                key={`${roundIndex}-${currentPlayer.id}`}
+                question={question}
+                onSubmit={handleAnswer}
+                playerName={currentPlayer.name}
+                playerColour={currentPlayer.colour}
+              />
+            );
+          })()}
           {session.allAnswersIn && (
             <motion.p
               className="text-center text-neon-green font-display tracking-wide text-lg"
@@ -198,25 +230,9 @@ export function Component() {
     broadcastHostState();
   };
 
-  const handleStartRound = () => {
-    useGameStore.setState({
-      session: { ...session, timerStarted: true },
-    });
-    broadcastHostState();
-    start();
-  };
-
   const handleCloseAnswers = () => {
     setAllAnswersIn();
     broadcastHostState();
-  };
-
-  const handleReveal = () => {
-    if (revealCalledRef.current) return;
-    revealCalledRef.current = true;
-    revealAnswers();
-    broadcastHostState('/player/reveal');
-    navigate(`${prefix}/reveal`, { replace: true });
   };
 
   return (
@@ -251,41 +267,67 @@ export function Component() {
           timeLeft={timeLeft}
           timerProgress={progress}
           showTimer={timerStarted}
+          questionInRound={session.currentQuestionInRound}
+          questionsInRound={session.selectedQuestions[roundIndex]?.length ?? 1}
         />
 
         {/* Player answer status */}
         <PlayerStatusBar players={nonHostPlayers} showAnswerStatus />
 
-        {/* State-based host UI */}
-        {!timerStarted && (
-          <motion.div
-            className="flex flex-col items-center gap-4 py-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
-            <p className="text-text-muted text-sm text-center">
-              Waiting for players to get ready…
-            </p>
-            <motion.button
-              onClick={handleStartRound}
-              className="px-8 py-3 rounded-full font-display tracking-wide text-base bg-gradient-to-r from-neon-cyan to-primary-container text-white shadow-primary"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              START ROUND
-            </motion.button>
-          </motion.div>
-        )}
-
-        {timerStarted && hostPlayer && !hostHasAnswered && (
-          <AnswerInput
-            key={`host-${roundIndex}`}
-            question={question}
-            onSubmit={handleHostAnswer}
-            playerName={hostPlayer.name}
-            playerColour={hostPlayer.colour}
-          />
-        )}
+        {timerStarted && hostPlayer && !hostHasAnswered && (() => {
+          const roundTypeId = session.roundTypeSequence?.[roundIndex];
+          if (roundTypeId) {
+            const def = getRoundDefinition(roundTypeId);
+            const RoundInput = def.slots.PlayerInput;
+            return (
+              <Suspense fallback={
+                <AnswerInput
+                  key={`host-${roundIndex}`}
+                  question={question}
+                  onSubmit={handleHostAnswer}
+                  playerName={hostPlayer.name}
+                  playerColour={hostPlayer.colour}
+                />
+              }>
+                <RoundInput
+                  key={`host-${roundIndex}-rt`}
+                  question={question}
+                  players={players}
+                  roundState={session.activeRoundState}
+                  onSubmit={(_, answer) => {
+                    handleHostAnswer(answer);
+                  }}
+                  onBuzzIn={(_, timestamp, answer) => {
+                    // Host buzz-in: store timestamp + submit
+                    useGameStore.setState({
+                      session: {
+                        ...session,
+                        players: session.players.map((p) =>
+                          p.id === hostPlayer.id ? { ...p, answerTimestamp: timestamp } : p
+                        ),
+                      },
+                    });
+                    handleHostAnswer(answer);
+                  }}
+                  onUpdateState={useGameStore.getState().updateRoundState}
+                  playerId={hostPlayer.id}
+                  timerStarted={timerStarted}
+                  allAnswersIn={allAnswersIn}
+                  isHost={true}
+                />
+              </Suspense>
+            );
+          }
+          return (
+            <AnswerInput
+              key={`host-${roundIndex}`}
+              question={question}
+              onSubmit={handleHostAnswer}
+              playerName={hostPlayer.name}
+              playerColour={hostPlayer.colour}
+            />
+          );
+        })()}
 
         {timerStarted && hostHasAnswered && !allAnswersIn && (
           <motion.div
@@ -305,6 +347,30 @@ export function Component() {
           </motion.div>
         )}
 
+        {/* Round-type-specific host controls */}
+        {(() => {
+          const roundTypeId = session.roundTypeSequence?.[roundIndex];
+          if (roundTypeId) {
+            const def = getRoundDefinition(roundTypeId);
+            if (def.slots.HostControls) {
+              const HostCtrl = def.slots.HostControls;
+              return (
+                <Suspense fallback={null}>
+                  <HostCtrl
+                    question={question}
+                    players={players}
+                    roundState={session.activeRoundState}
+                    onUpdateState={useGameStore.getState().updateRoundState}
+                    timerStarted={timerStarted}
+                    allAnswersIn={allAnswersIn}
+                  />
+                </Suspense>
+              );
+            }
+          }
+          return null;
+        })()}
+
         {allAnswersIn && (
           <motion.div
             className="flex flex-col items-center gap-4 py-2"
@@ -312,16 +378,8 @@ export function Component() {
             animate={{ opacity: 1, scale: 1 }}
           >
             <p className="text-neon-green font-display tracking-wide text-base text-center">
-              ALL ANSWERS IN
+              ALL ANSWERS IN — REVEALING…
             </p>
-            <motion.button
-              onClick={handleReveal}
-              className="px-10 py-4 rounded-full font-display text-xl tracking-wide bg-gradient-to-r from-neon-gold to-neon-pink text-white shadow-primary"
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.96 }}
-            >
-              REVEAL ANSWER
-            </motion.button>
           </motion.div>
         )}
       </div>

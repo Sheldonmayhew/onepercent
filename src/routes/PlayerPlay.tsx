@@ -1,10 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useMultiplayerStore } from '../stores/multiplayerStore';
 import { usePlayerMultiplayer } from '../hooks/useMultiplayer';
 import { useTimer } from '../hooks/useTimer';
 import AnswerInput from '../components/Game/AnswerInput';
+import { getRoundDefinition } from '../roundTypes/registry';
 
 const CURRENT_ROUTE = '/player/play';
 
@@ -13,7 +14,7 @@ export function Component() {
   const gameState = useMultiplayerStore((s) => s.gameState);
   const playerId = useMultiplayerStore((s) => s.playerId);
   const playerName = useMultiplayerStore((s) => s.playerName);
-  const { disconnect, sendAnswer } = usePlayerMultiplayer();
+  const { disconnect, sendAnswer, sendBuzzIn } = usePlayerMultiplayer();
   const mpReset = useMultiplayerStore((s) => s.reset);
 
   const me = gameState?.players.find((p) => p.id === playerId);
@@ -100,6 +101,11 @@ export function Component() {
             <div className="flex items-start justify-between mb-1">
               <span className="font-display text-sm font-bold text-text-secondary uppercase tracking-wider">
                 Round {round.index + 1} of {round.totalRounds}
+                {round.questionsInRound > 1 && (
+                  <span className="text-text-muted font-normal ml-2">
+                    Q{round.questionInRound + 1}/{round.questionsInRound}
+                  </span>
+                )}
               </span>
               <span className="inline-flex items-center gap-2 bg-bg-card shadow-soft rounded-full px-3 py-1.5">
                 <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: playerColour }} />
@@ -214,26 +220,74 @@ export function Component() {
           </motion.div>
         )}
 
-        {timerStarted && !isLockedIn && round && (
-          <AnswerInput
-            key={`player-${round.index}`}
-            question={{
-              id: `round-${round.index}`,
-              difficulty: round.difficulty,
-              type: round.question.type,
-              time_limit_seconds: round.timerDuration,
-              question: round.question.question,
-              options: round.question.options,
-              correct_answer: 0,
-              explanation: '',
-              image_url: round.question.image_url,
-              sequence_items: round.question.sequence_items,
-            }}
-            onSubmit={handleAnswer}
-            playerName={playerName ?? 'You'}
-            playerColour={playerColour}
-          />
-        )}
+        {timerStarted && !isLockedIn && round && (() => {
+          const roundType = round.roundType;
+          const questionObj = {
+            id: `round-${round.index}`,
+            difficulty: round.difficulty,
+            type: round.question.type,
+            time_limit_seconds: round.timerDuration,
+            question: round.question.question,
+            options: round.question.options,
+            correct_answer: 0,
+            explanation: '',
+            image_url: round.question.image_url,
+            sequence_items: round.question.sequence_items,
+            correct_answers: round.question.correct_answers,
+            ranking_criterion: round.question.ranking_criterion,
+            reveal_delay_ms: round.question.reveal_delay_ms,
+            reveal_chunks: round.question.reveal_chunks,
+            categories: round.question.categories,
+          };
+
+          if (roundType) {
+            const def = getRoundDefinition(roundType);
+            const RoundInput = def.slots.PlayerInput;
+            const playersAsPlayers = gameState!.players.map((p) => ({
+              ...p,
+              currentAnswer: null as string | number | null,
+              colour: p.colour,
+            }));
+
+            return (
+              <Suspense fallback={
+                <AnswerInput
+                  key={`player-${round.index}`}
+                  question={questionObj}
+                  onSubmit={handleAnswer}
+                  playerName={playerName ?? 'You'}
+                  playerColour={playerColour}
+                />
+              }>
+                <RoundInput
+                  key={`player-${round.index}-rt`}
+                  question={questionObj}
+                  players={playersAsPlayers}
+                  roundState={round.roundState}
+                  onSubmit={(_, answer) => handleAnswer(answer)}
+                  onBuzzIn={playerId ? (_, timestamp, answer) => {
+                    sendBuzzIn(playerId, timestamp, answer);
+                  } : undefined}
+                  onUpdateState={() => {}}
+                  playerId={playerId ?? ''}
+                  timerStarted={timerStarted}
+                  allAnswersIn={false}
+                  isHost={false}
+                />
+              </Suspense>
+            );
+          }
+
+          return (
+            <AnswerInput
+              key={`player-${round.index}`}
+              question={questionObj}
+              onSubmit={handleAnswer}
+              playerName={playerName ?? 'You'}
+              playerColour={playerColour}
+            />
+          );
+        })()}
 
         {isLockedIn && (
           <motion.div

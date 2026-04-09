@@ -6,6 +6,7 @@ import { useGameStore } from '../stores/gameStore';
 import type { GameBroadcast, BroadcastPlayer } from '../stores/multiplayerStore';
 import { PLAYER_COLOURS, PLAYER_AVATARS, AVAILABLE_EMOJIS } from '../types';
 import { generateId } from '../utils/helpers';
+import { getRoundDefinition } from '../roundTypes/registry';
 
 // ──────────────────────────────────────────
 // Module-level channels — persist across component mount/unmount cycles.
@@ -44,11 +45,7 @@ export function broadcastHostState(route?: string) {
 
   const tiers = [90, 80, 70, 60, 50, 40, 30, 20, 10, 5, 1];
   const difficulty = tiers[s.currentRound] ?? 90;
-  const pointsMap: Record<number, number> = {
-    90: 100, 80: 200, 70: 300, 60: 500, 50: 1000,
-    40: 2000, 30: 5000, 20: 10000, 10: 25000, 5: 50000, 1: 100000,
-  };
-  const points = pointsMap[difficulty] ?? 0;
+  const points = store.getCurrentPoints();
 
   const players: BroadcastPlayer[] = s.players.map((p) => ({
     id: p.id,
@@ -57,9 +54,17 @@ export function broadcastHostState(route?: string) {
     avatar: p.avatar,
     score: p.score,
     hasAnswered: p.hasAnswered,
+    answerTimestamp: p.answerTimestamp,
+    eliminated: p.eliminated,
+    selectedCategory: p.selectedCategory,
   }));
 
-  const currentQ = s.selectedQuestions[s.currentRound];
+  const currentRoundType = s.roundTypeSequence?.[s.currentRound] ?? 'point_builder';
+  const roundDef = getRoundDefinition(currentRoundType);
+
+  const roundQuestions = s.selectedQuestions[s.currentRound];
+  const currentQ = roundQuestions?.[s.currentQuestionInRound];
+  const questionsInRound = roundQuestions?.length ?? 1;
   const lastRound = s.roundHistory[s.roundHistory.length - 1];
 
   const broadcast: GameBroadcast = {
@@ -80,30 +85,48 @@ export function broadcastHostState(route?: string) {
       difficulty,
       points,
       totalRounds: tiers.length,
-      timerDuration: 45,
+      timerDuration: roundDef.timer.duration,
       categoryName: currentQ.category ?? s.pack?.name,
+      roundType: currentRoundType,
+      roundState: s.activeRoundState,
+      questionFormat: currentQ.question_format,
+      questionInRound: s.currentQuestionInRound,
+      questionsInRound,
       question: {
         question: currentQ.question,
         type: currentQ.type,
         options: currentQ.options,
         image_url: currentQ.image_url,
         sequence_items: currentQ.sequence_items,
+        correct_answers: currentQ.correct_answers,
+        ranking_criterion: currentQ.ranking_criterion,
+        reveal_delay_ms: currentQ.reveal_delay_ms,
+        reveal_chunks: currentQ.reveal_chunks,
+        categories: currentQ.categories,
       },
     };
   }
 
   if (playerRoute.includes('/reveal') && lastRound) {
-    const correctAnswer =
-      lastRound.question.type === 'multiple_choice' || lastRound.question.type === 'image_based'
-        ? lastRound.question.options?.[Number(lastRound.question.correct_answer)] ??
-          String(lastRound.question.correct_answer)
-        : String(lastRound.question.correct_answer);
+    const q = lastRound.question;
+    let correctAnswer: string;
+
+    if (q.question_format === 'multi_select' && q.correct_answers && q.options) {
+      correctAnswer = q.correct_answers.map((i) => q.options![i]).join(', ');
+    } else if (q.question_format === 'ranking' && q.ranking_order && q.options) {
+      correctAnswer = q.ranking_order.map((i) => q.options![i]).join(' → ');
+    } else if (q.type === 'multiple_choice' || q.type === 'image_based') {
+      correctAnswer = q.options?.[Number(q.correct_answer)] ?? String(q.correct_answer);
+    } else {
+      correctAnswer = String(q.correct_answer);
+    }
 
     broadcast.reveal = {
       correctAnswer,
       explanation: lastRound.question.explanation,
       correctPlayerIds: lastRound.correctPlayers,
       incorrectPlayerIds: lastRound.incorrectPlayers,
+      roundType: currentRoundType,
     };
 
     // Include round data so TV display has it even if it missed the /play broadcast
@@ -113,14 +136,24 @@ export function broadcastHostState(route?: string) {
         difficulty,
         points,
         totalRounds: tiers.length,
-        timerDuration: 45,
+        timerDuration: roundDef.timer.duration,
         categoryName: currentQ.category ?? s.pack?.name,
+        roundType: currentRoundType,
+        roundState: s.activeRoundState,
+        questionFormat: currentQ.question_format,
+        questionInRound: s.currentQuestionInRound,
+        questionsInRound,
         question: {
           question: currentQ.question,
           type: currentQ.type,
           options: currentQ.options,
           image_url: currentQ.image_url,
           sequence_items: currentQ.sequence_items,
+          correct_answers: currentQ.correct_answers,
+          ranking_criterion: currentQ.ranking_criterion,
+          reveal_delay_ms: currentQ.reveal_delay_ms,
+          reveal_chunks: currentQ.reveal_chunks,
+          categories: currentQ.categories,
         },
       };
     }
@@ -266,6 +299,72 @@ export function useHostMultiplayer() {
         .on('broadcast', { event: 'join_team' }, (msg) => {
           const { playerId, teamId } = msg.payload as { playerId: string; teamId: string };
           useGameStore.getState().assignPlayerToTeam(playerId, teamId);
+          broadcastHostState();
+        })
+        .on('broadcast', { event: 'buzz_in' }, (msg) => {
+          const { playerId, timestamp, answer } = msg.payload as {
+            playerId: string;
+            timestamp: number;
+            answer: string | number;
+          };
+          const store = useGameStore.getState();
+          if (!store.session) return;
+          // Store timestamp and submit answer
+          useGameStore.setState({
+            session: {
+              ...store.session,
+              players: store.session.players.map((p) =>
+                p.id === playerId ? { ...p, answerTimestamp: timestamp } : p
+              ),
+            },
+          });
+          submitAnswer(playerId, answer);
+          broadcastHostState();
+        })
+        .on('broadcast', { event: 'category_pick' }, (msg) => {
+          const { playerId, category } = msg.payload as { playerId: string; category: string };
+          const store = useGameStore.getState();
+          if (!store.session) return;
+          useGameStore.setState({
+            session: {
+              ...store.session,
+              players: store.session.players.map((p) =>
+                p.id === playerId ? { ...p, selectedCategory: category } : p
+              ),
+            },
+          });
+          broadcastHostState();
+        })
+        .on('broadcast', { event: 'steal_target' }, (msg) => {
+          const { playerId, targetId } = msg.payload as { playerId: string; targetId: string };
+          const store = useGameStore.getState();
+          if (!store.session) return;
+          useGameStore.setState({
+            session: {
+              ...store.session,
+              players: store.session.players.map((p) =>
+                p.id === playerId ? { ...p, stealTarget: targetId } : p
+              ),
+            },
+          });
+          broadcastHostState();
+        })
+        .on('broadcast', { event: 'grab_bag_submit' }, (msg) => {
+          const { playerId, selectedIndices } = msg.payload as {
+            playerId: string;
+            selectedIndices: number[];
+          };
+          // Store as comma-separated string to fit existing answer format
+          submitAnswer(playerId, selectedIndices.join(','));
+          broadcastHostState();
+        })
+        .on('broadcast', { event: 'ranking_submit' }, (msg) => {
+          const { playerId, order } = msg.payload as {
+            playerId: string;
+            order: number[];
+          };
+          // Store as comma-separated string
+          submitAnswer(playerId, order.join(','));
           broadcastHostState();
         })
         .on('broadcast', { event: 'player_leave' }, (msg) => {
@@ -447,6 +546,46 @@ export function usePlayerMultiplayer() {
     });
   }, []);
 
+  const sendBuzzIn = useCallback((playerId: string, timestamp: number, answer: string | number) => {
+    playerChannel?.send({
+      type: 'broadcast',
+      event: 'buzz_in',
+      payload: { playerId, timestamp, answer },
+    });
+  }, []);
+
+  const sendCategoryPick = useCallback((playerId: string, category: string) => {
+    playerChannel?.send({
+      type: 'broadcast',
+      event: 'category_pick',
+      payload: { playerId, category },
+    });
+  }, []);
+
+  const sendStealTarget = useCallback((playerId: string, targetId: string) => {
+    playerChannel?.send({
+      type: 'broadcast',
+      event: 'steal_target',
+      payload: { playerId, targetId },
+    });
+  }, []);
+
+  const sendGrabBagSubmit = useCallback((playerId: string, selectedIndices: number[]) => {
+    playerChannel?.send({
+      type: 'broadcast',
+      event: 'grab_bag_submit',
+      payload: { playerId, selectedIndices },
+    });
+  }, []);
+
+  const sendRankingSubmit = useCallback((playerId: string, order: number[]) => {
+    playerChannel?.send({
+      type: 'broadcast',
+      event: 'ranking_submit',
+      payload: { playerId, order },
+    });
+  }, []);
+
   const disconnect = useCallback(() => {
     if (playerBeforeUnloadHandler) {
       window.removeEventListener('beforeunload', playerBeforeUnloadHandler);
@@ -467,5 +606,16 @@ export function usePlayerMultiplayer() {
     }
   }, []);
 
-  return { joinRoom, sendReady, sendAnswer, sendJoinTeam, disconnect };
+  return {
+    joinRoom,
+    sendReady,
+    sendAnswer,
+    sendJoinTeam,
+    sendBuzzIn,
+    sendCategoryPick,
+    sendStealTarget,
+    sendGrabBagSubmit,
+    sendRankingSubmit,
+    disconnect,
+  };
 }

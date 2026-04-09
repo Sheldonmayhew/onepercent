@@ -7,12 +7,26 @@ import { broadcastHostState } from '../hooks/useMultiplayer';
 import { useSound } from '../hooks/useSound';
 import PlayerStatusBar from '../components/Game/PlayerStatusBar';
 import { formatRands } from '../utils/helpers';
-import { POINTS_PER_ROUND } from '../types';
+import { POINTS_PER_ROUND, DIFFICULTY_TIERS } from '../types';
 
 type RevealPhase = 'answer' | 'results' | 'ready';
 
 function getCorrectAnswerText(roundResult: NonNullable<ReturnType<typeof useGameStore.getState>['session']>['roundHistory'][number]): string {
   const q = roundResult.question;
+
+  // Multi-select (Grab Bag): show all correct options
+  if (q.question_format === 'multi_select' && q.correct_answers && q.options) {
+    return q.correct_answers.map((i) => q.options![i]).join(', ');
+  }
+
+  // Ranking (Close Call): show correct order
+  if (q.question_format === 'ranking' && q.ranking_order && q.options) {
+    return q.ranking_order.map((i) => q.options![i]).join(' → ');
+  }
+
+  // Progressive reveal (Look Before You Leap): standard MC answer
+  // Categorized (Switchagories): standard MC answer
+  // Standard multiple choice / image based
   if (q.type === 'multiple_choice' || q.type === 'image_based') {
     return q.options?.[Number(q.correct_answer)] ?? String(q.correct_answer);
   }
@@ -87,7 +101,12 @@ export function Component() {
 
   const handleNext = () => {
     const result = proceedToNextRound();
-    if (result === 'next') {
+    if (result === 'next_question') {
+      // Same round, next question — go straight to play (skip round intro)
+      if (isHost) broadcastHostState('/player/play');
+      navigate(`${prefix}/play`, { replace: true });
+    } else if (result === 'next_round') {
+      // New round — show round intro
       if (isHost) broadcastHostState('/player/round-intro');
       navigate(`${prefix}/round-intro`, { replace: true });
     } else {
@@ -357,20 +376,31 @@ export function Component() {
 
         {/* Next button — appears at 'ready' phase */}
         <AnimatePresence>
-          {phase === 'ready' && (
-            <motion.button
-              onClick={handleNext}
-              className="w-full py-4 rounded-full font-display text-xl tracking-wide bg-gradient-to-r from-neon-cyan to-primary-container text-white shadow-primary mt-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              NEXT QUESTION
-            </motion.button>
-          )}
+          {phase === 'ready' && (() => {
+            const roundQuestions = session.selectedQuestions[session.currentRound];
+            const hasMoreInRound = roundQuestions && session.currentQuestionInRound + 1 < roundQuestions.length;
+            const isLastRound = session.currentRound + 1 >= DIFFICULTY_TIERS.length;
+            const label = hasMoreInRound
+              ? `NEXT QUESTION (${session.currentQuestionInRound + 2}/${roundQuestions.length})`
+              : isLastRound
+                ? 'VIEW RESULTS'
+                : 'NEXT ROUND';
+
+            return (
+              <motion.button
+                onClick={handleNext}
+                className="w-full py-4 rounded-full font-display text-xl tracking-wide bg-gradient-to-r from-neon-cyan to-primary-container text-white shadow-primary mt-auto"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {label}
+              </motion.button>
+            );
+          })()}
         </AnimatePresence>
       </div>
     </motion.div>

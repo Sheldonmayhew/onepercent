@@ -1,0 +1,66 @@
+import { lazy } from 'react';
+import type { RoundTypeDefinition } from '../types';
+import { checkAnswer } from '../../utils/helpers';
+
+export interface SnapState {
+  revealedOptions: number[];
+  buzzTimestamps: Record<string, number>;
+}
+
+export const snapRound: RoundTypeDefinition<SnapState> = {
+  id: 'snap',
+  name: 'Snap',
+  tagline: 'First to spot it scores big!',
+  tier: 'warmup',
+  difficulty: 70,
+
+  theme: {
+    primary: '#F59E0B',
+    accent: '#FCD34D',
+    icon: '⚡',
+    introAnimation: 'slam',
+    soundCues: {
+      intro: 'round_start',
+      correct: 'correct_reveal',
+      wrong: 'wrong_reveal',
+      special: 'buzz_in',
+    },
+  },
+
+  timer: { duration: 30, autoStart: false },
+  questionFormat: 'timed_reveal',
+
+  createInitialState: () => ({
+    revealedOptions: [],
+    buzzTimestamps: {},
+  }),
+
+  score: (players, question, state, basePoints) => {
+    // Sort correct players by buzz timestamp (fastest first)
+    const correctBuzzes = players
+      .filter((p) => checkAnswer(question, p.currentAnswer))
+      .map((p) => ({ id: p.id, timestamp: state.buzzTimestamps[p.id] ?? Infinity }))
+      .sort((a, b) => a.timestamp - b.timestamp);
+
+    return players.map((p) => {
+      const rank = correctBuzzes.findIndex((b) => b.id === p.id);
+      if (rank === -1) return { playerId: p.id, delta: 0 };
+
+      // 15% reduction per rank, floor at 25%
+      const multiplier = Math.max(0.25, 1 - rank * 0.15);
+      return {
+        playerId: p.id,
+        delta: Math.round(basePoints * multiplier),
+      };
+    });
+  },
+
+  broadcastEvents: ['buzz_in'],
+
+  slots: {
+    PlayerInput: lazy(() => import('../../components/RoundTypes/Snap/PlayerInput')),
+    TvPlay: lazy(() => import('../../components/RoundTypes/Snap/TvPlay')),
+    TvIntro: lazy(() => import('../../components/RoundTypes/Snap/TvIntro')),
+    TvReveal: lazy(() => import('../../components/RoundTypes/Snap/TvReveal')),
+  },
+};
