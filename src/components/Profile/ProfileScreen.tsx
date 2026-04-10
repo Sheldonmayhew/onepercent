@@ -43,49 +43,49 @@ export default function ProfileScreen({ onClose }: ProfileScreenProps) {
     : 0;
 
   return (
-    <div className="min-h-dvh flex flex-col items-center justify-center relative overflow-hidden px-4 py-8">
+    <div className="min-h-dvh flex flex-col items-center justify-center relative overflow-hidden px-4 sm:px-8 lg:px-12 py-8 pb-24">
       <motion.div
-        className="relative z-10 w-full max-w-md"
+        className="relative z-10 w-full max-w-md md:max-w-2xl lg:max-w-3xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <div className="flex items-center justify-between mb-6">
-          <h1 className="font-display text-4xl text-text-primary tracking-tight">PROFILE</h1>
+        <div className="flex items-center justify-between mb-6 md:mb-8">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-text-primary tracking-tight">PROFILE</h1>
           <button
             onClick={onClose}
-            className="text-text-muted hover:text-text-primary transition-colors text-sm"
+            className="text-text-muted hover:text-text-primary transition-colors text-sm md:text-base"
           >
             ← Back
           </button>
         </div>
 
         {editing ? (
-          <div className="bg-white rounded-2xl shadow-soft border border-gray-100 p-6 mb-6">
-            <div className="mb-4">
-              <label className="text-xs text-text-secondary font-medium block mb-2">Name</label>
+          <div className="bg-white rounded-2xl md:rounded-3xl shadow-soft border border-gray-100 p-6 md:p-8 mb-6">
+            <div className="mb-4 md:mb-5">
+              <label className="text-xs md:text-sm text-text-secondary font-medium block mb-2">Name</label>
               <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name..."
                 maxLength={20}
-                className="w-full py-3 px-4 rounded-xl bg-white border border-gray-200 text-text-primary text-lg font-medium outline-none focus:border-neon-cyan focus:ring-2 focus:ring-indigo-100 transition-colors"
+                className="w-full py-3 md:py-4 px-4 md:px-5 rounded-xl md:rounded-2xl bg-white border border-gray-200 text-text-primary text-lg md:text-xl font-medium outline-none focus:border-neon-cyan focus:ring-2 focus:ring-indigo-100 transition-colors"
               />
             </div>
 
-            <div className="mb-4">
-              <label className="text-xs text-text-secondary font-medium block mb-2">Avatar</label>
+            <div className="mb-4 md:mb-5">
+              <label className="text-xs md:text-sm text-text-secondary font-medium block mb-2">Avatar</label>
               <EmojiPicker selected={avatar} onSelect={setAvatar} />
             </div>
 
-            <div className="mb-6">
-              <label className="text-xs text-text-secondary font-medium block mb-2">Colour</label>
-              <div className="flex gap-2">
+            <div className="mb-6 md:mb-8">
+              <label className="text-xs md:text-sm text-text-secondary font-medium block mb-2">Colour</label>
+              <div className="flex gap-2 md:gap-3">
                 {PLAYER_COLOURS.map((c) => (
                   <button
                     key={c}
                     onClick={() => setColour(c)}
-                    className={`w-8 h-8 rounded-full transition-all ${
+                    className={`w-8 h-8 md:w-10 md:h-10 rounded-full transition-all ${
                       colour === c ? 'ring-2 ring-white ring-offset-2 ring-offset-white scale-110' : ''
                     }`}
                     style={{ backgroundColor: c }}
@@ -97,7 +97,7 @@ export default function ProfileScreen({ onClose }: ProfileScreenProps) {
             <motion.button
               onClick={handleSave}
               disabled={!name.trim()}
-              className="w-full py-3 rounded-xl font-display text-lg tracking-wide bg-gradient-to-r from-neon-cyan to-neon-purple text-white hover:brightness-110 disabled:opacity-40 transition-all shadow-primary"
+              className="w-full py-3 md:py-4 rounded-xl md:rounded-2xl font-display text-lg md:text-xl tracking-wide bg-gradient-to-r from-neon-cyan to-neon-purple text-white hover:brightness-110 disabled:opacity-40 transition-all shadow-primary"
               whileTap={{ scale: 0.98 }}
             >
               {profile ? 'SAVE' : 'CREATE PROFILE'}
@@ -106,23 +106,23 @@ export default function ProfileScreen({ onClose }: ProfileScreenProps) {
         ) : profile ? (
           <>
             {/* Profile Card */}
-            <div className="bg-white rounded-2xl shadow-soft border border-gray-100 p-6 mb-6 text-center">
-              <span className="text-5xl block mb-2">{profile.avatar}</span>
-              <h2 className="font-display text-2xl" style={{ color: profile.colour }}>{profile.name}</h2>
-              <p className="text-text-muted text-xs mt-1">
+            <div className="bg-white rounded-2xl md:rounded-3xl shadow-soft border border-gray-100 p-6 md:p-8 mb-6 text-center">
+              <span className="text-5xl md:text-6xl block mb-2">{profile.avatar}</span>
+              <h2 className="font-display text-2xl md:text-3xl" style={{ color: profile.colour }}>{profile.name}</h2>
+              <p className="text-text-muted text-xs md:text-sm mt-1">
                 Playing since {new Date(profile.createdAt).toLocaleDateString()}
               </p>
 
-              <div className="flex gap-2 justify-center mt-4">
+              <div className="flex gap-2 md:gap-3 justify-center mt-4 md:mt-6">
                 <button
                   onClick={() => setEditing(true)}
-                  className="px-4 py-1.5 rounded-lg text-xs font-medium bg-white border border-gray-200 text-text-secondary hover:text-text-primary transition-colors"
+                  className="px-4 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl text-xs md:text-sm font-medium bg-white border border-gray-200 text-text-secondary hover:text-text-primary transition-colors"
                 >
                   Edit
                 </button>
                 <button
                   onClick={handleClear}
-                  className="px-4 py-1.5 rounded-lg text-xs font-medium bg-red-50 border border-red-200 text-red-500 hover:bg-red-100 transition-colors"
+                  className="px-4 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl text-xs md:text-sm font-medium bg-red-50 border border-red-200 text-red-500 hover:bg-red-100 transition-colors"
                 >
                   Clear Profile
                 </button>
@@ -131,9 +131,9 @@ export default function ProfileScreen({ onClose }: ProfileScreenProps) {
 
             {/* Stats */}
             {stats && stats.gamesPlayed > 0 && (
-              <div className="bg-white rounded-2xl shadow-soft border border-gray-100 p-6">
-                <h3 className="font-display text-lg text-text-primary tracking-wide mb-4">STATS</h3>
-                <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white rounded-2xl md:rounded-3xl shadow-soft border border-gray-100 p-6 md:p-8">
+                <h3 className="font-display text-lg md:text-xl text-text-primary tracking-wide mb-4 md:mb-6">STATS</h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
                   <StatCard label="Games Played" value={String(stats.gamesPlayed)} />
                   <StatCard label="Win Rate" value={`${winRate}%`} />
                   <StatCard label="Total Score" value={formatRands(stats.totalScore)} />
@@ -152,9 +152,9 @@ export default function ProfileScreen({ onClose }: ProfileScreenProps) {
 
 function StatCard({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-indigo-50 rounded-xl p-3 text-center">
-      <span className="text-xs text-text-muted block mb-1">{label}</span>
-      <span className="font-score text-lg text-neon-gold font-bold">{value}</span>
+    <div className="bg-indigo-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center">
+      <span className="text-xs md:text-sm text-text-muted block mb-1">{label}</span>
+      <span className="font-score text-lg md:text-xl text-neon-gold font-bold">{value}</span>
     </div>
   );
 }

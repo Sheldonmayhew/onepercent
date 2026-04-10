@@ -1,26 +1,22 @@
 import { create } from 'zustand';
 import type {
   GameSession,
-  GameSettings,
   Player,
   MultiplayerMode,
-  RoundResult,
   QuestionPack,
   Question,
-  Team,
 } from '../types';
 import {
   PLAYER_COLOURS,
   PLAYER_AVATARS,
   POINTS_PER_ROUND,
   DIFFICULTY_TIERS,
-  TEAM_COLOURS,
-  TEAM_NAMES,
   getQuestionMultiplier,
 } from '../types';
-import { generateId, selectQuestionsForGame, checkAnswer } from '../utils/helpers';
-import { ROUND_TYPE_SEQUENCE } from '../roundTypes/sequence';
-import { getRoundDefinition } from '../roundTypes/registry';
+import { generateId } from '../utils/helpers';
+import { buildQuickPlaySession, buildHostGameSession } from './gameStoreInit';
+import { computeRevealAnswers } from './gameStoreScoring';
+import { computeStartGame, computeProceedToNextRound, buildResetForReplay } from './gameStoreRounds';
 
 interface GameStore {
   session: GameSession | null;
@@ -58,79 +54,13 @@ export const useGameStore = create<GameStore>((set, get) => ({
   setPacks: (packs) => set({ availablePacks: packs }),
 
   initQuickPlay: (packIds) => {
-    const packs = get().availablePacks.filter((p) => packIds.includes(p.pack_id));
-    if (packs.length === 0) return;
-
-    const pack = packs[0];
-    const settings: GameSettings = {
-      soundEnabled: true,
-      packIds,
-      teamMode: false,
-      teamCount: 2,
-    };
-
-    set({
-      session: {
-        id: generateId(),
-        pack,
-        players: [],
-        currentRound: 0,
-        currentQuestionInRound: 0,
-        settings,
-        roundHistory: [],
-        selectedQuestions: [],
-        currentPlayerIndex: 0,
-        allAnswersIn: false,
-        timerStarted: false,
-        teams: [],
-        roundTypeSequence: [...ROUND_TYPE_SEQUENCE],
-        activeRoundState: null,
-      },
-    });
+    const session = buildQuickPlaySession(get().availablePacks, packIds);
+    if (session) set({ session });
   },
 
   initHostGame: (mode, packIds) => {
-    const packs = get().availablePacks.filter((p) => packIds.includes(p.pack_id));
-    if (packs.length === 0) return;
-
-    const pack = packs[0];
-    const teamMode = mode === 'team';
-    const settings: GameSettings = {
-      soundEnabled: true,
-      packIds,
-      teamMode,
-      teamCount: 2,
-    };
-
-    const teams: Team[] = teamMode
-      ? Array.from({ length: 2 }, (_, i) => ({
-          id: generateId(),
-          name: TEAM_NAMES[i],
-          colour: TEAM_COLOURS[i],
-          playerIds: [],
-          score: 0,
-        }))
-      : [];
-
-    set({
-      session: {
-        id: generateId(),
-        pack,
-        players: [],
-        currentRound: 0,
-        settings,
-        roundHistory: [],
-        selectedQuestions: [],
-        currentPlayerIndex: 0,
-        allAnswersIn: false,
-        timerStarted: false,
-        teams,
-        multiplayerMode: mode,
-        roundTypeSequence: [...ROUND_TYPE_SEQUENCE],
-        activeRoundState: null,
-        currentQuestionInRound: 0,
-      },
-    });
+    const session = buildHostGameSession(get().availablePacks, mode, packIds);
+    if (session) set({ session });
   },
 
   addPlayer: (name, emoji, isHost) => {
@@ -185,30 +115,9 @@ export const useGameStore = create<GameStore>((set, get) => ({
     if (!session) return;
 
     const packs = get().availablePacks.filter((p) => session.settings.packIds.includes(p.pack_id));
-    const questions = selectQuestionsForGame(packs.length > 0 ? packs : [session.pack]);
+    const updates = computeStartGame(session, packs);
 
-    const roundTypeId = session.roundTypeSequence[0];
-    const roundDef = getRoundDefinition(roundTypeId);
-    const firstQuestion = questions[0]?.[0];
-    const initialState = firstQuestion ? roundDef.createInitialState(session.players, firstQuestion) : null;
-
-    set({
-      session: {
-        ...session,
-        currentRound: 0,
-        currentQuestionInRound: 0,
-        selectedQuestions: questions,
-        currentPlayerIndex: 0,
-        allAnswersIn: false,
-        timerStarted: false,
-        activeRoundState: initialState,
-        players: session.players.map((p) => ({
-          ...p,
-          currentAnswer: null,
-          hasAnswered: false,
-        })),
-      },
-    });
+    set({ session: { ...session, ...updates } });
   },
 
   submitAnswer: (playerId, answer) => {
@@ -266,78 +175,15 @@ export const useGameStore = create<GameStore>((set, get) => ({
     const { session } = get();
     if (!session) return;
 
-    const roundQuestions = session.selectedQuestions[session.currentRound];
-    const question = roundQuestions?.[session.currentQuestionInRound];
-    if (!question) return;
-
-    const difficulty = [...DIFFICULTY_TIERS][session.currentRound];
-    const fullRoundPoints = POINTS_PER_ROUND[difficulty] ?? 0;
-    const questionsInRound = roundQuestions.length;
-    const multiplier = getQuestionMultiplier(session.currentQuestionInRound, questionsInRound);
-    const basePoints = Math.round(fullRoundPoints * multiplier);
-
-    // Delegate scoring to the round type definition
-    const roundTypeId = session.roundTypeSequence[session.currentRound];
-    const roundDef = getRoundDefinition(roundTypeId);
-    const scoreUpdates = roundDef.score(
-      session.players,
-      question,
-      session.activeRoundState,
-      basePoints,
-    );
-
-    // Build correct/incorrect ID lists and apply score deltas
-    const correctIds: string[] = [];
-    const incorrectIds: string[] = [];
-    const deltaMap = new Map(scoreUpdates.map((u) => [u.playerId, u]));
-
-    const updatedPlayers = session.players.map((p) => {
-      const update = deltaMap.get(p.id);
-      const isCorrect = checkAnswer(question, p.currentAnswer);
-
-      if (isCorrect) {
-        correctIds.push(p.id);
-      } else {
-        incorrectIds.push(p.id);
-      }
-
-      // Apply steal deductions
-      const stolenFrom = scoreUpdates
-        .filter((u) => u.stealFromId === p.id)
-        .reduce((sum, u) => sum + Math.abs(u.delta) * 0.25, 0);
-
-      const delta = update?.delta ?? 0;
-      return {
-        ...p,
-        score: Math.max(0, p.score + delta - stolenFrom),
-      };
-    });
-
-    const roundResult: RoundResult = {
-      roundIndex: session.currentRound,
-      difficulty,
-      question,
-      correctPlayers: correctIds,
-      incorrectPlayers: incorrectIds,
-    };
-
-    // Update team scores
-    const updatedTeams = session.teams.map((team) => {
-      const teamDelta = scoreUpdates
-        .filter((u) => updatedPlayers.find((p) => p.id === u.playerId)?.teamId === team.id)
-        .reduce((sum, u) => sum + u.delta, 0);
-      const teamStolenFrom = scoreUpdates
-        .filter((u) => u.stealFromId && updatedPlayers.find((p) => p.id === u.stealFromId)?.teamId === team.id)
-        .reduce((sum, u) => sum + Math.abs(u.delta) * 0.25, 0);
-      return { ...team, score: Math.max(0, team.score + teamDelta - teamStolenFrom) };
-    });
+    const result = computeRevealAnswers(session);
+    if (!result) return;
 
     set({
       session: {
         ...session,
-        players: updatedPlayers,
-        roundHistory: [...session.roundHistory, roundResult],
-        teams: updatedTeams,
+        players: result.updatedPlayers,
+        roundHistory: [...session.roundHistory, result.roundResult],
+        teams: result.updatedTeams,
       },
     });
   },
@@ -346,63 +192,11 @@ export const useGameStore = create<GameStore>((set, get) => ({
     const { session } = get();
     if (!session) return 'done';
 
-    const roundQuestions = session.selectedQuestions[session.currentRound];
-    const nextQuestionIdx = session.currentQuestionInRound + 1;
-
-    // More questions in this round?
-    if (roundQuestions && nextQuestionIdx < roundQuestions.length) {
-      // Keep the same round state (don't reinitialize) — it persists across questions in a round
-      set({
-        session: {
-          ...session,
-          currentQuestionInRound: nextQuestionIdx,
-          currentPlayerIndex: 0,
-          allAnswersIn: false,
-          timerStarted: false,
-          players: session.players.map((p) => ({
-            ...p,
-            currentAnswer: null,
-            hasAnswered: false,
-            answerTimestamp: undefined,
-          })),
-        },
-      });
-      return 'next_question';
+    const { update, result } = computeProceedToNextRound(session);
+    if (Object.keys(update).length > 0) {
+      set({ session: { ...session, ...update } });
     }
-
-    // Move to next round
-    const nextRound = session.currentRound + 1;
-
-    if (nextRound >= DIFFICULTY_TIERS.length) {
-      return 'done';
-    }
-
-    const roundTypeId = session.roundTypeSequence[nextRound];
-    const roundDef = getRoundDefinition(roundTypeId);
-    const nextRoundQuestions = session.selectedQuestions[nextRound];
-    const firstQuestion = nextRoundQuestions?.[0];
-    const initialState = firstQuestion ? roundDef.createInitialState(session.players, firstQuestion) : null;
-
-    set({
-      session: {
-        ...session,
-        currentRound: nextRound,
-        currentQuestionInRound: 0,
-        currentPlayerIndex: 0,
-        allAnswersIn: false,
-        timerStarted: false,
-        activeRoundState: initialState,
-        players: session.players.map((p) => ({
-          ...p,
-          currentAnswer: null,
-          hasAnswered: false,
-          answerTimestamp: undefined,
-          selectedCategory: undefined,
-          stealTarget: undefined,
-        })),
-      },
-    });
-    return 'next_round';
+    return result;
   },
 
   resetGame: () => set({ session: null }),
@@ -422,37 +216,10 @@ export const useGameStore = create<GameStore>((set, get) => ({
     const { session, availablePacks } = get();
     if (!session) return;
 
-    const packs = availablePacks.filter((p) => packIds.includes(p.pack_id));
-    if (packs.length === 0) return;
-
-    set({
-      session: {
-        ...session,
-        id: generateId(),
-        pack: packs[0],
-        currentRound: 0,
-        currentQuestionInRound: 0,
-        selectedQuestions: [],
-        roundHistory: [],
-        currentPlayerIndex: 0,
-        allAnswersIn: false,
-        timerStarted: false,
-        settings: { ...session.settings, packIds },
-        roundTypeSequence: [...ROUND_TYPE_SEQUENCE],
-        activeRoundState: null,
-        players: session.players.map((p) => ({
-          ...p,
-          score: 0,
-          currentAnswer: null,
-          hasAnswered: false,
-          eliminated: undefined,
-          answerTimestamp: undefined,
-          selectedCategory: undefined,
-          stealTarget: undefined,
-        })),
-        teams: session.teams.map((t) => ({ ...t, score: 0 })),
-      },
-    });
+    const updates = buildResetForReplay(session, availablePacks, packIds);
+    if (updates) {
+      set({ session: { ...session, ...updates } });
+    }
   },
 
   getCurrentQuestion: () => {

@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import type { Question } from '../../types';
+import { useBottomNav } from './BottomNavContext';
 
 interface AnswerInputProps {
   question: Question;
@@ -16,12 +17,14 @@ export default function AnswerInput({ question, onSubmit, disabled }: AnswerInpu
   const [sequenceOrder, setSequenceOrder] = useState<number[]>([]);
   const [isLocked, setIsLocked] = useState(false);
 
+  const bottomNav = useBottomNav();
+
   const handleMultipleChoice = (index: number) => {
     if (isLocked || disabled) return;
     setSelected(index);
   };
 
-  const handleLockIn = () => {
+  const handleLockIn = useCallback(() => {
     if (isLocked || disabled) return;
 
     if (question.type === 'multiple_choice' || question.type === 'image_based') {
@@ -38,7 +41,19 @@ export default function AnswerInput({ question, onSubmit, disabled }: AnswerInpu
       setIsLocked(true);
       onSubmit(sequenceOrder.join(','));
     }
-  };
+  }, [isLocked, disabled, question, selected, numericValue, sequenceOrder, onSubmit]);
+
+  const canLockIn = !isLocked && !disabled && (
+    (question.type === 'multiple_choice' && selected !== null) ||
+    (question.type === 'image_based' && selected !== null) ||
+    (question.type === 'numeric_input' && numericValue.trim() !== '') ||
+    (question.type === 'sequence' && sequenceOrder.length === (question.sequence_items ?? question.options ?? []).length)
+  );
+
+  // Report CTA state to bottom nav context when present
+  useEffect(() => {
+    bottomNav?.setCTAState({ canLockIn, isLocked, lockIn: handleLockIn });
+  }, [canLockIn, isLocked, handleLockIn, bottomNav]);
 
   const handleSequenceToggle = (index: number) => {
     if (isLocked || disabled) return;
@@ -50,10 +65,13 @@ export default function AnswerInput({ question, onSubmit, disabled }: AnswerInpu
     });
   };
 
+  // Hide built-in button when bottom nav is managing the CTA
+  const hideButton = bottomNav?.externalCTA ?? false;
+
   return (
     <div className="w-full">
-      {/* Locked-in indicator */}
-      {isLocked && (
+      {/* Locked-in indicator (only when no external CTA manages this) */}
+      {isLocked && !hideButton && (
         <div className="flex items-center justify-center mb-4">
           <span className="text-xs text-green-600 font-medium px-3 py-1 rounded-full bg-neon-green/10">
             LOCKED IN
@@ -142,8 +160,8 @@ export default function AnswerInput({ question, onSubmit, disabled }: AnswerInpu
         </div>
       )}
 
-      {/* Lock In Button */}
-      {!isLocked && (
+      {/* Lock In Button (hidden when bottom nav context is present) */}
+      {!isLocked && !hideButton && (
         <motion.button
           onClick={handleLockIn}
           disabled={disabled || (question.type === 'multiple_choice' && selected === null) || (question.type === 'numeric_input' && !numericValue.trim()) || (question.type === 'sequence' && sequenceOrder.length !== (question.sequence_items ?? question.options ?? []).length)}

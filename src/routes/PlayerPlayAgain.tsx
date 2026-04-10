@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useMultiplayerStore } from '../stores/multiplayerStore';
 import { usePlayerMultiplayer } from '../hooks/useMultiplayer';
+import GameLayout, { NavCTA, NavBack } from '../components/Game/GameLayout';
 
 const CURRENT_ROUTE = '/player/play-again';
 
@@ -13,16 +14,11 @@ export function Component() {
   const { disconnect } = usePlayerMultiplayer();
   const mpReset = useMultiplayerStore((s) => s.reset);
 
-  // Navigate when host broadcasts a new route (e.g. lobby once categories are picked)
   useEffect(() => {
     if (gameState?.route && gameState.route !== CURRENT_ROUTE) {
       navigate(gameState.route, { replace: true });
     }
   }, [gameState?.route, navigate]);
-
-  const handleStay = () => {
-    // Nothing to do — just wait for host to broadcast the lobby route
-  };
 
   const handleLeave = () => {
     disconnect();
@@ -31,14 +27,15 @@ export function Component() {
   };
 
   return (
-    <motion.div
-      className="min-h-dvh flex flex-col items-center justify-center bg-bg-primary px-6"
-      initial={{ opacity: 0, scale: 0.96 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.35 }}
+    <GameLayout
+      secondaryAction={<NavBack onClick={handleLeave} label="Leave" icon={
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+        </svg>
+      } />}
+      cta={<NavCTA onClick={() => {}}>I'M IN!</NavCTA>}
     >
-      <div className="w-full max-w-sm flex flex-col items-center gap-8">
+      <div className="flex flex-col items-center gap-8 pt-16">
         <motion.span
           className="text-6xl"
           initial={{ scale: 0.5, opacity: 0 }}
@@ -69,31 +66,7 @@ export function Component() {
           )}
         </motion.p>
 
-        <motion.div
-          className="flex flex-col gap-3 w-full"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35 }}
-        >
-          <motion.button
-            onClick={handleStay}
-            className="w-full py-4 rounded-full font-display text-xl tracking-wide bg-gradient-to-r from-neon-cyan to-primary-container text-white shadow-primary"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            I'M IN!
-          </motion.button>
-          <motion.button
-            onClick={handleLeave}
-            className="w-full py-3.5 rounded-full font-display text-lg tracking-wide bg-bg-card shadow-soft text-text-secondary hover:text-text-primary hover:bg-bg-elevated transition-all"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            LEAVE
-          </motion.button>
-        </motion.div>
-
-        {/* Waiting indicator — shown immediately since staying is the default */}
+        {/* Waiting indicator */}
         <motion.div
           className="flex items-center justify-center gap-3"
           animate={{ opacity: [0.5, 1, 0.5] }}
@@ -103,6 +76,6 @@ export function Component() {
           <p className="text-text-muted text-sm">Waiting for host to pick categories</p>
         </motion.div>
       </div>
-    </motion.div>
+    </GameLayout>
   );
 }

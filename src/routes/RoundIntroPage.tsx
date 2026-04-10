@@ -6,6 +6,7 @@ import { useMultiplayerStore } from '../stores/multiplayerStore';
 import { broadcastHostState } from '../hooks/useMultiplayer';
 import { getDifficultyColour, getDifficultyLabel, formatRands } from '../utils/helpers';
 import { getRoundDefinition } from '../roundTypes/registry';
+import GameLayout from '../components/Game/GameLayout';
 
 export function Component() {
   const navigate = useNavigate();
@@ -58,25 +59,33 @@ export function Component() {
   const roundDef = roundTypeId ? getRoundDefinition(roundTypeId) : null;
 
   return (
-    <motion.div
-      className="min-h-dvh flex flex-col items-center justify-center bg-bg-primary px-6"
-      initial={{ opacity: 0, scale: 0.96 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 1.02 }}
-      transition={{ duration: 0.35 }}
-      onClick={handleAdvance}
+    <GameLayout
+      header={
+        <div className="px-4 pt-3 pb-1 flex items-center justify-between">
+          <span className="font-display text-xs font-bold text-text-secondary uppercase tracking-wider">
+            Round {roundIndex + 1} of {totalRounds}
+          </span>
+          <span className="text-xs text-text-muted tracking-[0.15em] uppercase">
+            Worth {formatRands(points)}
+          </span>
+        </div>
+      }
+      cta={
+        <div className="flex flex-col items-center gap-2" onClick={handleAdvance}>
+          <div className="w-full h-1.5 bg-bg-elevated rounded-full overflow-hidden">
+            <motion.div
+              className="h-full rounded-full"
+              style={{ backgroundColor: roundDef?.theme.primary ?? diffColour }}
+              initial={{ width: '0%' }}
+              animate={{ width: '100%' }}
+              transition={{ duration: 3, ease: 'linear' }}
+            />
+          </div>
+          <p className="text-text-muted text-xs">Tap anywhere to skip</p>
+        </div>
+      }
     >
-      <div className="w-full max-w-sm flex flex-col items-center gap-6">
-        {/* Round label */}
-        <motion.p
-          className="text-xs text-text-muted tracking-[0.2em] uppercase font-medium"
-          initial={{ opacity: 0, y: -8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-        >
-          Round {roundIndex + 1} of {totalRounds}
-        </motion.p>
-
+      <div className="flex flex-col items-center gap-6 pt-12" onClick={handleAdvance}>
         {/* Round type name + icon */}
         {roundDef && (
           <motion.div
@@ -121,32 +130,11 @@ export function Component() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35 }}
         >
-          <span className="text-xs text-text-muted tracking-[0.15em] uppercase">Worth</span>
           <span className="font-score text-3xl text-neon-gold font-bold">
             {formatRands(points)}
           </span>
         </motion.div>
-
-        {/* Progress bar (fills over 3s) */}
-        <motion.div className="w-full h-1.5 bg-bg-elevated rounded-full overflow-hidden mt-4">
-          <motion.div
-            className="h-full rounded-full"
-            style={{ backgroundColor: roundDef?.theme.primary ?? diffColour }}
-            initial={{ width: '0%' }}
-            animate={{ width: '100%' }}
-            transition={{ duration: 3, ease: 'linear' }}
-          />
-        </motion.div>
-
-        <motion.p
-          className="text-text-muted text-xs"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-        >
-          Tap anywhere to skip
-        </motion.p>
       </div>
-    </motion.div>
+    </GameLayout>
   );
 }

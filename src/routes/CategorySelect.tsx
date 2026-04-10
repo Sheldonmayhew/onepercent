@@ -7,6 +7,7 @@ import { useProfileStore } from '../stores/profileStore';
 import type { MultiplayerMode } from '../types';
 import { TEAM_NAMES, TEAM_COLOURS } from '../types';
 import { generateId } from '../utils/helpers';
+import { motion as m } from 'framer-motion';
 
 function CategoryIcon({ name, className = 'w-6 h-6' }: { name: string; className?: string }) {
   const props = { className, fill: 'none', viewBox: '0 0 24 24', strokeWidth: 2, stroke: 'currentColor' } as const;
@@ -84,27 +85,18 @@ export function Component() {
   const teamCount = locationState?.teamCount ?? 2;
   const isReplay = locationState?.replay === true;
 
-  const [selectedPacks, setSelectedPacks] = useState<string[]>(
-    availablePacks.length > 0 ? [availablePacks[0].pack_id] : []
-  );
+  const [selectedPacks, setSelectedPacks] = useState<string[]>([]);
 
   const allSelected = availablePacks.length > 0 && selectedPacks.length === availablePacks.length;
 
   const togglePack = (packId: string) => {
-    setSelectedPacks((prev) => {
-      const isSelected = prev.includes(packId);
-      // Always keep at least one pack selected
-      if (isSelected && prev.length <= 1) return prev;
-      return isSelected ? prev.filter((id) => id !== packId) : [...prev, packId];
-    });
+    setSelectedPacks((prev) =>
+      prev.includes(packId) ? prev.filter((id) => id !== packId) : [...prev, packId]
+    );
   };
 
   const toggleAll = () => {
-    if (allSelected) {
-      setSelectedPacks(availablePacks.length > 0 ? [availablePacks[0].pack_id] : []);
-    } else {
-      setSelectedPacks(availablePacks.map((p) => p.pack_id));
-    }
+    setSelectedPacks(allSelected ? [] : availablePacks.map((p) => p.pack_id));
   };
 
   const totalQuestions = availablePacks
@@ -123,7 +115,6 @@ export function Component() {
     const packs = selectedPacks.length > 0 ? selectedPacks : availablePacks.slice(0, 1).map((p) => p.pack_id);
 
     if (isReplay) {
-      // Replay: keep existing room and players, just update packs and reset scores
       resetForReplay(packs);
       broadcastHostState('/player/lobby');
       navigate('/host/lobby');
@@ -132,7 +123,6 @@ export function Component() {
 
     initHostGame(mode, packs);
 
-    // If team mode with more than 2 teams, regenerate teams with the correct count
     if (mode === 'team' && teamCount > 2) {
       const store = useGameStore.getState();
       if (store.session) {
@@ -159,7 +149,6 @@ export function Component() {
 
   const handleBack = () => {
     if (isReplay) {
-      // Cancel replay — broadcast results route back to players and return to results
       broadcastHostState('/player/results');
       navigate('/host/results');
     } else if (isQuickPlay) {
@@ -169,122 +158,98 @@ export function Component() {
     }
   };
 
-  const title = isQuickPlay ? 'QUICK PLAY' : 'SELECT PACKS';
+  const handleStart = () => {
+    if (isQuickPlay) handleQuickPlay();
+    else handleHost();
+  };
 
   return (
-    <div className="min-h-dvh flex flex-col bg-bg-primary pb-24">
-      <motion.div
-        className="flex-1 max-w-2xl mx-auto w-full px-4 pt-6"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.3 }}
-      >
-        <h1 className="font-display text-3xl text-text-primary text-center mb-6 tracking-tight">
-          {title}
-        </h1>
-
-        {/* Pack grid */}
-        <div>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="font-display text-xl text-text-primary tracking-wide">Categories</h2>
-            <button
-              onClick={toggleAll}
-              className="text-xs text-neon-cyan font-medium hover:text-neon-purple transition-colors"
-            >
-              {allSelected ? 'Deselect All' : 'Select All'}
-            </button>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3">
-            {availablePacks.map((pack) => {
-              const isSelected = selectedPacks.includes(pack.pack_id);
-              const theme = getCategoryTheme(pack.name);
-              return (
-                <motion.button
-                  key={pack.pack_id}
-                  onClick={() => togglePack(pack.pack_id)}
-                  className={`relative overflow-hidden rounded-3xl text-left transition-all duration-200 ${
-                    isSelected ? 'ring-2 ring-white shadow-soft-lg scale-[1.02]' : 'opacity-70'
-                  }`}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  {/* Gradient background */}
-                  <div className={`bg-gradient-to-br ${theme.gradient} p-4 pb-5 min-h-[160px] flex flex-col justify-between`}>
-                    {/* Icon */}
-                    <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-white/20 text-white backdrop-blur-sm">
-                      <CategoryIcon name={theme.iconKey} />
-                    </span>
-
-                    {/* Text */}
-                    <div className="mt-auto">
-                      <h3 className="font-display text-lg font-bold text-white leading-tight">
-                        {pack.name}
-                      </h3>
-                      <p className="text-white/70 text-[11px] mt-0.5 leading-snug line-clamp-2">
-                        {theme.description}
-                      </p>
-                    </div>
-
-                    {/* Selected badge */}
-                    {isSelected && (
-                      <span className="absolute bottom-3 right-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
-                        <svg className="w-3 h-3" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        Selected
-                      </span>
-                    )}
-
-                    {/* Watermark icon */}
-                    <span className="absolute -bottom-2 -right-2 opacity-10 pointer-events-none select-none text-white">
-                      <CategoryIcon name={theme.iconKey} className="w-20 h-20" />
-                    </span>
-                  </div>
-                </motion.button>
-              );
-            })}
-          </div>
-
-          <p className="text-xs text-text-muted mt-2">
-            {totalQuestions} questions from {selectedPacks.length} pack
-            {selectedPacks.length !== 1 ? 's' : ''}
+    <div className="min-h-dvh flex flex-col bg-bg-primary pb-20">
+      <div className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 pt-5 sm:pt-8 lg:pt-12">
+        {/* Header row */}
+        <div className="flex items-center justify-between mb-4 md:mb-6 lg:mb-8">
+          <h2 className="font-display text-lg md:text-2xl lg:text-3xl text-text-primary tracking-wide">Categories</h2>
+          <p className="text-xs md:text-sm lg:text-base text-text-muted">
+            {totalQuestions} questions from {selectedPacks.length} pack{selectedPacks.length !== 1 ? 's' : ''}
           </p>
         </div>
 
-        {/* Action buttons */}
-        <div className="mt-6 space-y-3">
-          {isQuickPlay ? (
-            <motion.button
-              onClick={handleQuickPlay}
-              className="w-full py-4 rounded-full font-display text-2xl tracking-wider bg-neon-gold text-text-primary shadow-gold flex items-center justify-center gap-2"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-              START
-            </motion.button>
-          ) : (
-            <motion.button
-              onClick={handleHost}
-              className="w-full py-4 rounded-full font-display text-2xl tracking-wider bg-gradient-to-r from-neon-cyan to-primary-container text-white shadow-primary"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              NEXT
-            </motion.button>
-          )}
+        {/* Category grid — responsive columns */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-5">
+          {availablePacks.map((pack) => {
+            const isSelected = selectedPacks.includes(pack.pack_id);
+            const theme = getCategoryTheme(pack.name);
+            return (
+              <motion.button
+                key={pack.pack_id}
+                onClick={() => togglePack(pack.pack_id)}
+                className={`relative overflow-hidden rounded-2xl md:rounded-3xl text-left transition-all duration-200 aspect-square ${
+                  isSelected ? 'ring-2 ring-white shadow-soft-lg scale-[1.02]' : 'opacity-60'
+                }`}
+                whileTap={{ scale: 0.97 }}
+              >
+                <div className={`bg-gradient-to-br ${theme.gradient} p-3.5 md:p-5 lg:p-6 h-full flex flex-col justify-between`}>
+                  <span className="flex items-center justify-center w-9 h-9 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-xl md:rounded-2xl bg-white/20 text-white backdrop-blur-sm">
+                    <CategoryIcon name={theme.iconKey} className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
+                  </span>
+                  <div>
+                    <h3 className="font-display text-base md:text-lg lg:text-xl font-bold text-white leading-tight">{pack.name}</h3>
+                    <p className="text-white/60 text-[10px] md:text-xs lg:text-sm mt-0.5 leading-snug line-clamp-2">{theme.description}</p>
+                  </div>
+                  {isSelected && (
+                    <span className="absolute top-3 right-3 md:top-4 md:right-4 w-6 h-6 md:w-7 md:h-7 rounded-full bg-white/25 backdrop-blur-sm flex items-center justify-center">
+                      <svg className="w-3.5 h-3.5 md:w-4 md:h-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                  )}
+                </div>
+              </motion.button>
+            );
+          })}
         </div>
+      </div>
 
-        <motion.button
-          onClick={handleBack}
-          className="w-full mt-4 py-2.5 text-text-secondary hover:text-text-primary transition-colors text-sm"
-        >
-          ← Back
-        </motion.button>
-      </motion.div>
+      {/* ── Bottom nav: HOME | SELECT ALL | START ── */}
+      <nav className="fixed bottom-0 inset-x-0 bg-bg-card/90 backdrop-blur-md border-t border-outline-variant/10 safe-area-bottom z-40">
+        <div className="max-w-5xl mx-auto flex items-center justify-between px-4 md:px-6 lg:px-8 py-2.5 md:py-3 h-16 md:h-18 lg:h-20">
+          {/* HOME */}
+          <m.button
+            onClick={handleBack}
+            className="flex flex-col items-center gap-0.5 md:gap-1 text-text-muted hover:text-text-secondary transition-colors px-3 py-1"
+            whileTap={{ scale: 0.9 }}
+          >
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+            <span className="text-[10px] md:text-xs font-bold tracking-wide">HOME</span>
+          </m.button>
+
+          {/* SELECT ALL — center pill CTA */}
+          <m.button
+            onClick={toggleAll}
+            className="flex items-center gap-2 bg-gradient-to-r from-neon-cyan to-primary-container text-white font-display text-sm md:text-base font-bold tracking-wide px-8 md:px-10 py-3 md:py-3.5 rounded-full shadow-primary"
+            whileTap={{ scale: 0.95 }}
+          >
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {allSelected ? 'DESELECT ALL' : 'SELECT ALL'}
+          </m.button>
+
+          {/* START */}
+          <m.button
+            onClick={handleStart}
+            className="flex flex-col items-center gap-0.5 md:gap-1 text-text-muted hover:text-text-secondary transition-colors px-3 py-1"
+            whileTap={{ scale: 0.9 }}
+          >
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <span className="text-[10px] md:text-xs font-bold tracking-wide">START</span>
+          </m.button>
+        </div>
+      </nav>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { useMultiplayerStore } from '../stores/multiplayerStore';
 import { usePlayerMultiplayer } from '../hooks/useMultiplayer';
 import { getDifficultyColour, formatRands } from '../utils/helpers';
 import { getRoundDefinition } from '../roundTypes/registry';
+import GameLayout, { NavBack } from '../components/Game/GameLayout';
 
 const CURRENT_ROUTE = '/player/round-intro';
 
@@ -19,14 +20,12 @@ export function Component() {
   const me = gameState?.players.find((p) => p.id === playerId);
   const round = gameState?.round;
 
-  // Signal host we're ready on mount
   useEffect(() => {
     if (playerId != null && round != null) {
       sendReady(playerId, round.index);
     }
   }, [playerId, round?.index, sendReady]);
 
-  // Navigate when host broadcasts a new route
   useEffect(() => {
     if (gameState?.route && gameState.route !== CURRENT_ROUTE) {
       navigate(gameState.route, { replace: true });
@@ -46,35 +45,36 @@ export function Component() {
   const diffColour = getDifficultyColour(difficulty);
 
   return (
-    <motion.div
-      className="min-h-dvh flex flex-col bg-bg-primary px-4 pt-6 pb-8"
-      initial={{ opacity: 0, scale: 0.96 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 1.02 }}
-      transition={{ duration: 0.35 }}
-    >
-      {/* Header bar */}
-      <div className="flex items-center justify-between mb-6 w-full max-w-sm mx-auto">
-        <div className="flex items-center gap-2">
-          {me && <span className="text-2xl">{me.avatar}</span>}
-          <div>
-            <p className="font-medium text-text-primary text-sm">{playerName}</p>
-            {me && (
-              <p className="text-xs text-neon-gold font-score">
-                R{me.score.toLocaleString('en-ZA')}
-              </p>
-            )}
+    <GameLayout
+      header={
+        <div className="flex items-center justify-between px-4 pt-3 pb-1">
+          <div className="flex items-center gap-2">
+            {me && <span className="text-2xl">{me.avatar}</span>}
+            <div>
+              <p className="font-medium text-text-primary text-sm">{playerName}</p>
+              {me && <p className="text-xs text-neon-gold font-score">R{me.score.toLocaleString('en-ZA')}</p>}
+            </div>
           </div>
         </div>
-        <button
-          onClick={handleLeave}
-          className="text-xs text-text-muted hover:text-neon-pink transition-colors px-3 py-1.5 rounded-lg bg-bg-card"
+      }
+      secondaryAction={<NavBack onClick={handleLeave} label="Leave" icon={
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+        </svg>
+      } />}
+      cta={
+        <motion.div
+          className="flex items-center gap-2 justify-center py-3.5 rounded-2xl bg-neon-cyan/10 border border-neon-cyan/20"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.45 }}
         >
-          LEAVE
-        </button>
-      </div>
-
-      <div className="w-full max-w-sm mx-auto flex flex-col items-center gap-6 flex-1 justify-center">
+          <div className="w-2 h-2 rounded-full bg-neon-cyan animate-pulse" />
+          <span className="text-neon-cyan text-xs font-medium tracking-wide">READY — WAITING FOR HOST</span>
+        </motion.div>
+      }
+    >
+      <div className="flex flex-col items-center gap-6 pt-8">
         {/* Round label */}
         <motion.p
           className="text-xs text-text-muted tracking-[0.2em] uppercase font-medium"
@@ -85,7 +85,7 @@ export function Component() {
           Round {roundIndex + 1} of {totalRounds}
         </motion.p>
 
-        {/* Round type name + icon */}
+        {/* Round type */}
         {(() => {
           const roundType = round?.roundType;
           if (!roundType) return null;
@@ -98,20 +98,15 @@ export function Component() {
               transition={{ delay: 0.15, type: 'spring', stiffness: 300, damping: 18 }}
             >
               <span className="text-4xl">{def.theme.icon}</span>
-              <span
-                className="font-display text-xl font-bold tracking-wide uppercase"
-                style={{ color: def.theme.primary }}
-              >
+              <span className="font-display text-xl font-bold tracking-wide uppercase" style={{ color: def.theme.primary }}>
                 {def.name}
               </span>
-              <span className="text-text-secondary text-xs text-center italic">
-                {def.tagline}
-              </span>
+              <span className="text-text-secondary text-xs text-center italic">{def.tagline}</span>
             </motion.div>
           );
         })()}
 
-        {/* Difficulty badge */}
+        {/* Difficulty */}
         <motion.div
           className="flex flex-col items-center gap-2"
           initial={{ opacity: 0, y: 12 }}
@@ -134,18 +129,7 @@ export function Component() {
           <span className="text-xs text-text-muted tracking-[0.15em] uppercase">Worth</span>
           <span className="font-score text-3xl text-neon-gold font-bold">{formatRands(points)}</span>
         </motion.div>
-
-        {/* Ready indicator */}
-        <motion.div
-          className="flex items-center gap-2 bg-neon-cyan/10 border border-neon-cyan/20 rounded-full px-4 py-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.45 }}
-        >
-          <div className="w-2 h-2 rounded-full bg-neon-cyan animate-pulse" />
-          <span className="text-neon-cyan text-xs font-medium tracking-wide">READY — WAITING FOR HOST</span>
-        </motion.div>
       </div>
-    </motion.div>
+    </GameLayout>
   );
 }

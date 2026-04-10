@@ -5,11 +5,21 @@ import { useMultiplayerStore } from '../stores/multiplayerStore';
 import { usePlayerMultiplayer } from '../hooks/useMultiplayer';
 import { useTimer } from '../hooks/useTimer';
 import AnswerInput from '../components/Game/AnswerInput';
+import { BottomNavProvider, useBottomNav } from '../components/Game/BottomNavContext';
 import { getRoundDefinition } from '../roundTypes/registry';
+import { formatRands } from '../utils/helpers';
 
 const CURRENT_ROUTE = '/player/play';
 
 export function Component() {
+  return (
+    <BottomNavProvider>
+      <PlayerPlayInner />
+    </BottomNavProvider>
+  );
+}
+
+function PlayerPlayInner() {
   const navigate = useNavigate();
   const gameState = useMultiplayerStore((s) => s.gameState);
   const playerId = useMultiplayerStore((s) => s.playerId);
@@ -30,14 +40,10 @@ export function Component() {
     autoStart: false,
   });
 
-  // Start timer when host signals timerStarted
   useEffect(() => {
-    if (timerStarted) {
-      start();
-    }
+    if (timerStarted) start();
   }, [timerStarted, start]);
 
-  // Navigate when host broadcasts a new route
   useEffect(() => {
     if (gameState?.route && gameState.route !== CURRENT_ROUTE) {
       navigate(gameState.route, { replace: true });
@@ -57,158 +63,95 @@ export function Component() {
   };
 
   const isLockedIn = me?.hasAnswered ?? lockedIn.current;
-
-  // Determine player colour (fallback to first player colour if missing)
   const playerColour = me?.colour ?? '#4F46E5';
 
+  const isUrgent = timeLeft <= 5;
+  const isCritical = timeLeft <= 3;
+  const timerColor = isCritical ? 'bg-neon-pink' : isUrgent ? 'bg-neon-gold' : 'bg-neon-cyan';
+
+  const bottomNav = useBottomNav();
+  const ctaState = bottomNav?.ctaState ?? null;
+  const showLockIn = timerStarted && !isLockedIn && ctaState && !ctaState.isLocked;
+
   return (
-    <motion.div
-      className="min-h-dvh flex flex-col bg-bg-primary px-4 pt-6 pb-8"
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-    >
-      {/* Header bar */}
-      <div className="flex items-center justify-between mb-4 w-full max-w-lg mx-auto">
+    <div className="h-dvh flex flex-col bg-bg-primary safe-area-top overflow-hidden">
+      {/* Timer bar */}
+      {timerStarted && (
+        <div className="w-full h-2 bg-bg-elevated shrink-0">
+          <motion.div
+            className={`h-full ${timerColor} transition-colors duration-300 ${isCritical ? 'animate-timer-pulse' : ''}`}
+            initial={{ width: '100%' }}
+            animate={{ width: `${progress * 100}%` }}
+            transition={{ duration: 0.3, ease: 'linear' }}
+          />
+        </div>
+      )}
+
+      {/* Header */}
+      <div className="flex items-center justify-between px-4 sm:px-8 lg:px-12 py-2 shrink-0">
         <div className="flex items-center gap-2">
-          {me && <span className="text-2xl">{me.avatar}</span>}
+          {me && <span className="text-xl">{me.avatar}</span>}
           <div>
-            <p className="font-medium text-text-primary text-sm">{playerName}</p>
-            {me && (
-              <p className="text-xs text-neon-gold font-score">
-                R{me.score.toLocaleString('en-ZA')}
-              </p>
-            )}
+            <p className="font-medium text-text-primary text-xs">{playerName}</p>
+            {me && <p className="text-[10px] text-neon-gold font-score">R{me.score.toLocaleString('en-ZA')}</p>}
           </div>
         </div>
-        <button
-          onClick={handleLeave}
-          className="text-xs text-text-muted hover:text-neon-pink transition-colors px-3 py-1.5 rounded-lg bg-bg-card"
-        >
+        {timerStarted && (
+          <span className={`font-score text-sm font-bold tabular-nums ${isCritical ? 'text-neon-pink animate-timer-pulse' : isUrgent ? 'text-neon-gold' : 'text-text-secondary'}`}>
+            {timeLeft}s
+          </span>
+        )}
+        <button onClick={handleLeave} className="text-[10px] text-text-muted hover:text-neon-pink transition-colors px-2 py-1 rounded">
           LEAVE
         </button>
       </div>
 
-      <div className="w-full max-w-lg mx-auto flex flex-col gap-5 flex-1">
-        {/* Question card */}
-        {round && (
+      {/* Question card */}
+      {round && (
+        <div className="shrink-0 px-4 sm:px-8 lg:px-12 pb-3">
           <motion.div
-            initial={{ opacity: 0, y: 8 }}
+            className="bg-bg-card shadow-soft-md rounded-2xl p-4"
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            {/* Header above card */}
-            <div className="flex items-start justify-between mb-1">
-              <span className="font-display text-sm font-bold text-text-secondary uppercase tracking-wider">
-                Round {round.index + 1} of {round.totalRounds}
-                {round.questionsInRound > 1 && (
-                  <span className="text-text-muted font-normal ml-2">
-                    Q{round.questionInRound + 1}/{round.questionsInRound}
-                  </span>
-                )}
-              </span>
-              <span className="inline-flex items-center gap-2 bg-bg-card shadow-soft rounded-full px-3 py-1.5">
-                <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: playerColour }} />
-                <span className="text-sm font-medium text-text-primary">{playerName}'s turn</span>
+            <div className="flex items-center justify-between mb-2">
+              {round.categoryName && (
+                <span className="inline-block px-2.5 py-0.5 rounded-full bg-bg-elevated text-[10px] font-bold text-text-secondary uppercase tracking-wider">
+                  {round.categoryName}
+                </span>
+              )}
+              <span className="font-display text-sm font-bold italic text-neon-purple">
+                {formatRands(round.points)}
               </span>
             </div>
-            <p className="font-display text-2xl font-bold italic text-neon-purple mb-3">
-              Worth R{round.points.toLocaleString('en-ZA')}
+            <p className="font-responsive-question font-bold text-text-primary leading-snug">
+              {round.question.question}
             </p>
-
-            {/* Progress dots */}
-            <div className="flex gap-1.5 mb-5">
-              {Array.from({ length: round.totalRounds }).map((_, i) => (
-                <div
-                  key={i}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    i < round.index
-                      ? 'flex-1 bg-neon-cyan'
-                      : i === round.index
-                        ? 'flex-[1.5] bg-neon-cyan'
-                        : 'flex-1 bg-bg-elevated'
-                  }`}
-                />
-              ))}
-            </div>
-
-            {/* Card */}
-            <div className="bg-bg-card shadow-soft-md rounded-3xl p-5">
-              <div className="flex items-center justify-between mb-4">
-                {round.categoryName && (
-                  <span className="inline-block px-3 py-1 rounded-full bg-bg-elevated text-[11px] font-bold text-text-secondary uppercase tracking-wider">
-                    {round.categoryName}
-                  </span>
-                )}
-                {timerStarted && (
-                  <span className={`inline-flex items-center gap-1.5 font-score text-xl font-bold tabular-nums ${
-                    timeLeft <= 3 ? 'text-neon-pink animate-timer-pulse' : timeLeft <= 5 ? 'text-neon-gold' : 'text-neon-cyan'
-                  }`}>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z" clipRule="evenodd" />
-                    </svg>
-                    {timeLeft}
-                  </span>
-                )}
-              </div>
-              <p className="text-xl font-bold text-text-primary leading-snug text-left">
-                {round.question.question}
-              </p>
-              {round.question.image_url && (
-                <img
-                  src={round.question.image_url}
-                  alt="Question visual"
-                  className="mt-3 rounded-xl max-h-48 mx-auto object-contain"
-                />
-              )}
-              {timerStarted && (
-                <div className="mt-5">
-                  <div className="w-full h-2 rounded-full bg-bg-elevated overflow-hidden">
-                    <motion.div
-                      className={`h-full rounded-full transition-colors duration-300 ${
-                        timeLeft <= 3 ? 'bg-neon-pink' : 'bg-neon-gold'
-                      }`}
-                      initial={{ width: '100%' }}
-                      animate={{ width: `${progress * 100}%` }}
-                      transition={{ duration: 0.3, ease: 'linear' }}
-                    />
-                  </div>
-                  <div className="flex items-baseline justify-between mt-1.5">
-                    <span className="text-[10px] font-medium text-text-muted uppercase tracking-wider">Time Remaining</span>
-                    <span className="text-xs font-score font-medium text-text-muted tabular-nums">{timeLeft}s</span>
-                  </div>
-                </div>
-              )}
-            </div>
+            {round.question.image_url && (
+              <img src={round.question.image_url} alt="Question visual" className="mt-3 rounded-xl max-h-32 mx-auto object-contain" />
+            )}
           </motion.div>
-        )}
+        </div>
+      )}
 
-        {/* Other players' status */}
+      {/* Answer area */}
+      <div className="flex-1 min-h-0 overflow-y-auto px-4 sm:px-8 lg:px-12 pb-2">
+        {/* Other players */}
         {others.length > 0 && (
-          <div>
-            <p className="text-xs text-text-muted tracking-[0.12em] uppercase mb-2">Players</p>
+          <div className="mb-3">
             <div className="flex flex-wrap gap-2">
               {others.map((p) => (
-                <div
-                  key={p.id}
-                  className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-sm border ${
-                    p.hasAnswered
-                      ? 'bg-neon-green/10 border-neon-green/20'
-                      : 'bg-bg-card border-transparent shadow-soft'
-                  }`}
-                >
+                <div key={p.id} className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-sm border ${p.hasAnswered ? 'bg-neon-green/10 border-neon-green/20' : 'bg-bg-card border-transparent shadow-soft'}`}>
                   <span>{p.avatar}</span>
                   <span className="text-text-primary font-medium">{p.name}</span>
-                  {p.hasAnswered && (
-                    <span className="text-neon-green text-xs">✓</span>
-                  )}
+                  {p.hasAnswered && <span className="text-neon-green text-xs">✓</span>}
                 </div>
               ))}
             </div>
           </div>
         )}
 
-        {/* Answer input or locked-in state */}
         {!timerStarted && !isLockedIn && (
           <motion.div
             className="flex items-center justify-center gap-3 py-6"
@@ -251,13 +194,7 @@ export function Component() {
 
             return (
               <Suspense fallback={
-                <AnswerInput
-                  key={`player-${round.index}`}
-                  question={questionObj}
-                  onSubmit={handleAnswer}
-                  playerName={playerName ?? 'You'}
-                  playerColour={playerColour}
-                />
+                <AnswerInput key={`player-${round.index}`} question={questionObj} onSubmit={handleAnswer} playerName={playerName ?? 'You'} playerColour={playerColour} />
               }>
                 <RoundInput
                   key={`player-${round.index}-rt`}
@@ -265,9 +202,7 @@ export function Component() {
                   players={playersAsPlayers}
                   roundState={round.roundState}
                   onSubmit={(_, answer) => handleAnswer(answer)}
-                  onBuzzIn={playerId ? (_, timestamp, answer) => {
-                    sendBuzzIn(playerId, timestamp, answer);
-                  } : undefined}
+                  onBuzzIn={playerId ? (_, timestamp, answer) => { sendBuzzIn(playerId, timestamp, answer); } : undefined}
                   onUpdateState={() => {}}
                   playerId={playerId ?? ''}
                   timerStarted={timerStarted}
@@ -279,13 +214,7 @@ export function Component() {
           }
 
           return (
-            <AnswerInput
-              key={`player-${round.index}`}
-              question={questionObj}
-              onSubmit={handleAnswer}
-              playerName={playerName ?? 'You'}
-              playerColour={playerColour}
-            />
+            <AnswerInput key={`player-${round.index}`} question={questionObj} onSubmit={handleAnswer} playerName={playerName ?? 'You'} playerColour={playerColour} />
           );
         })()}
 
@@ -299,12 +228,36 @@ export function Component() {
               <span className="text-2xl text-neon-green">✓</span>
             </div>
             <p className="font-display text-xl tracking-wide text-neon-green">LOCKED IN</p>
-            <p className="text-text-muted text-sm text-center">
-              Waiting for other players…
-            </p>
           </motion.div>
         )}
       </div>
-    </motion.div>
+
+      {/* Bottom nav */}
+      <div className="shrink-0 bg-bg-card/95 backdrop-blur-md border-t border-outline-variant/10 safe-area-bottom px-4 sm:px-8 lg:px-12 pt-3 pb-5">
+        {showLockIn ? (
+          <motion.button
+            onClick={ctaState.lockIn}
+            disabled={!ctaState.canLockIn}
+            className="w-full py-3.5 rounded-2xl font-display text-lg font-bold tracking-wide bg-gradient-to-r from-neon-cyan to-primary-container text-white shadow-primary disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+            whileHover={{ scale: 1.01 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            LOCK IN
+          </motion.button>
+        ) : isLockedIn ? (
+          <div className="w-full py-3.5 rounded-2xl text-center font-display text-lg font-bold tracking-wide bg-neon-green/10 text-neon-green">
+            LOCKED IN
+          </div>
+        ) : !timerStarted ? (
+          <div className="w-full py-3.5 rounded-2xl text-center font-display text-sm tracking-wide text-text-muted">
+            Waiting for host…
+          </div>
+        ) : (
+          <div className="w-full py-3.5 rounded-2xl text-center font-display text-sm tracking-wide text-text-muted">
+            Select an answer above
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
