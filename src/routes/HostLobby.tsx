@@ -8,6 +8,8 @@ import { useHostMultiplayer, broadcastHostState, endHostGame } from '../hooks/us
 import { useProfileStore } from '../stores/profileStore';
 import { PLAYER_COLOURS } from '../types';
 import GameLayout, { NavCTA, NavBack } from '../components/Game/GameLayout';
+import { generateQuestions } from '../utils/questionGenerator';
+import { GeneratingOverlay } from '../components/Game/GeneratingOverlay';
 
 function getJoinUrl(code: string): string {
   return `${window.location.origin}${window.location.pathname}#/join?code=${code}`;
@@ -24,6 +26,8 @@ export function Component() {
 
   const [copied, setCopied] = useState(false);
   const [selectedPlayerId, setSelectedPlayerId] = useState<string | null>(null);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const availablePacks = useGameStore((s) => s.availablePacks);
   const hostAddedRef = useRef(false);
   const roomCreatedRef = useRef(false);
 
@@ -78,12 +82,22 @@ export function Component() {
     setTimeout(() => setCopied(false), 1500);
   };
 
-  const handleStartGame = () => {
+  const handleStartGame = async () => {
     try {
-      startGame();
+      const categoryNames = availablePacks
+        .filter((p) => session!.settings.packIds.includes(p.pack_id))
+        .map((p) => p.name);
+      const fallbackPacks = availablePacks.filter((p) => session!.settings.packIds.includes(p.pack_id));
+
+      setIsGenerating(true);
+      const { questions } = await generateQuestions(categoryNames, fallbackPacks);
+      setIsGenerating(false);
+
+      startGame(questions);
       broadcastHostState('/player/round-intro');
       navigate('/host/round-intro');
     } catch (err) {
+      setIsGenerating(false);
       console.error('Failed to start game:', err);
     }
   };
@@ -96,6 +110,7 @@ export function Component() {
   };
 
   return (
+    <>
     <GameLayout
       header={
         <div className="px-4 pt-4 pb-2">
@@ -305,5 +320,8 @@ export function Component() {
         )}
       </div>
     </GameLayout>
+
+    <GeneratingOverlay visible={isGenerating} />
+    </>
   );
 }

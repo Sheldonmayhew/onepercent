@@ -169,6 +169,23 @@ export const PLAYER_COLOURS = [
 
 export const PLAYER_AVATARS = ['🦁', '🐆', '🦏', '🐘', '🦒', '🦓', '🐊', '🦅'];
 
+// AI Question Generator types
+export interface GenerateQuestionsRequest {
+  categories: string[];
+  roundSequence: {
+    roundType: RoundTypeId;
+    difficulty: number;
+    questionFormat: QuestionFormat;
+    questionCount: number;
+  }[];
+}
+
+export interface GenerateQuestionsResponse {
+  questions: Question[][];
+  verified: boolean;
+  fallback: boolean;
+}
+
 export const TEAM_COLOURS = ['#FF4444', '#4488FF', '#44DD44', '#FFAA00'];
 export const TEAM_NAMES = ['Red Team', 'Blue Team', 'Green Team', 'Gold Team'];
 

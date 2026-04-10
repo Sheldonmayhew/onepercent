@@ -21,9 +21,10 @@ export function computeStartGame(
   session: GameSession,
   packs: QuestionPack[],
   allPackNames: string[],
+  preGeneratedQuestions?: import('../types').Question[][],
 ): Partial<GameSession> {
   const activePacks = packs.length > 0 ? packs : [session.pack];
-  const questions = selectQuestionsForGame(activePacks, session.players.length);
+  const questions = preGeneratedQuestions ?? selectQuestionsForGame(activePacks, session.players.length);
   const packNames = allPackNames;
 
   const roundTypeId = session.roundTypeSequence[0];

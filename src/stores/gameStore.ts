@@ -28,7 +28,7 @@ interface GameStore {
   initHostGame: (mode: MultiplayerMode, packIds: string[]) => void;
   addPlayer: (name: string, emoji?: string, isHost?: boolean) => void;
   removePlayer: (id: string) => void;
-  startGame: () => void;
+  startGame: (preGeneratedQuestions?: Question[][]) => void;
   submitAnswer: (playerId: string, answer: string | number) => void;
   revealAnswers: () => void;
   proceedToNextRound: () => 'next_question' | 'next_round' | 'done';
@@ -111,13 +111,13 @@ export const useGameStore = create<GameStore>((set, get) => ({
     });
   },
 
-  startGame: () => {
+  startGame: (preGeneratedQuestions) => {
     const { session, availablePacks } = get();
     if (!session) return;
 
     const packs = availablePacks.filter((p) => session.settings.packIds.includes(p.pack_id));
     const allPackNames = availablePacks.map((p) => p.name);
-    const updates = computeStartGame(session, packs, allPackNames);
+    const updates = computeStartGame(session, packs, allPackNames, preGeneratedQuestions);
 
     set({ session: { ...session, ...updates } });
   },

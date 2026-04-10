@@ -7,6 +7,8 @@ import { useProfileStore } from '../stores/profileStore';
 import type { MultiplayerMode } from '../types';
 import { TEAM_NAMES, TEAM_COLOURS } from '../types';
 import { generateId } from '../utils/helpers';
+import { generateQuestions } from '../utils/questionGenerator';
+import { GeneratingOverlay } from '../components/Game/GeneratingOverlay';
 import { motion as m } from 'framer-motion';
 
 function CategoryIcon({ name, className = 'w-6 h-6' }: { name: string; className?: string }) {
@@ -86,6 +88,7 @@ export function Component() {
   const isReplay = locationState?.replay === true;
 
   const [selectedPacks, setSelectedPacks] = useState<string[]>([]);
+  const [isGenerating, setIsGenerating] = useState(false);
 
   const allSelected = availablePacks.length > 0 && selectedPacks.length === availablePacks.length;
 
@@ -103,11 +106,22 @@ export function Component() {
     .filter((p) => selectedPacks.includes(p.pack_id))
     .reduce((sum, p) => sum + p.question_count, 0);
 
-  const handleQuickPlay = () => {
+  const handleQuickPlay = async () => {
     const packs = selectedPacks.length > 0 ? selectedPacks : availablePacks.slice(0, 1).map((p) => p.pack_id);
     initQuickPlay(packs);
     addPlayer(profile?.name ?? 'Player', profile?.avatar);
-    startGame();
+
+    // Get selected pack names as categories for AI generation
+    const categoryNames = availablePacks
+      .filter((p) => packs.includes(p.pack_id))
+      .map((p) => p.name);
+    const fallbackPacks = availablePacks.filter((p) => packs.includes(p.pack_id));
+
+    setIsGenerating(true);
+    const { questions } = await generateQuestions(categoryNames, fallbackPacks);
+    setIsGenerating(false);
+
+    startGame(questions);
     navigate('/quick-play/round-intro');
   };
 
@@ -250,6 +264,8 @@ export function Component() {
           </m.button>
         </div>
       </nav>
+
+      <GeneratingOverlay visible={isGenerating} />
     </div>
   );
 }

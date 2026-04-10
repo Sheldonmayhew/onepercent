@@ -62,7 +62,8 @@
       "Bash(node -e \"const d = require\\('c:/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/world-travel.json'\\); console.log\\('question_count:', d.question_count\\); console.log\\('actual questions:', d.questions.length\\); console.log\\('last 3 IDs:', d.questions.slice\\(-3\\).map\\(q => q.id\\)\\); console.log\\('sequence types:', d.questions.filter\\(q => q.type === 'sequence'\\).map\\(q => q.id\\)\\);\")",
       "Bash(grep -l \"timed_reveal\\\\|categorized\\\\|snap\\\\|switchagories\" /c/Users/Sheldon.Mayhew/Desktop/onepercent/src/data/packs/*.json)",
       "Skill(update-config)",
-      "Skill(update-config:*)"
+      "Skill(update-config:*)",
+      "mcp__plugin_supabase_supabase__deploy_edge_function"
     ],
     "additionalDirectories": [
       "C:\\Users\\Sheldon.Mayhew",
