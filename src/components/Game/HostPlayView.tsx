@@ -122,32 +122,35 @@ function HostPlayViewInner({
         </button>
       </div>
 
-      {/* ── Question area ── */}
-      <div className="shrink-0 px-4 sm:px-8 lg:px-12 pb-3">
-        <motion.div
-          className="bg-bg-card shadow-soft-md rounded-2xl p-4"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="flex items-center justify-between mb-2">
-            {question.category && (
-              <span className="inline-block px-2.5 py-0.5 rounded-full bg-bg-elevated text-[10px] font-bold text-text-secondary uppercase tracking-wider">
-                {question.category}
+      {/* ── Question area (hidden during Switchagories picking phase) ── */}
+      {!((session.activeRoundState as any)?.phase === 'picking' &&
+        session.roundTypeSequence?.[roundIndex] === 'switchagories') && (
+        <div className="shrink-0 px-4 sm:px-8 lg:px-12 pb-3">
+          <motion.div
+            className="bg-bg-card shadow-soft-md rounded-2xl p-4"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="flex items-center justify-between mb-2">
+              {question.category && (
+                <span className="inline-block px-2.5 py-0.5 rounded-full bg-bg-elevated text-[10px] font-bold text-text-secondary uppercase tracking-wider">
+                  {question.category}
+                </span>
+              )}
+              <span className="font-display text-sm font-bold italic text-neon-purple">
+                {formatRands(points)}
               </span>
+            </div>
+            <p className="font-responsive-question font-bold text-text-primary leading-snug">
+              {question.question}
+            </p>
+            {question.image_url && (
+              <img src={question.image_url} alt="Question visual" className="mt-3 rounded-xl max-h-32 mx-auto object-contain" />
             )}
-            <span className="font-display text-sm font-bold italic text-neon-purple">
-              {formatRands(points)}
-            </span>
-          </div>
-          <p className="font-responsive-question font-bold text-text-primary leading-snug">
-            {question.question}
-          </p>
-          {question.image_url && (
-            <img src={question.image_url} alt="Question visual" className="mt-3 rounded-xl max-h-32 mx-auto object-contain" />
-          )}
-        </motion.div>
-      </div>
+          </motion.div>
+        </div>
+      )}
 
       {/* ── Answer area ── */}
       <div className="flex-1 min-h-0 overflow-y-auto px-4 sm:px-8 lg:px-12 pb-2">

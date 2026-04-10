@@ -13,6 +13,8 @@ export interface BroadcastPlayer {
   answerTimestamp?: number;
   eliminated?: boolean;
   selectedCategory?: string;
+  correctCount?: number;
+  totalQuestions?: number;
 }
 
 export interface BroadcastRound {
@@ -72,6 +74,9 @@ interface MultiplayerStore {
   // Player-side game state (received from host broadcasts)
   gameState: GameBroadcast | null;
 
+  // Mock mode: drives state transitions locally instead of via Supabase
+  mockMode: boolean;
+
   // Actions
   setRole: (role: AppRole) => void;
   setRoomCode: (code: string | null) => void;
@@ -79,6 +84,7 @@ interface MultiplayerStore {
   setConnected: (val: boolean) => void;
   setError: (err: string | null) => void;
   setGameState: (state: GameBroadcast) => void;
+  setMockMode: (val: boolean) => void;
   reset: () => void;
 }
 
@@ -90,6 +96,7 @@ export const useMultiplayerStore = create<MultiplayerStore>((set) => ({
   isConnected: false,
   error: null,
   gameState: null,
+  mockMode: false,
 
   setRole: (role) => set({ role }),
   setRoomCode: (roomCode) => set({ roomCode }),
@@ -97,6 +104,7 @@ export const useMultiplayerStore = create<MultiplayerStore>((set) => ({
   setConnected: (isConnected) => set({ isConnected }),
   setError: (error) => set({ error }),
   setGameState: (gameState) => set({ gameState }),
+  setMockMode: (mockMode) => set({ mockMode }),
   reset: () =>
     set({
       role: null,
@@ -106,5 +114,6 @@ export const useMultiplayerStore = create<MultiplayerStore>((set) => ({
       isConnected: false,
       error: null,
       gameState: null,
+      mockMode: false,
     }),
 }));

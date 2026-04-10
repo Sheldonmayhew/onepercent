@@ -38,6 +38,8 @@ export function broadcastHostState(route?: string) {
   const difficulty = tiers[s.currentRound] ?? 90;
   const points = store.getCurrentPoints();
 
+  const totalQuestions = s.roundHistory.length;
+
   const players: BroadcastPlayer[] = s.players.map((p) => ({
     id: p.id,
     name: p.name,
@@ -48,6 +50,8 @@ export function broadcastHostState(route?: string) {
     answerTimestamp: p.answerTimestamp,
     eliminated: p.eliminated,
     selectedCategory: p.selectedCategory,
+    correctCount: s.roundHistory.filter((r) => r.correctPlayers.includes(p.id)).length,
+    totalQuestions,
   }));
 
   const currentRoundType = s.roundTypeSequence?.[s.currentRound] ?? 'point_builder';
@@ -118,6 +122,10 @@ export function broadcastHostState(route?: string) {
       correctPlayerIds: lastRound.correctPlayers,
       incorrectPlayerIds: lastRound.incorrectPlayers,
       roundType: currentRoundType,
+      scoreUpdates: Object.entries(lastRound.scoreDeltas).map(([playerId, delta]) => ({
+        playerId,
+        delta,
+      })),
     };
 
     // Include round data so TV display has it even if it missed the /play broadcast

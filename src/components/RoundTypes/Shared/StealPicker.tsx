@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import type { Player } from '../../../types';
+import { useBottomNav } from '../../Game/BottomNavContext';
 
 interface StealPickerProps {
   opponents: Player[];
@@ -11,17 +12,31 @@ interface StealPickerProps {
 export default function StealPicker({ opponents, onSteal, disabled }: StealPickerProps) {
   const [selected, setSelected] = useState<string | null>(null);
   const [isLocked, setIsLocked] = useState(false);
+  const bottomNav = useBottomNav();
 
   const handleSelect = (id: string) => {
     if (isLocked || disabled) return;
     setSelected(id);
   };
 
-  const handleLockIn = () => {
+  const handleLockIn = useCallback(() => {
     if (!selected || isLocked || disabled) return;
     setIsLocked(true);
     onSteal(selected);
-  };
+  }, [selected, isLocked, disabled, onSteal]);
+
+  // Register CTA state in bottom nav when present
+  useEffect(() => {
+    bottomNav?.setCTAState({
+      canLockIn: !!selected && !isLocked && !disabled,
+      isLocked,
+      lockIn: handleLockIn,
+      label: 'STEAL',
+      lockedLabel: 'STOLEN!',
+    });
+  }, [selected, isLocked, disabled, handleLockIn, bottomNav]);
+
+  const hideButton = bottomNav?.externalCTA ?? false;
 
   return (
     <div className="w-full">
@@ -57,7 +72,7 @@ export default function StealPicker({ opponents, onSteal, disabled }: StealPicke
         })}
       </div>
 
-      {!isLocked && (
+      {!isLocked && !hideButton && (
         <motion.button
           onClick={handleLockIn}
           disabled={disabled || !selected}

@@ -162,7 +162,7 @@ export default function TvReveal({ question, players, roundState: _roundState, c
                         <div className="flex-1 min-w-0">
                           <p className="text-xl font-medium text-text-primary">{p.name}</p>
                           <p className={`text-sm font-score ${wasCorrect ? 'text-neon-green' : delta < 0 ? 'text-red-500' : 'text-text-muted'}`}>
-                            {delta > 0 ? `+${formatRands(delta)}` : delta < 0 ? `-R${Math.abs(delta).toLocaleString('en-ZA')}` : 'No points'}
+                            {delta > 0 ? `+${formatRands(delta)}` : delta < 0 ? `-${Math.abs(delta).toLocaleString('en-ZA')}` : 'No points'}
                           </p>
                         </div>
                         <span className="font-score text-xl text-neon-gold">

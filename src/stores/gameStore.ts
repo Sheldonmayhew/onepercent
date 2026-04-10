@@ -37,6 +37,7 @@ interface GameStore {
   resetGame: () => void;
   resetForReplay: (packIds: string[]) => void;
   updateRoundState: (updater: (prev: unknown) => unknown) => void;
+  replaceCurrentQuestion: (question: Question) => void;
   getCurrentQuestion: () => Question | null;
   getActivePlayers: () => Player[];
   getTotalRounds: () => number;
@@ -111,11 +112,12 @@ export const useGameStore = create<GameStore>((set, get) => ({
   },
 
   startGame: () => {
-    const { session } = get();
+    const { session, availablePacks } = get();
     if (!session) return;
 
-    const packs = get().availablePacks.filter((p) => session.settings.packIds.includes(p.pack_id));
-    const updates = computeStartGame(session, packs);
+    const packs = availablePacks.filter((p) => session.settings.packIds.includes(p.pack_id));
+    const allPackNames = availablePacks.map((p) => p.name);
+    const updates = computeStartGame(session, packs, allPackNames);
 
     set({ session: { ...session, ...updates } });
   },
@@ -184,15 +186,19 @@ export const useGameStore = create<GameStore>((set, get) => ({
         players: result.updatedPlayers,
         roundHistory: [...session.roundHistory, result.roundResult],
         teams: result.updatedTeams,
+        ...(result.updatedRoundState !== undefined && {
+          activeRoundState: result.updatedRoundState,
+        }),
       },
     });
   },
 
   proceedToNextRound: () => {
-    const { session } = get();
+    const { session, availablePacks } = get();
     if (!session) return 'done';
 
-    const { update, result } = computeProceedToNextRound(session);
+    const allPackNames = availablePacks.map((p) => p.name);
+    const { update, result } = computeProceedToNextRound(session, allPackNames);
     if (Object.keys(update).length > 0) {
       set({ session: { ...session, ...update } });
     }
@@ -210,6 +216,18 @@ export const useGameStore = create<GameStore>((set, get) => ({
         activeRoundState: updater(session.activeRoundState),
       },
     });
+  },
+
+  replaceCurrentQuestion: (question) => {
+    const { session } = get();
+    if (!session) return;
+    const newSelected = session.selectedQuestions.map((roundQs, ri) => {
+      if (ri !== session.currentRound) return roundQs;
+      return roundQs.map((q, qi) =>
+        qi === session.currentQuestionInRound ? question : q,
+      );
+    });
+    set({ session: { ...session, selectedQuestions: newSelected } });
   },
 
   resetForReplay: (packIds) => {

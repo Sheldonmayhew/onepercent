@@ -9,7 +9,7 @@ export default function TvPlay({ question, players, roundState: _roundState, tim
   const { play } = useSound();
   const prevTimeLeft = useRef<number | null>(null);
 
-  const timerDuration = 30;
+  const timerDuration = question.time_limit_seconds ?? 45;
   const { timeLeft, progress, isExpired, start } = useTimer({
     duration: timerDuration,
     autoStart: false,

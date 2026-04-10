@@ -2,6 +2,7 @@ import { useCallback } from 'react';
 import type { RealtimeChannel } from '@supabase/supabase-js';
 import { supabase } from '../../lib/supabase';
 import { useMultiplayerStore } from '../../stores/multiplayerStore';
+import { useGameStore } from '../../stores/gameStore';
 import type { GameBroadcast } from '../../stores/multiplayerStore';
 import { generateId } from '../../utils/helpers';
 
@@ -136,6 +137,21 @@ export function usePlayerMultiplayer() {
   }, []);
 
   const sendAnswer = useCallback((playerId: string, answer: string | number) => {
+    const mpStore = useMultiplayerStore.getState();
+    if (mpStore.mockMode && mpStore.gameState) {
+      // In mock mode, mark this player as answered in both stores
+      useMultiplayerStore.setState({
+        gameState: {
+          ...mpStore.gameState,
+          players: mpStore.gameState.players.map((p) =>
+            p.id === playerId ? { ...p, hasAnswered: true } : p
+          ),
+        },
+      });
+      // Also submit to game store so scoring works correctly
+      useGameStore.getState().submitAnswer(playerId, answer);
+      return;
+    }
     playerChannel?.send({
       type: 'broadcast',
       event: 'answer',
@@ -144,6 +160,19 @@ export function usePlayerMultiplayer() {
   }, []);
 
   const sendBuzzIn = useCallback((playerId: string, timestamp: number, answer: string | number) => {
+    const mpStore = useMultiplayerStore.getState();
+    if (mpStore.mockMode && mpStore.gameState) {
+      useMultiplayerStore.setState({
+        gameState: {
+          ...mpStore.gameState,
+          players: mpStore.gameState.players.map((p) =>
+            p.id === playerId ? { ...p, hasAnswered: true, answerTimestamp: timestamp } : p
+          ),
+        },
+      });
+      useGameStore.getState().submitAnswer(playerId, answer);
+      return;
+    }
     playerChannel?.send({
       type: 'broadcast',
       event: 'buzz_in',
@@ -184,6 +213,8 @@ export function usePlayerMultiplayer() {
   }, []);
 
   const disconnect = useCallback(() => {
+    if (useMultiplayerStore.getState().mockMode) return;
+
     if (playerBeforeUnloadHandler) {
       window.removeEventListener('beforeunload', playerBeforeUnloadHandler);
       playerBeforeUnloadHandler = null;

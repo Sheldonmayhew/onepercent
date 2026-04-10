@@ -65,7 +65,8 @@
       "Skill(update-config:*)"
     ],
     "additionalDirectories": [
-      "C:\\Users\\Sheldon.Mayhew"
+      "C:\\Users\\Sheldon.Mayhew",
+      "\\tmp"
     ]
   }
 }

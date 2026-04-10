@@ -5,10 +5,11 @@ import { useGameStore } from './stores/gameStore';
 import { useMultiplayerStore } from './stores/multiplayerStore';
 import { broadcastHostState } from './hooks/useMultiplayer';
 import { loadAllPacks } from './data/loadPacks';
+import { useMockDriver } from './mock/useMockDriver';
 
 export default function App() {
   const { session, setPacks } = useGameStore();
-  const { role } = useMultiplayerStore();
+  const { role, mockMode } = useMultiplayerStore();
   const location = useLocation();
 
   useEffect(() => {
@@ -16,12 +17,15 @@ export default function App() {
     setPacks(packs);
   }, [setPacks]);
 
-  // Broadcast game state to players whenever session changes (host only)
+  // Broadcast game state to players whenever session changes (host only, not in mock mode)
   useEffect(() => {
-    if (role === 'host' && session) {
+    if (role === 'host' && session && !mockMode) {
       broadcastHostState();
     }
-  }, [session, role]);
+  }, [session, role, mockMode]);
+
+  // Mock driver — drives state transitions locally for player/TV mock testing
+  useMockDriver();
 
   return (
     <AnimatePresence mode="wait">

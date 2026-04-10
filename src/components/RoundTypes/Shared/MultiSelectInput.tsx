@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import { useBottomNav } from '../../Game/BottomNavContext';
 
 interface MultiSelectInputProps {
   options: string[];
@@ -11,6 +12,7 @@ interface MultiSelectInputProps {
 export default function MultiSelectInput({ options, onSubmit, disabled, maxSelections }: MultiSelectInputProps) {
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [isLocked, setIsLocked] = useState(false);
+  const bottomNav = useBottomNav();
 
   const toggleOption = (index: number) => {
     if (isLocked || disabled) return;
@@ -26,15 +28,28 @@ export default function MultiSelectInput({ options, onSubmit, disabled, maxSelec
     });
   };
 
-  const handleLockIn = () => {
+  const handleLockIn = useCallback(() => {
     if (isLocked || disabled || selected.size === 0) return;
     setIsLocked(true);
     onSubmit([...selected].sort((a, b) => a - b));
-  };
+  }, [isLocked, disabled, selected, onSubmit]);
+
+  // Register CTA state in bottom nav when present
+  useEffect(() => {
+    bottomNav?.setCTAState({
+      canLockIn: !isLocked && !disabled && selected.size > 0,
+      isLocked,
+      lockIn: handleLockIn,
+      label: `LOCK IN (${selected.size} selected)`,
+      lockedLabel: 'LOCKED IN',
+    });
+  }, [selected.size, isLocked, disabled, handleLockIn, bottomNav]);
+
+  const hideButton = bottomNav?.externalCTA ?? false;
 
   return (
     <div className="w-full">
-      {isLocked && (
+      {isLocked && !hideButton && (
         <div className="flex items-center justify-center mb-4">
           <span className="text-xs text-green-600 font-medium px-3 py-1 rounded-full bg-neon-green/10">
             LOCKED IN
@@ -80,7 +95,7 @@ export default function MultiSelectInput({ options, onSubmit, disabled, maxSelec
         })}
       </div>
 
-      {!isLocked && (
+      {!isLocked && !hideButton && (
         <motion.button
           onClick={handleLockIn}
           disabled={disabled || selected.size === 0}

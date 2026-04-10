@@ -5,11 +5,11 @@ import { useTimer } from '../../../hooks/useTimer';
 import { useSound } from '../../../hooks/useSound';
 import { formatRands, getDifficultyColour } from '../../../utils/helpers';
 
-export default function TvPlay({ question, players, roundState, timerStarted, allAnswersIn: _allAnswersIn, roundIndex, difficulty, points, theme: _theme }: TvPlayProps) {
+export default function TvPlay({ question, players, roundState: _roundState, timerStarted, allAnswersIn: _allAnswersIn, roundIndex, difficulty, points, theme: _theme }: TvPlayProps) {
   const { play } = useSound();
   const prevTimeLeft = useRef<number | null>(null);
 
-  const timerDuration = 30;
+  const timerDuration = question.time_limit_seconds ?? 45;
   const { timeLeft, progress, isExpired, start } = useTimer({
     duration: timerDuration,
     autoStart: false,
@@ -37,8 +37,6 @@ export default function TvPlay({ question, players, roundState, timerStarted, al
   const isCritical = timeLeft <= 3;
   const optionLetters = ['A', 'B', 'C', 'D', 'E', 'F'];
 
-  // Penalty counter from round state
-  const penaltyPercent = (roundState as any)?.penaltyPercent ?? 0;
 
   return (
     <div className="min-h-dvh flex flex-col p-6 lg:p-10 relative overflow-hidden">
@@ -66,18 +64,6 @@ export default function TvPlay({ question, players, roundState, timerStarted, al
           <span className="font-score text-lg text-neon-gold">
             {formatRands(points)}
           </span>
-          {/* Penalty counter */}
-          {penaltyPercent > 0 && (
-            <motion.span
-              className="font-score text-lg text-red-500 ml-2"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: [1, 1.15, 1] }}
-              transition={{ duration: 0.3 }}
-              key={penaltyPercent}
-            >
-              Penalty: {penaltyPercent}%
-            </motion.span>
-          )}
         </div>
 
         {timerStarted && (

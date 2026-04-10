@@ -102,6 +102,9 @@ export interface RoundResult {
   question: Question;
   correctPlayers: string[];
   incorrectPlayers: string[];
+  pointsAwarded: number;
+  /** Per-player score deltas (accounts for round-type multipliers, streaks, etc.) */
+  scoreDeltas: Record<string, number>;
 }
 
 export interface GameSession {
@@ -127,17 +130,17 @@ export const DIFFICULTY_TIERS = [90, 80, 70, 60, 50, 40, 30, 20, 10, 5, 1] as co
 export const QUICK_TIERS = [90, 70, 50, 20, 1] as const;
 
 export const POINTS_PER_ROUND: Record<number, number> = {
-  90: 100,
-  80: 200,
-  70: 300,
-  60: 500,
-  50: 1_000,
-  40: 2_000,
+  90: 250,
+  80: 500,
+  70: 900,
+  60: 1_600,
+  50: 2_500,
+  40: 3_700,
   30: 5_000,
-  20: 10_000,
-  10: 25_000,
-  5: 50_000,
-  1: 100_000,
+  20: 7_000,
+  10: 9_000,
+  5: 12_000,
+  1: 16_000,
 };
 
 // Questions per round, indexed by difficulty tier
@@ -148,11 +151,9 @@ export const QUESTIONS_PER_ROUND: Record<number, number> = {
   5: 1, 1: 1,              // Gauntlet: 1 question
 };
 
-// Escalating point multipliers within a round (by question index)
-// e.g., 4 questions → [0.25, 0.5, 0.75, 1.0]
-export function getQuestionMultiplier(questionIndex: number, totalQuestions: number): number {
-  if (totalQuestions <= 1) return 1;
-  return (questionIndex + 1) / totalQuestions;
+// Flat points per question — each question in a round is worth the same amount
+export function getQuestionMultiplier(_questionIndex: number, _totalQuestions: number): number {
+  return 1;
 }
 
 export const PLAYER_COLOURS = [

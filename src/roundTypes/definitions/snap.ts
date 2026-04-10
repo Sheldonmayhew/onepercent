@@ -42,12 +42,15 @@ export const snapRound: RoundTypeDefinition<SnapState> = {
       .map((p) => ({ id: p.id, timestamp: state.buzzTimestamps[p.id] ?? Infinity }))
       .sort((a, b) => a.timestamp - b.timestamp);
 
+    // 1st = 100%, 2nd = 50%, 3rd = 25%, 4th+ = 10%
+    const POSITION_MULTIPLIERS = [1, 0.5, 0.25];
+    const FLOOR = 0.1;
+
     return players.map((p) => {
       const rank = correctBuzzes.findIndex((b) => b.id === p.id);
       if (rank === -1) return { playerId: p.id, delta: 0 };
 
-      // 15% reduction per rank, floor at 25%
-      const multiplier = Math.max(0.25, 1 - rank * 0.15);
+      const multiplier = POSITION_MULTIPLIERS[rank] ?? FLOOR;
       return {
         playerId: p.id,
         delta: Math.round(basePoints * multiplier),

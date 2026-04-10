@@ -16,6 +16,7 @@ interface RevealResult {
   updatedPlayers: Player[];
   roundResult: RoundResult;
   updatedTeams: Team[];
+  updatedRoundState?: unknown;
 }
 
 export function computeRevealAnswers(session: GameSession): RevealResult | null {
@@ -72,6 +73,8 @@ export function computeRevealAnswers(session: GameSession): RevealResult | null 
     question,
     correctPlayers: correctIds,
     incorrectPlayers: incorrectIds,
+    pointsAwarded: basePoints,
+    scoreDeltas: Object.fromEntries(scoreUpdates.map((u) => [u.playerId, u.delta])),
   };
 
   // Update team scores
@@ -85,5 +88,10 @@ export function computeRevealAnswers(session: GameSession): RevealResult | null 
     return { ...team, score: Math.max(0, team.score + teamDelta - teamStolenFrom) };
   });
 
-  return { updatedPlayers, roundResult, updatedTeams };
+  // Let the round type update its own state after scoring (e.g. streak multipliers)
+  const updatedRoundState = roundDef.afterScore
+    ? roundDef.afterScore(session.activeRoundState, session.players, question, scoreUpdates)
+    : undefined;
+
+  return { updatedPlayers, roundResult, updatedTeams, updatedRoundState };
 }

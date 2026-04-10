@@ -15,7 +15,6 @@ export default function TvReveal({
 }: TvRevealProps) {
   const state = roundState as SwitchagoriesState;
   const [phase, setPhase] = useState<'recap' | 'answer' | 'results'>('recap');
-  const picks: Record<string, string> = state?.categoryPicks ?? {};
 
   useEffect(() => {
     const t1 = setTimeout(() => setPhase('answer'), 2000);
@@ -89,7 +88,7 @@ export default function TvReveal({
           </motion.div>
         )}
 
-        {/* Phase 3: Results with category picks and 2x bonus */}
+        {/* Phase 3: Results with picker 2x bonus */}
         {phase === 'results' && (
           <motion.div
             key="results"
@@ -106,8 +105,8 @@ export default function TvReveal({
                 const isCorrect = correctPlayerIds.includes(player.id);
                 const update = scoreUpdates.find((u) => u.playerId === player.id);
                 const delta = update?.delta ?? 0;
-                const playerPick = picks[player.id];
-                const hasBonus = delta > 0 && update && (update as any).bonus;
+                const isPicker = player.id === state?.pickerPlayerId;
+                const hasBonus = isPicker && isCorrect;
 
                 return (
                   <motion.div
@@ -129,10 +128,10 @@ export default function TvReveal({
                     />
                     <span className="text-text-primary font-medium flex-1">{player.name}</span>
 
-                    {/* Category pick */}
-                    {playerPick && (
+                    {/* Picker badge */}
+                    {isPicker && (
                       <span className="text-[10px] px-2 py-0.5 rounded-full bg-purple-400/20 text-purple-300 font-medium">
-                        {playerPick}
+                        Picker
                       </span>
                     )}
 

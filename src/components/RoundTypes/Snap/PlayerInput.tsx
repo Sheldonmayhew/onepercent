@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import BuzzButton from '../Shared/BuzzButton';
+import { useBottomNav } from '../../Game/BottomNavContext';
 
 export default function PlayerInput({ question, onSubmit, onBuzzIn, playerId, players: _players, roundState, allAnswersIn }: any) {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [hasBuzzed, setHasBuzzed] = useState(false);
+  const bottomNav = useBottomNav();
 
   const revealedOptions: number[] = roundState?.revealedOptions ?? [];
 
@@ -13,12 +14,24 @@ export default function PlayerInput({ question, onSubmit, onBuzzIn, playerId, pl
     setSelectedOption(idx);
   };
 
-  const handleBuzz = (timestamp: number) => {
+  const handleBuzz = useCallback(() => {
     if (selectedOption === null || hasBuzzed) return;
+    const timestamp = Date.now();
     setHasBuzzed(true);
     onBuzzIn?.(playerId, timestamp, selectedOption);
     onSubmit(playerId, selectedOption);
-  };
+  }, [selectedOption, hasBuzzed, playerId, onBuzzIn, onSubmit]);
+
+  // Register SNAP button in the bottom nav
+  useEffect(() => {
+    bottomNav?.setCTAState({
+      canLockIn: selectedOption !== null && !hasBuzzed && !allAnswersIn,
+      isLocked: hasBuzzed,
+      lockIn: handleBuzz,
+      label: 'SNAP!',
+      lockedLabel: 'SNAPPED!',
+    });
+  }, [selectedOption, hasBuzzed, allAnswersIn, handleBuzz, bottomNav]);
 
   return (
     <div className="w-full">
@@ -70,32 +83,6 @@ export default function PlayerInput({ question, onSubmit, onBuzzIn, playerId, pl
             })}
         </AnimatePresence>
       </div>
-
-      {/* Buzz button */}
-      {!hasBuzzed && selectedOption !== null && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: 'spring', stiffness: 200, damping: 16 }}
-        >
-          <BuzzButton
-            onBuzz={handleBuzz}
-            disabled={allAnswersIn}
-            label="SNAP!"
-            color="from-amber-500 to-orange-500"
-          />
-        </motion.div>
-      )}
-
-      {hasBuzzed && (
-        <motion.div
-          className="text-center py-4"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-        >
-          <span className="text-neon-green font-display text-lg tracking-wide">SNAPPED!</span>
-        </motion.div>
-      )}
     </div>
   );
 }

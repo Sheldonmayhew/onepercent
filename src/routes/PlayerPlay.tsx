@@ -242,11 +242,11 @@ function PlayerPlayInner() {
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.97 }}
           >
-            LOCK IN
+            {ctaState.label ?? 'LOCK IN'}
           </motion.button>
         ) : isLockedIn ? (
           <div className="w-full py-3.5 rounded-2xl text-center font-display text-lg font-bold tracking-wide bg-neon-green/10 text-neon-green">
-            LOCKED IN
+            {ctaState?.lockedLabel ?? 'LOCKED IN'}
           </div>
         ) : !timerStarted ? (
           <div className="w-full py-3.5 rounded-2xl text-center font-display text-sm tracking-wide text-text-muted">

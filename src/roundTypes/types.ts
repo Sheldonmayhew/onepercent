@@ -94,7 +94,7 @@ export interface RoundTypeDefinition<TState = void> {
   timer: { duration: number; autoStart: boolean; countUp?: boolean };
   questionFormat: QuestionFormat;
 
-  createInitialState: (players: Player[], question: Question) => TState;
+  createInitialState: (players: Player[], question: Question, questionIndex?: number) => TState;
 
   score: (
     players: Player[],
@@ -102,6 +102,16 @@ export interface RoundTypeDefinition<TState = void> {
     state: TState,
     basePoints: number
   ) => PlayerScoreUpdate[];
+
+  afterScore?: (
+    state: TState,
+    players: Player[],
+    question: Question,
+    scoreUpdates: PlayerScoreUpdate[]
+  ) => TState;
+
+  getQuestionCount?: (playerCount: number) => number;
+  resetStatePerQuestion?: boolean;
 
   broadcastEvents: readonly string[];
 

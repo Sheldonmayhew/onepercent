@@ -24,8 +24,8 @@ export default function TvPlay({
   const state = roundState as SwitchagoriesState;
   const diffColour = getDifficultyColour(difficulty);
   const phase: 'picking' | 'answering' = state?.phase ?? 'picking';
-  const picks: Record<string, string> = state?.categoryPicks ?? {};
-  const categories = question.categories ?? [];
+  const categories = state?.packOptions ?? [];
+  const pickerPlayer = players.find((p) => p.id === state?.pickerPlayerId);
   const { timeLeft, progress } = useTimer({
     duration: question.time_limit_seconds,
     autoStart: timerStarted,
@@ -33,7 +33,6 @@ export default function TvPlay({
 
   const isUrgent = timeLeft <= 5;
   const isCritical = timeLeft <= 3;
-  const pickedPlayerIds = new Set(Object.keys(picks));
 
   return (
     <div className="min-h-screen bg-bg-primary flex flex-col">
@@ -92,7 +91,7 @@ export default function TvPlay({
       {/* Main content */}
       <div className="flex flex-1 px-6 py-6 gap-6">
         <div className="flex-1">
-          {/* Picking phase: category grid */}
+          {/* Picking phase: show picker and category grid */}
           {phase === 'picking' && (
             <motion.div
               className="bg-bg-card shadow-soft rounded-3xl p-8"
@@ -100,35 +99,43 @@ export default function TvPlay({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="font-display text-lg text-purple-400 uppercase tracking-wider text-center mb-6">
-                Choose Your Category
-              </h3>
+              {/* Picker spotlight */}
+              <div className="flex items-center justify-center gap-3 mb-6">
+                {pickerPlayer && (
+                  <span
+                    className="w-5 h-5 rounded-full shrink-0"
+                    style={{ backgroundColor: pickerPlayer.colour }}
+                  />
+                )}
+                <h3 className="font-display text-lg text-purple-400 uppercase tracking-wider text-center">
+                  {pickerPlayer?.name ?? 'Player'}&apos;s Turn to Pick
+                </h3>
+              </div>
+
               <div className="grid grid-cols-2 gap-4">
                 {categories.map((cat: string, idx: number) => {
                   const gradient = CATEGORY_COLORS[idx % CATEGORY_COLORS.length];
-                  // Players who picked this category
-                  const pickedBy = players.filter((p) => picks[p.id] === cat);
+                  const isChosen = state?.categoryPick === cat;
 
                   return (
                     <motion.div
                       key={cat}
-                      className={`relative py-8 px-6 rounded-2xl bg-gradient-to-br ${gradient} text-white text-center`}
+                      className={`relative py-8 px-6 rounded-2xl bg-gradient-to-br ${gradient} text-white text-center ${
+                        isChosen ? 'ring-4 ring-white/60 shadow-lg scale-105' : ''
+                      } ${state?.categoryPick && !isChosen ? 'opacity-40' : ''}`}
                       initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
+                      animate={{ opacity: state?.categoryPick && !isChosen ? 0.4 : 1, scale: isChosen ? 1.05 : 1 }}
                       transition={{ delay: idx * 0.1 + 0.2 }}
                     >
                       <span className="font-display text-xl font-bold">{cat}</span>
-                      {pickedBy.length > 0 && (
-                        <div className="flex justify-center gap-1 mt-3">
-                          {pickedBy.map((p) => (
-                            <span
-                              key={p.id}
-                              className="w-4 h-4 rounded-full border-2 border-white/40"
-                              style={{ backgroundColor: p.colour }}
-                              title={p.name}
-                            />
-                          ))}
-                        </div>
+                      {isChosen && (
+                        <motion.span
+                          className="block text-sm mt-2 text-white/80"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                        >
+                          Selected!
+                        </motion.span>
                       )}
                     </motion.div>
                   );
@@ -137,7 +144,7 @@ export default function TvPlay({
             </motion.div>
           )}
 
-          {/* Answering phase: question with category badges */}
+          {/* Answering phase: question with category badge */}
           {phase === 'answering' && (
             <motion.div
               className="bg-bg-card shadow-soft rounded-3xl p-8"
@@ -192,13 +199,16 @@ export default function TvPlay({
             </h3>
             <div className="space-y-2">
               {players.map((player) => {
-                const playerPick = picks[player.id];
-                const hasPicked = pickedPlayerIds.has(player.id);
+                const isCurrentPicker = player.id === state?.pickerPlayerId;
 
                 return (
                   <motion.div
                     key={player.id}
-                    className="flex items-center gap-2 py-2 px-3 rounded-xl bg-bg-elevated"
+                    className={`flex items-center gap-2 py-2 px-3 rounded-xl ${
+                      isCurrentPicker && phase === 'picking'
+                        ? 'bg-purple-400/15 ring-1 ring-purple-400/30'
+                        : 'bg-bg-elevated'
+                    }`}
                     animate={player.hasAnswered ? { scale: [1, 1.05, 1] } : {}}
                     transition={{ duration: 0.3 }}
                   >
@@ -210,20 +220,20 @@ export default function TvPlay({
                       {player.name}
                     </span>
 
-                    {/* Category badge in answering phase */}
-                    {phase === 'answering' && playerPick && (
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-purple-400/20 text-purple-300 font-medium truncate max-w-[80px]">
-                        {playerPick}
+                    {/* Picker badge */}
+                    {isCurrentPicker && (
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-purple-400/20 text-purple-300 font-medium">
+                        Picker
                       </span>
                     )}
 
                     {/* Status */}
                     {phase === 'picking' ? (
-                      hasPicked ? (
+                      isCurrentPicker && state?.categoryPick ? (
                         <span className="text-neon-green text-xs font-bold">✓</span>
-                      ) : (
+                      ) : isCurrentPicker ? (
                         <span className="text-text-muted text-xs">...</span>
-                      )
+                      ) : null
                     ) : player.hasAnswered ? (
                       <span className="text-neon-green text-xs font-bold">✓</span>
                     ) : (

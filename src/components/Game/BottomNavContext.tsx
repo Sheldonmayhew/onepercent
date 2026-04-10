@@ -5,6 +5,8 @@ export interface CTAState {
   canLockIn: boolean;
   isLocked: boolean;
   lockIn: () => void;
+  label?: string;
+  lockedLabel?: string;
 }
 
 interface BottomNavContextValue {

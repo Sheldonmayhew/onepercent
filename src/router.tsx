@@ -119,6 +119,12 @@ const router = createHashRouter([
         path: 'tv/display',
         lazy: () => retryImport(() => import('./routes/TvDisplay')),
       },
+
+      // Mock preview gallery (dev only)
+      {
+        path: 'mock',
+        lazy: () => retryImport(() => import('./mock/MockGallery')),
+      },
     ],
   },
 ]);

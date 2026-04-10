@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useBottomNav } from '../../Game/BottomNavContext';
 
 interface CategoryPickerProps {
   categories: string[];
@@ -16,12 +17,24 @@ const CATEGORY_COLORS = [
 
 export default function CategoryPicker({ categories, onPick, disabled }: CategoryPickerProps) {
   const [picked, setPicked] = useState<string | null>(null);
+  const bottomNav = useBottomNav();
 
   const handlePick = (category: string) => {
     if (picked || disabled) return;
     setPicked(category);
     onPick(category);
   };
+
+  // Register CTA state in bottom nav (selection-based, no separate button)
+  useEffect(() => {
+    bottomNav?.setCTAState({
+      canLockIn: false,
+      isLocked: !!picked,
+      lockIn: () => {},
+      label: 'Pick a category above',
+      lockedLabel: picked ? `Locked in: ${picked}` : 'LOCKED IN',
+    });
+  }, [picked, bottomNav]);
 
   return (
     <div className="w-full">

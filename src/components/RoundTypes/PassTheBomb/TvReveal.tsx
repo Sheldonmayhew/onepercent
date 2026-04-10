@@ -176,7 +176,7 @@ export default function TvReveal({ question, players, roundState: _roundState, c
                             <span className="text-2xl">{p.avatar}</span>
                             <span className="text-lg text-text-primary font-medium">{p.name}</span>
                             <span className="text-red-500 font-score font-bold">
-                              {penalty < 0 ? `-R${Math.abs(penalty).toLocaleString('en-ZA')}` : '--'}
+                              {penalty < 0 ? `-${Math.abs(penalty).toLocaleString('en-ZA')}` : '--'}
                             </span>
                           </motion.div>
                         );
@@ -228,7 +228,7 @@ export default function TvReveal({ question, players, roundState: _roundState, c
                         <div className="flex-1 min-w-0">
                           <p className="text-xl font-medium text-text-primary">{p.name}</p>
                           <p className={`text-sm font-score ${wasCorrect ? 'text-neon-green' : 'text-red-500'}`}>
-                            {wasCorrect ? `+${formatRands(pointsAwarded)}` : penalty < 0 ? `-R${Math.abs(penalty).toLocaleString('en-ZA')}` : 'No points'}
+                            {wasCorrect ? `+${formatRands(pointsAwarded)}` : penalty < 0 ? `-${Math.abs(penalty).toLocaleString('en-ZA')}` : 'No points'}
                           </p>
                         </div>
                         <span className="font-score text-xl text-neon-gold">

@@ -1,10 +1,17 @@
 import { lazy } from 'react';
 import type { RoundTypeDefinition } from '../types';
-import { checkAnswer } from '../../utils/helpers';
+import { checkAnswer, shuffleArray } from '../../utils/helpers';
 
 export interface SwitchagoriesState {
-  categoryPicks: Record<string, string>;
+  pickerPlayerId: string;
+  packOptions: string[];
+  categoryPick: string | null;
   phase: 'picking' | 'answering';
+}
+
+/** Pick 4 random pack names from available packs */
+export function pickRandomPacks(packNames: string[], count = 4): string[] {
+  return shuffleArray(packNames).slice(0, count);
 }
 
 export const switchagoriesRound: RoundTypeDefinition<SwitchagoriesState> = {
@@ -30,25 +37,26 @@ export const switchagoriesRound: RoundTypeDefinition<SwitchagoriesState> = {
   timer: { duration: 45, autoStart: false },
   questionFormat: 'categorized',
 
-  createInitialState: () => ({
-    categoryPicks: {},
-    phase: 'picking',
+  getQuestionCount: (playerCount) => playerCount,
+  resetStatePerQuestion: true,
+
+  createInitialState: (players, _question, questionIndex) => ({
+    pickerPlayerId: players[questionIndex ?? 0]?.id ?? '',
+    packOptions: [],  // populated by the game store after init
+    categoryPick: null,
+    phase: 'picking' as const,
   }),
 
-  score: (players, question, state, basePoints) => {
+  score: (players, _question, state, basePoints) => {
     return players.map((p) => {
-      const isCorrect = checkAnswer(question, p.currentAnswer);
+      const isCorrect = checkAnswer(_question, p.currentAnswer);
       if (!isCorrect) return { playerId: p.id, delta: 0 };
 
-      // 2x bonus if player's category pick matches the question's category
-      const pickedCategory = state.categoryPicks[p.id];
-      const questionCategory = question.category;
-      const matchesCategory = pickedCategory && questionCategory &&
-        pickedCategory.toLowerCase() === questionCategory.toLowerCase();
-
+      // Picker gets 2x bonus
+      const isPicker = p.id === state.pickerPlayerId;
       return {
         playerId: p.id,
-        delta: matchesCategory ? basePoints * 2 : basePoints,
+        delta: isPicker ? basePoints * 2 : basePoints,
       };
     });
   },

@@ -43,6 +43,16 @@ export const quickstarterRound: RoundTypeDefinition<QuickstarterState> = {
     });
   },
 
+  afterScore: (state, players, question) => {
+    const updated: Record<string, number> = {};
+    for (const p of players) {
+      const isCorrect = checkAnswer(question, p.currentAnswer);
+      const current = state.multipliers[p.id] ?? 1;
+      updated[p.id] = isCorrect ? current + 0.5 : 1;
+    }
+    return { ...state, multipliers: updated };
+  },
+
   broadcastEvents: [],
 
   slots: {

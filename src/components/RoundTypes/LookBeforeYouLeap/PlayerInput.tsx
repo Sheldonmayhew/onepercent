@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect, useCallback } from 'react';
+import { motion } from 'framer-motion';
 import type { PlayerInputProps } from '../../../roundTypes/types';
 import type { LookBeforeYouLeapState } from '../../../roundTypes/definitions/lookBeforeYouLeap';
-import BuzzButton from '../Shared/BuzzButton';
+import { useBottomNav } from '../../Game/BottomNavContext';
 
 const MULTIPLIERS = ['3x', '2x', '1.5x', '1x'];
 
@@ -17,6 +17,7 @@ export default function PlayerInput({
   const [selected, setSelected] = useState<number | null>(null);
   const [isLocked, setIsLocked] = useState(false);
   const [hasBuzzed, setHasBuzzed] = useState(false);
+  const bottomNav = useBottomNav();
 
   const revealChunks: string[] = question.reveal_chunks ?? [];
   const revealedCount: number = roundState?.revealedChunks ?? 1;
@@ -35,13 +36,25 @@ export default function PlayerInput({
     setSelected(idx);
   };
 
-  const handleBuzz = (timestamp: number) => {
+  const handleBuzz = useCallback(() => {
     if (selected === null || hasBuzzed) return;
+    const timestamp = Date.now();
     setHasBuzzed(true);
     setIsLocked(true);
     onBuzzIn?.(playerId, timestamp, selected);
     onSubmit(playerId, selected);
-  };
+  }, [selected, hasBuzzed, playerId, onBuzzIn, onSubmit]);
+
+  // Register CTA state in bottom nav when present
+  useEffect(() => {
+    bottomNav?.setCTAState({
+      canLockIn: selected !== null && !hasBuzzed && !allAnswersIn,
+      isLocked: hasBuzzed,
+      lockIn: handleBuzz,
+      label: 'BUZZ IN & LOCK',
+      lockedLabel: `LOCKED IN at ${currentMultiplier}`,
+    });
+  }, [selected, hasBuzzed, allAnswersIn, handleBuzz, currentMultiplier, bottomNav]);
 
   return (
     <div className="w-full space-y-4">
@@ -109,21 +122,8 @@ export default function PlayerInput({
         </div>
       )}
 
-      {/* Buzz in button */}
-      <AnimatePresence>
-        {!hasBuzzed && (
-          <motion.div exit={{ opacity: 0, scale: 0.9 }}>
-            <BuzzButton
-              onBuzz={handleBuzz}
-              disabled={allAnswersIn || selected === null}
-              label="BUZZ IN & LOCK"
-              color="from-red-600 to-neon-pink"
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {hasBuzzed && (
+      {/* Locked-in text shown only when bottom nav not managing CTA */}
+      {hasBuzzed && !(bottomNav?.externalCTA) && (
         <motion.div
           className="text-center py-3"
           initial={{ opacity: 0, scale: 0.8 }}

@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, Reorder } from 'framer-motion';
+import { useBottomNav } from '../../Game/BottomNavContext';
 
 interface RankingInputProps {
   items: string[];
@@ -18,16 +19,30 @@ export default function RankingInput({ items, criterion, onSubmit, disabled }: R
     items.map((text, originalIndex) => ({ originalIndex, text }))
   );
   const [isLocked, setIsLocked] = useState(false);
+  const bottomNav = useBottomNav();
 
-  const handleLockIn = () => {
+  const handleLockIn = useCallback(() => {
     if (isLocked || disabled) return;
     setIsLocked(true);
     onSubmit(rankItems.map((item) => item.originalIndex));
-  };
+  }, [isLocked, disabled, rankItems, onSubmit]);
+
+  // Register CTA state in bottom nav when present
+  useEffect(() => {
+    bottomNav?.setCTAState({
+      canLockIn: !isLocked && !disabled,
+      isLocked,
+      lockIn: handleLockIn,
+      label: 'LOCK IN ORDER',
+      lockedLabel: 'LOCKED IN',
+    });
+  }, [isLocked, disabled, handleLockIn, bottomNav]);
+
+  const hideButton = bottomNav?.externalCTA ?? false;
 
   return (
     <div className="w-full">
-      {isLocked && (
+      {isLocked && !hideButton && (
         <div className="flex items-center justify-center mb-4">
           <span className="text-xs text-green-600 font-medium px-3 py-1 rounded-full bg-neon-green/10">
             LOCKED IN
@@ -67,7 +82,7 @@ export default function RankingInput({ items, criterion, onSubmit, disabled }: R
         ))}
       </Reorder.Group>
 
-      {!isLocked && (
+      {!isLocked && !hideButton && (
         <motion.button
           onClick={handleLockIn}
           disabled={disabled}

@@ -96,7 +96,7 @@ function findQuestions(
 }
 
 // Returns a 2D array: selectedQuestions[roundIndex][questionIndex]
-export function selectQuestionsForGame(packs: QuestionPack[]): Question[][] {
+export function selectQuestionsForGame(packs: QuestionPack[], playerCount?: number): Question[][] {
   const tiers = [...DIFFICULTY_TIERS];
   const usedIds = new Set<string>();
 
@@ -109,7 +109,9 @@ export function selectQuestionsForGame(packs: QuestionPack[]): Question[][] {
     const roundTypeId = ROUND_TYPE_SEQUENCE[roundIndex];
     const roundDef = getRoundDefinition(roundTypeId);
     const requiredFormat = roundDef.questionFormat;
-    const count = QUESTIONS_PER_ROUND[difficulty] ?? 1;
+    const count = (roundDef.getQuestionCount && playerCount)
+      ? roundDef.getQuestionCount(playerCount)
+      : QUESTIONS_PER_ROUND[difficulty] ?? 1;
 
     return findQuestions(allQuestions, difficulty, requiredFormat, count, usedIds);
   });
@@ -120,7 +122,7 @@ export function formatPoints(points: number): string {
 }
 
 export function formatRands(points: number): string {
-  return `R${points.toLocaleString('en-ZA')}`;
+  return points.toLocaleString('en-ZA');
 }
 
 export function getDifficultyLabel(difficulty: number): string {

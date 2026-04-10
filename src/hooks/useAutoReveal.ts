@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import { useGameStore } from '../stores/gameStore';
 import { broadcastHostState } from './useMultiplayer';
 import { getRoundDefinition } from '../roundTypes/registry';
+import { shuffleArray } from '../utils/helpers';
+import { DIFFICULTY_TIERS } from '../types';
 import type { GameSession, Question, Player } from '../types';
 
 interface UseAutoRevealParams {
@@ -21,7 +23,7 @@ export function useAutoReveal({
   isQuickPlay,
   isHost,
   getCurrentQuestion,
-  getActivePlayers,
+  getActivePlayers: _getActivePlayers,
 }: UseAutoRevealParams) {
   // Auto-reveal for timed_reveal (Snap) and progressive_reveal (LookBeforeYouLeap)
   const autoRevealInterval = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -115,7 +117,7 @@ export function useAutoReveal({
     };
   }, [session?.currentRound, session?.timerStarted, isQuickPlay, isHost]);
 
-  // Switchagories: auto-transition from picking → answering when all players have picked
+  // Switchagories: when picker selects a pack, find a question from that pack and transition
   useEffect(() => {
     if (!session) return;
     const roundTypeId = session.roundTypeSequence?.[session.currentRound];
@@ -126,12 +128,41 @@ export function useAutoReveal({
     const state = session.activeRoundState as any;
     if (state?.phase === 'answering') return;
 
-    const picks: Record<string, string> = state?.categoryPicks ?? {};
-    const activePlayers = getActivePlayers();
-    const allPicked = activePlayers.length > 0 && activePlayers.every((p) => picks[p.id]);
+    // Transition once the picker has made their pack choice
+    if (state?.categoryPick) {
+      const store = useGameStore.getState();
 
-    if (allPicked) {
-      useGameStore.getState().updateRoundState((prev: any) => ({
+      // Search all available packs (not just selected) since pack options come from all packs
+      const chosenPack = store.availablePacks.find((p) => p.name === state.categoryPick);
+      if (chosenPack) {
+        const difficulty = [...DIFFICULTY_TIERS][session.currentRound] ?? 60;
+        const usedIds = new Set(
+          session.roundHistory.map((r) => r.question.id),
+        );
+
+        // Find matching questions, preferring exact difficulty then nearest
+        let pool = chosenPack.questions.filter(
+          (q) => q.difficulty === difficulty && !usedIds.has(q.id),
+        );
+        if (pool.length === 0) {
+          pool = chosenPack.questions.filter((q) => !usedIds.has(q.id));
+          pool.sort(
+            (a, b) =>
+              Math.abs(a.difficulty - difficulty) -
+              Math.abs(b.difficulty - difficulty),
+          );
+        }
+        if (pool.length === 0) {
+          pool = chosenPack.questions;
+        }
+
+        const picked = shuffleArray(pool)[0];
+        if (picked) {
+          store.replaceCurrentQuestion(picked);
+        }
+      }
+
+      store.updateRoundState((prev: any) => ({
         ...prev,
         phase: 'answering',
       }));
